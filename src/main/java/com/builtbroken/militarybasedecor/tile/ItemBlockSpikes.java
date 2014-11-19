@@ -1,6 +1,5 @@
 package com.builtbroken.militarybasedecor.tile;
 
-import icbm.Reference;
 import net.minecraft.item.ItemStack;
 import resonant.content.prefab.itemblock.ItemTooltip;
 
@@ -23,11 +22,5 @@ public class ItemBlockSpikes extends ItemTooltip
     public String getUnlocalizedName(ItemStack itemstack)
     {
         return this.getUnlocalizedName() + "." + itemstack.getItemDamage();
-    }
-
-    @Override
-    public String getUnlocalizedName()
-    {
-        return "tile." + Reference.PREFIX + "spikes";
     }
 }
