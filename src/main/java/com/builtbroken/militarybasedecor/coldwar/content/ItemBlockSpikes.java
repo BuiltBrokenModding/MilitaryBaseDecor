@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.tile;
+package com.builtbroken.militarybasedecor.coldwar.content;
 
 import net.minecraft.item.ItemStack;
 import resonant.content.prefab.itemblock.ItemTooltip;

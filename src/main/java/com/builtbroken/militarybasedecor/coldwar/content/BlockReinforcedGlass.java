@@ -1,10 +1,10 @@
-package com.builtbroken.militarybasedecor.tile;
+package com.builtbroken.militarybasedecor.coldwar.content;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import resonant.api.blocks.IAntiPoisonBlock;
+import resonant.api.tile.IAntiPoisonBlock;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

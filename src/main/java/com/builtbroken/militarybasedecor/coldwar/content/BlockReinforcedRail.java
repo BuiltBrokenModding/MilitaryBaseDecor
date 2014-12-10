@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.tile;
+package com.builtbroken.militarybasedecor.coldwar.content;
 
 import net.minecraft.block.BlockRail;
 import net.minecraft.entity.item.EntityMinecart;

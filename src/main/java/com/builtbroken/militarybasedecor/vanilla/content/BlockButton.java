@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.tile;
+package com.builtbroken.militarybasedecor.vanilla.content;
 
 /**
  * Created by robert on 11/5/2014.

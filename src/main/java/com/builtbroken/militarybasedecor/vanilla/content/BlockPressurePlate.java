@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.tile;
+package com.builtbroken.militarybasedecor.vanilla.content;
 
 import net.minecraft.block.material.Material;
 
