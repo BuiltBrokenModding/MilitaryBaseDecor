@@ -1,7 +1,7 @@
 package com.builtbroken.militarybasedecor.coldwar.content;
 
 import net.minecraft.item.ItemStack;
-import resonant.content.prefab.itemblock.ItemTooltip;
+import resonant.lib.prefab.item.ItemTooltip;
 
 public class ItemBlockSpikes extends ItemTooltip
 {
