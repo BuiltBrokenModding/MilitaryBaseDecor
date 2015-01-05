@@ -4,11 +4,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import com.builtbroken.api.tile.IAntiPoisonBlock;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockReinforcedGlass extends Block implements IAntiPoisonBlock
+public class BlockReinforcedGlass extends Block
 {
     public BlockReinforcedGlass()
     {
@@ -55,12 +54,6 @@ public class BlockReinforcedGlass extends Block implements IAntiPoisonBlock
      * drops. */
     @Override
     protected boolean canSilkHarvest()
-    {
-        return true;
-    }
-
-    @Override
-    public boolean isPoisonPrevention(World par1World, int x, int y, int z, String type)
     {
         return true;
     }

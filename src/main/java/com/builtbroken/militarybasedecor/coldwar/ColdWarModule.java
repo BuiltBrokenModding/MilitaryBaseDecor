@@ -1,6 +1,6 @@
 package com.builtbroken.militarybasedecor.coldwar;
 
-import com.builtbroken.lib.mod.loadable.ILoadable;
+import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 
 /** Content themed after cold ware military bunkers and bases
  * Created by robert on 12/7/2014.

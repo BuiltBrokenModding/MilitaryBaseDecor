@@ -2,7 +2,6 @@ package com.builtbroken.militarybasedecor.coldwar.content;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import com.builtbroken.lib.prefab.item.ItemTooltip;
 
 public class ItemBlockSpikes extends Item
 {

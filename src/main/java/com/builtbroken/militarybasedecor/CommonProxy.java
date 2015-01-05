@@ -1,6 +1,7 @@
 package com.builtbroken.militarybasedecor;
 
-import com.builtbroken.lib.mod.AbstractProxy;
+
+import com.builtbroken.mc.lib.mod.AbstractProxy;
 
 /**
  * Created by robert on 12/7/2014.

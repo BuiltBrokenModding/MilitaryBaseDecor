@@ -1,5 +1,6 @@
 package com.builtbroken.militarybasedecor;
 
+import com.builtbroken.mc.lib.mod.AbstractMod;
 import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
 import cpw.mods.fml.common.Mod;
@@ -7,7 +8,6 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import com.builtbroken.lib.mod.AbstractMod;
 
 /**
  * Created by robert on 11/18/2014.
