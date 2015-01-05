@@ -1,6 +1,6 @@
 package com.builtbroken.militarybasedecor.vanilla;
 
-import resonant.lib.mod.loadable.ILoadable;
+import com.builtbroken.lib.mod.loadable.ILoadable;
 
 /**
  * Content themed to vanilla MC rather than any set mod or History era

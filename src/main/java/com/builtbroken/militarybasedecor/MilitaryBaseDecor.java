@@ -7,7 +7,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import resonant.lib.mod.AbstractMod;
+import com.builtbroken.lib.mod.AbstractMod;
 
 /**
  * Created by robert on 11/18/2014.
