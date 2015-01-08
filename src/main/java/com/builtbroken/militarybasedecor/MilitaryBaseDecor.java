@@ -44,7 +44,7 @@ public class MilitaryBaseDecor extends AbstractMod
     public static MilitaryBaseDecor INSTANCE;
 
     @SidedProxy(clientSide = "com.builtbroken.militarybasedecor.ClientProxy", serverSide = "com.builtbroken.militarybasedecor.CommonProxy")
-    private CommonProxy proxy;
+    public static CommonProxy proxy;
 
     //@Mod.Metadata(ID)
     //private ModMetadata meta;
@@ -53,7 +53,7 @@ public class MilitaryBaseDecor extends AbstractMod
 
     public MilitaryBaseDecor()
     {
-        super(DOMAIN);
+        super(ID);
     }
 
     @Mod.EventHandler
