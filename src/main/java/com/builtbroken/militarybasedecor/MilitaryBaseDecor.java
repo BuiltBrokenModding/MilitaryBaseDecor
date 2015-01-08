@@ -8,24 +8,45 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Created by robert on 11/18/2014.
  */
+@Mod(modid = MilitaryBaseDecor.ID, name = MilitaryBaseDecor.NAME, version = MilitaryBaseDecor.VERSION, dependencies = "required-after:VoltzEngine;")
 public class MilitaryBaseDecor extends AbstractMod
 {
-    public static final String MOD_ID = "militarybasedecor";
-    public static final String MOD_NAME = "Military Base Decor";
-    public static final String DOMAIN = MOD_ID;
-    public static final String PREFIX = MOD_ID + ":";
+    public static final String ID = "militarybasedecor";
+    public static final String NAME = "Military Base Decor";
+    public static final String DOMAIN = ID;
+    public static final String PREFIX = ID + ":";
 
-    @Mod.Instance(MOD_ID)
+    public static final String MAJOR_VERSION = "@MAJOR@";
+    public static final String MINOR_VERSION = "@MINOR@";
+    public static final String REVISION_VERSION = "@REVIS@";
+    public static final String BUILD_VERSION = "@BUILD@";
+    public static final String VERSION = MAJOR_VERSION + "." + MINOR_VERSION + "." + REVISION_VERSION + "." + BUILD_VERSION;
+
+    public static final String ASSETS_PATH = "/assets/icbm/";
+    public static final String TEXTURE_PATH = "textures/";
+    public static final String GUI_PATH = TEXTURE_PATH + "gui/";
+    public static final String MODEL_PREFIX = "models/";
+    public static final String MODEL_DIRECTORY = ASSETS_PATH + MODEL_PREFIX;
+
+    public static final String MODEL_TEXTURE_PATH = TEXTURE_PATH + MODEL_PREFIX;
+    public static final String BLOCK_PATH = TEXTURE_PATH + "blocks/";
+    public static final String ITEM_PATH = TEXTURE_PATH + "items/";
+
+    public static final Logger LOGGER = LogManager.getLogger(NAME);
+
+    @Mod.Instance(ID)
     public static MilitaryBaseDecor INSTANCE;
 
     @SidedProxy(clientSide = "com.builtbroken.militarybasedecor.ClientProxy", serverSide = "com.builtbroken.militarybasedecor.CommonProxy")
     private CommonProxy proxy;
 
-    //@Mod.Metadata(MOD_ID)
+    //@Mod.Metadata(ID)
     //private ModMetadata meta;
 
 
