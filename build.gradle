@@ -1,0 +1,114 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+    }
+}
+
+apply from: './BuiltBrokenScripts/index.gradle'
+apply plugin: 'forge'
+
+
+ext.buildProps = file "build.properties"
+
+buildProps.withReader {
+    def prop = new Properties()
+    prop.load(it)
+    ext.config = new ConfigSlurper().parse prop
+}
+
+if (project.getProperty("bambooshortPlanName") == "BBM-Dev") {
+    group = "dev.builtbroken.militarybasedecor"
+    archivesBaseName = "MilitaryBaseDecor"
+} else {
+    group = "dev.builtbroken.militarybasedecor"
+    archivesBaseName = "MilitaryBaseDecor"
+}
+
+version = "${project.minecraft.version}-${config.version.mod.major}.${config.version.mod.minor}.${config.version.mod.revis}b"
+
+// This is used to set the local version
+if (project.hasProperty("bambooBuildNumber"))
+    version += project.bambooBuildNumber
+else
+    version += "NIGHTLY"
+println "version = "+ version
+
+println "Current Minecraft version = " + minecraft.apiVersion
+
+def currentJvm = org.gradle.internal.jvm.Jvm.current()
+println "Current Java version = " + currentJvm
+
+
+archivesBaseName = "BasicIndustry"
+
+minecraft {
+	replace "@MAJOR@", config.version.mod.major
+	replace "@MINOR@", config.version.mod.minor
+	replace "@REVIS@", config.version.mod.revis
+	
+	if (project.hasProperty("bambooBuildNumber")) {
+		replace "@BUILD@", project.bambooBuildNumber
+	}
+	else {
+		replace "@BUILD@", "nightly"
+	}
+}
+
+
+processResources {
+	from 'build.properties'
+}
+
+task copyBuildXml(type: Copy) {
+    from 'build.properties'
+    into 'output'
+}
+
+task apiZip(type: Zip) {
+    classifier = 'api'
+    from sourceSets*.allSource
+    include 'artillects/api/**'
+    destinationDir = file 'output'
+}
+
+artifacts {
+    archives apiZip
+}
+
+repositories {
+    maven {
+        name "BuiltBroken"
+        url "http://ci.builtbroken.com/maven/"
+    }
+    maven {
+        name "Mobius Repo"
+        url "http://mobiusstrip.eu/maven"
+    }
+    maven {
+        name 'CB Repo'
+        url "http://chickenbones.net/maven/"
+    }
+    maven { 
+        name 'OC Maven'
+        url = "http://maven.cil.li/" }
+}
+
+dependencies 
+{
+    testCompile 'junit:junit:4.11'
+    compile "mcp.mobius.waila:Waila:1.5.8a_1.7.10"
+    compile "li.cil.oc:OpenComputers:MC1.7.10-1.4.0.+:dev"
+    compile "dev.builtbroken.voltzengine:VoltzEngine:1.7.10-0.+:deobf-dev"
+}
