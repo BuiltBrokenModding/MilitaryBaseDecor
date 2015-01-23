@@ -7,6 +7,7 @@ import com.builtbroken.mc.lib.mod.loadable.ILoadable;
  */
 public class ColdWarModule implements ILoadable
 {
+
     @Override
     public void preInit()
     {

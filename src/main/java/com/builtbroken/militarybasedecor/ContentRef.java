@@ -1,6 +1,8 @@
 package com.builtbroken.militarybasedecor;
 
+import li.cil.oc.api.CreativeTab;
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 
 /** Reference block for all content created by the modules on this mod.
  * Do not assume the fields are not-null as the user has the option to
@@ -10,8 +12,11 @@ import net.minecraft.block.Block;
  */
 public class ContentRef
 {
+
     public static Block concrete;
     public static Block reinforcedGlass;
     public static Block reinforcedRails;
     public static Block spikes;
+    public static Block reinforcedDirt;
+    public static Block reinforcedBricks;
 }
