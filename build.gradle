@@ -67,26 +67,6 @@ minecraft {
 }
 
 
-processResources {
-	from 'build.properties'
-}
-
-task copyBuildXml(type: Copy) {
-    from 'build.properties'
-    into 'output'
-}
-
-task apiZip(type: Zip) {
-    classifier = 'api'
-    from sourceSets*.allSource
-    include 'artillects/api/**'
-    destinationDir = file 'output'
-}
-
-artifacts {
-    archives apiZip
-}
-
 repositories {
     maven {
         name "BuiltBroken"
