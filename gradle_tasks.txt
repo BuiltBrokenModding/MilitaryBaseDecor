@@ -1,0 +1,214 @@
+To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: http://gradle.org/docs/2.2.1/userguide/gradle_daemon.html.
+version = 1.7.10-0.0.1bNIGHTLY
+Current Minecraft version = 1.7.10-10.13.2.1277
+Current Java version = 1.7.0_67 (Oracle Corporation 24.65-b04)
+****************************
+ Powered By MCP:             
+ http://mcp.ocean-labs.de/   
+ Searge, ProfMobius, Fesh0r, 
+ R4wk, ZeuX, IngisKahn, bspkrs
+ MCP Data version : unknown
+****************************
+:tasks
+
+------------------------------------------------------------
+All tasks runnable from root project
+------------------------------------------------------------
+
+Build tasks
+-----------
+apiClasses - Assembles classes 'api'.
+    compileApiJava - Compiles Java source 'api:java'.
+    compileApiScala - Compiles the api Scala source.
+    processApiResources - Processes JVM resources 'api:resources'.
+assemble - Assembles the outputs of this project. [jar]
+    extractMcpData
+    extractUserDev
+    genSrgs
+    getVersionJson
+    reobf
+build - Assembles and tests this project. [assemble, check]
+buildDependents - Assembles and tests this project and all projects that depend on it. [build]
+buildNeeded - Assembles and tests this project and all projects it depends on. [build]
+classes - Assembles classes 'main'. [apiClasses]
+    compileJava - Compiles Java source 'main:java'.
+    compileScala - Compiles the main Scala source.
+    processResources - Processes JVM resources 'main:resources'.
+    sourceMainJava
+    sourceMainScala
+clean - Deletes the build directory.
+    makePretty
+jar - Assembles a jar archive containing the main classes. [classes]
+    copyBuildXml
+testClasses - Assembles classes 'test'. [apiClasses, classes]
+    compileTestJava - Compiles Java source 'test:java'.
+    compileTestScala - Compiles the test Scala source.
+    processTestResources - Processes JVM resources 'test:resources'.
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build. [incubating]
+wrapper - Generates Gradle wrapper files. [incubating]
+
+Documentation tasks
+-------------------
+javadoc - Generates Javadoc API documentation for the main source code. [classes]
+scaladoc - Generates Scaladoc for the main source code. [apiClasses, classes]
+
+ForgeGradle tasks
+-----------------
+cleanCache - Cleares the ForgeGradle cache. DONT RUN THIS unless you want a fresh start, or the dev tells you to.
+debugClient - Runs the Minecraft client in debug mode [jar]
+    copyNativesLegacy
+    extractNatives
+    extractUserDev
+    getAssets
+    getAssetsIndex
+    getVersionJson
+    makeStart
+debugServer - Runs the Minecraft serevr in debug mode [jar]
+    copyNativesLegacy
+    extractNatives
+    extractUserDev
+    getAssets
+    getAssetsIndex
+    getVersionJson
+    makeStart
+runClient - Runs the Minecraft client [jar]
+    copyNativesLegacy
+    extractNatives
+    extractUserDev
+    getAssets
+    getAssetsIndex
+    getVersionJson
+    makeStart
+runServer - Runs the Minecraft Server [jar]
+    copyNativesLegacy
+    extractNatives
+    extractUserDev
+    getAssets
+    getAssetsIndex
+    getVersionJson
+    makeStart
+setupCIWorkspace - Sets up the bare minimum to build a minecraft mod. Idea for CI servers
+    applyBinPatches
+    deobfBinJar
+    downloadClient
+    downloadMcpTools
+    downloadServer
+    extractMcpData
+    extractUserDev
+    genSrgs
+    getVersionJson
+    mergeJars
+setupDecompWorkspace - DevWorkspace + the deobfuscated Minecraft source linked as a source jar.
+    copyNativesLegacy
+    decompile
+    deobfuscateJar
+    downloadClient
+    downloadMcpTools
+    downloadServer
+    extractMcpData
+    extractMinecraftSrc
+    extractNatives
+    extractUserDev
+    genSrgs
+    getAssets
+    getAssetsIndex
+    getVersionJson
+    makeStart
+    mergeJars
+    processSources
+    recompMinecraft
+    remapJar
+    repackMinecraft
+setupDevWorkspace - CIWorkspace + natives and assets to run and test Minecraft
+    applyBinPatches
+    copyNativesLegacy
+    deobfBinJar
+    downloadClient
+    downloadMcpTools
+    downloadServer
+    extractMcpData
+    extractNatives
+    extractUserDev
+    genSrgs
+    getAssets
+    getAssetsIndex
+    getVersionJson
+    makeStart
+    mergeJars
+
+Help tasks
+----------
+components - Displays the components produced by root project 'MilitaryBaseDecor'. [incubating]
+dependencies - Displays all dependencies declared in root project 'MilitaryBaseDecor'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'MilitaryBaseDecor'.
+help - Displays a help message.
+projects - Displays the sub-projects of root project 'MilitaryBaseDecor'.
+properties - Displays the properties of root project 'MilitaryBaseDecor'.
+tasks - Displays the tasks runnable from root project 'MilitaryBaseDecor'.
+
+IDE tasks
+---------
+cleanEclipse - Cleans all Eclipse files.
+    cleanEclipseClasspath
+    cleanEclipseJdt
+    cleanEclipseProject
+cleanIdea - Cleans IDEA project files (IML, IPR)
+    cleanIdeaModule
+    cleanIdeaProject
+eclipse - Generates all Eclipse files.
+    eclipseClasspath - Generates the Eclipse classpath file.
+    eclipseJdt - Generates the Eclipse JDT settings file.
+    eclipseProject - Generates the Eclipse project file.
+idea - Generates IDEA project files (IML, IPR, IWS)
+    ideaModule - Generates IDEA module files (IML)
+    ideaProject - Generates IDEA project file (IPR)
+    ideaWorkspace - Generates an IDEA workspace file (IWS)
+
+Publishing tasks
+----------------
+generatePomFileForMavenJavaPublication - Generates the Maven POM file for publication 'mavenJava'.
+publish - Publishes all publications produced by this project. [publishMavenJavaPublicationToMavenRepository]
+publishMavenJavaPublicationToMavenLocal - Publishes Maven publication 'mavenJava' to the local Maven repository. [classes, generatePomFileForMavenJavaPublication, jar]
+    deobfJar
+publishMavenJavaPublicationToMavenRepository - Publishes Maven publication 'mavenJava' to Maven repository 'maven'. [classes, generatePomFileForMavenJavaPublication, jar]
+    deobfJar
+publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache. [publishMavenJavaPublicationToMavenLocal]
+
+Upload tasks
+------------
+uploadArchives - Uploads all artifacts belonging to configuration ':archives' [jar]
+    extractMcpData
+    extractUserDev
+    genSrgs
+    getVersionJson
+    reobf
+
+Verification tasks
+------------------
+check - Runs all checks. [test]
+test - Runs the unit tests. [classes, testClasses]
+
+Other tasks
+-----------
+apiZip
+cleanIdeaWorkspace
+genIntellijRuns
+install - Installs the 'archives' artifacts into the local Maven repository. [jar]
+javadocJar [javadoc]
+scalaApiConsole - Starts a Scala REPL with the api runtime class path. [apiClasses]
+scalaConsole - Starts a Scala REPL with the main runtime class path. [classes]
+scalaTestConsole - Starts a Scala REPL with the test runtime class path. [classes, testClasses]
+sourcesJar
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+Pattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
+
+BUILD SUCCESSFUL
+
+Total time: 1 mins 25.439 secs
