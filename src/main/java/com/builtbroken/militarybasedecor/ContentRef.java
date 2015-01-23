@@ -19,4 +19,5 @@ public class ContentRef
     public static Block spikes;
     public static Block reinforcedDirt;
     public static Block reinforcedBricks;
+    public static Block barbedWire;
 }
