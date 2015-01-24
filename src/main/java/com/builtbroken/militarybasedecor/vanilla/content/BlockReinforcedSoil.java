@@ -7,18 +7,21 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import scala.reflect.internal.Types;
 
 import java.util.List;
 
 /**
  * Created by Ole on 23.01.2015.
  */
-public class BlockReinforcedSoil extends Block {
+public class BlockReinforcedSoil extends Block
+{
+
+    public static float RESISTANCE_SCALE = 5;
 
     public BlockReinforcedSoil()
     {
@@ -44,17 +47,27 @@ public class BlockReinforcedSoil extends Block {
     public float getBlockHardness(World world, int x, int y, int z)
     {
         int meta = world.getBlockMetadata(x, y, z);
-        if(meta < SubTypes.values().length)
+        if (meta < ReinforcedSoilMeta.values().length)
         {
-            return SubTypes.values()[meta].hardness;
+            return ReinforcedSoilMeta.values()[meta].hardness;
         }
         return this.blockHardness;
+    }
+
+    public float getExplosionResistance(Entity entity, World world, int x, int y, int z, double explosionX, double explosionY, double explosionZ)
+    {
+        int meta = world.getBlockMetadata(x, y, z);
+        if (meta < ReinforcedSoilMeta.values().length)
+        {
+            return ReinforcedSoilMeta.values()[meta].base_resistance * RESISTANCE_SCALE;
+        }
+        return super.getExplosionResistance(entity);
     }
 
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item item, CreativeTabs tab, List list)
     {
-        for(SubTypes type : SubTypes.values())
+        for (ReinforcedSoilMeta type : ReinforcedSoilMeta.values())
         {
             list.add(new ItemStack(item, 1, type.ordinal()));
         }
@@ -63,7 +76,7 @@ public class BlockReinforcedSoil extends Block {
     /**
      * Sub types for this block
      */
-    public static enum SubTypes
+    public static enum ReinforcedSoilMeta
     {
         DIRT(Blocks.dirt),
         SAND(Blocks.sand),
@@ -72,13 +85,13 @@ public class BlockReinforcedSoil extends Block {
         public final float hardness;
         public final float base_resistance;
 
-        private SubTypes(Block block)
+        private ReinforcedSoilMeta(Block block)
         {
             hardness = BlockUtility.getBlockHardness(block);
             base_resistance = BlockUtility.getBlockResistance(block);
         }
 
-        private SubTypes(float hardness, float base_resistance)
+        private ReinforcedSoilMeta(float hardness, float base_resistance)
         {
             this.hardness = hardness;
             this.base_resistance = base_resistance;
