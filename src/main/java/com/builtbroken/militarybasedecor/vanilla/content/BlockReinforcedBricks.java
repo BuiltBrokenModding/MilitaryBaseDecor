@@ -18,7 +18,7 @@ public class BlockReinforcedBricks extends Block {
         this.setBlockTextureName("reinforcedBricks");
         this.setHardness(3.0F);
         this.setResistance(40);
-        this.setStepSound(BlockButton.soundTypeStone);
+        this.setStepSound(Block.soundTypeStone);
     }
 
     @SideOnly(Side.CLIENT)

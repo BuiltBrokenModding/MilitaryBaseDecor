@@ -2,7 +2,6 @@ package com.builtbroken.militarybasedecor.coldwar.content;
 
 import java.util.List;
 
-import com.builtbroken.militarybasedecor.vanilla.content.BlockButton;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -27,7 +26,7 @@ public class BlockConcrete extends Block
         this.setBlockTextureName("concrete");
         this.setHardness(3.8f);
         this.setResistance(28);
-        this.setStepSound(BlockButton.soundTypeMetal);
+        this.setStepSound(Block.soundTypeMetal);
     }
 
     @Override

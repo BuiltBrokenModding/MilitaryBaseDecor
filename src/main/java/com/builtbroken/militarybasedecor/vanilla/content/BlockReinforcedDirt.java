@@ -18,7 +18,7 @@ public class BlockReinforcedDirt extends Block {
         this.setBlockTextureName("reinforcedDirt");
         this.setHardness(2.5F);
         this.setResistance(35);
-        this.setStepSound(BlockButton.soundTypeWood); // Dirt???
+        this.setStepSound(Block.soundTypeWood); // Dirt???
     }
 
     @SideOnly(Side.CLIENT)
