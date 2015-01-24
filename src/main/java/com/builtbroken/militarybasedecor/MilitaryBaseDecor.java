@@ -1,6 +1,7 @@
 package com.builtbroken.militarybasedecor;
 
 import com.builtbroken.mc.lib.mod.AbstractMod;
+import com.builtbroken.mc.lib.mod.ModCreativeTab;
 import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
 import cpw.mods.fml.common.Mod;
@@ -8,6 +9,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraft.item.ItemStack;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -28,7 +30,7 @@ public class MilitaryBaseDecor extends AbstractMod
     public static final String BUILD_VERSION = "@BUILD@";
     public static final String VERSION = MAJOR_VERSION + "." + MINOR_VERSION + "." + REVISION_VERSION + "." + BUILD_VERSION;
 
-    public static final String ASSETS_PATH = "/assets/icbm/";
+    public static final String ASSETS_PATH = "/assets/militarybasedecor/";
     public static final String TEXTURE_PATH = "textures/";
     public static final String GUI_PATH = TEXTURE_PATH + "gui/";
     public static final String MODEL_PREFIX = "models/";
@@ -51,15 +53,21 @@ public class MilitaryBaseDecor extends AbstractMod
 
 
 
-    public MilitaryBaseDecor()
-    {
+    public final ModCreativeTab CREATIVE_TAB;
+
+    public MilitaryBaseDecor() {
         super(ID);
+        CREATIVE_TAB = new ModCreativeTab("MilitaryBaseDecor");
+        CREATIVE_TAB.itemSorter = new ModCreativeTab.NameSorter();
     }
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         super.preInit(event);
+
+        CREATIVE_TAB.itemStack = new ItemStack(ContentRef.concrete);
+
         loader.applyModule(ColdWarModule.class, getConfig().getBoolean("ColdWar", "LoadModule", true, ""));
         loader.applyModule(VanillaModule.class, getConfig().getBoolean("Vanilla", "LoadModule", true, ""));
     }

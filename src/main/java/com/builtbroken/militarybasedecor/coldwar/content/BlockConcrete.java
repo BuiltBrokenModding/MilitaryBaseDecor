@@ -2,7 +2,6 @@ package com.builtbroken.militarybasedecor.coldwar.content;
 
 import java.util.List;
 
-import com.builtbroken.militarybasedecor.ContentRef;
 import com.builtbroken.militarybasedecor.vanilla.content.BlockButton;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -19,7 +18,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockConcrete extends Block
 {
-    private IIcon iconCompact, iconReinforced;
+    private IIcon iconCompact, iconReinforced, iconDark, iconDecor;
 
     public BlockConcrete()
     {
@@ -27,7 +26,7 @@ public class BlockConcrete extends Block
         this.setBlockName("concrete");
         this.setBlockTextureName("concrete");
         this.setHardness(3.8f);
-        this.setResistance(50);
+        this.setResistance(28);
         this.setStepSound(BlockButton.soundTypeMetal);
     }
 
@@ -40,6 +39,10 @@ public class BlockConcrete extends Block
                 return this.iconCompact;
             case 2:
                 return this.iconReinforced;
+            case 3:
+                return this.iconDark;
+            case 4:
+                return this.iconDecor;
         }
 
         return this.blockIcon;
@@ -51,8 +54,11 @@ public class BlockConcrete extends Block
     {
         super.registerBlockIcons(iconRegister);
 
+        this.blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", ""));
         this.iconCompact = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", "") + "Compact");
         this.iconReinforced = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", "") + "Reinforced");
+        this.iconDark = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", "") + "Dark");
+        this.iconDecor = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", "") + "Decor");
 
     }
 
@@ -67,6 +73,10 @@ public class BlockConcrete extends Block
                 return 38;
             case 2:
                 return 48;
+            case 3:
+                return 28;
+            case 4:
+                return 28;
         }
 
         return this.getExplosionResistance(par1Entity);

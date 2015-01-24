@@ -27,7 +27,7 @@ public class BlockReinforcedDirt extends Block {
     {
         super.registerBlockIcons(iconRegister);
 
-        this.blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(5));
+        this.blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", ""));
     }
 
     @Override

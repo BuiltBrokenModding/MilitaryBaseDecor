@@ -24,7 +24,7 @@ public class BlockMetalFence extends BlockFence {
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister)
     {
-        this.blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(5));
+        this.blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", ""));
     }
 
 }
