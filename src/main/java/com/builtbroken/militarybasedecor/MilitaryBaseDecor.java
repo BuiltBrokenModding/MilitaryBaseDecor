@@ -53,7 +53,7 @@ public class MilitaryBaseDecor extends AbstractMod
 
 
 
-    public final ModCreativeTab CREATIVE_TAB;
+    public static ModCreativeTab CREATIVE_TAB;
 
     public MilitaryBaseDecor() {
         super(ID);
@@ -65,8 +65,6 @@ public class MilitaryBaseDecor extends AbstractMod
     public void preInit(FMLPreInitializationEvent event)
     {
         super.preInit(event);
-
-        CREATIVE_TAB.itemStack = new ItemStack(ContentRef.concrete);
 
         loader.applyModule(ColdWarModule.class, getConfig().getBoolean("ColdWar", "LoadModule", true, ""));
         loader.applyModule(VanillaModule.class, getConfig().getBoolean("Vanilla", "LoadModule", true, ""));
