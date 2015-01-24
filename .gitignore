@@ -2,3 +2,5 @@
 .gradle/
 output/
 .settings/
+*.ipr
+*.iws
