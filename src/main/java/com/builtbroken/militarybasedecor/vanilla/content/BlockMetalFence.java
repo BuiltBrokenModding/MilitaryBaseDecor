@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.coldwar.content;
+package com.builtbroken.militarybasedecor.vanilla.content;
 
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.material.Material;
