@@ -7,29 +7,22 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
 
 import java.util.List;
 
 /**
  * Created by Ole on 23.01.2015.
  */
-public class BlockReinforcedSoil extends Block
+public class BlockReinforcedSoil extends BlockReinforced
 {
-
     public static float RESISTANCE_SCALE = 5;
 
     public BlockReinforcedSoil()
     {
-        super(Material.ground);
-        this.setBlockName("reinforcedSoil");
-        this.setBlockTextureName("reinforcedSoil");
-        this.setHardness(2.5F);
-        this.setResistance(35);
+        super(Material.ground, "reinforcedSoil");
         this.setStepSound(Block.soundTypeWood);
     }
 
@@ -44,9 +37,8 @@ public class BlockReinforcedSoil extends Block
     }
 
     @Override
-    public float getBlockHardness(World world, int x, int y, int z)
+    public float getBlockHardness(int meta)
     {
-        int meta = world.getBlockMetadata(x, y, z);
         if (meta < ReinforcedSoilMeta.values().length)
         {
             return ReinforcedSoilMeta.values()[meta].hardness;
@@ -54,14 +46,14 @@ public class BlockReinforcedSoil extends Block
         return this.blockHardness;
     }
 
-    public float getExplosionResistance(Entity entity, World world, int x, int y, int z, double explosionX, double explosionY, double explosionZ)
+    @Override
+    public float getBlockResistance(int meta)
     {
-        int meta = world.getBlockMetadata(x, y, z);
         if (meta < ReinforcedSoilMeta.values().length)
         {
             return ReinforcedSoilMeta.values()[meta].base_resistance * RESISTANCE_SCALE;
         }
-        return super.getExplosionResistance(entity);
+        return 35;
     }
 
     @SideOnly(Side.CLIENT)
