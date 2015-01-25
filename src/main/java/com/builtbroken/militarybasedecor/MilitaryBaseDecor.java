@@ -2,6 +2,7 @@ package com.builtbroken.militarybasedecor;
 
 import com.builtbroken.mc.lib.mod.AbstractMod;
 import com.builtbroken.mc.lib.mod.ModCreativeTab;
+import com.builtbroken.militarybasedecor.civilwar.CivilWarModule;
 import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
 import cpw.mods.fml.common.Mod;
@@ -9,9 +10,6 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraft.item.ItemStack;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
 
@@ -31,6 +29,16 @@ public class MilitaryBaseDecor extends AbstractMod
     public static final String REVISION_VERSION = "@REVIS@";
     public static final String BUILD_VERSION = "@BUILD@";
     public static final String VERSION = MAJOR_VERSION + "." + MINOR_VERSION + "." + REVISION_VERSION + "." + BUILD_VERSION;
+
+    public static final String ASSETS_PATH = "/assets/icbm/";
+    public static final String TEXTURE_PATH = "textures/";
+    public static final String GUI_PATH = TEXTURE_PATH + "gui/";
+    public static final String MODEL_PREFIX = "models/";
+    public static final String MODEL_DIRECTORY = ASSETS_PATH + MODEL_PREFIX;
+
+    public static final String MODEL_TEXTURE_PATH = TEXTURE_PATH + MODEL_PREFIX;
+    public static final String BLOCK_PATH = TEXTURE_PATH + "blocks/";
+    public static final String ITEM_PATH = TEXTURE_PATH + "items/";
 
     @Mod.Instance(ID)
     public static MilitaryBaseDecor INSTANCE;
@@ -54,6 +62,7 @@ public class MilitaryBaseDecor extends AbstractMod
         getManager().setTab(CREATIVE_TAB);
 
         loader.applyModule(new ColdWarModule());
+        loader.applyModule(new CivilWarModule());
         loader.applyModule(new VanillaModule());
     }
 

@@ -2,6 +2,7 @@ package com.builtbroken.militarybasedecor.coldwar;
 
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.coldwar.content.BlockConcrete;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
