@@ -53,8 +53,8 @@ public class TileSimpleCamo extends TileEnt implements IPacketReceiver
                 stack = player.getCurrentEquippedItem().copy();
                 stack.stackSize = 1;
                 sendDescPacket();
+                return true;
             }
-            return true;
         }
         return false;
     }

@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.vanilla.content;
+package com.builtbroken.militarybasedecor.vanilla.content.reinforced;
 
 import com.builtbroken.mc.lib.helper.BlockUtility;
 import cpw.mods.fml.relauncher.Side;
@@ -16,14 +16,14 @@ import java.util.List;
 /**
  * Created by Ole on 23.01.2015.
  */
-public class BlockReinforcedStone extends BlockReinforced
+public class BlockReinforcedSoil extends BlockReinforced
 {
     public static float RESISTANCE_SCALE = 5;
 
-    public BlockReinforcedStone()
+    public BlockReinforcedSoil()
     {
-        super(Material.rock, "reinforcedStone");
-        this.setStepSound(Block.soundTypeStone);
+        super(Material.ground, "reinforcedSoil");
+        this.setStepSound(soundTypeWood);
     }
 
     @SideOnly(Side.CLIENT)
@@ -31,16 +31,17 @@ public class BlockReinforcedStone extends BlockReinforced
     public void registerBlockIcons(IIconRegister iconRegister)
     {
         super.registerBlockIcons(iconRegister);
-
+        //TODO use block textures that this block mimics
+        //TOOD add overlay on render to render edge of block as 2px wood frame
         this.blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", ""));
     }
 
     @Override
     public float getBlockHardness(int meta)
     {
-        if (meta < ReinforcedStoneMeta.values().length)
+        if (meta < ReinforcedSoilMeta.values().length)
         {
-            return ReinforcedStoneMeta.values()[meta].hardness;
+            return ReinforcedSoilMeta.values()[meta].hardness;
         }
         return this.blockHardness;
     }
@@ -48,9 +49,9 @@ public class BlockReinforcedStone extends BlockReinforced
     @Override
     public float getBlockResistance(int meta)
     {
-        if (meta < ReinforcedStoneMeta.values().length)
+        if (meta < ReinforcedSoilMeta.values().length)
         {
-            return ReinforcedStoneMeta.values()[meta].base_resistance * RESISTANCE_SCALE;
+            return ReinforcedSoilMeta.values()[meta].base_resistance * RESISTANCE_SCALE;
         }
         return 35;
     }
@@ -58,7 +59,7 @@ public class BlockReinforcedStone extends BlockReinforced
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item item, CreativeTabs tab, List list)
     {
-        for (ReinforcedStoneMeta type : ReinforcedStoneMeta.values())
+        for (ReinforcedSoilMeta type : ReinforcedSoilMeta.values())
         {
             list.add(new ItemStack(item, 1, type.ordinal()));
         }
@@ -67,27 +68,25 @@ public class BlockReinforcedStone extends BlockReinforced
     /**
      * Sub types for this block
      */
-    public static enum ReinforcedStoneMeta
+    public static enum ReinforcedSoilMeta
     {
-        STONE(Blocks.stone),
-        BRICK(Blocks.stonebrick);
+        DIRT(Blocks.dirt),
+        SAND(Blocks.sand),
+        GRASS(Blocks.grass);
 
         public final float hardness;
         public final float base_resistance;
 
-        private ReinforcedStoneMeta(Block block)
+        private ReinforcedSoilMeta(Block block)
         {
             hardness = BlockUtility.getBlockHardness(block);
             base_resistance = BlockUtility.getBlockResistance(block);
         }
 
-        private ReinforcedStoneMeta(float hardness, float base_resistance)
+        private ReinforcedSoilMeta(float hardness, float base_resistance)
         {
             this.hardness = hardness;
             this.base_resistance = base_resistance;
         }
     }
 }
-
-
-

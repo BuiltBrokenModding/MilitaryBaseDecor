@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.vanilla.content;
+package com.builtbroken.militarybasedecor.vanilla.content.reinforced;
 
 import com.builtbroken.mc.lib.helper.BlockUtility;
 import cpw.mods.fml.relauncher.Side;
@@ -22,7 +22,7 @@ public class BlockReinforcedCasing extends BlockReinforced
     public BlockReinforcedCasing()
     {
         super(Material.ground, "reinforcedCasing");
-        this.setStepSound(Block.soundTypeWood);
+        this.setStepSound(soundTypeWood);
     }
 
     @SideOnly(Side.CLIENT)

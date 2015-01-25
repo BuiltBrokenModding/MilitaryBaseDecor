@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.vanilla.content;
+package com.builtbroken.militarybasedecor.vanilla.content.reinforced;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
