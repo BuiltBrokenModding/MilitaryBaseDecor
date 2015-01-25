@@ -13,6 +13,8 @@ import net.minecraft.item.ItemStack;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.swing.*;
+
 /**
  * Created by robert on 11/18/2014.
  */
@@ -30,35 +32,17 @@ public class MilitaryBaseDecor extends AbstractMod
     public static final String BUILD_VERSION = "@BUILD@";
     public static final String VERSION = MAJOR_VERSION + "." + MINOR_VERSION + "." + REVISION_VERSION + "." + BUILD_VERSION;
 
-    public static final String ASSETS_PATH = "/assets/militarybasedecor/";
-    public static final String TEXTURE_PATH = "textures/";
-    public static final String GUI_PATH = TEXTURE_PATH + "gui/";
-    public static final String MODEL_PREFIX = "models/";
-    public static final String MODEL_DIRECTORY = ASSETS_PATH + MODEL_PREFIX;
-
-    public static final String MODEL_TEXTURE_PATH = TEXTURE_PATH + MODEL_PREFIX;
-    public static final String BLOCK_PATH = TEXTURE_PATH + "blocks/";
-    public static final String ITEM_PATH = TEXTURE_PATH + "items/";
-
-    public static final Logger LOGGER = LogManager.getLogger(NAME);
-
     @Mod.Instance(ID)
     public static MilitaryBaseDecor INSTANCE;
 
     @SidedProxy(clientSide = "com.builtbroken.militarybasedecor.ClientProxy", serverSide = "com.builtbroken.militarybasedecor.CommonProxy")
     public static CommonProxy proxy;
 
-    //@Mod.Metadata(ID)
-    //private ModMetadata meta;
-
-
-
     public static ModCreativeTab CREATIVE_TAB;
 
-    public MilitaryBaseDecor() {
+    public MilitaryBaseDecor()
+    {
         super(ID);
-        CREATIVE_TAB = new ModCreativeTab("MilitaryBaseDecor");
-        CREATIVE_TAB.itemSorter = new ModCreativeTab.NameSorter();
     }
 
     @Mod.EventHandler
@@ -66,8 +50,11 @@ public class MilitaryBaseDecor extends AbstractMod
     {
         super.preInit(event);
 
-        loader.applyModule(ColdWarModule.class, getConfig().getBoolean("ColdWar", "LoadModule", true, ""));
-        loader.applyModule(VanillaModule.class, getConfig().getBoolean("Vanilla", "LoadModule", true, ""));
+        CREATIVE_TAB = new ModCreativeTab("MilitaryBaseDecor");
+        getManager().setTab(CREATIVE_TAB);
+
+        loader.applyModule(new ColdWarModule());
+        loader.applyModule(new VanillaModule());
     }
 
     @Mod.EventHandler
