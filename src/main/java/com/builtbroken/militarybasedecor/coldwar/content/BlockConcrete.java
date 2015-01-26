@@ -84,7 +84,7 @@ public class BlockConcrete extends Block
     @Override
     public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List par3List)
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
             par3List.add(new ItemStack(par1, 1, i));
         }

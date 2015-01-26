@@ -12,6 +12,8 @@ import net.minecraft.world.World;
 /**
  * Created by Ole on 23.01.2015.
  */
+
+// TODO fix crashes on block placement!
 public class BlockBarbedWire extends BlockPane {
 
     public BlockBarbedWire()
