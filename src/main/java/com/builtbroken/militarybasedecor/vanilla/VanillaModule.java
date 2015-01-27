@@ -33,7 +33,7 @@ public class VanillaModule implements ILoadable
         reinforcedStone = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedStone.class);
         reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class);
         reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class);
-        metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockMetalFence.class);
+        //metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockMetalFence.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class);
     }
 
