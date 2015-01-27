@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockConcrete extends Block
 {
-    private IIcon iconCompact, iconReinforced, iconDark, iconDecor;
+    private IIcon iconReinforced, iconPlated, iconDark, iconDecor;
 
     public BlockConcrete()
     {
@@ -35,7 +35,7 @@ public class BlockConcrete extends Block
         switch (metadata)
         {
             case 1:
-                return this.iconCompact;
+                return this.iconPlated;
             case 2:
                 return this.iconReinforced;
             case 3:
@@ -53,8 +53,7 @@ public class BlockConcrete extends Block
     {
         super.registerBlockIcons(iconRegister);
 
-        this.blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", ""));
-        this.iconCompact = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", "") + "Compact");
+        this.iconPlated = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", "") + "Plated");
         this.iconReinforced = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", "") + "Reinforced");
         this.iconDark = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", "") + "Dark");
         this.iconDecor = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", "") + "Decor");
@@ -69,9 +68,9 @@ public class BlockConcrete extends Block
         switch (metadata)
         {
             case 1:
-                return 38;
-            case 2:
                 return 48;
+            case 2:
+                return 38;
             case 3:
                 return 28;
             case 4:
