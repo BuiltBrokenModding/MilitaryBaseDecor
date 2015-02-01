@@ -18,8 +18,8 @@ import net.minecraftforge.client.model.IModelCustom;
 // TODO Finish this class
 public class RenderWoodenBlockade extends Render implements IItemRenderer {
 
-    public static final IModelCustom SMALL = AdvancedModelLoader.loadModel(new ResourceLocation(MilitaryBaseDecor.ID, MilitaryBaseDecor.MODEL_PREFIX + "blockade.tcn"));
-    public static final ResourceLocation SMALL_TEXTURE = new ResourceLocation(MilitaryBaseDecor.ID, MilitaryBaseDecor.MODEL_TEXTURE_PATH + "blockade.png");
+    public static final IModelCustom SMALL = AdvancedModelLoader.loadModel(new ResourceLocation(MilitaryBaseDecor.DOMAIN, MilitaryBaseDecor.MODEL_PREFIX + "blockade.tcn"));
+    public static final ResourceLocation SMALL_TEXTURE = new ResourceLocation(MilitaryBaseDecor.DOMAIN, MilitaryBaseDecor.MODEL_TEXTURE_PATH + "blockade.png");
 
     public RenderWoodenBlockade(float f)
     {

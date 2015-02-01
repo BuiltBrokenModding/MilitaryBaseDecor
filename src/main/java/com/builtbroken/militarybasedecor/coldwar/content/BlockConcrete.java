@@ -14,7 +14,6 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-
 public class BlockConcrete extends Block
 {
     private IIcon iconReinforced, iconPlated, iconDark, iconDecor;

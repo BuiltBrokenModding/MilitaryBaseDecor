@@ -11,19 +11,18 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-import javax.swing.*;
-
 /**
  * Created by robert on 11/18/2014.
  */
-@Mod(modid = MilitaryBaseDecor.ID, name = MilitaryBaseDecor.NAME, version = MilitaryBaseDecor.VERSION, dependencies = "required-after:VoltzEngine;")
-public class MilitaryBaseDecor extends AbstractMod
+@Mod(modid = MilitaryBaseDecor.DOMAIN, name = MilitaryBaseDecor.NAME, version = MilitaryBaseDecor.VERSION, dependencies = "required-after:VoltzEngine")
+public final class MilitaryBaseDecor extends AbstractMod
 {
-    public static final String ID = "militarybasedecor";
+    /** Name of the channel and mod ID. */
     public static final String NAME = "Military Base Decor";
-    public static final String DOMAIN = ID;
-    public static final String PREFIX = ID + ":";
+    public static final String DOMAIN = "militarybasedecor";
+    public static final String PREFIX = DOMAIN + ":";
 
+    /** The version of MilitaryBaseDecor. */
     public static final String MAJOR_VERSION = "@MAJOR@";
     public static final String MINOR_VERSION = "@MINOR@";
     public static final String REVISION_VERSION = "@REVIS@";
@@ -40,7 +39,7 @@ public class MilitaryBaseDecor extends AbstractMod
     public static final String BLOCK_PATH = TEXTURE_PATH + "blocks/";
     public static final String ITEM_PATH = TEXTURE_PATH + "items/";
 
-    @Mod.Instance(ID)
+    @Mod.Instance(DOMAIN)
     public static MilitaryBaseDecor INSTANCE;
 
     @SidedProxy(clientSide = "com.builtbroken.militarybasedecor.ClientProxy", serverSide = "com.builtbroken.militarybasedecor.CommonProxy")
@@ -50,7 +49,7 @@ public class MilitaryBaseDecor extends AbstractMod
 
     public MilitaryBaseDecor()
     {
-        super(ID);
+        super(DOMAIN);
     }
 
     @Mod.EventHandler
