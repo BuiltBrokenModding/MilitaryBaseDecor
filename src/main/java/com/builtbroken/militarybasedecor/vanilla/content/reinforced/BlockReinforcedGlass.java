@@ -1,5 +1,6 @@
 package com.builtbroken.militarybasedecor.vanilla.content.reinforced;
 
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.world.IBlockAccess;
@@ -14,6 +15,7 @@ public class BlockReinforcedGlass extends Block
         super(Material.glass);
         this.setBlockName("glassReinforced");
         this.setBlockTextureName("glassReinforced");
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
         this.setResistance(48);
     }
 

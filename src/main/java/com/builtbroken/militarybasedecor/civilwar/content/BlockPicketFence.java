@@ -15,7 +15,7 @@ public class BlockPicketFence extends BlockPane {
 
     public BlockPicketFence()
     {
-        super("militarybasedecor:BlockPicketFence", "militarybasedecor:BlockPicketFence", Material.iron, true);
+        super("militarybasedecor:picketFence", "militarybasedecor:picketFence", Material.iron, true);
         this.setBlockName("picketFence");
         this.setBlockTextureName("picketFence");
         this.setHardness(3.0F);

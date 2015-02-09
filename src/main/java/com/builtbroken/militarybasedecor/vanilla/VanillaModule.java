@@ -2,14 +2,16 @@ package com.builtbroken.militarybasedecor.vanilla;
 
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.vanilla.content.*;
 import com.builtbroken.militarybasedecor.vanilla.content.camo.TileSimpleCamo;
+import com.builtbroken.militarybasedecor.vanilla.content.items.ItemBag;
+import com.builtbroken.militarybasedecor.vanilla.content.items.ItemBagConcrete;
 import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedCasing;
 import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedGlass;
 import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedSoil;
 import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedStone;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -26,6 +28,9 @@ public class VanillaModule implements ILoadable
     public static Block simpleCamoBlock;
     public static Block metalFence;
 
+    public static Item bagConcrete;
+    public static Item leatherBag;
+
     @Override
     public void preInit()
     {
@@ -35,6 +40,9 @@ public class VanillaModule implements ILoadable
         reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class);
         //metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockMetalFence.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class);
+
+        bagConcrete = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagConcrete.class);
+        leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
     }
 
     @Override
@@ -48,5 +56,9 @@ public class VanillaModule implements ILoadable
     {
         //Reinforced wood casing
         GameRegistry.addShapedRecipe(new ItemStack(reinforcedCasing, 1, 0), new Object[]{"SWS", "WSW" , "SWS", 'S', Items.stick, 'W', Blocks.planks});
+        //Leather Bag
+        GameRegistry.addShapedRecipe(new ItemStack(leatherBag, 1, 0), new Object[]{"S S", "L L", "LLL", 'S', Items.string, 'L', Items.leather});
+        //Bag of Concrete
+        GameRegistry.addShapelessRecipe(new ItemStack(bagConcrete, 1, 0), new Object[]{Blocks.gravel, Blocks.sand, leatherBag});
     }
 }

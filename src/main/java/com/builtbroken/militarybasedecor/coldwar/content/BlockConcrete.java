@@ -2,6 +2,7 @@ package com.builtbroken.militarybasedecor.coldwar.content;
 
 import java.util.List;
 
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -26,6 +27,7 @@ public class BlockConcrete extends Block
         this.setHardness(3.8f);
         this.setResistance(28);
         this.setStepSound(Block.soundTypeMetal);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
 
     @Override
@@ -52,9 +54,9 @@ public class BlockConcrete extends Block
     {
         super.registerBlockIcons(iconRegister);
 
-        this.iconPlated = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", "") + "Plated");
-        this.iconReinforced = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", "") + "Reinforced");
-        this.iconDark = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", "") + "Dark");
+        this.iconPlated = iconRegister.registerIcon(this.getTextureName().replace("tile.", "") + "Plated");
+        this.iconReinforced = iconRegister.registerIcon(this.getTextureName().replace("tile.", "") + "Reinforced");
+        this.iconDark = iconRegister.registerIcon(this.getTextureName().replace("tile.", "") + "Dark");
         this.iconDecor = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", "") + "Decor");
 
     }

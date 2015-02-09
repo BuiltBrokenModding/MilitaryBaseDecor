@@ -1,6 +1,7 @@
 package com.builtbroken.militarybasedecor.vanilla.content.reinforced;
 
 import com.builtbroken.mc.lib.helper.BlockUtility;
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -24,6 +25,7 @@ public class BlockReinforcedStone extends BlockReinforced
     {
         super(Material.rock, "reinforcedStone");
         this.setStepSound(soundTypeStone);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
 
     @SideOnly(Side.CLIENT)

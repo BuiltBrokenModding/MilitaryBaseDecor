@@ -3,6 +3,7 @@ package com.builtbroken.militarybasedecor.coldwar;
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.coldwar.content.BlockBarbedWire;
 import com.builtbroken.militarybasedecor.coldwar.content.BlockConcrete;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
@@ -23,6 +24,7 @@ public class ColdWarModule implements ILoadable
     public void preInit()
     {
         concrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcrete.class);
+        // barbedWire = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBarbedWire.class);
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(concrete);
     }
 
