@@ -26,7 +26,7 @@ public class BlockConcrete extends Block
         this.setBlockTextureName("concrete");
         this.setHardness(3.8f);
         this.setResistance(28);
-        this.setStepSound(Block.soundTypeMetal);
+        this.setStepSound(Block.soundTypeStone);
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
 

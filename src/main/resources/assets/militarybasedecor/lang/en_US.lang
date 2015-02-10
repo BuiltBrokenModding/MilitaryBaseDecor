@@ -4,11 +4,16 @@ itemGroup.MilitaryBaseDecor=Military Base Decor
 tile.concrete.0.name=Concrete
 tile.concrete.1.name=Compact Concrete
 tile.concrete.2.name=Reinforced Concrete
+tile.concrete.3.name=Dark Concrete
+tile.concrete.4.name=Decorative Concrete
 tile.reinforcedGlass.name=Reinforced Glass
+tile.asphalt.1.name=Asphalt
+tile.asphalt.2=name=Striped Asphalt
+tile.asphalt.3=Cracked Asphalt
 tile.spikes.0.name=Spikes
 tile.spikes.1.name=Poison Spikes
 tile.spikes.2.name=Flammable Spikes
-tile.reinforcedDirt.name=Reinforced Dirt
+tile.reinforcedSoil.name=Reinforced Dirt
 tile.reinforcedBricks.name=Reinforced Bricks
 tile.barbedWire.name=Barbed Wire
 tile.metalFence.name=Metal Fence
