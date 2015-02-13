@@ -2,6 +2,7 @@ package com.builtbroken.militarybasedecor.vanilla;
 
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.vanilla.content.BlockConcrete;
 import com.builtbroken.militarybasedecor.vanilla.content.camo.TileSimpleCamo;
 import com.builtbroken.militarybasedecor.vanilla.content.items.ItemBag;
 import com.builtbroken.militarybasedecor.vanilla.content.items.ItemBagConcrete;
@@ -27,6 +28,7 @@ public class VanillaModule implements ILoadable
     public static Block reinforcedCasing;
     public static Block simpleCamoBlock;
     public static Block metalFence;
+    public static Block concrete;
 
     public static Item bagConcrete;
     public static Item leatherBag;
@@ -38,11 +40,14 @@ public class VanillaModule implements ILoadable
         reinforcedStone = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedStone.class);
         reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class);
         reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class);
+        concrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcrete.class);
         //metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockMetalFence.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class);
 
         bagConcrete = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagConcrete.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
+
+        MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(concrete);
     }
 
     @Override
