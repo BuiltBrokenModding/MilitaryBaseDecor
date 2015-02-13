@@ -26,7 +26,7 @@ private IIcon iconStriped, iconCracked;
     {
         super(Material.rock);
         this.setBlockName("asphalt");
-        this.setBlockTextureName("asphalt");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "asphalt");
         this.setHardness(2.8f);
         this.setResistance(18);
         this.setStepSound(Block.soundTypeStone);
@@ -36,14 +36,6 @@ private IIcon iconStriped, iconCracked;
     @Override
     public IIcon getIcon(int side, int metadata)
     {
-        switch (metadata)
-        {
-            case 1:
-                return this.iconStriped;
-            case 2:
-                return this.iconCracked;
-        }
-
         return this.blockIcon;
     }
 
@@ -53,17 +45,18 @@ private IIcon iconStriped, iconCracked;
     {
         super.registerBlockIcons(iconRegister);
 
-        this.iconStriped = iconRegister.registerIcon(this.getTextureName().replace("tile.", "") + "Striped");
-        this.iconCracked = iconRegister.registerIcon(this.getTextureName().replace("tile.", "") + "Cracked");
+        //this.iconStriped = iconRegister.registerIcon(this.getTextureName().replace("tile.", "") + "Striped");
+        //this.iconCracked = iconRegister.registerIcon(this.getTextureName().replace("tile.", "") + "Cracked");
     }
 
     @Override
     public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List par3List)
     {
-        for (int i = 0; i < 5; i++)
-        {
-            par3List.add(new ItemStack(par1, 1, i));
-        }
+        //TODO when you get texture you can re-add the meta version - Dark
+        //for (int i = 0; i < 5; i++)
+        //{
+            par3List.add(new ItemStack(par1, 1, 0));
+        //}
     }
 
     @Override

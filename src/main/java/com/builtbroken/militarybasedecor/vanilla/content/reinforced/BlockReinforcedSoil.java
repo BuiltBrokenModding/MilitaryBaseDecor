@@ -32,10 +32,7 @@ public class BlockReinforcedSoil extends BlockReinforced
     @Override
     public void registerBlockIcons(IIconRegister iconRegister)
     {
-        super.registerBlockIcons(iconRegister);
-        //TODO use block textures that this block mimics
-        //TODO add overlay on render to render edge of block as 2px wood frame
-        this.blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", ""));
+
     }
 
     @Override

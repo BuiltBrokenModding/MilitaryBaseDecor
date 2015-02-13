@@ -32,9 +32,7 @@ public class BlockReinforcedStone extends BlockReinforced
     @Override
     public void registerBlockIcons(IIconRegister iconRegister)
     {
-        super.registerBlockIcons(iconRegister);
 
-        this.blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", ""));
     }
 
     @Override

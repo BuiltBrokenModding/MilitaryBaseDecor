@@ -1,6 +1,7 @@
 package com.builtbroken.militarybasedecor.vanilla.content.reinforced;
 
 import com.builtbroken.mc.lib.helper.BlockUtility;
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -23,14 +24,7 @@ public class BlockReinforcedCasing extends BlockReinforced
     {
         super(Material.ground, "reinforcedCasing");
         this.setStepSound(soundTypeWood);
-    }
-
-    @SideOnly(Side.CLIENT)
-    @Override
-    public void registerBlockIcons(IIconRegister iconRegister)
-    {
-        super.registerBlockIcons(iconRegister);
-        this.blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", ""));
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "wood_casing");
     }
 
     @Override

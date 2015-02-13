@@ -21,7 +21,7 @@ public class BlockBarbedWire extends BlockPane {
     {
         super("militarybasedecor:barbedWire", "militarybasedecor:barbedWire", Material.iron, true);
         this.setBlockName("barbedWire");
-        this.setBlockTextureName("barbedWire");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "barbedWire");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
         this.setHardness(5.0F);
         this.setResistance(20.0F);
@@ -31,12 +31,6 @@ public class BlockBarbedWire extends BlockPane {
     {
         entity.attackEntityFrom(DamageSource.cactus, 1.0F);
         entity.setInWeb();
-    }
-
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister)
-    {
-        this.blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().replace("tile.", ""));
     }
 }
 

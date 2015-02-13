@@ -6,6 +6,7 @@ import com.builtbroken.mc.core.network.packet.PacketType;
 import com.builtbroken.mc.lib.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
 import com.builtbroken.mc.prefab.tile.TileEnt;
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import cpw.mods.fml.common.network.ByteBufUtils;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -32,8 +33,9 @@ public class TileSimpleCamo extends TileEnt implements IPacketReceiver
 
     public TileSimpleCamo()
     {
-        super("TileCamo", Material.rock);
+        super("tileCamo", Material.rock);
         this.itemBlock = ItemBlockCamo.class;
+        this.setTextureName(MilitaryBaseDecor.PREFIX + "camo_simple");
     }
 
     @Override
