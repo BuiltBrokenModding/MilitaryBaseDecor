@@ -4,7 +4,9 @@ import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.coldwar.content.BlockAsphalt;
+import com.builtbroken.militarybasedecor.coldwar.content.BlockBarbedWire;
 import com.builtbroken.militarybasedecor.vanilla.content.BlockConcrete;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
@@ -14,6 +16,7 @@ import net.minecraft.item.ItemStack;
 public class ColdWarModule extends AbstractLoadable
 {
     public static Block asphalt;
+    public static Block barbedWire;
 
     @Override
     public void preInit()

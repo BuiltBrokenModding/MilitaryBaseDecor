@@ -19,7 +19,7 @@ public class BlockBarbedWire extends BlockPane {
 
     public BlockBarbedWire()
     {
-        super("militarybasedecor:barbedWire", "militarybasedecor:barbedWire", Material.iron, true);
+        super("ColdWarModule:barbedWire", "ColdWarModule:barbedWire", Material.iron, true);
         this.setBlockName("barbedWire");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "barbedWire");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
