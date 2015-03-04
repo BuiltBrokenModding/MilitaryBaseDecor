@@ -49,7 +49,7 @@ public final class MilitaryBaseDecor extends AbstractMod
 
     public MilitaryBaseDecor()
     {
-        super(DOMAIN);
+        super(DOMAIN, "MilitaryBaseDecor");
     }
 
     @Mod.EventHandler
