@@ -1,20 +1,16 @@
 ## Master language file
 itemGroup.MilitaryBaseDecor=Military Base Decor
 ## Misc Blocks
-tile.concrete.0.name=Concrete
-tile.concrete.1.name=Compact Concrete
-tile.concrete.2.name=Reinforced Concrete
-tile.concrete.3.name=Dark Concrete
-tile.concrete.4.name=Decorative Concrete
+tile.militarybasedecor:tileCamo.0.name=Basic Camo Block
+tile.reinforcedCasing.name=Reinforced Casing
+tile.glassReinforced.name=Reinforced Glass
+tile.concrete.name=Concrete
 tile.reinforcedGlass.name=Reinforced Glass
-tile.asphalt.1.name=Asphalt
-tile.asphalt.2=name=Striped Asphalt
-tile.asphalt.3=Cracked Asphalt
-tile.spikes.0.name=Spikes
-tile.spikes.1.name=Poison Spikes
-tile.spikes.2.name=Flammable Spikes
+tile.asphalt.name=Asphalt
 tile.reinforcedSoil.name=Reinforced Dirt
-tile.reinforcedBricks.name=Reinforced Bricks
+tile.reinforcedStone.name=Reinforced Stone
 tile.barbedWire.name=Barbed Wire
 tile.metalFence.name=Metal Fence
-
+# Misc Items
+item.militarybasedecor:bagConcrete.name=Bag of Concrete
+item.militarybasedecor:bag.name=Bag

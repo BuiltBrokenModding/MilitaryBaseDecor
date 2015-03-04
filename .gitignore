@@ -1,6 +1,8 @@
 *.iml
 .gradle/
 output/
+run/
+out/
 .settings/
 .project
 .classpath

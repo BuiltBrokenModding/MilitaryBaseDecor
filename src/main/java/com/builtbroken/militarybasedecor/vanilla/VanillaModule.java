@@ -3,6 +3,7 @@ package com.builtbroken.militarybasedecor.vanilla;
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.vanilla.content.BlockConcrete;
+import com.builtbroken.militarybasedecor.vanilla.content.BlockMetalFence;
 import com.builtbroken.militarybasedecor.vanilla.content.camo.TileSimpleCamo;
 import com.builtbroken.militarybasedecor.vanilla.content.items.ItemBag;
 import com.builtbroken.militarybasedecor.vanilla.content.items.ItemBagConcrete;
