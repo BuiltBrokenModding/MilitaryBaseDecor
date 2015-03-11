@@ -3,6 +3,7 @@
 output/
 run/
 out/
+eclipse/
 .settings/
 .project
 .classpath
