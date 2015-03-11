@@ -3,14 +3,16 @@ package com.builtbroken.militarybasedecor.vanilla;
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.vanilla.content.BlockConcrete;
-import com.builtbroken.militarybasedecor.vanilla.content.BlockMetalFence;
+import com.builtbroken.militarybasedecor.vanilla.content.BlockWiredFence;
 import com.builtbroken.militarybasedecor.vanilla.content.camo.TileSimpleCamo;
 import com.builtbroken.militarybasedecor.vanilla.content.items.ItemBag;
 import com.builtbroken.militarybasedecor.vanilla.content.items.ItemBagConcrete;
 import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedCasing;
 import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedGlass;
+import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedMetal;
 import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedSoil;
 import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedStone;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -25,11 +27,12 @@ public class VanillaModule implements ILoadable
 {
     public static Block reinforcedSoil;
     public static Block reinforcedStone;
+    public static Block reinforcedMetal;
     public static Block reinforcedGlass;
     public static Block reinforcedCasing;
     public static Block simpleCamoBlock;
-    public static Block metalFence;
     public static Block concrete;
+    public static Block wiredFence;
 
     public static Item bagConcrete;
     public static Item leatherBag;
@@ -39,11 +42,12 @@ public class VanillaModule implements ILoadable
     {
         reinforcedSoil = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedSoil.class);
         reinforcedStone = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedStone.class);
+        reinforcedMetal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetal.class);
         reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class);
         reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class);
         concrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcrete.class);
-        //metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockMetalFence.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class);
+        wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWiredFence.class);
 
         bagConcrete = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagConcrete.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);

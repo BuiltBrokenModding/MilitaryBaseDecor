@@ -9,8 +9,10 @@ tile.reinforcedGlass.name=Reinforced Glass
 tile.asphalt.name=Asphalt
 tile.reinforcedSoil.name=Reinforced Dirt
 tile.reinforcedStone.name=Reinforced Stone
+tile.reinforcedMetal.name=Reinforced Metal
+tile.picketFence.name=Picket Fence
 tile.barbedWire.name=Barbed Wire
-tile.metalFence.name=Metal Fence
+tile.wiredFence.name=Wired Fence
 # Misc Items
 item.militarybasedecor:bagConcrete.name=Bag of Concrete
 item.militarybasedecor:bag.name=Bag

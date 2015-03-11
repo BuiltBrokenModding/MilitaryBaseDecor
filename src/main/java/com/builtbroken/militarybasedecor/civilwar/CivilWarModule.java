@@ -16,6 +16,8 @@ public class CivilWarModule implements ILoadable
     @Override
     public void preInit()
     {
+    	
+    	picketFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockPicketFence.class);
 
     }
 

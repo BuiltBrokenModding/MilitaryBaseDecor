@@ -3,9 +3,12 @@
 output/
 run/
 out/
+bin/
 eclipse/
 .settings/
 .project
 .classpath
 *.ipr
 *.iws
+MilitaryBaseDecor.iml
+.cache

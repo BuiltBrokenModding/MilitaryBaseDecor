@@ -22,6 +22,6 @@ public class ColdWarModule extends AbstractLoadable
     public void preInit()
     {
         asphalt = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAsphalt.class);
-        //barbedWire = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBarbedWire.class);
+        barbedWire = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBarbedWire.class);
     }
 }
