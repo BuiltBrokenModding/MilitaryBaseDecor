@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class BlockAsphalt extends Block {
 
-private IIcon iconStriped, iconCracked;
+private IIcon iconStripedYellow, iconStripedWhite, iconCracked;
 
     public BlockAsphalt()
     {
@@ -33,9 +33,19 @@ private IIcon iconStriped, iconCracked;
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public IIcon getIcon(int side, int metadata)
     {
+        switch (metadata)
+        {
+        	case 1:
+        		return this.iconStripedWhite;
+        	case 2:
+        		return this.iconStripedYellow;
+        	case 3: 
+        		return this.iconCracked;
+        }
         return this.blockIcon;
     }
 
@@ -45,18 +55,18 @@ private IIcon iconStriped, iconCracked;
     {
         super.registerBlockIcons(iconRegister);
 
-        //this.iconStriped = iconRegister.registerIcon(this.getTextureName().replace("tile.", "") + "Striped");
-        //this.iconCracked = iconRegister.registerIcon(this.getTextureName().replace("tile.", "") + "Cracked");
+        this.iconStripedYellow = iconRegister.registerIcon(this.getTextureName().replace("tile.", "") + "StripedYellow");
+        this.iconStripedWhite = iconRegister.registerIcon(this.getTextureName().replace("tile.", "") + "StripedWhite");
+        this.iconCracked = iconRegister.registerIcon(this.getTextureName().replace("tile.", "") + "Cracked");
     }
 
     @Override
     public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List par3List)
     {
-        //TODO when you get texture you can re-add the meta version - Dark
-        //for (int i = 0; i < 5; i++)
-        //{
-            par3List.add(new ItemStack(par1, 1, 0));
-        //}
+        for (int i = 0; i < 4; i++)
+        {
+            par3List.add(new ItemStack(par1, 1, i));
+        }
     }
 
     @Override

@@ -16,8 +16,8 @@
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>
-    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
@@ -45,7 +45,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.builtbroken.voltzengine/VoltzEngine/1.7.10-0.3.2b198/bfd0237a765e30d87efe13fa94995951c5ead121/VoltzEngine-1.7.10-0.3.2b198-deobf-dev.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.builtbroken.voltzengine/VoltzEngine/1.7.10-0.3.2b202/78ddd02bb96a89a93ff1927632eeb6084f15430b/VoltzEngine-1.7.10-0.3.2b202-deobf-dev.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
