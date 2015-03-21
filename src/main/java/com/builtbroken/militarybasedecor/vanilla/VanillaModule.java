@@ -2,6 +2,7 @@ package com.builtbroken.militarybasedecor.vanilla;
 
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.vanilla.content.BlockBasicSandBag;
 import com.builtbroken.militarybasedecor.vanilla.content.BlockConcrete;
 import com.builtbroken.militarybasedecor.vanilla.content.BlockWiredFence;
 import com.builtbroken.militarybasedecor.vanilla.content.camo.TileSimpleCamo;
@@ -33,6 +34,7 @@ public class VanillaModule implements ILoadable
     public static Block simpleCamoBlock;
     public static Block concrete;
     public static Block wiredFence;
+    public static Block sandBag;
 
     public static Item bagConcrete;
     public static Item leatherBag;
@@ -48,6 +50,7 @@ public class VanillaModule implements ILoadable
         concrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcrete.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class);
         wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWiredFence.class);
+        sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class);
 
         bagConcrete = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagConcrete.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
@@ -70,5 +73,7 @@ public class VanillaModule implements ILoadable
         GameRegistry.addShapedRecipe(new ItemStack(leatherBag, 1, 0), new Object[]{"S S", "L L", "LLL", 'S', Items.string, 'L', Items.leather});
         //Bag of Concrete
         GameRegistry.addShapelessRecipe(new ItemStack(bagConcrete, 1, 0), new Object[]{Blocks.gravel, Blocks.sand, leatherBag});
+        //Basic Sandbag
+        GameRegistry.addShapedRecipe(new ItemStack(sandBag, 1, 0), new Object[]{"WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', new ItemStack(Blocks.sand, 1, 0)});
     }
 }

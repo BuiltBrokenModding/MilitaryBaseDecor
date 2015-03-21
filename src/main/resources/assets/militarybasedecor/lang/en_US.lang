@@ -13,6 +13,8 @@ tile.reinforcedMetal.name=Reinforced Metal
 tile.picketFence.name=Picket Fence
 tile.barbedWire.name=Barbed Wire
 tile.wiredFence.name=Wired Fence
+tile.sandBag.name=Basic Sandbag
+tile.advSandBag.name=Advanced Sandbag
 # Misc Items
 item.militarybasedecor:bagConcrete.name=Bag of Concrete
 item.militarybasedecor:bag.name=Bag

@@ -5,6 +5,8 @@ import com.builtbroken.mc.lib.mod.ModCreativeTab;
 import com.builtbroken.militarybasedecor.civilwar.CivilWarModule;
 import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
+import com.builtbroken.militarybasedecor.worldwar1.WorldWar1Module;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -62,6 +64,7 @@ public final class MilitaryBaseDecor extends AbstractMod
 
         loader.applyModule(new ColdWarModule());
         loader.applyModule(new CivilWarModule());
+        loader.applyModule(new WorldWar1Module());
         loader.applyModule(new VanillaModule());
     }
 
