@@ -1,5 +1,7 @@
 package com.builtbroken.militarybasedecor.coldwar.content;
 
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+
 import net.minecraft.block.BlockRail;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.world.World;
@@ -10,9 +12,12 @@ public class BlockReinforcedRail extends BlockRail
     public BlockReinforcedRail()
     {
         super();
-        setHardness(10F);
-        setResistance(10F);
-        setStepSound(soundTypeMetal);
+        this.setBlockName("reinforcedRail");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforcedRail");
+        this.setHardness(10F);
+        this.setResistance(10F);
+        this.setStepSound(soundTypeMetal);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
 
     @Override

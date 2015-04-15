@@ -1,5 +1,7 @@
 package com.builtbroken.militarybasedecor.vanilla.content.items;
 
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+
 import net.minecraft.item.Item;
 
 /**
@@ -10,6 +12,6 @@ public class ItemBag extends Item {
     public ItemBag()
     {
         this.setUnlocalizedName("Bag");
-        this.setTextureName("Bag");
+        this.setTextureName(MilitaryBaseDecor.PREFIX + "Bag");
     }
 }

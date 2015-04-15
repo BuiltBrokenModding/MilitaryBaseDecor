@@ -20,13 +20,13 @@ public class WorldWar1Module extends AbstractLoadable {
 	 	@Override
 	    public void preInit()
 	    {
-	 		advancedSandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAdvancedSandbag.class);
+	 		// TODO Create integration with the Armory mod(when we get to making it...) advancedSandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAdvancedSandbag.class);
 	    }
 	 	
 	 	@Override 
 	 	public void postInit()
 	 	{
-	 		GameRegistry.addShapedRecipe(new ItemStack(advancedSandBag, 1, 0), new Object[]{"WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', VanillaModule.sandBag});
+	 	// TODO Create integration with the Armory mod(when we get to making it...) GameRegistry.addShapedRecipe(new ItemStack(advancedSandBag, 1, 0), new Object[]{"WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', VanillaModule.sandBag});
 	 	}
 
 }

@@ -5,6 +5,7 @@ import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.coldwar.content.BlockAsphalt;
 import com.builtbroken.militarybasedecor.coldwar.content.BlockBarbedWire;
+import com.builtbroken.militarybasedecor.coldwar.content.BlockReinforcedRail;
 import com.builtbroken.militarybasedecor.vanilla.content.BlockConcrete;
 
 import net.minecraft.block.Block;
@@ -17,11 +18,13 @@ public class ColdWarModule extends AbstractLoadable
 {
     public static Block asphalt;
     public static Block barbedWire;
+    public static Block reinforcedRail;
 
     @Override
     public void preInit()
     {
         asphalt = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAsphalt.class);
         barbedWire = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBarbedWire.class);
+        reinforcedRail = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedRail.class);
     }
 }

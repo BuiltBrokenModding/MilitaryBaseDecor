@@ -20,8 +20,6 @@ import java.util.List;
  */
 public class BlockAsphalt extends Block {
 
-private IIcon iconStripedYellow, iconStripedWhite, iconCracked;
-
     public BlockAsphalt()
     {
         super(Material.rock);
