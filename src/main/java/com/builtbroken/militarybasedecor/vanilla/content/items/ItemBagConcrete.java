@@ -14,7 +14,7 @@ public class ItemBagConcrete extends Item {
     public ItemBagConcrete()
     {
         this.setUnlocalizedName("bagConcrete");
-        this.setTextureName(MilitaryBaseDecor.PREFIX + "bagConcrete");
+        this.setTextureName(MilitaryBaseDecor.PREFIX + "bag_concrete");
         this.setMaxStackSize(1);
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }

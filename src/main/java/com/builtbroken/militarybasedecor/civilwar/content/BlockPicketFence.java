@@ -16,9 +16,9 @@ public class BlockPicketFence extends BlockPane {
 
     public BlockPicketFence()
     {
-        super("militarybasedecor:picketFence", "militarybasedecor:picketFence", Material.wood, true);
-        this.setBlockName("picketFence");
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "picketFence");
+        super("militarybasedecor:picket_fence", "militarybasedecor:picket_fence", Material.wood, true);
+        this.setBlockName("picket_fence");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "picket_fence");
         this.setHardness(3.0F);
         this.setResistance(10.0F);
         this.setStepSound(soundTypeWood);

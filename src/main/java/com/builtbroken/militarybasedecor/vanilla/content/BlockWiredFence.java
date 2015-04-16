@@ -14,9 +14,9 @@ import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 
 	    public BlockWiredFence()
 	    {
-	        super("militarybasedecor:wiredFence", "militarybasedecor:wiredFence", Material.iron, true);
-	        this.setBlockName("wiredFence");
-	        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "wiredFence");
+	        super("militarybasedecor:wired_fence", "militarybasedecor:wired_fence", Material.iron, true);
+	        this.setBlockName("wired_fence");
+	        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "wired_fence");
 	        this.setHardness(3.0F);
 	        this.setResistance(10.0F);
 	        this.setStepSound(soundTypeMetal);

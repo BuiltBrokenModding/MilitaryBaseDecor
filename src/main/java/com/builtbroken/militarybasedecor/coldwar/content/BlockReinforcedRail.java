@@ -13,7 +13,7 @@ public class BlockReinforcedRail extends BlockRail
     {
         super();
         this.setBlockName("reinforcedRail");
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforcedRail");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_rail");
         this.setHardness(10F);
         this.setResistance(10F);
         this.setStepSound(soundTypeMetal);

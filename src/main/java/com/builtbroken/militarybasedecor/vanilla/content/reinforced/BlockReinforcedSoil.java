@@ -25,6 +25,7 @@ public class BlockReinforcedSoil extends BlockReinforced
     {
         super(Material.ground, "reinforcedSoil");
         this.setStepSound(soundTypeWood);
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_dirt");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
 

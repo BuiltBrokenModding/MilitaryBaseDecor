@@ -12,6 +12,6 @@ public class ItemBag extends Item {
     public ItemBag()
     {
         this.setUnlocalizedName("Bag");
-        this.setTextureName(MilitaryBaseDecor.PREFIX + "Bag");
+        this.setTextureName(MilitaryBaseDecor.PREFIX + "bag");
     }
 }

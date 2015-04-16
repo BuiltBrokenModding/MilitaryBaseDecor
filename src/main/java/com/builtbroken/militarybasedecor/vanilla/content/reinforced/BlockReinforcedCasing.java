@@ -2,6 +2,7 @@ package com.builtbroken.militarybasedecor.vanilla.content.reinforced;
 
 import com.builtbroken.mc.lib.helper.BlockUtility;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -77,5 +78,24 @@ public class BlockReinforcedCasing extends BlockReinforced
             this.hardness = hardness;
             this.base_resistance = base_resistance;
         }
+    }
+    
+    @SideOnly(Side.CLIENT)
+    @Override
+    public int getRenderBlockPass()
+    {
+        return 0;
+    }
+
+    @Override
+    public boolean renderAsNormalBlock()
+    {
+        return false;
+    }
+    
+    @Override
+    public boolean isOpaqueCube()
+    {
+        return false;
     }
 }

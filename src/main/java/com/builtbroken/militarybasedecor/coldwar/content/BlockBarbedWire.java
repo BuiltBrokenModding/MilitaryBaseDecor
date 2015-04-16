@@ -35,9 +35,9 @@ public class BlockBarbedWire extends BlockPane {
 
     public BlockBarbedWire()
     {
-        super("militarybasedecor:barbedWire", "militarybasedecor:barbedWire", Material.iron, true);
-        this.setBlockName("barbedWire");
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "barbedWire");
+        super("militarybasedecor:barbed_wire", "militarybasedecor:barbed_wire", Material.iron, true);
+        this.setBlockName("barbed_wire");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "barbed_wire");
         this.setHardness(3.0F);
         this.setResistance(10.0F);
         this.setStepSound(soundTypeMetal);

@@ -10,9 +10,10 @@ tile.asphalt.name=Asphalt
 tile.reinforcedSoil.name=Reinforced Dirt
 tile.reinforcedStone.name=Reinforced Stone
 tile.reinforcedMetal.name=Reinforced Metal
-tile.picketFence.name=Picket Fence
-tile.barbedWire.name=Barbed Wire
-tile.wiredFence.name=Wired Fence
+tile.reinforcedRail.name=Reinforced Rail
+tile.picket_fence.name=Picket Fence
+tile.barbed_wire.name=Barbed Wire
+tile.wired_fence.name=Wired Fence
 tile.sandBag.name=Basic Sandbag
 tile.advSandBag.name=Advanced Sandbag
 # Misc Items
