@@ -1,5 +1,7 @@
 package com.builtbroken.militarybasedecor.vanilla.content.camo;
 
+import java.util.List;
+
 import com.builtbroken.mc.core.network.IPacketReceiver;
 import com.builtbroken.mc.core.network.packet.PacketTile;
 import com.builtbroken.mc.core.network.packet.PacketType;
@@ -7,6 +9,7 @@ import com.builtbroken.mc.lib.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
 import com.builtbroken.mc.prefab.tile.TileEnt;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+
 import cpw.mods.fml.common.network.ByteBufUtils;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -20,6 +23,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 
 /**
@@ -36,6 +40,11 @@ public class TileSimpleCamo extends TileEnt implements IPacketReceiver
         super("tileCamo", Material.rock);
         this.itemBlock = ItemBlockCamo.class;
         this.setTextureName(MilitaryBaseDecor.DOMAIN + ":" + "camo_simple");
+    }
+    
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    {
+    	list.add(EnumChatFormatting.AQUA + "Vanilla Module");
     }
 
     @Override

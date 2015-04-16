@@ -1,8 +1,14 @@
 package com.builtbroken.militarybasedecor.vanilla.content.reinforced;
 
+import java.util.List;
+
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
@@ -17,6 +23,11 @@ public class BlockReinforcedGlass extends Block
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_glass");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
         this.setResistance(48);
+    }
+    
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    {
+    	list.add(EnumChatFormatting.AQUA + "Vanilla Module");
     }
 
     /** Returns which pass should this block be rendered on. 0 for solids and 1 for alpha */

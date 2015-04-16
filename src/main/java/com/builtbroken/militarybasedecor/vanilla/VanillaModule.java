@@ -1,7 +1,9 @@
 package com.builtbroken.militarybasedecor.vanilla;
 
+import com.builtbroken.mc.lib.helper.recipe.UniversalRecipe;
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
 import com.builtbroken.militarybasedecor.vanilla.content.BlockBasicSandBag;
 import com.builtbroken.militarybasedecor.vanilla.content.BlockConcrete;
 import com.builtbroken.militarybasedecor.vanilla.content.BlockWiredFence;
@@ -20,6 +22,7 @@ import net.minecraft.item.Item;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 /**
  * Content themed to vanilla MC rather than any set mod or History era
@@ -51,7 +54,6 @@ public class VanillaModule implements ILoadable
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class);
         wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWiredFence.class);
         // TODO Create integration with the Armory mod(when we get to making it...) sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class);
-
         bagConcrete = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagConcrete.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
 
@@ -59,23 +61,30 @@ public class VanillaModule implements ILoadable
     }
 
     @Override
-    public void init()
-    {
-
-    }
+    public void init() {}
 
     @Override
     public void postInit()
     {
-        //Reinforced wood casing
+    	// Blocks
+        // Reinforced wood casing
         GameRegistry.addShapedRecipe(new ItemStack(reinforcedCasing, 1, 0), new Object[]{"SWS", "WSW" , "SWS", 'S', Items.stick, 'W', Blocks.planks});
-        //Leather Bag
+        // Concrete
+        GameRegistry.addShapelessRecipe(new ItemStack(concrete, 2, 0), new Object[]{Items.water_bucket, bagConcrete});
+        // Wired Fence
+        GameRegistry.addShapedRecipe(new ItemStack(wiredFence, 6, 0), new Object[]{"III", "   ", "III", 'I', Items.iron_ingot});
+        // Simple Camo Block
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(simpleCamoBlock, 8), "WWW", "WCW", "WWW", 'W', Blocks.vine, 'C', UniversalRecipe.CIRCUIT_T1.get()));
+        // Reinforced Glass
+        GameRegistry.addShapedRecipe(new ItemStack(reinforcedGlass, 8, 0), new Object[]{"IGI", "GIG", "IGI", 'I', Items.iron_ingot, 'G', Blocks.glass});
+        
+        // Items
+        // Leather Bag
         GameRegistry.addShapedRecipe(new ItemStack(leatherBag, 1, 0), new Object[]{"S S", "L L", "LLL", 'S', Items.string, 'L', Items.leather});
-        //Bag of Concrete
+        // Bag of Concrete
         GameRegistry.addShapelessRecipe(new ItemStack(bagConcrete, 1, 0), new Object[]{Blocks.gravel, Blocks.sand, leatherBag});
         
-        
-        //Basic Sandbag
+        // Basic Sandbag
         // TODO Create integration with the Armory mod(when we get to making it...) GameRegistry.addShapedRecipe(new ItemStack(sandBag, 1, 0), new Object[]{"WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', new ItemStack(Blocks.sand, 1, 0)});
     }
 }

@@ -1,9 +1,14 @@
 package com.builtbroken.militarybasedecor.coldwar.content;
 
+import java.util.List;
+
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 
 import net.minecraft.block.BlockRail;
 import net.minecraft.entity.item.EntityMinecart;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 /** @author DarkGuardsman */
@@ -18,6 +23,11 @@ public class BlockReinforcedRail extends BlockRail
         this.setResistance(10F);
         this.setStepSound(soundTypeMetal);
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+    }
+    
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    {
+    	list.add(EnumChatFormatting.AQUA + "Cold War Module");
     }
 
     @Override

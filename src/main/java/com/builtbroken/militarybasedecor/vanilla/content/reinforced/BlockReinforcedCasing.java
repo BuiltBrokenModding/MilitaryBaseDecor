@@ -9,9 +9,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 
 import java.util.List;
 
@@ -26,6 +28,11 @@ public class BlockReinforcedCasing extends BlockReinforced
         super(Material.ground, "reinforcedCasing");
         this.setStepSound(soundTypeWood);
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "wood_casing");
+    }
+    
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    {
+    	list.add(EnumChatFormatting.AQUA + "Vanilla Module");
     }
 
     @Override

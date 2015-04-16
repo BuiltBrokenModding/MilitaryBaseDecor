@@ -4,14 +4,17 @@ import java.util.List;
 
 import com.builtbroken.mc.lib.helper.BlockUtility;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
@@ -32,5 +35,10 @@ public class BlockConcrete extends Block
         this.setResistance(150);
         this.setStepSound(Block.soundTypeStone);
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+    }
+    
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    {
+    	list.add(EnumChatFormatting.AQUA + "Vanilla Module");
     }
 }

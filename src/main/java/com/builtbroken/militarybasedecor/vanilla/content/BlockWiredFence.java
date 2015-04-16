@@ -1,8 +1,13 @@
 package com.builtbroken.militarybasedecor.vanilla.content;
 
+import java.util.List;
+
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.IBlockAccess;
 
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
@@ -21,6 +26,11 @@ import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 	        this.setResistance(10.0F);
 	        this.setStepSound(soundTypeMetal);
 	        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+	    }
+	    
+	    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+	    {
+	    	list.add(EnumChatFormatting.AQUA + "Vanilla Module");
 	    }
 	    
 	    @Override
