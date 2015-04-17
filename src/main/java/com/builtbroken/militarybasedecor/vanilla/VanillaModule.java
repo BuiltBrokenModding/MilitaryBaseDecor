@@ -1,6 +1,7 @@
 package com.builtbroken.militarybasedecor.vanilla;
 
 import com.builtbroken.mc.lib.helper.recipe.UniversalRecipe;
+import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
@@ -27,7 +28,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 /**
  * Content themed to vanilla MC rather than any set mod or History era
  */
-public class VanillaModule implements ILoadable
+public class VanillaModule extends AbstractLoadable
 {
     public static Block reinforcedSoil;
     public static Block reinforcedStone;
@@ -59,10 +60,7 @@ public class VanillaModule implements ILoadable
 
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(concrete);
     }
-
-    @Override
-    public void init() {}
-
+    
     @Override
     public void postInit()
     {
