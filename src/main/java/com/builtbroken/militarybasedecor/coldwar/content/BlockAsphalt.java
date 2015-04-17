@@ -36,6 +36,6 @@ public class BlockAsphalt extends Block {
     
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
-    	list.add(EnumChatFormatting.AQUA + "Cold War Module");
+    	list.add(EnumChatFormatting.BLUE + "Cold War Module");
     }
 }

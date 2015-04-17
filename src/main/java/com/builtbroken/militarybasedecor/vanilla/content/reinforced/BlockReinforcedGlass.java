@@ -27,7 +27,7 @@ public class BlockReinforcedGlass extends Block
     
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
-    	list.add(EnumChatFormatting.AQUA + "Vanilla Module");
+    	list.add(EnumChatFormatting.BLUE + "Vanilla Module");
     }
 
     /** Returns which pass should this block be rendered on. 0 for solids and 1 for alpha */

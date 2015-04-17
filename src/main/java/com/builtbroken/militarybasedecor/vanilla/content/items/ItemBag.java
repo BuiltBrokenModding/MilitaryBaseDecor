@@ -22,6 +22,6 @@ public class ItemBag extends Item {
     
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
-    	list.add(EnumChatFormatting.AQUA + "Vanilla Module");
+    	list.add(EnumChatFormatting.BLUE + "Vanilla Module");
     }
 }

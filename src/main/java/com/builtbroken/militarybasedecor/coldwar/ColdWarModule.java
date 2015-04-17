@@ -7,7 +7,7 @@ import com.builtbroken.militarybasedecor.coldwar.content.BlockAsphalt;
 import com.builtbroken.militarybasedecor.coldwar.content.BlockBarbedWire;
 import com.builtbroken.militarybasedecor.coldwar.content.BlockReinforcedRail;
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
-import com.builtbroken.militarybasedecor.vanilla.content.BlockConcrete;
+import com.builtbroken.militarybasedecor.vanilla.content.concrete.BlockConcrete;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;

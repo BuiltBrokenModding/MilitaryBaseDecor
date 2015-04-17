@@ -32,7 +32,7 @@ public class BlockPicketFence extends BlockPane {
     
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
-    	list.add(EnumChatFormatting.AQUA + "Civil War Module");
+    	list.add(EnumChatFormatting.BLUE + "Civil War Module");
     }
 }
 
