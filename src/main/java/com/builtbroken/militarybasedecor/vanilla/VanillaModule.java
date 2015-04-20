@@ -5,6 +5,8 @@ import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
+import com.builtbroken.militarybasedecor.prefab.BlockStairsPrefab;
+import com.builtbroken.militarybasedecor.prefab.BlockWallPrefab;
 import com.builtbroken.militarybasedecor.vanilla.content.BlockBasicSandBag;
 import com.builtbroken.militarybasedecor.vanilla.content.BlockWiredFence;
 import com.builtbroken.militarybasedecor.vanilla.content.camo.TileSimpleCamo;
@@ -19,6 +21,8 @@ import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinfor
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -37,8 +41,11 @@ public class VanillaModule extends AbstractLoadable
     public static Block reinforcedCasing;
     public static Block simpleCamoBlock;
     public static Block concrete;
+    public static Block concreteStairs;
+    public static Block concreteWall;
     public static Block wiredFence;
     public static Block sandBag;
+    public static Block metalFence;
 
     public static Item bagConcrete;
     public static Item leatherBag;
@@ -52,9 +59,13 @@ public class VanillaModule extends AbstractLoadable
         reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class);
         reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class);
         concrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcrete.class);
-        simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class);
+        concreteStairs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_stairs", new BlockStairsPrefab(concrete, 0).setBlockTextureName(MilitaryBaseDecor.DOMAIN + "concrete").setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone));
+        concreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall", new BlockWallPrefab(concrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone));
+        simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class).setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "camo_simple");
         wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWiredFence.class);
         // TODO Create integration with the Armory mod(when we get to making it...) sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class);
+        metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeMetal)); 
+        		
         bagConcrete = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagConcrete.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
 

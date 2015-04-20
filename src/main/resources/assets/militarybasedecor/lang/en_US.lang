@@ -5,6 +5,8 @@ tile.militarybasedecor:tileCamo.0.name=Basic Camo Block
 tile.reinforcedCasing.name=Reinforced Casing
 tile.glassReinforced.name=Reinforced Glass
 tile.concrete.name=Concrete
+tile.concrete_stairs.name=Concrete Stairs
+tile.concrete_wall.name=Concrete Wall
 tile.reinforcedGlass.name=Reinforced Glass
 tile.asphalt.name=Asphalt
 tile.reinforcedSoil.name=Reinforced Dirt
@@ -16,6 +18,8 @@ tile.barbed_wire.name=Barbed Wire
 tile.wired_fence.name=Wired Fence
 tile.sandBag.name=Basic Sandbag
 tile.advSandBag.name=Advanced Sandbag
+tile.metal_fence.name=Metal Fence
 # Misc Items
 item.militarybasedecor:bagConcrete.name=Bag of Concrete
 item.militarybasedecor:bag.name=Bag
+item.militarybasedecor:chocolate.name=Chocolate ???

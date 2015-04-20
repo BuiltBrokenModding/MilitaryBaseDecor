@@ -1,6 +1,8 @@
 package com.builtbroken.militarybasedecor.vanilla.content.camo;
 
 import com.builtbroken.mc.prefab.tile.item.ItemBlockMetadata;
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
