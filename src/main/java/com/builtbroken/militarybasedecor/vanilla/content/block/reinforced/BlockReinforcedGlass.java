@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.vanilla.content.reinforced;
+package com.builtbroken.militarybasedecor.vanilla.content.block.reinforced;
 
 import java.util.List;
 
@@ -25,11 +25,6 @@ public class BlockReinforcedGlass extends Block
         this.setResistance(48);
     }
     
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
-    {
-    	list.add(EnumChatFormatting.BLUE + "Vanilla Module");
-    }
-
     /** Returns which pass should this block be rendered on. 0 for solids and 1 for alpha */
     @SideOnly(Side.CLIENT)
     @Override

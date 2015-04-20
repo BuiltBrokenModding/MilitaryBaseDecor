@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.vanilla.content.reinforced;
+package com.builtbroken.militarybasedecor.vanilla.content.block.reinforced;
 
 import java.util.List;
 
@@ -27,11 +27,6 @@ public class BlockReinforcedMetal extends BlockReinforced{
         this.setStepSound(soundTypeMetal);
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_metal");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
-    }
-    
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
-    {
-    	list.add(EnumChatFormatting.BLUE + "Vanilla Module");
     }
 
     @SideOnly(Side.CLIENT)

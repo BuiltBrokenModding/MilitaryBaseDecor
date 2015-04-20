@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.coldwar.content;
+package com.builtbroken.militarybasedecor.coldwar.content.block;
 
 import java.util.List;
 

@@ -84,24 +84,24 @@ public final class MilitaryBaseDecor extends AbstractMod
         WORLD_WAR_TWO_ENABLED = getConfig().getBoolean("Enable WW2 Module", Configuration.CATEGORY_GENERAL, true, "Enables/Disables the WW2 module.");
         
         // Module Loading
-        if (COLD_WAR_ENABLED = true) {
-        loader.applyModule(new ColdWarModule());
-        }
+        if (VANILLA_ENABLED = true) {
+            loader.applyModule(new VanillaModule());
+            }
         
         if (CIVIL_WAR_ENABLED = true) {
-        loader.applyModule(new CivilWarModule());
-        }
+            loader.applyModule(new CivilWarModule());
+            }
         
         //if (WORLD_WAR_ONE_ENABLED = true) {
-        //TODO Disabled until we need it! loader.applyModule(new WorldWar1Module());
-        //}
-        
-        if (VANILLA_ENABLED = true) {
-        loader.applyModule(new VanillaModule());
-        }
+        	//TODO Disabled until we need it! loader.applyModule(new WorldWar1Module());
+          //}
         
         if (WORLD_WAR_TWO_ENABLED = true) {
-        loader.applyModule(new WorldWar2Module());
+            loader.applyModule(new WorldWar2Module());
+            }
+        
+        if (COLD_WAR_ENABLED = true) {
+        loader.applyModule(new ColdWarModule());
         }
     }
 

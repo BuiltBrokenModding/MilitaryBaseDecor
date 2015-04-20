@@ -14,9 +14,9 @@ import net.minecraft.util.EnumChatFormatting;
 
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.coldwar.content.BlockAsphalt;
-import com.builtbroken.militarybasedecor.coldwar.content.BlockBarbedWire;
-import com.builtbroken.militarybasedecor.coldwar.content.BlockReinforcedRail;
+import com.builtbroken.militarybasedecor.coldwar.content.block.BlockAsphalt;
+import com.builtbroken.militarybasedecor.coldwar.content.block.BlockBarbedWire;
+import com.builtbroken.militarybasedecor.coldwar.content.block.BlockReinforcedRail;
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
 
 import cpw.mods.fml.common.registry.GameRegistry;

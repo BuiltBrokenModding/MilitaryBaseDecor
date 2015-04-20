@@ -7,17 +7,18 @@ import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
 import com.builtbroken.militarybasedecor.prefab.BlockStairsPrefab;
 import com.builtbroken.militarybasedecor.prefab.BlockWallPrefab;
-import com.builtbroken.militarybasedecor.vanilla.content.BlockBasicSandBag;
-import com.builtbroken.militarybasedecor.vanilla.content.BlockWiredFence;
-import com.builtbroken.militarybasedecor.vanilla.content.camo.TileSimpleCamo;
-import com.builtbroken.militarybasedecor.vanilla.content.concrete.BlockConcrete;
+import com.builtbroken.militarybasedecor.vanilla.content.block.BlockBasicSandBag;
+import com.builtbroken.militarybasedecor.vanilla.content.block.BlockConcrete;
+import com.builtbroken.militarybasedecor.vanilla.content.block.BlockWiredFence;
+import com.builtbroken.militarybasedecor.vanilla.content.block.ItemBlockVanilla;
+import com.builtbroken.militarybasedecor.vanilla.content.block.camo.TileSimpleCamo;
+import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedCasing;
+import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedGlass;
+import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedMetal;
+import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedSoil;
+import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedStone;
 import com.builtbroken.militarybasedecor.vanilla.content.items.ItemBag;
 import com.builtbroken.militarybasedecor.vanilla.content.items.ItemBagConcrete;
-import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedCasing;
-import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedGlass;
-import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedMetal;
-import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedSoil;
-import com.builtbroken.militarybasedecor.vanilla.content.reinforced.BlockReinforcedStone;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -53,18 +54,18 @@ public class VanillaModule extends AbstractLoadable
     @Override
     public void preInit()
     {
-        reinforcedSoil = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedSoil.class);
-        reinforcedStone = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedStone.class);
-        reinforcedMetal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetal.class);
-        reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class);
-        reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class);
-        concrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcrete.class);
-        concreteStairs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_stairs", new BlockStairsPrefab(concrete, 0).setBlockTextureName(MilitaryBaseDecor.DOMAIN + "concrete").setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone));
-        concreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall", new BlockWallPrefab(concrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone));
+        reinforcedSoil = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedSoil.class, ItemBlockVanilla.class);
+        reinforcedStone = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedStone.class, ItemBlockVanilla.class);
+        reinforcedMetal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetal.class, ItemBlockVanilla.class);
+        reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class, ItemBlockVanilla.class);
+        reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class, ItemBlockVanilla.class);
+        concrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcrete.class, ItemBlockVanilla.class);
+        concreteStairs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_stairs", new BlockStairsPrefab(concrete, 0).setBlockTextureName(MilitaryBaseDecor.DOMAIN + "concrete").setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
+        concreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall", new BlockWallPrefab(concrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class).setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "camo_simple");
-        wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWiredFence.class);
-        // TODO Create integration with the Armory mod(when we get to making it...) sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class);
-        metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeMetal)); 
+        wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWiredFence.class, ItemBlockVanilla.class);
+        // TODO Create integration with the Armory mod(when we get to making it...) sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class), ItemBlockVanilla.class;
+        metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeMetal), ItemBlockVanilla.class); 
         		
         bagConcrete = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagConcrete.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);

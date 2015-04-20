@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.vanilla.content.reinforced;
+package com.builtbroken.militarybasedecor.vanilla.content.block.reinforced;
 
 import com.builtbroken.mc.lib.helper.BlockUtility;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
@@ -18,29 +18,33 @@ import net.minecraft.util.EnumChatFormatting;
 import java.util.List;
 
 /**
- * Mainly for crafting reinforced blocks, can be used as a decoration if players want
- * Created by robert on 1/24/2015.
+ * Created by Ole on 23.01.2015.
  */
-public class BlockReinforcedCasing extends BlockReinforced
+public class BlockReinforcedSoil extends BlockReinforced
 {
-    public BlockReinforcedCasing()
+    public static float RESISTANCE_SCALE = 5;
+
+    public BlockReinforcedSoil()
     {
-        super(Material.ground, "reinforcedCasing");
+        super(Material.ground, "reinforcedSoil");
         this.setStepSound(soundTypeWood);
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "wood_casing");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_dirt");
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
     
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
-    	list.add(EnumChatFormatting.BLUE + "Vanilla Module");
+
     }
 
     @Override
     public float getBlockHardness(int meta)
     {
-        if (meta < ReinforcedCasing.values().length)
+        if (meta < ReinforcedSoilMeta.values().length)
         {
-            return ReinforcedCasing.values()[meta].hardness;
+            return ReinforcedSoilMeta.values()[meta].hardness;
         }
         return this.blockHardness;
     }
@@ -48,9 +52,9 @@ public class BlockReinforcedCasing extends BlockReinforced
     @Override
     public float getBlockResistance(int meta)
     {
-        if (meta < ReinforcedCasing.values().length)
+        if (meta < ReinforcedSoilMeta.values().length)
         {
-            return ReinforcedCasing.values()[meta].base_resistance;
+            return ReinforcedSoilMeta.values()[meta].base_resistance * RESISTANCE_SCALE;
         }
         return 35;
     }
@@ -58,7 +62,7 @@ public class BlockReinforcedCasing extends BlockReinforced
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item item, CreativeTabs tab, List list)
     {
-        for (ReinforcedCasing type : ReinforcedCasing.values())
+        for (ReinforcedSoilMeta type : ReinforcedSoilMeta.values())
         {
             list.add(new ItemStack(item, 1, type.ordinal()));
         }
@@ -67,42 +71,25 @@ public class BlockReinforcedCasing extends BlockReinforced
     /**
      * Sub types for this block
      */
-    public static enum ReinforcedCasing
+    public static enum ReinforcedSoilMeta
     {
-        WOOD(Blocks.planks);
+        DIRT(Blocks.dirt),
+        SAND(Blocks.sand),
+        GRASS(Blocks.grass);
 
         public final float hardness;
         public final float base_resistance;
 
-        private ReinforcedCasing(Block block)
+        private ReinforcedSoilMeta(Block block)
         {
             hardness = BlockUtility.getBlockHardness(block);
             base_resistance = BlockUtility.getBlockResistance(block);
         }
 
-        private ReinforcedCasing(float hardness, float base_resistance)
+        private ReinforcedSoilMeta(float hardness, float base_resistance)
         {
             this.hardness = hardness;
             this.base_resistance = base_resistance;
         }
-    }
-    
-    @SideOnly(Side.CLIENT)
-    @Override
-    public int getRenderBlockPass()
-    {
-        return 0;
-    }
-
-    @Override
-    public boolean renderAsNormalBlock()
-    {
-        return false;
-    }
-    
-    @Override
-    public boolean isOpaqueCube()
-    {
-        return false;
     }
 }

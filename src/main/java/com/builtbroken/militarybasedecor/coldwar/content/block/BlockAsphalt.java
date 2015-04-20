@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.coldwar.content;
+package com.builtbroken.militarybasedecor.coldwar.content.block;
 
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 
@@ -32,10 +32,5 @@ public class BlockAsphalt extends Block {
         this.setResistance(18);
         this.setStepSound(Block.soundTypeStone);
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
-    }
-    
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
-    {
-    	list.add(EnumChatFormatting.BLUE + "Cold War Module");
     }
 }

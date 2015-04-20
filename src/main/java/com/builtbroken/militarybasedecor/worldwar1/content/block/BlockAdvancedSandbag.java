@@ -1,20 +1,20 @@
-package com.builtbroken.militarybasedecor.vanilla.content;
+package com.builtbroken.militarybasedecor.worldwar1.content.block;
 
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class BlockBasicSandBag extends Block {
+public class BlockAdvancedSandbag extends Block {
 
-	public BlockBasicSandBag() {
+	public BlockAdvancedSandbag() {
 		super(Material.cloth);
-		this.setBlockName("sandBag");
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "sandBag");
-        this.setHardness(0.5f);
+		this.setBlockName("advSandBag");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "advSandBag");
+        this.setHardness(1f);
         this.setResistance(1);
         this.setStepSound(Block.soundTypeCloth);
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
 	}
-
 }
+

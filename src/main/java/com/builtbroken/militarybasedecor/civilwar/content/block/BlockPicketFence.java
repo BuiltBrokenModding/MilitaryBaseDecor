@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.civilwar.content;
+package com.builtbroken.militarybasedecor.civilwar.content.block;
 
 import java.util.List;
 
@@ -28,11 +28,6 @@ public class BlockPicketFence extends BlockPane {
         this.setResistance(10.0F);
         this.setStepSound(soundTypeWood);
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
-    }
-    
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
-    {
-    	list.add(EnumChatFormatting.BLUE + "Civil War Module");
     }
 }
 

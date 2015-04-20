@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.vanilla.content;
+package com.builtbroken.militarybasedecor.vanilla.content.block;
 
 import java.util.List;
 
@@ -26,11 +26,6 @@ import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 	        this.setResistance(10.0F);
 	        this.setStepSound(soundTypeMetal);
 	        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
-	    }
-	    
-	    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
-	    {
-	    	list.add(EnumChatFormatting.BLUE + "Vanilla Module");
 	    }
 	    
 	    @Override

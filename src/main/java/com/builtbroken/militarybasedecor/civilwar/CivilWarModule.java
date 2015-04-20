@@ -2,7 +2,8 @@ package com.builtbroken.militarybasedecor.civilwar;
 
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.civilwar.content.BlockPicketFence;
+import com.builtbroken.militarybasedecor.civilwar.content.block.BlockPicketFence;
+import com.builtbroken.militarybasedecor.civilwar.content.block.ItemBlockCivilWar;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -21,7 +22,7 @@ public class CivilWarModule implements ILoadable
     public void preInit()
     {
     	
-    	picketFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockPicketFence.class);
+    	picketFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockPicketFence.class, ItemBlockCivilWar.class);
     }
 
     @Override

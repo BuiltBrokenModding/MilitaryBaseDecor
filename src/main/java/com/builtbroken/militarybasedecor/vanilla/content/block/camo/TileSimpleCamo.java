@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.vanilla.content.camo;
+package com.builtbroken.militarybasedecor.vanilla.content.block.camo;
 
 import java.util.List;
 
