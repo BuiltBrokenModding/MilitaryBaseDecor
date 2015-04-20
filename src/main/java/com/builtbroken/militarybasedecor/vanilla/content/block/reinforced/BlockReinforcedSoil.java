@@ -14,6 +14,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.IIcon;
 
 import java.util.List;
 
@@ -30,6 +31,17 @@ public class BlockReinforcedSoil extends BlockReinforced
         this.setStepSound(soundTypeWood);
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_dirt");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+    }
+    
+    /**
+     * TODO Once we get the textures we need to specify them here!
+     */
+    @SideOnly(Side.CLIENT)
+    @Override
+    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+    {
+		return blockIcon;
+        
     }
     
     @SideOnly(Side.CLIENT)
