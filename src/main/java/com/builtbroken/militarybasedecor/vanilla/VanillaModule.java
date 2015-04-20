@@ -9,6 +9,7 @@ import com.builtbroken.militarybasedecor.prefab.BlockStairsPrefab;
 import com.builtbroken.militarybasedecor.prefab.BlockWallPrefab;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockBasicSandBag;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockConcrete;
+import com.builtbroken.militarybasedecor.vanilla.content.block.BlockMetalWall;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockWiredFence;
 import com.builtbroken.militarybasedecor.vanilla.content.block.ItemBlockVanilla;
 import com.builtbroken.militarybasedecor.vanilla.content.block.camo.TileSimpleCamo;
@@ -47,6 +48,7 @@ public class VanillaModule extends AbstractLoadable
     public static Block wiredFence;
     public static Block sandBag;
     public static Block metalFence;
+    public static Block metalWall;
 
     public static Item bagConcrete;
     public static Item leatherBag;
@@ -66,7 +68,8 @@ public class VanillaModule extends AbstractLoadable
         wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWiredFence.class, ItemBlockVanilla.class);
         // TODO Create integration with the Armory mod(when we get to making it...) sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class), ItemBlockVanilla.class;
         metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeMetal), ItemBlockVanilla.class); 
-        		
+        metalWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_wall", new BlockMetalWall(reinforcedMetal).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
+        
         bagConcrete = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagConcrete.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
 
