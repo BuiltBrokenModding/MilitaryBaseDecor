@@ -52,10 +52,11 @@ public class VanillaModule extends AbstractLoadable
 
     public static Item bagConcrete;
     public static Item leatherBag;
-
+    
     @Override
     public void preInit()
     {
+    	
         reinforcedSoil = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedSoil.class, ItemBlockVanilla.class);
         reinforcedStone = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedStone.class, ItemBlockVanilla.class);
         reinforcedMetal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetal.class, ItemBlockVanilla.class);

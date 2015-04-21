@@ -24,7 +24,7 @@ import java.util.List;
 public class BlockReinforcedSoil extends BlockReinforced
 {
     public static float RESISTANCE_SCALE = 5;
-
+    
     public BlockReinforcedSoil()
     {
         super(Material.ground, "reinforcedSoil");
@@ -38,17 +38,15 @@ public class BlockReinforcedSoil extends BlockReinforced
      */
     @SideOnly(Side.CLIENT)
     @Override
-    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+    public IIcon getIcon(int side, int metadata)
     {
 		return blockIcon;
-        
     }
     
     @SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister iconRegister)
     {
-
     }
 
     @Override

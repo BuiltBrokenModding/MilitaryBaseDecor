@@ -73,7 +73,7 @@ public final class MilitaryBaseDecor extends AbstractMod
 
         CREATIVE_TAB = new ModCreativeTab("MilitaryBaseDecor");
         getManager().setTab(CREATIVE_TAB);
-
+        
         // Config
         CHOCOLATE_ENABLED = getConfig().getBoolean("Enable Chocolate", Configuration.CATEGORY_GENERAL, true, "Should the chocolate item(joke item) be enabled/disabled?");
         

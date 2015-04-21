@@ -21,7 +21,7 @@ import net.minecraft.util.IIcon;
 public class BlockReinforcedMetal extends BlockReinforced{
 
 	public static float RESISTANCE_SCALE = 7;
-
+	
     public BlockReinforcedMetal()
     {
         super(Material.iron, "reinforcedMetal");
@@ -30,7 +30,6 @@ public class BlockReinforcedMetal extends BlockReinforced{
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
 
-    
     /**
      * TODO Once we get the textures we need to specify them here!
      */
