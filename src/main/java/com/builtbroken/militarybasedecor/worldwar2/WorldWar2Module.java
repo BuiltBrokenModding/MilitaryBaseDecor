@@ -29,10 +29,9 @@ public class WorldWar2Module extends AbstractLoadable
     @Override
     public void preInit()
     {
-    	if (MilitaryBaseDecor.CHOCOLATE_ENABLED = true) {
+    	if (MilitaryBaseDecor.CHOCOLATE_ENABLED) {
     	chocolate = MilitaryBaseDecor.INSTANCE.getManager().newItem("chocolate", new ItemFood(0, 0F, false).setPotionEffect(20, 60, 1, 1F).setTextureName(MilitaryBaseDecor.DOMAIN + "chocolate").setUnlocalizedName("chocolate").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB));
     	}
-    	else return;
     }
     
     @Override

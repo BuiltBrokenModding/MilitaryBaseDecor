@@ -38,10 +38,12 @@ public class ColdWarModule extends AbstractLoadable
     {
     	// Blocks
     	// Asphalt
+    	if (MilitaryBaseDecor.VANILLA_ENABLED) { // Temp solution until we have a complete recipe system figured out!
         GameRegistry.addShapelessRecipe(new ItemStack(asphalt, 1, 0), new Object[]{VanillaModule.concrete, new ItemStack(Items.dye, 1, 0)});
-        // Barbed Wire
-        GameRegistry.addShapedRecipe(new ItemStack(barbedWire, 8, 0), new Object[]{"FFF", "FWF", "FFF", 'F', Items.flint, 'W', VanillaModule.wiredFence});
-        // Reinforced Raik
+        // Reinforced Rail
         GameRegistry.addShapelessRecipe(new ItemStack(reinforcedRail, 1, 0), new Object[]{VanillaModule.concrete, Blocks.rail});
+         // Barbed Wire
+        GameRegistry.addShapedRecipe(new ItemStack(barbedWire, 8, 0), new Object[]{"FFF", "FWF", "FFF", 'F', Items.flint, 'W', VanillaModule.wiredFence});
+    	}  
     }
 }

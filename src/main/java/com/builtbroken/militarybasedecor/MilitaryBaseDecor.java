@@ -54,7 +54,7 @@ public final class MilitaryBaseDecor extends AbstractMod
     public static boolean VANILLA_ENABLED = true;
     public static boolean CIVIL_WAR_ENABLED = true;
     public static boolean COLD_WAR_ENABLED = true;
-    // public static boolean WORLD_WAR_ONE_ENABLED = true;
+    public static boolean WORLD_WAR_ONE_ENABLED = true;
     public static boolean WORLD_WAR_TWO_ENABLED = true;
     
     public static boolean CHOCOLATE_ENABLED = true;
@@ -75,32 +75,32 @@ public final class MilitaryBaseDecor extends AbstractMod
         getManager().setTab(CREATIVE_TAB);
         
         // Config
-        CHOCOLATE_ENABLED = getConfig().getBoolean("Enable Chocolate", Configuration.CATEGORY_GENERAL, true, "Should the chocolate item(joke item) be enabled/disabled?");
+        CHOCOLATE_ENABLED = getConfig().getBoolean("Enable Chocolate", "Settings", true, "Should the chocolate item(joke item) be enabled/disabled?");
         
-        VANILLA_ENABLED = getConfig().getBoolean("Enable Vanilla Module", Configuration.CATEGORY_GENERAL, true, "Enables/Disables the Vanilla module.");
-        CIVIL_WAR_ENABLED = getConfig().getBoolean("Enable Civil War Module", Configuration.CATEGORY_GENERAL, true, "Enables/Disables the Civil War module.");
-        COLD_WAR_ENABLED = getConfig().getBoolean("Enable Cold War Module", Configuration.CATEGORY_GENERAL, true, "Enables/Disables the Cold War module.");
-        // WORLD_WAR_ONE_ENABLED = getConfig().getBoolean("Enable WW1 Module", Configuration.CATEGORY_GENERAL, true, "Enables/Disables the WW1 module.");
-        WORLD_WAR_TWO_ENABLED = getConfig().getBoolean("Enable WW2 Module", Configuration.CATEGORY_GENERAL, true, "Enables/Disables the WW2 module.");
+        VANILLA_ENABLED = getConfig().getBoolean("Enable Vanilla Module", "Modules", true, "Enables/Disables the Vanilla module.");
+        CIVIL_WAR_ENABLED = getConfig().getBoolean("Enable Civil War Module", "Modules", true, "Enables/Disables the Civil War module.");
+        COLD_WAR_ENABLED = getConfig().getBoolean("Enable Cold War Module", "Modules", true, "Enables/Disables the Cold War module.");
+        WORLD_WAR_ONE_ENABLED = getConfig().getBoolean("Enable WW1 Module", "Modules", true, "Enables/Disables the WW1 module.");
+        WORLD_WAR_TWO_ENABLED = getConfig().getBoolean("Enable WW2 Module", "Modules", true, "Enables/Disables the WW2 module.");
         
         // Module Loading
-        if (VANILLA_ENABLED = true) {
+        if (VANILLA_ENABLED) {
             loader.applyModule(new VanillaModule());
             }
         
-        if (CIVIL_WAR_ENABLED = true) {
+        if (CIVIL_WAR_ENABLED) {
             loader.applyModule(new CivilWarModule());
             }
         
-        //if (WORLD_WAR_ONE_ENABLED = true) {
+        //if (!WORLD_WAR_ONE_ENABLED) {
         	//TODO Disabled until we need it! loader.applyModule(new WorldWar1Module());
           //}
         
-        if (WORLD_WAR_TWO_ENABLED = true) {
+        if (WORLD_WAR_TWO_ENABLED) {
             loader.applyModule(new WorldWar2Module());
             }
         
-        if (COLD_WAR_ENABLED = true) {
+        if (COLD_WAR_ENABLED) {
         loader.applyModule(new ColdWarModule());
         }
     }
