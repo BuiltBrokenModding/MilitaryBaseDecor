@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.coldwar.content.block;
+package com.builtbroken.militarybasedecor.worldwar1.content.block;
 
 import static net.minecraftforge.common.util.ForgeDirection.EAST;
 import static net.minecraftforge.common.util.ForgeDirection.NORTH;

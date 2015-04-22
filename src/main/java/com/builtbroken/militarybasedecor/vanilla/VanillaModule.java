@@ -18,8 +18,9 @@ import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockR
 import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedMetal;
 import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedSoil;
 import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedStone;
-import com.builtbroken.militarybasedecor.vanilla.content.items.ItemBag;
-import com.builtbroken.militarybasedecor.vanilla.content.items.ItemBagConcrete;
+import com.builtbroken.militarybasedecor.vanilla.content.item.ItemBag;
+import com.builtbroken.militarybasedecor.vanilla.content.item.ItemBagConcrete;
+import com.builtbroken.militarybasedecor.vanilla.content.item.ItemFenceWires;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -29,6 +30,8 @@ import net.minecraft.item.Item;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 /**
@@ -49,14 +52,15 @@ public class VanillaModule extends AbstractLoadable
     public static Block sandBag;
     public static Block metalFence;
     public static Block metalWall;
+    public static Block fluidConcrete;
 
     public static Item bagConcrete;
     public static Item leatherBag;
+    public static Item fenceWires;
     
     @Override
     public void preInit()
-    {
-    	
+    {       
         reinforcedSoil = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedSoil.class, ItemBlockVanilla.class);
         reinforcedStone = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedStone.class, ItemBlockVanilla.class);
         reinforcedMetal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetal.class, ItemBlockVanilla.class);
@@ -73,6 +77,7 @@ public class VanillaModule extends AbstractLoadable
         
         bagConcrete = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagConcrete.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
+        fenceWires = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemFenceWires.class);
 
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(concrete);
     }
@@ -86,7 +91,7 @@ public class VanillaModule extends AbstractLoadable
         // Concrete
         GameRegistry.addShapelessRecipe(new ItemStack(concrete, 2, 0), new Object[]{Items.water_bucket, bagConcrete});
         // Wired Fence
-        GameRegistry.addShapedRecipe(new ItemStack(wiredFence, 6, 0), new Object[]{"III", "   ", "III", 'I', Items.iron_ingot});
+        GameRegistry.addShapedRecipe(new ItemStack(wiredFence, 6, 0), new Object[]{"WWW", "   ", "WWW", 'W', fenceWires});
         // Simple Camo Block
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(simpleCamoBlock, 8), "WWW", "WCW", "WWW", 'W', Blocks.vine, 'C', UniversalRecipe.CIRCUIT_T1.get()));
         // Reinforced Glass

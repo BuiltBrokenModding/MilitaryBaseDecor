@@ -92,17 +92,17 @@ public final class MilitaryBaseDecor extends AbstractMod
             loader.applyModule(new CivilWarModule());
             }
         
-        //if (!WORLD_WAR_ONE_ENABLED) {
-        	//TODO Disabled until we need it! loader.applyModule(new WorldWar1Module());
-          //}
+        if (!WORLD_WAR_ONE_ENABLED) {
+        	loader.applyModule(new WorldWar1Module());
+            }
         
         if (WORLD_WAR_TWO_ENABLED) {
             loader.applyModule(new WorldWar2Module());
             }
         
         if (COLD_WAR_ENABLED) {
-        loader.applyModule(new ColdWarModule());
-        }
+            loader.applyModule(new ColdWarModule());
+            }
     }
 
     @Mod.EventHandler

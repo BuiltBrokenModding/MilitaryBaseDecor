@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.vanilla.content.items;
+package com.builtbroken.militarybasedecor.vanilla.content.item;
 
 import java.util.List;
 
