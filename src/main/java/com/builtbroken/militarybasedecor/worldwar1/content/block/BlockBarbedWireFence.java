@@ -18,6 +18,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -33,27 +34,28 @@ import net.minecraftforge.common.util.ForgeDirection;
 /**
  * Created by Ole on 23.01.2015.
  */
-public class BlockBarbedWire extends BlockPane {
+public class BlockBarbedWireFence extends BlockPane {
 
-    public BlockBarbedWire()
+    public BlockBarbedWireFence()
     {
-        super("militarybasedecor:barbed_wire", "militarybasedecor:barbed_wire", Material.iron, true);
-        this.setBlockName("barbed_wire");
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "barbed_wire");
+        super("militarybasedecor:barbed_wire_fence", "militarybasedecor:barbed_wire_fence", Material.iron, true);
+        this.setBlockName("barbed_wire_fence");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "barbed_wire_fence");
         this.setHardness(3.0F);
         this.setResistance(10.0F);
         this.setStepSound(soundTypeMetal);
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
     
-    	public AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
-    	{
-        return null;
-    	}
-    
 		public void onEntityCollidedWithBlock(World world, int player, int player2, int player3, Entity entity)
 		{
 			entity.attackEntityFrom(DamageSource.cactus, 1.0F);
 			entity.setInWeb();
 		}
+		
+		@Override
+	    public boolean isLadder(IBlockAccess world, int x, int y, int z, EntityLivingBase entity)
+	    {
+	        return true;
+	    }
 }

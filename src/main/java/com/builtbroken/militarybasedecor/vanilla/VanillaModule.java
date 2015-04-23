@@ -8,7 +8,7 @@ import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
 import com.builtbroken.militarybasedecor.prefab.BlockStairsPrefab;
 import com.builtbroken.militarybasedecor.prefab.BlockWallPrefab;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockBasicSandBag;
-import com.builtbroken.militarybasedecor.vanilla.content.block.BlockConcrete;
+import com.builtbroken.militarybasedecor.vanilla.content.block.BlockBasicConcrete;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockMetalWall;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockWiredFence;
 import com.builtbroken.militarybasedecor.vanilla.content.block.ItemBlockVanilla;
@@ -45,7 +45,7 @@ public class VanillaModule extends AbstractLoadable
     public static Block reinforcedGlass;
     public static Block reinforcedCasing;
     public static Block simpleCamoBlock;
-    public static Block concrete;
+    public static Block basicConcrete;
     public static Block concreteStairs;
     public static Block concreteWall;
     public static Block wiredFence;
@@ -53,10 +53,12 @@ public class VanillaModule extends AbstractLoadable
     public static Block metalFence;
     public static Block metalWall;
     public static Block fluidConcrete;
+    public static Block reinforcedDoor;
 
     public static Item bagConcrete;
     public static Item leatherBag;
     public static Item fenceWires;
+    public static Item reinforcedDoorItem;
     
     @Override
     public void preInit()
@@ -66,9 +68,9 @@ public class VanillaModule extends AbstractLoadable
         reinforcedMetal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetal.class, ItemBlockVanilla.class);
         reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class, ItemBlockVanilla.class);
         reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class, ItemBlockVanilla.class);
-        concrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcrete.class, ItemBlockVanilla.class);
-        concreteStairs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_stairs", new BlockStairsPrefab(concrete, 0).setBlockTextureName(MilitaryBaseDecor.DOMAIN + "concrete").setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
-        concreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall", new BlockWallPrefab(concrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
+        basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicConcrete.class, ItemBlockVanilla.class);
+        concreteStairs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_stairs", new BlockStairsPrefab(basicConcrete, 0).setBlockTextureName(MilitaryBaseDecor.DOMAIN + "concrete").setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
+        concreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall", new BlockWallPrefab(basicConcrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class).setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "camo_simple");
         wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWiredFence.class, ItemBlockVanilla.class);
         // TODO Create integration with the Armory mod(when we get to making it...) sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class), ItemBlockVanilla.class;
@@ -78,8 +80,8 @@ public class VanillaModule extends AbstractLoadable
         bagConcrete = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagConcrete.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
         fenceWires = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemFenceWires.class);
-
-        MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(concrete);
+        
+        MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(basicConcrete);
     }
     
     @Override
@@ -89,7 +91,7 @@ public class VanillaModule extends AbstractLoadable
         // Reinforced wood casing
         GameRegistry.addShapedRecipe(new ItemStack(reinforcedCasing, 1, 0), new Object[]{"SWS", "WSW" , "SWS", 'S', Items.stick, 'W', Blocks.planks});
         // Concrete
-        GameRegistry.addShapelessRecipe(new ItemStack(concrete, 2, 0), new Object[]{Items.water_bucket, bagConcrete});
+        GameRegistry.addShapelessRecipe(new ItemStack(basicConcrete, 2, 0), new Object[]{Items.water_bucket, bagConcrete});
         // Wired Fence
         GameRegistry.addShapedRecipe(new ItemStack(wiredFence, 6, 0), new Object[]{"WWW", "   ", "WWW", 'W', fenceWires});
         // Simple Camo Block

@@ -29,7 +29,7 @@ public class BlockWallPrefab extends BlockWall {
 	@Override
     public IIcon getIcon(int p_149691_1_, int p_149691_2_)
     {
-		return VanillaModule.concrete.getBlockTextureFromSide(p_149691_1_);
+		return VanillaModule.basicConcrete.getBlockTextureFromSide(p_149691_1_);
     }
 	
 	@SideOnly(Side.CLIENT)

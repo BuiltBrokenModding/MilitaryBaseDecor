@@ -7,7 +7,7 @@ import com.builtbroken.militarybasedecor.coldwar.content.block.BlockAsphalt;
 import com.builtbroken.militarybasedecor.coldwar.content.block.BlockReinforcedRail;
 import com.builtbroken.militarybasedecor.coldwar.content.block.ItemBlockColdWar;
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
-import com.builtbroken.militarybasedecor.vanilla.content.block.BlockConcrete;
+import com.builtbroken.militarybasedecor.vanilla.content.block.BlockBasicConcrete;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -21,7 +21,6 @@ import net.minecraft.item.ItemStack;
 public class ColdWarModule extends AbstractLoadable
 {
     public static Block asphalt;
-    public static Block barbedWire;
     public static Block reinforcedRail;
 
     @Override
@@ -37,11 +36,9 @@ public class ColdWarModule extends AbstractLoadable
     	// Blocks
     	// Asphalt
     	if (MilitaryBaseDecor.VANILLA_ENABLED) { // Temp solution until we have a complete recipe system figured out!
-        GameRegistry.addShapelessRecipe(new ItemStack(asphalt, 1, 0), new Object[]{VanillaModule.concrete, new ItemStack(Items.dye, 1, 0)});
+        GameRegistry.addShapelessRecipe(new ItemStack(asphalt, 1, 0), new Object[]{VanillaModule.basicConcrete, new ItemStack(Items.dye, 1, 0)});
         // Reinforced Rail
-        GameRegistry.addShapelessRecipe(new ItemStack(reinforcedRail, 1, 0), new Object[]{VanillaModule.concrete, Blocks.rail});
-         // Barbed Wire
-        GameRegistry.addShapedRecipe(new ItemStack(barbedWire, 8, 0), new Object[]{"FFF", "FWF", "FFF", 'F', Items.flint, 'W', VanillaModule.wiredFence});
+        GameRegistry.addShapelessRecipe(new ItemStack(reinforcedRail, 1, 0), new Object[]{VanillaModule.basicConcrete, Blocks.rail});
     	}  
     }
 }

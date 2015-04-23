@@ -5,6 +5,6 @@ import net.minecraft.block.BlockCauldron;
 /*
  * A very basic block/cauldron that will allow the player to create concrete.
  */
-public class BlockConcreteMixer extends BlockCauldron {
+public class BlockBasicConcreteMixer extends BlockCauldron {
 
 }

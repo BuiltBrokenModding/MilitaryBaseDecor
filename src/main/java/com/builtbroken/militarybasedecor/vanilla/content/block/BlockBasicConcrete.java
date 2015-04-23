@@ -24,14 +24,14 @@ import cpw.mods.fml.relauncher.SideOnly;
  * Vanilla version of concrete that is very basic (but contains sub colors)
  * Created by robert on 2/12/2015.
  */
-public class BlockConcrete extends Block
+public class BlockBasicConcrete extends Block
 {
 	
-    public BlockConcrete()
+    public BlockBasicConcrete()
     {
         super(Material.rock);
-        this.setBlockName("concrete");
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "concrete");
+        this.setBlockName("basic_concrete");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "basic_concrete");
         this.setHardness(15);
         this.setResistance(150);
         this.setStepSound(Block.soundTypeStone);
