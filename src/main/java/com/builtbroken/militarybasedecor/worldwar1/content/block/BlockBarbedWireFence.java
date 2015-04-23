@@ -20,6 +20,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.PlayerCapabilities;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -36,6 +37,8 @@ import net.minecraftforge.common.util.ForgeDirection;
  */
 public class BlockBarbedWireFence extends BlockPane {
 
+	public PlayerCapabilities capabilities = new PlayerCapabilities();
+	
     public BlockBarbedWireFence()
     {
         super("militarybasedecor:barbed_wire_fence", "militarybasedecor:barbed_wire_fence", Material.iron, true);
@@ -47,11 +50,17 @@ public class BlockBarbedWireFence extends BlockPane {
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
     
-		public void onEntityCollidedWithBlock(World world, int player, int player2, int player3, Entity entity)
-		{
-			entity.attackEntityFrom(DamageSource.cactus, 1.0F);
-			entity.setInWeb();
-		}
+        // TODO make it 100% creative mode, not just flying...
+        public void onEntityCollidedWithBlock(World world, int i, int j, int k, Entity entity)
+        {
+        	if (!this.capabilities.isCreativeMode && !this.capabilities.isFlying) {
+    		entity.setInWeb();
+    		entity.attackEntityFrom(DamageSource.cactus, 1.0F);
+    	}
+        	if (this.capabilities.isCreativeMode && this.capabilities.isFlying) {
+    		
+    	     }
+        }
 		
 		@Override
 	    public boolean isLadder(IBlockAccess world, int x, int y, int z, EntityLivingBase entity)

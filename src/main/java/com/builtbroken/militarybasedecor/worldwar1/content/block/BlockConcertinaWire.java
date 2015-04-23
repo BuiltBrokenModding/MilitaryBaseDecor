@@ -8,6 +8,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.PlayerCapabilities;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
@@ -15,6 +17,8 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
 public class BlockConcertinaWire extends Block {
+	
+	public PlayerCapabilities capabilities = new PlayerCapabilities();
 	
 	public BlockConcertinaWire()
     {
@@ -26,10 +30,16 @@ public class BlockConcertinaWire extends Block {
         this.setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "concertina_wire");
     }
 
+	// TODO make it 100% creative mode, not just flying...
     public void onEntityCollidedWithBlock(World world, int i, int j, int k, Entity entity)
     {
-        entity.setInWeb();
-        entity.attackEntityFrom(DamageSource.cactus, 1.0F);
+    	if (!this.capabilities.isCreativeMode && !this.capabilities.isFlying) {
+    		entity.setInWeb();
+    		entity.attackEntityFrom(DamageSource.cactus, 1.0F);
+    	}
+    	if (this.capabilities.isCreativeMode && this.capabilities.isFlying) {
+    		
+    	}
     }
 
     public boolean isOpaqueCube()

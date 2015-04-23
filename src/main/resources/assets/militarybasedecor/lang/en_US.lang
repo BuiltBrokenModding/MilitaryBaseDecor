@@ -26,6 +26,8 @@ tile.metal_fence.0.name=Metal Fence
 tile.metal_wall.0.name=Iron Wall
 tile.metal_wall.1.name=Gold Wall
 tile.concertina_wire.0.name=Concertina Wire
+tile.embrasure_block.0.name=Normal Embrasure Block
+tile.embrasure_block.1.name=Rusty Embrasure Block
 # Misc Items
 item.militarybasedecor:bagConcrete.name=Bag of Concrete
 item.militarybasedecor:bag.name=Bag

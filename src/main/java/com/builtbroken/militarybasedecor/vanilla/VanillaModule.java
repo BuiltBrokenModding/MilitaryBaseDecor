@@ -9,6 +9,7 @@ import com.builtbroken.militarybasedecor.prefab.BlockStairsPrefab;
 import com.builtbroken.militarybasedecor.prefab.BlockWallPrefab;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockBasicSandBag;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockBasicConcrete;
+import com.builtbroken.militarybasedecor.vanilla.content.block.BlockEmbrasureBlock;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockMetalWall;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockWiredFence;
 import com.builtbroken.militarybasedecor.vanilla.content.block.ItemBlockVanilla;
@@ -53,12 +54,11 @@ public class VanillaModule extends AbstractLoadable
     public static Block metalFence;
     public static Block metalWall;
     public static Block fluidConcrete;
-    public static Block reinforcedDoor;
+    public static Block embrasureBlock;
 
     public static Item bagConcrete;
     public static Item leatherBag;
     public static Item fenceWires;
-    public static Item reinforcedDoorItem;
     
     @Override
     public void preInit()
@@ -76,6 +76,7 @@ public class VanillaModule extends AbstractLoadable
         // TODO Create integration with the Armory mod(when we get to making it...) sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class), ItemBlockVanilla.class;
         metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeMetal), ItemBlockVanilla.class); 
         metalWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_wall", new BlockMetalWall(reinforcedMetal).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
+        embrasureBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockEmbrasureBlock.class, ItemBlockVanilla.class);
         
         bagConcrete = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagConcrete.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
