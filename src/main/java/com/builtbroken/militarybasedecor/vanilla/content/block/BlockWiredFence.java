@@ -8,18 +8,22 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 	/**
 	 * Created by Ole on 3.11.2015.
 	 */
 	public class BlockWiredFence extends BlockPane {
-
-	    public BlockWiredFence()
+		
+	    public BlockWiredFence(String texture1, String texture2, Material material, boolean bool)
 	    {
-	        super("militarybasedecor:wired_fence", "militarybasedecor:wired_fence_top", Material.iron, true);
+	        super(texture1, texture2, material, bool);
 	        this.setBlockName("wired_fence");
 	        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "wired_fence");
 	        this.setHardness(3.0F);

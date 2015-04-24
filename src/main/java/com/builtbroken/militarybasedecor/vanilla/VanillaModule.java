@@ -10,6 +10,7 @@ import com.builtbroken.militarybasedecor.prefab.BlockWallPrefab;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockBasicSandBag;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockEmbrasureBlock;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockMetalWall;
+import com.builtbroken.militarybasedecor.vanilla.content.block.BlockRustyIronBlock;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockWiredFence;
 import com.builtbroken.militarybasedecor.vanilla.content.block.ItemBlockVanilla;
 import com.builtbroken.militarybasedecor.vanilla.content.block.camo.TileSimpleCamo;
@@ -21,6 +22,8 @@ import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockR
 import com.builtbroken.militarybasedecor.vanilla.content.item.ItemBag;
 import com.builtbroken.militarybasedecor.vanilla.content.item.ItemBagCement;
 import com.builtbroken.militarybasedecor.vanilla.content.item.ItemFenceWires;
+import com.builtbroken.militarybasedecor.vanilla.content.item.ItemRustyIronIngot;
+import com.builtbroken.militarybasedecor.vanilla.content.item.ItemRustyIronNugget;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -50,15 +53,20 @@ public class VanillaModule extends AbstractLoadable
     public static Block concreteStairs;
     public static Block concreteWall;
     public static Block wiredFence;
+    public static Block rustyWiredFence;
     public static Block sandBag;
     public static Block metalFence;
     public static Block metalWall;
     public static Block fluidConcrete;
     public static Block embrasureBlock;
+    public static Block rustyIronBlock;
 
     public static Item bagCement;
     public static Item leatherBag;
     public static Item fenceWires;
+    public static Item rustyFenceWires;
+    public static Item rustyIronIngot;
+    public static Item rustyIronNugget;
     
     @Override
     public void preInit()
@@ -72,15 +80,20 @@ public class VanillaModule extends AbstractLoadable
         concreteStairs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_stairs", new BlockStairsPrefab(basicConcrete, 0).setBlockTextureName(MilitaryBaseDecor.DOMAIN + "basic_concrete_silver").setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
         concreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall", new BlockWallPrefab(basicConcrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class);
-        wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWiredFence.class, ItemBlockVanilla.class);
+        wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_fence", new BlockWiredFence("militarybasedecor:wired_fence", "militarybasedecor:wired_fence_top", Material.iron, true), ItemBlockVanilla.class);
+        rustyWiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("rusty_wired_fence", new BlockWiredFence("militarybasedecor:rusty_wired_fence", "militarybasedecor:rusty_wired_fence_top", Material.iron, true), ItemBlockVanilla.class);
         // TODO Create integration with the Armory mod(when we get to making it...) sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class), ItemBlockVanilla.class;
         metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeMetal), ItemBlockVanilla.class); 
         metalWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_wall", new BlockMetalWall(reinforcedMetal).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
         embrasureBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockEmbrasureBlock.class, ItemBlockVanilla.class);
+        rustyIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRustyIronBlock.class, ItemBlockVanilla.class);
         
         bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagCement.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
-        fenceWires = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemFenceWires.class);
+        fenceWires = MilitaryBaseDecor.INSTANCE.getManager().newItem("fence_wires", new ItemFenceWires()).setUnlocalizedName("fence_wires");
+        rustyFenceWires = MilitaryBaseDecor.INSTANCE.getManager().newItem("rusty_fence_wires", new ItemFenceWires()).setUnlocalizedName("rusty_fence_wires");
+        rustyIronIngot = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemRustyIronIngot.class);
+        rustyIronNugget = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemRustyIronNugget.class);
         
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(basicConcrete);
     }

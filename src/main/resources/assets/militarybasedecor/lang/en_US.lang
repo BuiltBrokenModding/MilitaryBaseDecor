@@ -46,10 +46,14 @@ tile.embrasure_block.1.name=Rusty Embrasure Block
 tile.rope_fence.0.name=Rope Fence
 tile.tangled_rope.0.name=Tangled Rope
 tile.limecrete.0.name=Limecrete
+tile.rusty_iron_block.0.name=Rusty Iron Block
 # Misc Items
 item.militarybasedecor:bagCement.name=Bag of Cement
 item.militarybasedecor:bag.name=Bag
 item.militarybasedecor:chocolate.name=Chocolate
-item.militarybasedecor:fenceWires.name=Fence Wires
+item.militarybasedecor:rustyIronNugget.name=Rusty Iron Nugget
+item.militarybasedecor:rustyIronIngot.name=Rusty Iron Ingot
+item.fence_wires.name=Fence Wires
+item.rusty_fence_wires.name=Rusty Fence Wires
 item.militarybasedecor:rope.name=Rope
 
