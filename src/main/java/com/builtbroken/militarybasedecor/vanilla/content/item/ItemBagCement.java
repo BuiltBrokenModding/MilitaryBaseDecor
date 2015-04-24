@@ -15,12 +15,12 @@ import net.minecraft.util.EnumChatFormatting;
 /**
  * Created by Ole on 09.02.2015.
  */
-public class ItemBagConcrete extends Item {
+public class ItemBagCement extends Item {
 
-    public ItemBagConcrete()
+    public ItemBagCement()
     {
-        this.setUnlocalizedName("bagConcrete");
-        this.setTextureName(MilitaryBaseDecor.PREFIX + "bag_concrete");
+        this.setUnlocalizedName("bagCement");
+        this.setTextureName(MilitaryBaseDecor.PREFIX + "bag_cement");
         this.setMaxStackSize(1);
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }

@@ -23,6 +23,7 @@ public class BlockReinforcedGlass extends Block
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_glass");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
         this.setResistance(48);
+        this.setHardness(6.0F);
     }
     
     /** Returns which pass should this block be rendered on. 0 for solids and 1 for alpha */

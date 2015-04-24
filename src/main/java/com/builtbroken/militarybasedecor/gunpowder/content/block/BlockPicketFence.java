@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.civilwar.content.block;
+package com.builtbroken.militarybasedecor.gunpowder.content.block;
 
 import java.util.List;
 

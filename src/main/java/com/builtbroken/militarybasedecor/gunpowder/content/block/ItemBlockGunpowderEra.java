@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.civilwar.content.block;
+package com.builtbroken.militarybasedecor.gunpowder.content.block;
 
 import java.util.List;
 
@@ -9,15 +9,15 @@ import net.minecraft.util.EnumChatFormatting;
 
 import com.builtbroken.mc.prefab.tile.item.ItemBlockMetadata;
 
-public class ItemBlockCivilWar extends ItemBlockMetadata {
+public class ItemBlockGunpowderEra extends ItemBlockMetadata {
 
-	public ItemBlockCivilWar(Block block) {
+	public ItemBlockGunpowderEra(Block block) {
 		super(block);
 	}
 
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
-    	list.add(EnumChatFormatting.BLUE + "Civil War Module");
+    	list.add(EnumChatFormatting.BLUE + "Gunpowder Era Module");
     }
 	
 }

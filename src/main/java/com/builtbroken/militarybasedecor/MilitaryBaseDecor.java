@@ -5,8 +5,8 @@ import net.minecraftforge.common.config.Configuration;
 import com.builtbroken.mc.lib.mod.AbstractMod;
 import com.builtbroken.mc.lib.mod.ModCreativeTab;
 import com.builtbroken.mc.lib.mod.config.Config;
-import com.builtbroken.militarybasedecor.civilwar.CivilWarModule;
 import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
+import com.builtbroken.militarybasedecor.gunpowder.GunpowderModule;
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
 import com.builtbroken.militarybasedecor.worldwar1.WorldWar1Module;
 import com.builtbroken.militarybasedecor.worldwar2.WorldWar2Module;
@@ -44,7 +44,7 @@ public final class MilitaryBaseDecor extends AbstractMod
     public static final String MODEL_TEXTURE_PATH = TEXTURE_PATH + MODEL_PREFIX;
     public static final String BLOCK_PATH = TEXTURE_PATH + "blocks/";
     public static final String ITEM_PATH = TEXTURE_PATH + "items/";
-
+    
     @Mod.Instance(DOMAIN)
     public static MilitaryBaseDecor INSTANCE;
 
@@ -52,7 +52,7 @@ public final class MilitaryBaseDecor extends AbstractMod
     public static CommonProxy proxy;
     
     public static boolean VANILLA_ENABLED = true;
-    public static boolean CIVIL_WAR_ENABLED = true;
+    public static boolean GUNPOWDER_ERA_ENABLED = true;
     public static boolean COLD_WAR_ENABLED = true;
     public static boolean WORLD_WAR_ONE_ENABLED = true;
     public static boolean WORLD_WAR_TWO_ENABLED = true;
@@ -75,21 +75,23 @@ public final class MilitaryBaseDecor extends AbstractMod
         getManager().setTab(CREATIVE_TAB);
         
         // Config
-        CHOCOLATE_ENABLED = getConfig().getBoolean("Enable Chocolate", "Settings", true, "Should the chocolate item(joke item) be enabled/disabled?");
-        
         VANILLA_ENABLED = getConfig().getBoolean("Enable Vanilla Module", "Modules", true, "Enables/Disables the Vanilla module.");
-        CIVIL_WAR_ENABLED = getConfig().getBoolean("Enable Civil War Module", "Modules", true, "Enables/Disables the Civil War module.");
+        GUNPOWDER_ERA_ENABLED = getConfig().getBoolean("Enable Civil War Module", "Modules", true, "Enables/Disables the Civil War module.");
         COLD_WAR_ENABLED = getConfig().getBoolean("Enable Cold War Module", "Modules", true, "Enables/Disables the Cold War module.");
         WORLD_WAR_ONE_ENABLED = getConfig().getBoolean("Enable WW1 Module", "Modules", true, "Enables/Disables the WW1 module.");
         WORLD_WAR_TWO_ENABLED = getConfig().getBoolean("Enable WW2 Module", "Modules", true, "Enables/Disables the WW2 module.");
+        
+        if (WORLD_WAR_TWO_ENABLED) {
+        CHOCOLATE_ENABLED = getConfig().getBoolean("Enable Chocolate", "Settings", false, "Should the chocolate item(joke item) be enabled/disabled?");
+        }
         
         // Module Loading
         if (VANILLA_ENABLED) {
             loader.applyModule(new VanillaModule());
             }
         
-        if (CIVIL_WAR_ENABLED) {
-            loader.applyModule(new CivilWarModule());
+        if (GUNPOWDER_ERA_ENABLED) {
+            loader.applyModule(new GunpowderModule());
             }
         
         if (WORLD_WAR_ONE_ENABLED) {

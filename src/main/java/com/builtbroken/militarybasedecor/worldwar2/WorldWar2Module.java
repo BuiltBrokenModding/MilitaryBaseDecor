@@ -18,6 +18,7 @@ import com.builtbroken.militarybasedecor.coldwar.content.block.BlockAsphalt;
 import com.builtbroken.militarybasedecor.coldwar.content.block.BlockReinforcedRail;
 import com.builtbroken.militarybasedecor.coldwar.content.block.ItemBlockColdWar;
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
+import com.builtbroken.militarybasedecor.worldwar2.content.item.ItemChocolate;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -30,7 +31,7 @@ public class WorldWar2Module extends AbstractLoadable
     public void preInit()
     {
     	if (MilitaryBaseDecor.CHOCOLATE_ENABLED) {
-    	chocolate = MilitaryBaseDecor.INSTANCE.getManager().newItem("chocolate", new ItemFood(0, 0F, false).setPotionEffect(20, 60, 1, 1F).setTextureName(MilitaryBaseDecor.DOMAIN + "chocolate").setUnlocalizedName("chocolate").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB));
+    	chocolate = MilitaryBaseDecor.INSTANCE.getManager().newItem("chocolate", new ItemChocolate(0, 0F, false).setPotionEffect(20, 60, 1, 1F).setTextureName(MilitaryBaseDecor.DOMAIN + "chocolate").setUnlocalizedName("chocolate").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB));
     	}
     }
     

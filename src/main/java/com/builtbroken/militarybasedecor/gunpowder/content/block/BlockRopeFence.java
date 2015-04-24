@@ -1,0 +1,20 @@
+package com.builtbroken.militarybasedecor.gunpowder.content.block;
+
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+
+import net.minecraft.block.BlockPane;
+import net.minecraft.block.material.Material;
+
+public class BlockRopeFence extends BlockPane {
+
+	public BlockRopeFence()
+    {
+        super("militarybasedecor:rope_fence", "militarybasedecor:rope_fence_top", Material.wood, true);
+        this.setBlockName("rope_fence");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "rope_fence");
+        this.setHardness(3.0F);
+        this.setResistance(10.0F);
+        this.setStepSound(soundTypeWood);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+    }
+}
