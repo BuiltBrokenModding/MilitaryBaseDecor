@@ -2,6 +2,7 @@ package com.builtbroken.militarybasedecor.gunpowder;
 
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.gunpowder.content.block.BlockLimecrete;
 import com.builtbroken.militarybasedecor.gunpowder.content.block.BlockPicketFence;
 import com.builtbroken.militarybasedecor.gunpowder.content.block.BlockRopeFence;
 import com.builtbroken.militarybasedecor.gunpowder.content.block.BlockTangledRope;
@@ -24,12 +25,14 @@ public class GunpowderModule implements ILoadable
     public static Block picketFence;
     public static Block ropeFence;
     public static Block tangledRope;
+    public static Block limecrete;
     
     public static Item rope;
 
     @Override
     public void preInit()
     {
+    	limecrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockLimecrete.class, ItemBlockGunpowderEra.class);
     	ropeFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRopeFence.class, ItemBlockGunpowderEra.class);
     	tangledRope = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockTangledRope.class, ItemBlockGunpowderEra.class);
     	picketFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockPicketFence.class, ItemBlockGunpowderEra.class);
