@@ -41,7 +41,7 @@ public class BlockBarbedWireFence extends BlockPane {
 	
     public BlockBarbedWireFence()
     {
-        super("militarybasedecor:barbed_wire_fence", "militarybasedecor:barbed_wire_fence", Material.iron, true);
+        super("militarybasedecor:barbed_wire_fence", "militarybasedecor:wired_fence_top", Material.iron, true);
         this.setBlockName("barbed_wire_fence");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "barbed_wire_fence");
         this.setHardness(3.0F);
