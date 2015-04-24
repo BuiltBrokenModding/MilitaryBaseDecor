@@ -44,9 +44,11 @@ tile.concertina_wire.0.name=Concertina Wire
 tile.embrasure_block.0.name=Normal Embrasure Block
 tile.embrasure_block.1.name=Rusty Embrasure Block
 tile.rope_fence.0.name=Rope Fence
+tile.tangled_rope.0.name=Tangled Rope
 # Misc Items
 item.militarybasedecor:bagCement.name=Bag of Cement
 item.militarybasedecor:bag.name=Bag
 item.militarybasedecor:chocolate.name=Chocolate
 item.militarybasedecor:fenceWires.name=Fence Wires
+item.militarybasedecor:rope.name=Rope
 
