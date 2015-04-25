@@ -25,11 +25,6 @@ public class BlockReinforcedRail extends BlockRail
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
     
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
-    {
-    	list.add(EnumChatFormatting.BLUE + "Cold War Module");
-    }
-
     @Override
     public float getRailMaxSpeed(World world, EntityMinecart cart, int y, int x, int z)
     {

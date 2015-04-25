@@ -24,8 +24,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 	    public BlockWiredFence(String texture1, String texture2, Material material, boolean bool)
 	    {
 	        super(texture1, texture2, material, bool);
-	        this.setBlockName("wired_fence");
-	        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "wired_fence");
 	        this.setHardness(3.0F);
 	        this.setResistance(10.0F);
 	        this.setStepSound(soundTypeMetal);

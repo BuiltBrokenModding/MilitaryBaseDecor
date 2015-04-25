@@ -2,6 +2,8 @@ package com.builtbroken.militarybasedecor.vanilla.content.block;
 
 import java.util.List;
 
+import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
@@ -19,7 +21,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockMetalWall extends BlockWall {
 	
-	public static final String[] field_150092_a = new String[] {"iron", "gold"};
+	public static final String[] field_150092_a = new String[] {"iron", "gold", "rusty"};
 
     public BlockMetalWall(Block block)
     {
@@ -33,7 +35,7 @@ public class BlockMetalWall extends BlockWall {
     @Override
     public IIcon getIcon(int p_149691_1_, int p_149691_2_)
     {
-        return p_149691_2_ == 1 ? Blocks.gold_block.getBlockTextureFromSide(p_149691_1_) : Blocks.iron_block.getBlockTextureFromSide(p_149691_1_);
+        return p_149691_2_ == 2 ? VanillaModule.rustyIronBlock.getBlockTextureFromSide(p_149691_1_) : p_149691_2_ == 1 ? Blocks.gold_block.getBlockTextureFromSide(p_149691_1_) : Blocks.iron_block.getBlockTextureFromSide(p_149691_1_);
     }
 
     /**
@@ -137,6 +139,7 @@ public class BlockMetalWall extends BlockWall {
     {
         p_149666_3_.add(new ItemStack(p_149666_1_, 1, 0));
         p_149666_3_.add(new ItemStack(p_149666_1_, 1, 1));
+        p_149666_3_.add(new ItemStack(p_149666_1_, 1, 2));
     }
 
     /**
