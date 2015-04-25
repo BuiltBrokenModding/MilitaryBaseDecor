@@ -38,6 +38,8 @@ public class ColdWarModule extends AbstractLoadable
         metalDoor = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_door", new BlockMetalDoor());
         
         metalDoorItem = MilitaryBaseDecor.INSTANCE.getManager().newItem("metal_door_item", new ItemMetalDoor(Material.iron));
+        
+        MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(asphalt);
     }
     
     @Override

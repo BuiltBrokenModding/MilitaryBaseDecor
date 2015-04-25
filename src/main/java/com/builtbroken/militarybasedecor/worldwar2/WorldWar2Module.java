@@ -33,6 +33,8 @@ public class WorldWar2Module extends AbstractLoadable
     	if (MilitaryBaseDecor.CHOCOLATE_ENABLED) {
     	chocolate = MilitaryBaseDecor.INSTANCE.getManager().newItem("chocolate", new ItemChocolate(0, 0F, false).setPotionEffect(20, 60, 1, 1F).setTextureName(MilitaryBaseDecor.DOMAIN + "chocolate").setUnlocalizedName("chocolate").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB));
     	}
+    	
+    	MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(chocolate);
     }
     
     @Override

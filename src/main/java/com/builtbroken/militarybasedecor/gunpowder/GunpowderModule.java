@@ -38,6 +38,8 @@ public class GunpowderModule implements ILoadable
     	picketFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockPicketFence.class, ItemBlockGunpowderEra.class);
     	
     	rope = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemRope.class);
+    	
+    	MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(ropeFence);
     }
 
     @Override
