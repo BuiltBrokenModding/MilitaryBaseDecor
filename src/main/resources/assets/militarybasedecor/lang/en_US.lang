@@ -49,6 +49,7 @@ tile.rope_fence.0.name=Rope Fence
 tile.tangled_rope.0.name=Tangled Rope
 tile.limecrete.0.name=Limecrete
 tile.rusty_iron_block.0.name=Rusty Iron Block
+tile.metal_door.name=Metal Door
 # Misc Items
 item.militarybasedecor:bagCement.name=Bag of Cement
 item.militarybasedecor:bag.name=Bag
@@ -58,4 +59,5 @@ item.militarybasedecor:rustyIronIngot.name=Rusty Iron Ingot
 item.fence_wires.name=Fence Wires
 item.rusty_fence_wires.name=Rusty Fence Wires
 item.militarybasedecor:rope.name=Rope
+item.militarybasedecor:metal_door_item.name=Metal Door
 
