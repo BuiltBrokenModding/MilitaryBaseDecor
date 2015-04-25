@@ -11,6 +11,7 @@ import com.builtbroken.militarybasedecor.vanilla.content.block.BlockBasicSandBag
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockEmbrasureBlock;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockMetalWall;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockRustyIronBlock;
+import com.builtbroken.militarybasedecor.vanilla.content.block.BlockWiredDoor;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockWiredFence;
 import com.builtbroken.militarybasedecor.vanilla.content.block.ItemBlockVanilla;
 import com.builtbroken.militarybasedecor.vanilla.content.block.camo.TileSimpleCamo;
@@ -24,6 +25,7 @@ import com.builtbroken.militarybasedecor.vanilla.content.item.ItemBagCement;
 import com.builtbroken.militarybasedecor.vanilla.content.item.ItemFenceWires;
 import com.builtbroken.militarybasedecor.vanilla.content.item.ItemRustyIronIngot;
 import com.builtbroken.militarybasedecor.vanilla.content.item.ItemRustyIronNugget;
+import com.builtbroken.militarybasedecor.vanilla.content.item.ItemWiredDoor;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -60,6 +62,7 @@ public class VanillaModule extends AbstractLoadable
     public static Block fluidConcrete;
     public static Block embrasureBlock;
     public static Block rustyIronBlock;
+    public static Block wiredDoor;
 
     public static Item bagCement;
     public static Item leatherBag;
@@ -67,6 +70,7 @@ public class VanillaModule extends AbstractLoadable
     public static Item rustyFenceWires;
     public static Item rustyIronIngot;
     public static Item rustyIronNugget;
+    public static Item wiredDoorItem;
     
     @Override
     public void preInit()
@@ -87,6 +91,7 @@ public class VanillaModule extends AbstractLoadable
         metalWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_wall", new BlockMetalWall(reinforcedMetal).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
         embrasureBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockEmbrasureBlock.class, ItemBlockVanilla.class);
         rustyIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRustyIronBlock.class, ItemBlockVanilla.class);
+        wiredDoor = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_door", new BlockWiredDoor(Material.iron).setBlockName("wired_door").setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "wired_door"));
         
         bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagCement.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
@@ -94,6 +99,7 @@ public class VanillaModule extends AbstractLoadable
         rustyFenceWires = MilitaryBaseDecor.INSTANCE.getManager().newItem("rusty_fence_wires", new ItemFenceWires()).setUnlocalizedName("rusty_fence_wires");
         rustyIronIngot = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemRustyIronIngot.class);
         rustyIronNugget = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemRustyIronNugget.class);
+        wiredDoorItem = MilitaryBaseDecor.INSTANCE.getManager().newItem("wired_door_item", new ItemWiredDoor(Material.iron));
         
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(basicConcrete);
     }
