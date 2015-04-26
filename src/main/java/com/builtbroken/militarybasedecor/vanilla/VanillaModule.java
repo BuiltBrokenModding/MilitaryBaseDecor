@@ -8,12 +8,14 @@ import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
 import com.builtbroken.militarybasedecor.prefab.BlockStairsPrefab;
 import com.builtbroken.militarybasedecor.prefab.BlockWallPrefab;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockBasicSandBag;
+import com.builtbroken.militarybasedecor.vanilla.content.block.BlockChainLinkFence;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockEmbrasureBlock;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockMetalWall;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockRustyIronBlock;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockWiredDoor;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockWiredFence;
 import com.builtbroken.militarybasedecor.vanilla.content.block.ItemBlockVanilla;
+import com.builtbroken.militarybasedecor.vanilla.content.block.TilePaneBarbs;
 import com.builtbroken.militarybasedecor.vanilla.content.block.TilePole;
 import com.builtbroken.militarybasedecor.vanilla.content.block.camo.TileSimpleCamo;
 import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedCasing;
@@ -65,6 +67,8 @@ public class VanillaModule extends AbstractLoadable
     public static Block rustyIronBlock;
     public static Block wiredDoor;
     public static Block panePole;
+    public static Block chainLinkFence;
+    public static Block paneBarbs;
 
     public static Item bagCement;
     public static Item leatherBag;
@@ -95,6 +99,8 @@ public class VanillaModule extends AbstractLoadable
         rustyIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRustyIronBlock.class, ItemBlockVanilla.class);
         wiredDoor = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_door", new BlockWiredDoor(Material.iron).setBlockName("wired_door").setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "wired_door"));
         panePole = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TilePole.class);
+        chainLinkFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockChainLinkFence.class, ItemBlockVanilla.class);
+        paneBarbs = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TilePaneBarbs.class);
         
         bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagCement.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);

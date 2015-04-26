@@ -52,6 +52,8 @@ tile.rusty_iron_block.0.name=Rusty Iron Block
 tile.metal_door.name=Metal Door
 tile.wired_door.name=Wired Door
 tile.militarybasedecor:pane_pole.0.name=Pane Pole
+tile.chain_link_fence.0.name=Chain Link Fence
+tile.militarybasedecor:pane_barbs.0.name=Pane Barbs
 # Misc Items
 item.militarybasedecor:bagCement.name=Bag of Cement
 item.militarybasedecor:bag.name=Bag
