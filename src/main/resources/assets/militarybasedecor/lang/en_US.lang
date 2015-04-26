@@ -51,6 +51,7 @@ tile.limecrete.0.name=Limecrete
 tile.rusty_iron_block.0.name=Rusty Iron Block
 tile.metal_door.name=Metal Door
 tile.wired_door.name=Wired Door
+tile.militarybasedecor:pane_pole.0.name=Pane Pole
 # Misc Items
 item.militarybasedecor:bagCement.name=Bag of Cement
 item.militarybasedecor:bag.name=Bag

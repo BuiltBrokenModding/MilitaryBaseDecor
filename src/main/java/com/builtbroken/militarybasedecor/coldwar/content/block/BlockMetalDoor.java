@@ -25,6 +25,7 @@ public class BlockMetalDoor extends BlockDoor {
 		float f = 0.5F;
         float f1 = 1.0F;
         this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f1, 0.5F + f);
+        this.setCreativeTab(null);
 		this.setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "metal_door");
 		this.setBlockName("metal_door");
 	}

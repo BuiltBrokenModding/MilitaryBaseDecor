@@ -39,7 +39,7 @@ public class TileSimpleCamo extends TileEnt implements IPacketReceiver
     {
         super("tileCamo", Material.rock);
         this.itemBlock = ItemBlockCamo.class;
-        this.setTextureName(MilitaryBaseDecor.DOMAIN + ":" + "camo_simple");
+        this.setTextureName(MilitaryBaseDecor.PREFIX + "camo_simple");
     }
     
     @Override
