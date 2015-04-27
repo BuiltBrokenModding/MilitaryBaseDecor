@@ -65,7 +65,8 @@ public class TilePaneBarbs extends TileMachine implements ISimpleItemRenderer{
 	
 	@Override
 	public void renderInventoryItem(IItemRenderer.ItemRenderType type, ItemStack itemStack, Object... data) {
-		GL11.glTranslatef(0.7f, 0.7f, 0.7f);
+		GL11.glTranslatef(0.5f, 0.5f, 0.5f);
+		GL11.glScaled(1f, 1f, 1f);
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(Assets.PANE_BARBS_TEXTURE);
         Assets.PANE_BARBS_MODEL.renderAll();;
 	}
