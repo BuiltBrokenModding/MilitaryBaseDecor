@@ -17,8 +17,10 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -35,16 +37,22 @@ public class TileSimpleCamo extends TileEnt implements IPacketReceiver
     ItemStack stack = null;
     boolean locked = false;
 
-    public TileSimpleCamo()
-    {
+    public TileSimpleCamo() {
         super("tileCamo", Material.rock);
         this.itemBlock = ItemBlockCamo.class;
+        this.setTextureName(MilitaryBaseDecor.PREFIX + "camo_simple");
     }
-    
+
     @Override
     public Tile newTile()
     {
         return new TileSimpleCamo();
+    }
+
+    @SideOnly(Side.CLIENT)
+    public IIcon getIcon()
+    {
+        return Blocks.vine.getIcon(0, 0);
     }
 
     @Override

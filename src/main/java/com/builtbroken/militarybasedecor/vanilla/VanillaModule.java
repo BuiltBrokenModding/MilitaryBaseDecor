@@ -2,14 +2,10 @@ package com.builtbroken.militarybasedecor.vanilla;
 
 import com.builtbroken.mc.lib.helper.recipe.UniversalRecipe;
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
-import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
 import com.builtbroken.militarybasedecor.prefab.BlockStairsPrefab;
 import com.builtbroken.militarybasedecor.prefab.BlockWallPrefab;
-import com.builtbroken.militarybasedecor.vanilla.content.block.BlockBasicSandBag;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockChainLinkFence;
-import com.builtbroken.militarybasedecor.vanilla.content.block.BlockEmbrasureBlock;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockMetalWall;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockRustyIronBlock;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockWiredDoor;
@@ -39,8 +35,6 @@ import net.minecraft.item.Item;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 /**
@@ -62,8 +56,6 @@ public class VanillaModule extends AbstractLoadable
     public static Block sandBag;
     public static Block metalFence;
     public static Block metalWall;
-    public static Block fluidConcrete;
-    public static Block embrasureBlock;
     public static Block rustyIronBlock;
     public static Block wiredDoor;
     public static Block panePole;
@@ -95,7 +87,6 @@ public class VanillaModule extends AbstractLoadable
         // TODO Create integration with the Armory mod(when we get to making it...) sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class), ItemBlockVanilla.class;
         metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeMetal), ItemBlockVanilla.class); 
         metalWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_wall", new BlockMetalWall(reinforcedMetal).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
-        embrasureBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockEmbrasureBlock.class, ItemBlockVanilla.class);
         rustyIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRustyIronBlock.class, ItemBlockVanilla.class);
         wiredDoor = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_door", new BlockWiredDoor(Material.iron).setBlockName("wired_door").setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "wired_door"));
         panePole = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TilePole.class);
