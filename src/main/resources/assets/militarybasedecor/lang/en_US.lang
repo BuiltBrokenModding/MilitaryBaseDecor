@@ -54,6 +54,9 @@ tile.wired_door.name=Wired Door
 tile.militarybasedecor:pane_pole.0.name=Pane Pole
 tile.chain_link_fence.0.name=Chain Link Fence
 tile.militarybasedecor:pane_barbs.0.name=Pane Barbs
+tile.stone_light.0.name=Stone Light
+tile.stone_light.1.name=Cobblestone Light
+tile.stone_light.2.name=Stone Bricks Light
 # Misc Items
 item.militarybasedecor:bagCement.name=Bag of Cement
 item.militarybasedecor:bag.name=Bag

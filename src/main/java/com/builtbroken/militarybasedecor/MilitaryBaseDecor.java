@@ -1,5 +1,6 @@
 package com.builtbroken.militarybasedecor;
 
+import com.builtbroken.militarybasedecor.future.FutureModule;
 import net.minecraftforge.common.config.Configuration;
 
 import com.builtbroken.mc.lib.mod.AbstractMod;
@@ -56,6 +57,7 @@ public final class MilitaryBaseDecor extends AbstractMod
     public static boolean COLD_WAR_ENABLED = true;
     public static boolean WORLD_WAR_ONE_ENABLED = true;
     public static boolean WORLD_WAR_TWO_ENABLED = true;
+    public static boolean FUTURE_ENABLED = true;
     
     public static boolean CHOCOLATE_ENABLED = true;
 
@@ -80,7 +82,8 @@ public final class MilitaryBaseDecor extends AbstractMod
         COLD_WAR_ENABLED = getConfig().getBoolean("Enable Cold War Module", "Modules", true, "Enables/Disables the Cold War module.");
         WORLD_WAR_ONE_ENABLED = getConfig().getBoolean("Enable WW1 Module", "Modules", true, "Enables/Disables the WW1 module.");
         WORLD_WAR_TWO_ENABLED = getConfig().getBoolean("Enable WW2 Module", "Modules", true, "Enables/Disables the WW2 module.");
-        
+        FUTURE_ENABLED = getConfig().getBoolean("Enable Future Module", "Modules", true, "Enables/Disables the Future module.");
+
         if (WORLD_WAR_TWO_ENABLED) {
         CHOCOLATE_ENABLED = getConfig().getBoolean("Enable Chocolate", "Settings", false, "Should the chocolate item(joke item) be enabled/disabled?");
         }
@@ -105,6 +108,10 @@ public final class MilitaryBaseDecor extends AbstractMod
         if (COLD_WAR_ENABLED) {
             loader.applyModule(new ColdWarModule());
             }
+
+        if (FUTURE_ENABLED) {
+            loader.applyModule(new FutureModule());
+        }
     }
 
     @Mod.EventHandler

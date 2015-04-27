@@ -19,5 +19,4 @@ public class ItemBlockVanilla extends ItemBlockMetadata {
     {
     	list.add(EnumChatFormatting.BLUE + "Vanilla Module");
     }
-
 }
