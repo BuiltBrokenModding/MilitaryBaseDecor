@@ -68,8 +68,8 @@ public class TilePaneBarbs extends TileMachine implements ISimpleItemRenderer{
 		GL11.glTranslatef(0.5f, 0.5f, 0.5f);
 		GL11.glScaled(1f, 1f, 1f);
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(Assets.PANE_BARBS_TEXTURE);
-        Assets.PANE_BARBS_MODEL.renderAll();;
-	}
+        Assets.PANE_BARBS_MODEL.renderAll();
+    }
 	
 	@SideOnly(Side.CLIENT)
     public AxisAlignedBB getRenderBoundingBox()

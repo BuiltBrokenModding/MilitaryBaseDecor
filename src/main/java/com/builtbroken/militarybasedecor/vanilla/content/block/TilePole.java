@@ -56,8 +56,8 @@ public class TilePole extends TileEnt implements ISimpleItemRenderer{
 	public void renderInventoryItem(IItemRenderer.ItemRenderType type, ItemStack itemStack, Object... data) {
 		GL11.glTranslatef(0.5f, 0.5f, 0.5f);
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(Assets.PANE_POLE_TEXTURE);
-        Assets.PANE_POLE_MODEL.renderAll();;
-	}
+        Assets.PANE_POLE_MODEL.renderAll();
+    }
 	
 	@SideOnly(Side.CLIENT)
     public AxisAlignedBB getRenderBoundingBox()

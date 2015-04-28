@@ -23,6 +23,6 @@ public class ItemChocolate extends ItemFood {
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
     	list.add(EnumChatFormatting.BLUE + "WW2 Module");
-    	list.add(EnumChatFormatting.GREEN.ITALIC + "???");
+    	list.add(EnumChatFormatting.ITALIC + "???");
     }
 }

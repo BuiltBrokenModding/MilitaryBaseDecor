@@ -83,7 +83,7 @@ public class BlockReinforcedStone extends BlockReinforced
     /**
      * Sub types for this block
      */
-    public static enum ReinforcedStoneMeta
+    public enum ReinforcedStoneMeta
     {
         STONE(Blocks.stone),
         BRICK(Blocks.stonebrick);
@@ -91,13 +91,13 @@ public class BlockReinforcedStone extends BlockReinforced
         public final float hardness;
         public final float base_resistance;
 
-        private ReinforcedStoneMeta(Block block)
+        ReinforcedStoneMeta(Block block)
         {
             hardness = BlockUtility.getBlockHardness(block);
             base_resistance = BlockUtility.getBlockResistance(block);
         }
 
-        private ReinforcedStoneMeta(float hardness, float base_resistance)
+        ReinforcedStoneMeta(float hardness, float base_resistance)
         {
             this.hardness = hardness;
             this.base_resistance = base_resistance;

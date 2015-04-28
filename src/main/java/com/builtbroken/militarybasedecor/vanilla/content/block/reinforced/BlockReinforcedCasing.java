@@ -62,20 +62,20 @@ public class BlockReinforcedCasing extends BlockReinforced
     /**
      * Sub types for this block
      */
-    public static enum ReinforcedCasing
+    public enum ReinforcedCasing
     {
         WOOD(Blocks.planks);
 
         public final float hardness;
         public final float base_resistance;
 
-        private ReinforcedCasing(Block block)
+        ReinforcedCasing(Block block)
         {
             hardness = BlockUtility.getBlockHardness(block);
             base_resistance = BlockUtility.getBlockResistance(block);
         }
 
-        private ReinforcedCasing(float hardness, float base_resistance)
+        ReinforcedCasing(float hardness, float base_resistance)
         {
             this.hardness = hardness;
             this.base_resistance = base_resistance;

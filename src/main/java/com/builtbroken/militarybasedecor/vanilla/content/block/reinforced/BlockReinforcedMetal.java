@@ -78,7 +78,7 @@ public class BlockReinforcedMetal extends BlockReinforced{
     /**
      * Sub types for this block
      */
-    public static enum ReinforcedMetalMeta
+    public enum ReinforcedMetalMeta
     {
         IRON(Blocks.iron_block),
         GOLD(Blocks.gold_block);
@@ -86,13 +86,13 @@ public class BlockReinforcedMetal extends BlockReinforced{
         public final float hardness;
         public final float base_resistance;
 
-        private ReinforcedMetalMeta(Block block)
+        ReinforcedMetalMeta(Block block)
         {
             hardness = BlockUtility.getBlockHardness(block);
             base_resistance = BlockUtility.getBlockResistance(block);
         }
 
-        private ReinforcedMetalMeta(float hardness, float base_resistance)
+        ReinforcedMetalMeta(float hardness, float base_resistance)
         {
             this.hardness = hardness;
             this.base_resistance = base_resistance;

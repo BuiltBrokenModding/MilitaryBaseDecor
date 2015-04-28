@@ -81,7 +81,7 @@ public class BlockReinforcedSoil extends BlockReinforced
     /**
      * Sub types for this block
      */
-    public static enum ReinforcedSoilMeta
+    public enum ReinforcedSoilMeta
     {
         DIRT(Blocks.dirt),
         SAND(Blocks.sand),
@@ -90,13 +90,13 @@ public class BlockReinforcedSoil extends BlockReinforced
         public final float hardness;
         public final float base_resistance;
 
-        private ReinforcedSoilMeta(Block block)
+        ReinforcedSoilMeta(Block block)
         {
             hardness = BlockUtility.getBlockHardness(block);
             base_resistance = BlockUtility.getBlockResistance(block);
         }
 
-        private ReinforcedSoilMeta(float hardness, float base_resistance)
+        ReinforcedSoilMeta(float hardness, float base_resistance)
         {
             this.hardness = hardness;
             this.base_resistance = base_resistance;

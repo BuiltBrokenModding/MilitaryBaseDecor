@@ -41,7 +41,7 @@ public class WorldWar1Module extends AbstractLoadable {
 	 	
 	 		// Blocks
 	 		// Barbed Wire Fence
-	 		 GameRegistry.addShapedRecipe(new ItemStack(barbedWireFence, 8, 0), new Object[]{"FFF", "FWF", "FFF", 'F', Items.flint, 'W', VanillaModule.wiredFence});
+	 		 GameRegistry.addShapedRecipe(new ItemStack(barbedWireFence, 8, 0), "FFF", "FWF", "FFF", 'F', Items.flint, 'W', VanillaModule.wiredFence);
 	 	}
 
 }
