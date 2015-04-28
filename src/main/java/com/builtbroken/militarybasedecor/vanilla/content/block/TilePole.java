@@ -1,5 +1,7 @@
 package com.builtbroken.militarybasedecor.vanilla.content.block;
 
+import com.builtbroken.mc.prefab.tile.TileMachine;
+import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
 import org.lwjgl.opengl.GL11;
 
 import net.minecraft.block.Block;
@@ -29,7 +31,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraftforge.client.IItemRenderer;
 import net.minecraftforge.client.model.IModelCustom;
 
-public class TilePole extends TileEnt implements ISimpleItemRenderer{
+public class TilePole extends TileMachine implements ISimpleItemRenderer{
 	
 	public TilePole() {
 		super("pane_pole", Material.iron);
@@ -37,7 +39,6 @@ public class TilePole extends TileEnt implements ISimpleItemRenderer{
 		this.isOpaque = false;
         this.renderNormalBlock = false;
         this.renderTileEntity = true;
-        this.bounds = new Cube(0.42F, 0F, 0.42F, 0.60F, 1F, 0.60F);
 	}
 
 	@Override
@@ -49,7 +50,7 @@ public class TilePole extends TileEnt implements ISimpleItemRenderer{
 	@SideOnly(Side.CLIENT)
     public IIcon getIcon()
     {
-        return Blocks.iron_block.getIcon(0, 0);
+        return ColdWarModule.asphalt.getIcon(0, 0);
     }
 	
 	@Override
@@ -72,6 +73,13 @@ public class TilePole extends TileEnt implements ISimpleItemRenderer{
         //Render Pole
         GL11.glPushMatrix();
         GL11.glTranslatef(pos.xf() + 0.5f, pos.yf() + 0.5f, pos.zf() + 0.5f);
+        switch(facing)
+        {
+            case EAST: break;
+            case WEST: GL11.glRotatef(180f, 0, 1f, 0); break;
+            case SOUTH: GL11.glRotatef(-90f, 0, 1f, 0); break;
+            default: GL11.glRotatef(90f, 0, 1f, 0); break;
+        }
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(Assets.PANE_POLE_TEXTURE);
         Assets.PANE_POLE_MODEL.renderAll();
         GL11.glPopMatrix();

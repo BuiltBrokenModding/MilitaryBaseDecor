@@ -3,7 +3,7 @@ package com.builtbroken.militarybasedecor.vanilla;
 import com.builtbroken.mc.lib.helper.recipe.UniversalRecipe;
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.prefab.BlockStairsPrefab;
+import com.builtbroken.militarybasedecor.prefab.BlockColoredStairs;
 import com.builtbroken.militarybasedecor.prefab.BlockWallPrefab;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockChainLinkFence;
 import com.builtbroken.militarybasedecor.vanilla.content.block.BlockMetalWall;
@@ -42,6 +42,27 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
  */
 public class VanillaModule extends AbstractLoadable
 {
+
+    public static String[] colors =
+            {
+                    "Black",
+                    "Red",
+                    "Green",
+                    "Brown",
+                    "Blue",
+                    "Purple",
+                    "Cyan",
+                    "LightGray",
+                    "Gray",
+                    "Pink",
+                    "Lime",
+                    "Yellow",
+                    "LightBlue",
+                    "Magenta",
+                    "Orange",
+                    "White"
+            };
+
     public static Block reinforcedSoil;
     public static Block reinforcedStone;
     public static Block reinforcedMetal;
@@ -49,7 +70,7 @@ public class VanillaModule extends AbstractLoadable
     public static Block reinforcedCasing;
     public static Block simpleCamoBlock;
     public static Block basicConcrete;
-    public static Block concreteStairs;
+    public static Block concreteStairs[] = new Block[16];
     public static Block concreteWall;
     public static Block wiredFence;
     public static Block rustyWiredFence;
@@ -79,8 +100,10 @@ public class VanillaModule extends AbstractLoadable
         reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class, ItemBlockVanilla.class);
         reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class, ItemBlockVanilla.class);
         basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_basic",new BlockColored(Material.rock).setHardness(15).setResistance(150).setStepSound(Block.soundTypeStone).setBlockName("basic_concrete").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
-        concreteStairs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_stairs", new BlockStairsPrefab(basicConcrete, 0).setBlockTextureName(MilitaryBaseDecor.DOMAIN + "basic_concrete_silver").setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
-        concreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall", new BlockWallPrefab(basicConcrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
+        for (int i = 0; i < 16; i++) {
+            concreteStairs[i] = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_basic_stairs_" + i, new BlockColoredStairs(basicConcrete, i).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
+        }
+        concreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall_", new BlockWallPrefab(basicConcrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class);
         wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_fence", new BlockWiredFence("militarybasedecor:wired_fence", "militarybasedecor:wired_fence_top", Material.iron, true).setBlockName("wired_fence"), ItemBlockVanilla.class);
         rustyWiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("rusty_wired_fence", new BlockWiredFence("militarybasedecor:rusty_wired_fence", "militarybasedecor:rusty_wired_fence_top", Material.iron, true).setBlockName("rusty_wired_fence"), ItemBlockVanilla.class);
