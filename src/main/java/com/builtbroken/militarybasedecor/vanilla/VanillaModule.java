@@ -35,7 +35,6 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
  */
 public class VanillaModule extends AbstractLoadable
 {
-
     public static String[] colors =
             {
                     "Black",
@@ -105,7 +104,6 @@ public class VanillaModule extends AbstractLoadable
         metalWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_wall", new BlockMetalWall(reinforcedMetal).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
         rustyIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRustyIronBlock.class, ItemBlockVanilla.class);
         wiredDoor = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_door", new BlockWiredDoor(Material.iron).setBlockName("wired_door").setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "wired_door"));
-        panePole = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TilePole.class);
         chainLinkFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockChainLinkFence.class, ItemBlockVanilla.class);
         paneBarbs = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TilePaneBarbs.class);
         

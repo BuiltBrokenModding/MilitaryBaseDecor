@@ -44,7 +44,7 @@ public class WorldWar1Module extends AbstractLoadable {
 	 		 GameRegistry.addShapedRecipe(new ItemStack(barbedWireFence, 8, 0), "FFF", "FWF", "FFF", 'F', Items.flint, 'W', VanillaModule.wiredFence);
 
             // Items
-            
+
 	 	}
 
 }
