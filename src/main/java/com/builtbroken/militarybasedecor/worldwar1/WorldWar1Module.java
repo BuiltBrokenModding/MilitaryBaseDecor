@@ -29,7 +29,7 @@ public class WorldWar1Module extends AbstractLoadable {
 	    {
 	 		barbedWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBarbedWireFence.class, ItemBlockWorldWar1.class);
 	 		concertinaWire = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcertinaWire.class, ItemBlockWorldWar1.class);
-	 		// TODO Create integration with the Armory mod(when we get to making it...) advancedSandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAdvancedSandbag.class, ItemBlockWorldWar1.class);
+	 		advancedSandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAdvancedSandbag.class, ItemBlockWorldWar1.class);
 	 		
 	 		MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(barbedWireFence);
 	    }
@@ -37,11 +37,14 @@ public class WorldWar1Module extends AbstractLoadable {
 	 	@Override 
 	 	public void postInit()
 	 	{
-	 	// TODO Create integration with the Armory mod(when we get to making it...) GameRegistry.addShapedRecipe(new ItemStack(advancedSandBag, 1, 0), new Object[]{"WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', VanillaModule.sandBag});
-	 	
 	 		// Blocks
+			// Advanced Sandbag
+			GameRegistry.addShapedRecipe(new ItemStack(advancedSandBag, 1, 0), new Object[]{"WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', VanillaModule.sandBag});
 	 		// Barbed Wire Fence
 	 		 GameRegistry.addShapedRecipe(new ItemStack(barbedWireFence, 8, 0), "FFF", "FWF", "FFF", 'F', Items.flint, 'W', VanillaModule.wiredFence);
+
+            // Items
+            
 	 	}
 
 }
