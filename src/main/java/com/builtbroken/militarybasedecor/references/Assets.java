@@ -13,9 +13,11 @@ public final class Assets {
 	
 	    //Models
 	    public static final IModelCustom PANE_BARBS_MODEL = model("Pane_Barbs.tcn");
+		public static final IModelCustom MESHED_FLOOR_PANEL_MODEL = model("Meshed_Floor_Panel.tcn");
 
 	    //Textures
 	    public static final ResourceLocation PANE_BARBS_TEXTURE = texture("Pane_Barbs");
+		public static final ResourceLocation MESHED_FLOOR_PANEL_TEXTURE = texture("Meshed_Floor_Panel");
 	    
 	    
 	    public static IModelCustom model(String name)

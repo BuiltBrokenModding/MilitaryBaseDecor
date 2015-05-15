@@ -71,7 +71,6 @@ public class VanillaModule extends AbstractLoadable
     public static Block metalWall;
     public static Block rustyIronBlock;
     public static Block wiredDoor;
-    public static Block panePole;
     public static Block chainLinkFence;
     public static Block paneBarbs;
 

@@ -2,7 +2,7 @@ package com.builtbroken.militarybasedecor.future;
 
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.future.content.block.ItemBlockFuture;
+import com.builtbroken.militarybasedecor.future.content.block.TileMeshedFloorPanel;
 import net.minecraft.block.Block;
 
 /**
@@ -11,8 +11,12 @@ import net.minecraft.block.Block;
  */
 public class FutureModule extends AbstractLoadable {
 
+    public static Block meshedFloorPanel;
+
     @Override
     public void preInit() {
+
+        meshedFloorPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileMeshedFloorPanel.class);
 
     }
 
