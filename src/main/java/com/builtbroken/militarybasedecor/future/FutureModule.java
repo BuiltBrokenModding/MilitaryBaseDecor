@@ -2,7 +2,6 @@ package com.builtbroken.militarybasedecor.future;
 
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.future.content.block.BlockGroundLight;
 import com.builtbroken.militarybasedecor.future.content.block.ItemBlockFuture;
 import net.minecraft.block.Block;
 
@@ -12,12 +11,8 @@ import net.minecraft.block.Block;
  */
 public class FutureModule extends AbstractLoadable {
 
-    public static Block stoneLight;
-
     @Override
     public void preInit() {
-
-        stoneLight = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockGroundLight.class, ItemBlockFuture.class);
 
     }
 
