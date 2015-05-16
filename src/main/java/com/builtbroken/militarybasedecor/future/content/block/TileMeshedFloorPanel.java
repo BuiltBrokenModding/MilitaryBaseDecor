@@ -1,5 +1,6 @@
 package com.builtbroken.militarybasedecor.future.content.block;
 
+import com.builtbroken.mc.api.items.ISimpleItemRenderer;
 import com.builtbroken.mc.lib.transform.region.Cube;
 import com.builtbroken.mc.lib.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
@@ -20,7 +21,7 @@ import org.lwjgl.opengl.GL11;
 /**
  * Created by Ole on 5/15/2015.
  */
-public class TileMeshedFloorPanel extends TileEnt {
+public class TileMeshedFloorPanel extends Tile  implements ISimpleItemRenderer {
 
     public TileMeshedFloorPanel() {
         super("meshed_floor_panel", Material.iron);
@@ -44,8 +45,8 @@ public class TileMeshedFloorPanel extends TileEnt {
     }
 
     public void renderInventoryItem(IItemRenderer.ItemRenderType type, ItemStack itemStack, Object... data) {
-        GL11.glTranslatef(1f, 1f, 1f);
-        GL11.glScaled(5f, 5f, 5f);
+        GL11.glTranslatef(0.5f, 0.5f, 0.5f);
+        GL11.glScaled(1f, 1f, 1f);
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(Assets.MESHED_FLOOR_PANEL_TEXTURE);
         Assets.MESHED_FLOOR_PANEL_MODEL.renderAll();
     }

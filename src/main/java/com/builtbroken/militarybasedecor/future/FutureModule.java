@@ -17,7 +17,6 @@ public class FutureModule extends AbstractLoadable {
     public void preInit() {
 
         meshedFloorPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileMeshedFloorPanel.class);
-
     }
 
     @Override

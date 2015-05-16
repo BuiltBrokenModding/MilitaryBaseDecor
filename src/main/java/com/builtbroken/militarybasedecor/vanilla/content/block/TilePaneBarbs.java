@@ -1,5 +1,6 @@
 package com.builtbroken.militarybasedecor.vanilla.content.block;
 
+import com.builtbroken.mc.core.network.IPacketReceiver;
 import io.netty.buffer.ByteBuf;
 
 import org.lwjgl.opengl.GL11;
