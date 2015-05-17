@@ -2,10 +2,13 @@ package com.builtbroken.militarybasedecor.vanilla.content.block;
 
 import java.util.List;
 
+import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
@@ -15,8 +18,9 @@ import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.world.World;
 
-	/**
+/**
 	 * Created by Ole on 3.11.2015.
 	 */
 	public class BlockWiredFence extends BlockPane {
@@ -29,7 +33,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 	        this.setStepSound(soundTypeMetal);
 	        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
 	    }
-	    
+
 	    @Override
 	    public boolean isLadder(IBlockAccess world, int x, int y, int z, EntityLivingBase entity)
 	    {

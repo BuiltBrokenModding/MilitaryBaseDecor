@@ -19,7 +19,6 @@ public final class Assets {
 	    public static final ResourceLocation PANE_BARBS_TEXTURE = texture("Pane_Barbs");
 		public static final ResourceLocation MESHED_FLOOR_PANEL_TEXTURE = texture("Meshed_Floor_Panel");
 
-
 	    public static IModelCustom model(String name)
 	    {
 	        return EngineModelLoader.loadModel(new ResourceLocation(MilitaryBaseDecor.DOMAIN, MilitaryBaseDecor.MODEL_PREFIX + name));

@@ -14,9 +14,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 
-public class ItemFenceWires extends Item {
+public class ItemBundledWire extends Item {
 	
-	 public ItemFenceWires()
+	 public ItemBundledWire()
 	    {}
 	    
 	    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)

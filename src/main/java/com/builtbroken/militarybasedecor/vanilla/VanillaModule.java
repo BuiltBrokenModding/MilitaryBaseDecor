@@ -12,13 +12,9 @@ import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockR
 import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedMetal;
 import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedSoil;
 import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedStone;
-import com.builtbroken.militarybasedecor.vanilla.content.item.ItemBag;
-import com.builtbroken.militarybasedecor.vanilla.content.item.ItemBagCement;
-import com.builtbroken.militarybasedecor.vanilla.content.item.ItemFenceWires;
-import com.builtbroken.militarybasedecor.vanilla.content.item.ItemRustyIronIngot;
-import com.builtbroken.militarybasedecor.vanilla.content.item.ItemRustyIronNugget;
-import com.builtbroken.militarybasedecor.vanilla.content.item.ItemWiredDoor;
+import com.builtbroken.militarybasedecor.vanilla.content.item.*;
 
+import com.builtbroken.militarybasedecor.vanilla.content.item.tool.ItemWireCutters;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockColored;
@@ -76,11 +72,11 @@ public class VanillaModule extends AbstractLoadable
 
     public static Item bagCement;
     public static Item leatherBag;
-    public static Item fenceWires;
-    public static Item rustyFenceWires;
+    public static Item bundledWire;
     public static Item rustyIronIngot;
     public static Item rustyIronNugget;
     public static Item wiredDoorItem;
+    public static Item wireCutters;
     
     @Override
     public void preInit()
@@ -96,23 +92,23 @@ public class VanillaModule extends AbstractLoadable
         }
         concreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall", new BlockWallPrefab(basicConcrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class);
-        wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_fence", new BlockWiredFence("militarybasedecor:wired_fence", "militarybasedecor:wired_fence_top", Material.iron, true).setBlockName("wired_fence"), ItemBlockVanilla.class);
-        rustyWiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("rusty_wired_fence", new BlockWiredFence("militarybasedecor:rusty_wired_fence", "militarybasedecor:rusty_wired_fence_top", Material.iron, true).setBlockName("rusty_wired_fence"), ItemBlockVanilla.class);
+        wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_fence", new BlockWiredFence("militarybasedecor:wired_fence", "militarybasedecor:wired_fence_top", Material.iron, true).setBlockUnbreakable().setBlockName("wired_fence"), ItemBlockVanilla.class);
+        rustyWiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("rusty_wired_fence", new BlockWiredFence("militarybasedecor:rusty_wired_fence", "militarybasedecor:rusty_wired_fence_top", Material.iron, true).setBlockName("rusty_wired_fence").setBlockUnbreakable(), ItemBlockVanilla.class);
         sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class, ItemBlockVanilla.class);
         metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeMetal), ItemBlockVanilla.class); 
         metalWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_wall", new BlockMetalWall(reinforcedMetal).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
         rustyIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRustyIronBlock.class, ItemBlockVanilla.class);
         wiredDoor = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_door", new BlockWiredDoor(Material.iron).setBlockName("wired_door").setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "wired_door"));
-        chainLinkFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockChainLinkFence.class, ItemBlockVanilla.class);
+        chainLinkFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockChainLinkFence.class, ItemBlockVanilla.class).setBlockUnbreakable();
         paneBarbs = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TilePaneBarbs.class);
         
         bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagCement.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
-        fenceWires = MilitaryBaseDecor.INSTANCE.getManager().newItem("fence_wires", new ItemFenceWires()).setUnlocalizedName("fence_wires");
-        rustyFenceWires = MilitaryBaseDecor.INSTANCE.getManager().newItem("rusty_fence_wires", new ItemFenceWires()).setUnlocalizedName("rusty_fence_wires");
+        bundledWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("bundled_wire", new ItemBundledWire()).setUnlocalizedName("bundled_wire");
         rustyIronIngot = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemRustyIronIngot.class);
         rustyIronNugget = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemRustyIronNugget.class);
         wiredDoorItem = MilitaryBaseDecor.INSTANCE.getManager().newItem("wired_door_item", new ItemWiredDoor(Material.iron));
+        wireCutters = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemWireCutters.class).setUnlocalizedName("wire_cutters").setTextureName(MilitaryBaseDecor.PREFIX + "wire_cutters");
         
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(basicConcrete);
     }
@@ -126,7 +122,7 @@ public class VanillaModule extends AbstractLoadable
         // Concrete
         GameRegistry.addShapelessRecipe(new ItemStack(basicConcrete, 2, 0), Items.water_bucket, bagCement);
         // Wired Fence
-        GameRegistry.addShapedRecipe(new ItemStack(wiredFence, 6, 0), "WWW", "   ", "WWW", 'W', fenceWires);
+        GameRegistry.addShapedRecipe(new ItemStack(wiredFence, 6, 0), "WWW", "   ", "WWW", 'W', bundledWire);
         // Simple Camo Block
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(simpleCamoBlock, 8), "WWW", "WCW", "WWW", 'W', Blocks.vine, 'C', UniversalRecipe.CIRCUIT_T1.get()));
         // Reinforced Glass
@@ -139,6 +135,6 @@ public class VanillaModule extends AbstractLoadable
         GameRegistry.addShapelessRecipe(new ItemStack(bagCement, 1, 0), Blocks.gravel, Blocks.sand, leatherBag);
         
         // Basic Sandbag
-        // TODO Create integration with the Armory mod(when we get to making it...) GameRegistry.addShapedRecipe(new ItemStack(sandBag, 1, 0), new Object[]{"WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', new ItemStack(Blocks.sand, 1, 0)});
+        GameRegistry.addShapedRecipe(new ItemStack(sandBag, 1, 0), new Object[]{"WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', new ItemStack(Blocks.sand, 1, 0)});
     }
 }

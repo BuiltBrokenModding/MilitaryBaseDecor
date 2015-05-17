@@ -1,5 +1,6 @@
 package com.builtbroken.militarybasedecor.worldwar1;
 
+import com.builtbroken.militarybasedecor.worldwar1.content.item.ItemBarbedBundledWire;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -21,15 +22,17 @@ public class WorldWar1Module extends AbstractLoadable {
 	public static Block advancedSandBag;
 	public static Block barbedWireFence;
 	public static Block concertinaWire;
-	
-	public static Item barbedWire;
+
+	public static Item barbedBundledWire;
 	
 	 	@Override
 	    public void preInit()
 	    {
-	 		barbedWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBarbedWireFence.class, ItemBlockWorldWar1.class);
+	 		barbedWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBarbedWireFence.class, ItemBlockWorldWar1.class).setBlockUnbreakable();
 	 		concertinaWire = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcertinaWire.class, ItemBlockWorldWar1.class);
 	 		advancedSandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAdvancedSandbag.class, ItemBlockWorldWar1.class);
+
+			barbedBundledWire = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBarbedBundledWire.class).setUnlocalizedName("barbed_bundled_wire");
 	 		
 	 		MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(barbedWireFence);
 	    }
