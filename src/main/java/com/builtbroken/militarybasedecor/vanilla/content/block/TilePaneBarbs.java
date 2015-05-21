@@ -37,10 +37,10 @@ public class TilePaneBarbs extends TileMachine implements ISimpleItemRenderer{
 	
 	public TilePaneBarbs() {
 		super("pane_barbs", Material.iron);
-		this.itemBlock = ItemBlockVanilla.class;
 		this.isOpaque = false;
         this.renderNormalBlock = false;
         this.renderTileEntity = true;
+        this.itemBlock = ItemBlockVanilla.class;
         this.bounds = new Cube(0F, 0F, 0F, 1F, 0.35F, 1F);
 	}
 	
@@ -62,19 +62,13 @@ public class TilePaneBarbs extends TileMachine implements ISimpleItemRenderer{
     {
         return Blocks.iron_block.getIcon(0, 0);
     }
-	
-	@Override
-	public void renderInventoryItem(IItemRenderer.ItemRenderType type, ItemStack itemStack, Object... data) {
-		GL11.glTranslatef(0.5f, 0.5f, 0.5f);
-		GL11.glScaled(1f, 1f, 1f);
+
+    @Override
+    public void renderInventoryItem(IItemRenderer.ItemRenderType itemRenderType, ItemStack itemStack, Object... objects) {
+        GL11.glTranslatef(-0.5f, -0.5f, -0.5f);
+        GL11.glScaled(.8f, .8f, .8f);
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(Assets.PANE_BARBS_TEXTURE);
         Assets.PANE_BARBS_MODEL.renderAll();
-    }
-	
-	@SideOnly(Side.CLIENT)
-    public AxisAlignedBB getRenderBoundingBox()
-    {
-        return new Cube(0, 0, 0, 1, 3, 1).add(x(), y(), z()).toAABB();
     }
 	
 	@Override
@@ -95,10 +89,4 @@ public class TilePaneBarbs extends TileMachine implements ISimpleItemRenderer{
         Assets.PANE_BARBS_MODEL.renderAll();
         GL11.glPopMatrix();
     }
-	
-	 @SideOnly(Side.CLIENT)
-	    public void registerIcons(IIconRegister iconRegister)
-	    {
-
-	    }
 }

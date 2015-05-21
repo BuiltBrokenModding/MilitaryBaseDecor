@@ -39,10 +39,10 @@ public final class MilitaryBaseDecor extends AbstractMod
     public static final String ASSETS_PATH = "/assets/militarybasedecor/";
     public static final String TEXTURE_PATH = "textures/";
     public static final String GUI_PATH = TEXTURE_PATH + "gui/";
-    public static final String MODEL_PREFIX = "models/";
-    public static final String MODEL_DIRECTORY = ASSETS_PATH + MODEL_PREFIX;
+    public static final String MODEL_PATH = "models/";
+    public static final String MODEL_DIRECTORY = ASSETS_PATH + MODEL_PATH;
 
-    public static final String MODEL_TEXTURE_PATH = TEXTURE_PATH + MODEL_PREFIX;
+    public static final String MODEL_TEXTURE_PATH = TEXTURE_PATH + MODEL_PATH;
     public static final String BLOCK_PATH = TEXTURE_PATH + "blocks/";
     public static final String ITEM_PATH = TEXTURE_PATH + "items/";
     

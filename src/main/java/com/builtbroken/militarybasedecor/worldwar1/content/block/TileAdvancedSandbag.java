@@ -1,11 +1,13 @@
-package com.builtbroken.militarybasedecor.future.content.block;
+package com.builtbroken.militarybasedecor.worldwar1.content.block;
 
 import com.builtbroken.mc.api.items.ISimpleItemRenderer;
 import com.builtbroken.mc.lib.transform.region.Cube;
 import com.builtbroken.mc.lib.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
 import com.builtbroken.mc.prefab.tile.TileEnt;
+import com.builtbroken.mc.prefab.tile.TileMachine;
 import com.builtbroken.militarybasedecor.references.Assets;
+import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -19,36 +21,28 @@ import net.minecraftforge.client.IItemRenderer;
 import org.lwjgl.opengl.GL11;
 
 /**
- * Created by Ole on 5/15/2015.
+ * Created by Ole on 5/17/2015.
  */
-public class TileMeshedFloorPanel extends Tile implements ISimpleItemRenderer {
+public class TileAdvancedSandbag extends Tile implements ISimpleItemRenderer {
 
-    public TileMeshedFloorPanel() {
-        super("meshed_floor_panel", Material.iron);
+    public TileAdvancedSandbag() {
+        super("advanced_sandbag", Material.cloth);
         this.isOpaque = false;
         this.renderNormalBlock = false;
         this.renderTileEntity = true;
-        this.itemBlock = ItemBlockFuture.class;
-        this.bounds = new Cube(0.0F, 0.94F, 0.0F, 1.0F, 1.0F, 1.0F);
+        this.itemBlock = ItemBlockWorldWar1.class;
     }
 
     @Override
     public Tile newTile()
     {
-        return new TileMeshedFloorPanel();
+        return new TileAdvancedSandbag();
     }
 
     @SideOnly(Side.CLIENT)
     public IIcon getIcon()
     {
-        return Blocks.iron_block.getIcon(0, 0);
-    }
-
-    public void renderInventoryItem(IItemRenderer.ItemRenderType type, ItemStack itemStack, Object... data) {
-        GL11.glTranslatef(0.5f, 0.5f, 0.5f);
-        GL11.glScaled(1f, 1f, 1f);
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(Assets.MESHED_FLOOR_PANEL_TEXTURE);
-        Assets.MESHED_FLOOR_PANEL_MODEL.renderAll();
+        return VanillaModule.sandBag.getIcon(0, 0);
     }
 
     @SideOnly(Side.CLIENT)
@@ -58,14 +52,21 @@ public class TileMeshedFloorPanel extends Tile implements ISimpleItemRenderer {
     }
 
     @Override
+    public void renderInventoryItem(IItemRenderer.ItemRenderType itemRenderType, ItemStack itemStack, Object... objects) {
+        GL11.glTranslatef(-0.5f, -0.5f, -0.5f);
+        GL11.glScaled(.8f, .8f, .8f);
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(Assets.ADVANCED_SANDBAG_TEXTURE);
+        Assets.ADVANCED_SANDBAG_MODEL.renderAll();
+    }
+
+    @Override
     @SideOnly(Side.CLIENT)
-    public void renderDynamic(Pos pos, float frame, int pass)
-    {
-        //Render Meshed Floor Panel
+    public void renderDynamic(Pos pos, float frame, int pass) {
+        //Render Advanced Sandbag
         GL11.glPushMatrix();
         GL11.glTranslatef(pos.xf() + 0.5f, pos.yf() + 0.5f, pos.zf() + 0.5f);
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(Assets.MESHED_FLOOR_PANEL_TEXTURE);
-        Assets.MESHED_FLOOR_PANEL_MODEL.renderAll();
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(Assets.ADVANCED_SANDBAG_TEXTURE);
+        Assets.ADVANCED_SANDBAG_MODEL.renderAll();
         GL11.glPopMatrix();
     }
 
@@ -74,5 +75,4 @@ public class TileMeshedFloorPanel extends Tile implements ISimpleItemRenderer {
     {
 
     }
-
 }
