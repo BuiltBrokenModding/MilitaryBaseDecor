@@ -33,6 +33,7 @@ https://docs.google.com/document/d/105N6q63OJnzrWjMbydFYFUlHmK6spc8P8da8qkduFRs/
 
 ###Credits
 * Morton - Assets
+* Viridian Ouroboros - Textures
 
 ## Download Locations
 * http://www.builtbroken.com/pages/militarybasedecor/
