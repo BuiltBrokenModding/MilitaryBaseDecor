@@ -98,17 +98,15 @@ public class VanillaModule extends AbstractLoadable
         metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeMetal), ItemBlockVanilla.class); 
         metalWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_wall", new BlockMetalWall(reinforcedMetal).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
         rustyIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRustyIronBlock.class, ItemBlockVanilla.class);
-        wiredDoor = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_door", new BlockWiredDoor(Material.iron).setBlockName("wired_door").setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "wired_door"));
         chainLinkFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockChainLinkFence.class, ItemBlockVanilla.class).setBlockUnbreakable();
         paneBarbs = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TilePaneBarbs.class);
         
-        bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagCement.class);
-        leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
+        bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag_cement", ItemBagCement.class);
+        leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag", ItemBag.class);
         bundledWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("bundled_wire", new ItemBundledWire()).setUnlocalizedName("bundled_wire");
-        rustyIronIngot = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemRustyIronIngot.class);
-        rustyIronNugget = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemRustyIronNugget.class);
-        wiredDoorItem = MilitaryBaseDecor.INSTANCE.getManager().newItem("wired_door_item", new ItemWiredDoor(Material.iron));
-        wireCutters = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemWireCutters.class).setUnlocalizedName("wire_cutters").setTextureName(MilitaryBaseDecor.PREFIX + "wire_cutters");
+        rustyIronIngot = MilitaryBaseDecor.INSTANCE.getManager().newItem("rusty_iron_ingot", ItemRustyIronIngot.class);
+        rustyIronNugget = MilitaryBaseDecor.INSTANCE.getManager().newItem("rusty_iron_nugget", ItemRustyIronNugget.class);
+        wireCutters = MilitaryBaseDecor.INSTANCE.getManager().newItem("wire_cutters", ItemWireCutters.class).setUnlocalizedName("wire_cutters").setTextureName(MilitaryBaseDecor.PREFIX + "wire_cutters");
         
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(basicConcrete);
     }

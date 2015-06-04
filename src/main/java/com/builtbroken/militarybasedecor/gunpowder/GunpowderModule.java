@@ -37,7 +37,7 @@ public class GunpowderModule implements ILoadable
     	tangledRope = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockTangledRope.class, ItemBlockGunpowderEra.class);
     	picketFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockPicketFence.class, ItemBlockGunpowderEra.class);
     	
-    	rope = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemRope.class);
+    	rope = MilitaryBaseDecor.INSTANCE.getManager().newItem("rope", ItemRope.class);
     	
     	MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(ropeFence);
     }
