@@ -66,7 +66,6 @@ public class VanillaModule extends AbstractLoadable
     public static Block metalFence;
     public static Block metalWall;
     public static Block rustyIronBlock;
-    public static Block wiredDoor;
     public static Block chainLinkFence;
     public static Block paneBarbs;
 
@@ -75,7 +74,6 @@ public class VanillaModule extends AbstractLoadable
     public static Item bundledWire;
     public static Item rustyIronIngot;
     public static Item rustyIronNugget;
-    public static Item wiredDoorItem;
     public static Item wireCutters;
     
     @Override

@@ -11,7 +11,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 /** Content themed after cold ware military bunkers and bases
@@ -21,9 +20,6 @@ public class ColdWarModule extends AbstractLoadable
 {
     public static Block asphalt;
     public static Block reinforcedRail;
-    public static Block metalDoor;
-    
-    public static Item metalDoorItem;
 
     @Override
     public void preInit()
