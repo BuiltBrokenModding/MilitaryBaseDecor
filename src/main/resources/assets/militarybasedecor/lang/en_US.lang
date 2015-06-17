@@ -64,8 +64,6 @@ tile.rope_fence.0.name=Rope Fence
 tile.tangled_rope.0.name=Tangled Rope
 tile.limecrete.0.name=Limecrete
 tile.rusty_iron_block.0.name=Rusty Iron Block
-tile.metal_door.name=Metal Door
-tile.wired_door.name=Wired Door
 tile.militarybasedecor:pane_pole.0.name=Pane Pole
 tile.chain_link_fence.0.name=Chain Link Fence
 tile.militarybasedecor:pane_barbs.0.name=Pane Barbs
@@ -86,6 +84,4 @@ item.bundled_wire.name=Bundled Wire
 item.barbed_bundled_wire.name=Barbed Bundled Wire
 item.militarybasedecor:rope.name=Rope
 item.wire_cutters.name=Wire Cutters
-item.militarybasedecor:metal_door_item.name=Metal Door
-item.militarybasedecor:wired_door_item.name=Wired Door
 

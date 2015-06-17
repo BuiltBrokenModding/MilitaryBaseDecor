@@ -27,7 +27,7 @@ public class ColdWarModule extends AbstractLoadable
     public static Block asphalt;
     public static Block reinforcedRail;
     public static Block metalDoor;
-    
+
     public static Item metalDoorItem;
 
     @Override
@@ -36,7 +36,7 @@ public class ColdWarModule extends AbstractLoadable
         asphalt = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAsphalt.class, ItemBlockColdWar.class);
         reinforcedRail = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedRail.class, ItemBlockColdWar.class);
         metalDoor = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_door", new BlockMetalDoor());
-        
+
         metalDoorItem = MilitaryBaseDecor.INSTANCE.getManager().newItem("metal_door_item", new ItemMetalDoor(Material.iron));
         
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(asphalt);
