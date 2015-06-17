@@ -11,6 +11,7 @@ public class BlockOliveDrabTexturedBlock extends Block {
 
     public BlockOliveDrabTexturedBlock() {
         super(Material.cloth);
+        this.setBlockName("olive_drab_textured_block");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "olive_drab_textured_block");
         this.setHardness(0.5f);
         this.setResistance(1);

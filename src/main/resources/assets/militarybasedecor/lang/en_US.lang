@@ -73,8 +73,9 @@ tile.militarybasedecor:meshed_floor_panel.0.name=Meshed Floor Panel
 tile.militarybasedecor:glass_floor_panel.0.name=Glass Floor Panel
 tile.militarybasedecor:reinforced_glass_floor_panel.0.name=Reinforced Glass Panel
 tile.militarybasedecor:advanced_sandbag.0.name=Advanced Sandbag
-tile.BlockCorrugatedGalvanisedIron.0.name=Corrugated Galvanised Iron
-tile.BlockOliveDrabTexturedBlock.0.name=Olive Drab Textured Block
+tile.corrugated_galvanised_iron_block.0.name=Corrugated Galvanised Iron
+tile.olive_drab_textured_block.0.name=Olive Drab Textured Block
+tile.ammunition_box.0.name=Ammunition Box
 # Misc Items
 item.militarybasedecor:bagCement.name=Bag of Cement
 item.militarybasedecor:bag.name=Bag

@@ -1,8 +1,6 @@
 package com.builtbroken.militarybasedecor.worldwar2;
 
-import com.builtbroken.militarybasedecor.worldwar2.content.block.BlockCorrugatedGalvanisedIron;
-import com.builtbroken.militarybasedecor.worldwar2.content.block.BlockOliveDrabTexturedBlock;
-import com.builtbroken.militarybasedecor.worldwar2.content.block.ItemBlockWorldWar2;
+import com.builtbroken.militarybasedecor.worldwar2.content.block.*;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -16,6 +14,7 @@ public class WorldWar2Module extends AbstractLoadable
 
     public static Block corrugatedGalvanisedIronBlock;
     public static Block oliveDrabTexturedBlock;
+    public static Block ammunitionBox;
 
 	public static Item chocolate;
 	
@@ -26,7 +25,8 @@ public class WorldWar2Module extends AbstractLoadable
     	chocolate = MilitaryBaseDecor.INSTANCE.getManager().newItem("chocolate", new ItemChocolate(0, 0F, false).setPotionEffect(20, 60, 1, 1F).setTextureName(MilitaryBaseDecor.DOMAIN + "chocolate").setUnlocalizedName("chocolate").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB));
     	}
 
-        corrugatedGalvanisedIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockCorrugatedGalvanisedIron.class, ItemBlockWorldWar2.class);
+        ammunitionBox = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAmmunitionBox.class, ItemBlockWorldWar2.class);
+        corrugatedGalvanisedIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockCorrugatedGalvanisedIron.class, ItemBlockCorrugatedGalvanisedIron.class);
         oliveDrabTexturedBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockOliveDrabTexturedBlock.class, ItemBlockWorldWar2.class);
 
     	MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(chocolate);
