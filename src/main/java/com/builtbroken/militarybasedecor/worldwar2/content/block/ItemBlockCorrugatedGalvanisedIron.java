@@ -18,7 +18,7 @@ public class ItemBlockCorrugatedGalvanisedIron extends ItemBlockMetadata{
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
         list.add(EnumChatFormatting.BLUE + "WW2 Module");
-        list.add(EnumChatFormatting.BLUE.ITALIC + "Used to create Quonset huts");
+        list.add(EnumChatFormatting.ITALIC + "Used to create Quonset huts");
     }
 
 }
