@@ -71,6 +71,7 @@ tile.advanced_sandbag.0.name=Advanced Sandbag
 tile.corrugated_galvanised_iron_block.0.name=Corrugated Galvanised Iron
 tile.olive_drab_textured_block.0.name=Olive Drab Textured Block
 tile.ammunition_box.0.name=Ammunition Box
+tile.equipment_crate.0.name=Equipment Crate
 # Misc Items
 item.cement_bag.name=Bag of Cement
 item.bag.name=Bag

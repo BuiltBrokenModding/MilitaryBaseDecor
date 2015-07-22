@@ -13,6 +13,7 @@ public class WorldWar2Module extends AbstractLoadable {
     public static Block corrugatedGalvanisedIronBlock;
     public static Block oliveDrabTexturedBlock;
     public static Block ammunitionBox;
+    public static Block equipmentCrate;
 
     public static Item chocolate;
 
@@ -24,6 +25,7 @@ public class WorldWar2Module extends AbstractLoadable {
         ammunitionBox = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAmmunitionBox.class, ItemBlockWorldWar2.class);
         corrugatedGalvanisedIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockCorrugatedGalvanisedIron.class, ItemBlockCorrugatedGalvanisedIron.class);
         oliveDrabTexturedBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockOliveDrabTexturedBlock.class, ItemBlockWorldWar2.class);
+        equipmentCrate = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockEquipmentCrate.class, ItemBlockWorldWar2.class);
 
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(ammunitionBox);
     }
@@ -32,4 +34,3 @@ public class WorldWar2Module extends AbstractLoadable {
     public void postInit() {
     }
 }
-

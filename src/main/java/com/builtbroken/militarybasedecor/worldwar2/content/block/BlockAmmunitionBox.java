@@ -6,6 +6,7 @@ import net.minecraft.block.material.Material;
 
 /**
  * Created by Ole on 6/17/2015.
+ * TODO Make a one slot storage GUI for any item from Armory.
  */
 public class BlockAmmunitionBox extends Block {
 
