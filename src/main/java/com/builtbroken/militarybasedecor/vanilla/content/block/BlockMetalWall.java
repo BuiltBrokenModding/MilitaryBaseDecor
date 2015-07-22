@@ -1,6 +1,5 @@
 package com.builtbroken.militarybasedecor.vanilla.content.block;
 
-import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
