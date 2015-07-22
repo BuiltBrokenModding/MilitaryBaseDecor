@@ -55,21 +55,15 @@ public class VanillaModule extends AbstractLoadable {
     public static Block concreteStairs[] = new Block[16];
     public static Block concreteWall;
     public static Block wiredFence;
-    public static Block rustyWiredFence;
     public static Block sandBag;
     public static Block metalFence;
     public static Block metalWall;
-    public static Block rustyIronBlock;
-    public static Block wiredDoor;
     public static Block chainLinkFence;
     public static Block paneBarbs;
 
     public static Item bagCement;
     public static Item leatherBag;
     public static Item bundledWire;
-    public static Item rustyIronIngot;
-    public static Item rustyIronNugget;
-    public static Item wiredDoorItem;
     public static Item wireCutters;
 
     @Override
@@ -86,19 +80,15 @@ public class VanillaModule extends AbstractLoadable {
         concreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall", new BlockWallPrefab(basicConcrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileSimpleCamo.class);
         wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_fence", new BlockWiredFence("militarybasedecor:wired_fence", "militarybasedecor:wired_fence_top", Material.iron, true).setBlockUnbreakable().setBlockName("wired_fence"), ItemBlockVanilla.class);
-        rustyWiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("rusty_wired_fence", new BlockWiredFence("militarybasedecor:rusty_wired_fence", "militarybasedecor:rusty_wired_fence_top", Material.iron, true).setBlockName("rusty_wired_fence").setBlockUnbreakable(), ItemBlockVanilla.class);
         sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class, ItemBlockVanilla.class);
         metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeMetal), ItemBlockVanilla.class);
         metalWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_wall", new BlockMetalWall(reinforcedMetal).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
-        rustyIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRustyIronBlock.class, ItemBlockVanilla.class);
         chainLinkFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockChainLinkFence.class, ItemBlockVanilla.class).setBlockUnbreakable();
         paneBarbs = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TilePaneBarbs.class);
 
         bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBagCement.class);
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBag.class);
         bundledWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("bundled_wire", new ItemBundledWire()).setUnlocalizedName("bundled_wire");
-        rustyIronIngot = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemRustyIronIngot.class);
-        rustyIronNugget = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemRustyIronNugget.class);
         wireCutters = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemWireCutters.class).setUnlocalizedName("wire_cutters").setTextureName(MilitaryBaseDecor.PREFIX + "wire_cutters");
 
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(basicConcrete);
