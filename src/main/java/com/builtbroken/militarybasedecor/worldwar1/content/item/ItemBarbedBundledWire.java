@@ -20,8 +20,7 @@ public class ItemBarbedBundledWire extends Item {
     }
 
 
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
-    {
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
         list.add(EnumChatFormatting.BLUE + "WW1 Module");
     }
 }

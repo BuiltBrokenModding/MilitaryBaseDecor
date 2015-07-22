@@ -17,8 +17,7 @@ public class ItemBlockFuture extends ItemBlockMetadata {
         super(block);
     }
 
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
-    {
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
         list.add(EnumChatFormatting.BLUE + "Future Module");
     }
 }

@@ -4,7 +4,6 @@ import com.builtbroken.mc.api.items.ISimpleItemRenderer;
 import com.builtbroken.mc.lib.transform.region.Cube;
 import com.builtbroken.mc.lib.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
-import com.builtbroken.mc.prefab.tile.TileEnt;
 import com.builtbroken.militarybasedecor.references.Assets;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
@@ -33,14 +32,12 @@ public class TileMeshedFloorPanel extends Tile implements ISimpleItemRenderer {
     }
 
     @Override
-    public Tile newTile()
-    {
+    public Tile newTile() {
         return new TileMeshedFloorPanel();
     }
 
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon()
-    {
+    public IIcon getIcon() {
         return Blocks.iron_block.getIcon(0, 0);
     }
 
@@ -52,15 +49,13 @@ public class TileMeshedFloorPanel extends Tile implements ISimpleItemRenderer {
     }
 
     @SideOnly(Side.CLIENT)
-    public AxisAlignedBB getRenderBoundingBox()
-    {
+    public AxisAlignedBB getRenderBoundingBox() {
         return new Cube(0, 0, 0, 1, 3, 1).add(x(), y(), z()).toAABB();
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void renderDynamic(Pos pos, float frame, int pass)
-    {
+    public void renderDynamic(Pos pos, float frame, int pass) {
         //Render Meshed Floor Panel
         GL11.glPushMatrix();
         GL11.glTranslatef(pos.xf() + 0.5f, pos.yf() + 0.5f, pos.zf() + 0.5f);
@@ -70,8 +65,7 @@ public class TileMeshedFloorPanel extends Tile implements ISimpleItemRenderer {
     }
 
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister)
-    {
+    public void registerIcons(IIconRegister iconRegister) {
 
     }
 

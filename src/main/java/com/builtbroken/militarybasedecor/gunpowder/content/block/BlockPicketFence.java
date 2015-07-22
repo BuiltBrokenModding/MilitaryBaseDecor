@@ -1,21 +1,8 @@
 package com.builtbroken.militarybasedecor.gunpowder.content.block;
 
-import java.util.List;
-
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemDye;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.IIcon;
 
 /**
  * Created by Ole on 26.01.2015.
@@ -23,8 +10,7 @@ import net.minecraft.util.IIcon;
 
 public class BlockPicketFence extends BlockPane {
 
-    public BlockPicketFence()
-    {
+    public BlockPicketFence() {
         super("militarybasedecor:picket_fence", "militarybasedecor:picket_fence_top", Material.wood, true);
         this.setBlockName("picket_fence");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "picket_fence");

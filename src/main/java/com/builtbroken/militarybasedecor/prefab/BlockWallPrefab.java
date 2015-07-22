@@ -1,6 +1,5 @@
 package com.builtbroken.militarybasedecor.prefab;
 
-import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -28,15 +27,13 @@ public class BlockWallPrefab extends BlockWall {
      */
     @SideOnly(Side.CLIENT)
     @Override
-    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
-    {
+    public IIcon getIcon(int p_149691_1_, int p_149691_2_) {
         return VanillaModule.basicConcrete.getBlockTextureFromSide(p_149691_1_);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
-    public void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, List p_149666_3_)
-    {
+    public void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, List p_149666_3_) {
         p_149666_3_.add(new ItemStack(p_149666_1_, 1, 0));
     }
 }

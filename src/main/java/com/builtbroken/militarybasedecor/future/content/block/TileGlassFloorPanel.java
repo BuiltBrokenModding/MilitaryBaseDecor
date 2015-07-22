@@ -34,14 +34,12 @@ public class TileGlassFloorPanel extends Tile implements ISimpleItemRenderer {
     }
 
     @Override
-    public Tile newTile()
-    {
+    public Tile newTile() {
         return new TileGlassFloorPanel();
     }
 
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon()
-    {
+    public IIcon getIcon() {
         return Blocks.glass.getIcon(0, 0);
     }
 
@@ -53,15 +51,13 @@ public class TileGlassFloorPanel extends Tile implements ISimpleItemRenderer {
     }
 
     @SideOnly(Side.CLIENT)
-    public AxisAlignedBB getRenderBoundingBox()
-    {
+    public AxisAlignedBB getRenderBoundingBox() {
         return new Cube(0, 0, 0, 1, 3, 1).add(x(), y(), z()).toAABB();
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void renderDynamic(Pos pos, float frame, int pass)
-    {
+    public void renderDynamic(Pos pos, float frame, int pass) {
         //Render Glass Floor Panel
         GL11.glPushMatrix();
         GL11.glTranslatef(pos.xf() + 0.5f, pos.yf() + 0.5f, pos.zf() + 0.5f);
@@ -71,8 +67,7 @@ public class TileGlassFloorPanel extends Tile implements ISimpleItemRenderer {
     }
 
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister)
-    {
+    public void registerIcons(IIconRegister iconRegister) {
 
     }
 

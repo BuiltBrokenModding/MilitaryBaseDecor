@@ -12,7 +12,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
@@ -35,14 +34,12 @@ public class TileReinforcedGlassFloorPanel extends Tile implements ISimpleItemRe
     }
 
     @Override
-    public Tile newTile()
-    {
+    public Tile newTile() {
         return new TileReinforcedGlassFloorPanel();
     }
 
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon()
-    {
+    public IIcon getIcon() {
         return VanillaModule.reinforcedGlass.getIcon(0, 0);
     }
 
@@ -54,15 +51,13 @@ public class TileReinforcedGlassFloorPanel extends Tile implements ISimpleItemRe
     }
 
     @SideOnly(Side.CLIENT)
-    public AxisAlignedBB getRenderBoundingBox()
-    {
+    public AxisAlignedBB getRenderBoundingBox() {
         return new Cube(0, 0, 0, 1, 3, 1).add(x(), y(), z()).toAABB();
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void renderDynamic(Pos pos, float frame, int pass)
-    {
+    public void renderDynamic(Pos pos, float frame, int pass) {
         //Render Reinforced Glass Floor Panel
         GL11.glPushMatrix();
         GL11.glTranslatef(pos.xf() + 0.5f, pos.yf() + 0.5f, pos.zf() + 0.5f);
@@ -72,8 +67,7 @@ public class TileReinforcedGlassFloorPanel extends Tile implements ISimpleItemRe
     }
 
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister)
-    {
+    public void registerIcons(IIconRegister iconRegister) {
 
     }
 

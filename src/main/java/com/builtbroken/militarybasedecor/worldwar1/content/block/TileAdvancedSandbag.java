@@ -4,8 +4,6 @@ import com.builtbroken.mc.api.items.ISimpleItemRenderer;
 import com.builtbroken.mc.lib.transform.region.Cube;
 import com.builtbroken.mc.lib.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
-import com.builtbroken.mc.prefab.tile.TileEnt;
-import com.builtbroken.mc.prefab.tile.TileMachine;
 import com.builtbroken.militarybasedecor.references.Assets;
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
 import cpw.mods.fml.client.FMLClientHandler;
@@ -13,7 +11,6 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
@@ -34,20 +31,17 @@ public class TileAdvancedSandbag extends Tile implements ISimpleItemRenderer {
     }
 
     @Override
-    public Tile newTile()
-    {
+    public Tile newTile() {
         return new TileAdvancedSandbag();
     }
 
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon()
-    {
+    public IIcon getIcon() {
         return VanillaModule.sandBag.getIcon(0, 0);
     }
 
     @SideOnly(Side.CLIENT)
-    public AxisAlignedBB getRenderBoundingBox()
-    {
+    public AxisAlignedBB getRenderBoundingBox() {
         return new Cube(0, 0, 0, 1, 3, 1).add(x(), y(), z()).toAABB();
     }
 
@@ -71,8 +65,7 @@ public class TileAdvancedSandbag extends Tile implements ISimpleItemRenderer {
     }
 
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister)
-    {
+    public void registerIcons(IIconRegister iconRegister) {
 
     }
 }

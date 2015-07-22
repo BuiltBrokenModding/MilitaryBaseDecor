@@ -1,21 +1,15 @@
 package com.builtbroken.militarybasedecor.coldwar.content.block;
 
-import java.util.List;
-
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-
 import net.minecraft.block.BlockRail;
 import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
-/** @author DarkGuardsman */
-public class BlockReinforcedRail extends BlockRail
-{
-    public BlockReinforcedRail()
-    {
+/**
+ * @author DarkGuardsman
+ */
+public class BlockReinforcedRail extends BlockRail {
+    public BlockReinforcedRail() {
         super();
         this.setBlockName("reinforcedRail");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_rail");
@@ -24,10 +18,9 @@ public class BlockReinforcedRail extends BlockRail
         this.setStepSound(soundTypeMetal);
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
-    
+
     @Override
-    public float getRailMaxSpeed(World world, EntityMinecart cart, int y, int x, int z)
-    {
+    public float getRailMaxSpeed(World world, EntityMinecart cart, int y, int x, int z) {
         return 0.6f;
     }
 }

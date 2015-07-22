@@ -1,7 +1,6 @@
 package com.builtbroken.militarybasedecor.coldwar;
 
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
-import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.coldwar.content.block.BlockAsphalt;
 import com.builtbroken.militarybasedecor.coldwar.content.block.BlockMetalDoor;
@@ -9,21 +8,19 @@ import com.builtbroken.militarybasedecor.coldwar.content.block.BlockReinforcedRa
 import com.builtbroken.militarybasedecor.coldwar.content.block.ItemBlockColdWar;
 import com.builtbroken.militarybasedecor.coldwar.content.item.ItemMetalDoor;
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockRailPowered;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-/** Content themed after cold ware military bunkers and bases
+/**
+ * Content themed after cold ware military bunkers and bases
  * Created by robert on 12/7/2014.
  */
-public class ColdWarModule extends AbstractLoadable
-{
+public class ColdWarModule extends AbstractLoadable {
     public static Block asphalt;
     public static Block reinforcedRail;
     public static Block metalDoor;
@@ -31,26 +28,24 @@ public class ColdWarModule extends AbstractLoadable
     public static Item metalDoorItem;
 
     @Override
-    public void preInit()
-    {
+    public void preInit() {
         asphalt = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAsphalt.class, ItemBlockColdWar.class);
         reinforcedRail = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedRail.class, ItemBlockColdWar.class);
         metalDoor = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_door", new BlockMetalDoor());
 
         metalDoorItem = MilitaryBaseDecor.INSTANCE.getManager().newItem("metal_door_item", new ItemMetalDoor(Material.iron));
-        
+
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(asphalt);
     }
-    
+
     @Override
-    public void postInit()
-    {
-    	// Blocks
-    	// Asphalt
-    	if (MilitaryBaseDecor.VANILLA_ENABLED) { // Temp solution until we have a complete recipe system figured out!
-        GameRegistry.addShapelessRecipe(new ItemStack(asphalt, 1, 0), VanillaModule.basicConcrete, new ItemStack(Items.dye, 1, 0));
-        // Reinforced Rail
-        GameRegistry.addShapelessRecipe(new ItemStack(reinforcedRail, 1, 0), VanillaModule.basicConcrete, Blocks.rail);
-    	}  
+    public void postInit() {
+        // Blocks
+        // Asphalt
+        if (MilitaryBaseDecor.VANILLA_ENABLED) { // Temp solution until we have a complete recipe system figured out!
+            GameRegistry.addShapelessRecipe(new ItemStack(asphalt, 1, 0), VanillaModule.basicConcrete, new ItemStack(Items.dye, 1, 0));
+            // Reinforced Rail
+            GameRegistry.addShapelessRecipe(new ItemStack(reinforcedRail, 1, 0), VanillaModule.basicConcrete, Blocks.rail);
+        }
     }
 }

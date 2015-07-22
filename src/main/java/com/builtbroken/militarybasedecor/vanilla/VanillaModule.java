@@ -7,30 +7,24 @@ import com.builtbroken.militarybasedecor.prefab.BlockColoredStairs;
 import com.builtbroken.militarybasedecor.prefab.BlockWallPrefab;
 import com.builtbroken.militarybasedecor.vanilla.content.block.*;
 import com.builtbroken.militarybasedecor.vanilla.content.block.camo.TileSimpleCamo;
-import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedCasing;
-import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedGlass;
-import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedMetal;
-import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedSoil;
-import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.BlockReinforcedStone;
+import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.*;
 import com.builtbroken.militarybasedecor.vanilla.content.item.*;
-
 import com.builtbroken.militarybasedecor.vanilla.content.item.tool.ItemWireCutters;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockColored;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 /**
  * Content themed to vanilla MC rather than any set mod or History era
  */
-public class VanillaModule extends AbstractLoadable
-{
+public class VanillaModule extends AbstractLoadable {
     public static String[] colors =
             {
                     "Black",
@@ -79,14 +73,13 @@ public class VanillaModule extends AbstractLoadable
     public static Item wireCutters;
 
     @Override
-    public void preInit()
-    {
+    public void preInit() {
         reinforcedSoil = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedSoil.class, ItemBlockVanilla.class);
         reinforcedStone = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedStone.class, ItemBlockVanilla.class);
         reinforcedMetal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetal.class, ItemBlockVanilla.class);
         reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class, ItemBlockVanilla.class);
         reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class, ItemBlockVanilla.class);
-        basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_basic",new BlockColored(Material.rock).setHardness(15).setResistance(150).setStepSound(Block.soundTypeStone).setBlockName("basic_concrete").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
+        basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_basic", new BlockColored(Material.rock).setHardness(15).setResistance(150).setStepSound(Block.soundTypeStone).setBlockName("basic_concrete").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
         for (int i = 0; i < 16; i++) {
             concreteStairs[i] = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_basic_stairs_" + i, new BlockColoredStairs(basicConcrete, i).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
         }
@@ -114,9 +107,8 @@ public class VanillaModule extends AbstractLoadable
     }
 
     @Override
-    public void postInit()
-    {
-    	// Blocks
+    public void postInit() {
+        // Blocks
         // Reinforced wood casing
         GameRegistry.addShapedRecipe(new ItemStack(reinforcedCasing, 1, 0), "SWS", "WSW", "SWS", 'S', Items.stick, 'W', Blocks.planks);
         // Concrete
