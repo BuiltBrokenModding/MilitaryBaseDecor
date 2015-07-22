@@ -8,9 +8,7 @@ import com.builtbroken.militarybasedecor.prefab.BlockWallPrefab;
 import com.builtbroken.militarybasedecor.vanilla.content.block.*;
 import com.builtbroken.militarybasedecor.vanilla.content.block.camo.TileSimpleCamo;
 import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.*;
-import com.builtbroken.militarybasedecor.vanilla.content.item.ItemBag;
-import com.builtbroken.militarybasedecor.vanilla.content.item.ItemBagCement;
-import com.builtbroken.militarybasedecor.vanilla.content.item.ItemBundledWire;
+import com.builtbroken.militarybasedecor.vanilla.content.item.VanillaItems;
 import com.builtbroken.militarybasedecor.vanilla.content.item.tool.ItemWireCutters;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -88,9 +86,9 @@ public class VanillaModule extends AbstractLoadable {
         chainLinkFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockChainLinkFence.class, ItemBlockVanilla.class).setBlockUnbreakable();
         paneBarbs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("pane_barbs", new TilePaneBarbs()).setBlockName("pane_barbs");
 
-        bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem("cement_bag", new ItemBagCement()).setUnlocalizedName("cement_bag").setMaxStackSize(1).setTextureName(MilitaryBaseDecor.PREFIX + "cement_bag");
-        leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag", new ItemBag()).setUnlocalizedName("bag").setTextureName(MilitaryBaseDecor.PREFIX + "bag");
-        bundledWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("bundled_wire", new ItemBundledWire()).setUnlocalizedName("bundled_wire").setTextureName(MilitaryBaseDecor.PREFIX + "bundled_wire");
+        bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem("cement_bag", new VanillaItems()).setUnlocalizedName("cement_bag").setMaxStackSize(1).setTextureName(MilitaryBaseDecor.PREFIX + "cement_bag");
+        leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag", new VanillaItems()).setUnlocalizedName("bag").setTextureName(MilitaryBaseDecor.PREFIX + "bag");
+        bundledWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("bundled_wire", new VanillaItems()).setUnlocalizedName("bundled_wire").setTextureName(MilitaryBaseDecor.PREFIX + "bundled_wire");
         wireCutters = MilitaryBaseDecor.INSTANCE.getManager().newItem("wire_cutters", new ItemWireCutters()).setUnlocalizedName("wire_cutters").setTextureName(MilitaryBaseDecor.PREFIX + "wire_cutters");
 
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(basicConcrete);

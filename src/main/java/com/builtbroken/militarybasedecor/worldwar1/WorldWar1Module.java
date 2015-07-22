@@ -7,7 +7,7 @@ import com.builtbroken.militarybasedecor.worldwar1.content.block.BlockBarbedWire
 import com.builtbroken.militarybasedecor.worldwar1.content.block.BlockConcertinaWire;
 import com.builtbroken.militarybasedecor.worldwar1.content.block.ItemBlockWorldWar1;
 import com.builtbroken.militarybasedecor.worldwar1.content.block.TileAdvancedSandbag;
-import com.builtbroken.militarybasedecor.worldwar1.content.item.ItemBarbedBundledWire;
+import com.builtbroken.militarybasedecor.worldwar1.content.item.WorldWar1Items;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -29,7 +29,7 @@ public class WorldWar1Module extends AbstractLoadable {
         concertinaWire = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcertinaWire.class, ItemBlockWorldWar1.class);
         advancedSandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock("advanced_sandbag", new TileAdvancedSandbag()).setBlockName("advanced_sandbag");
 
-        barbedBundledWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("barbed_bundled_wire", new ItemBarbedBundledWire()).setUnlocalizedName("barbed_bundled_wire").setTextureName(MilitaryBaseDecor.PREFIX + "barbed_bundled_wire");
+        barbedBundledWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("barbed_bundled_wire", new WorldWar1Items()).setUnlocalizedName("barbed_bundled_wire").setTextureName(MilitaryBaseDecor.PREFIX + "barbed_bundled_wire");
 
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(barbedWireFence);
     }

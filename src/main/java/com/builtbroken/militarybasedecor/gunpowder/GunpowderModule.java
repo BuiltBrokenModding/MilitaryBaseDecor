@@ -3,7 +3,7 @@ package com.builtbroken.militarybasedecor.gunpowder;
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.gunpowder.content.block.*;
-import com.builtbroken.militarybasedecor.gunpowder.content.item.ItemRope;
+import com.builtbroken.militarybasedecor.gunpowder.content.item.GunpowderItems;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -31,7 +31,7 @@ public class GunpowderModule implements ILoadable {
         tangledRope = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockTangledRope.class, ItemBlockGunpowderEra.class);
         picketFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockPicketFence.class, ItemBlockGunpowderEra.class);
 
-        rope = MilitaryBaseDecor.INSTANCE.getManager().newItem("rope", new ItemRope()).setUnlocalizedName("rope").setTextureName(MilitaryBaseDecor.PREFIX + "rope");
+        rope = MilitaryBaseDecor.INSTANCE.getManager().newItem("rope", new GunpowderItems()).setUnlocalizedName("rope").setTextureName(MilitaryBaseDecor.PREFIX + "rope");
 
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(ropeFence);
     }
