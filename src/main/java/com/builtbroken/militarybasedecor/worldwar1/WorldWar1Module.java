@@ -27,9 +27,9 @@ public class WorldWar1Module extends AbstractLoadable {
     public void preInit() {
         barbedWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBarbedWireFence.class, ItemBlockWorldWar1.class).setBlockUnbreakable();
         concertinaWire = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcertinaWire.class, ItemBlockWorldWar1.class);
-        advancedSandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileAdvancedSandbag.class);
+        advancedSandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock("advanced_sandbag", new TileAdvancedSandbag()).setBlockName("advanced_sandbag");
 
-        barbedBundledWire = MilitaryBaseDecor.INSTANCE.getManager().newItem(ItemBarbedBundledWire.class).setUnlocalizedName("barbed_bundled_wire");
+        barbedBundledWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("barbed_bundled_wire", new ItemBarbedBundledWire()).setUnlocalizedName("barbed_bundled_wire").setTextureName(MilitaryBaseDecor.PREFIX + "barbed_bundled_wire");
 
         MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(barbedWireFence);
     }

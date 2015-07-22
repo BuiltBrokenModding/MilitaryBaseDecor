@@ -18,7 +18,7 @@ import java.util.List;
 
 public class BlockMetalWall extends BlockWall {
 
-    public static final String[] field_150092_a = new String[]{"iron", "gold", "rusty"};
+    public static final String[] field_150092_a = new String[]{"iron", "gold"};
 
     public BlockMetalWall(Block block) {
         super(block);
@@ -30,7 +30,7 @@ public class BlockMetalWall extends BlockWall {
     @SideOnly(Side.CLIENT)
     @Override
     public IIcon getIcon(int p_149691_1_, int p_149691_2_) {
-        return p_149691_2_ == 2 ? VanillaModule.rustyIronBlock.getBlockTextureFromSide(p_149691_1_) : p_149691_2_ == 1 ? Blocks.gold_block.getBlockTextureFromSide(p_149691_1_) : Blocks.iron_block.getBlockTextureFromSide(p_149691_1_);
+        return p_149691_2_ == 1 ? Blocks.gold_block.getBlockTextureFromSide(p_149691_1_) : Blocks.iron_block.getBlockTextureFromSide(p_149691_1_);
     }
 
     /**
@@ -120,7 +120,6 @@ public class BlockMetalWall extends BlockWall {
     public void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, List p_149666_3_) {
         p_149666_3_.add(new ItemStack(p_149666_1_, 1, 0));
         p_149666_3_.add(new ItemStack(p_149666_1_, 1, 1));
-        p_149666_3_.add(new ItemStack(p_149666_1_, 1, 2));
     }
 
     /**

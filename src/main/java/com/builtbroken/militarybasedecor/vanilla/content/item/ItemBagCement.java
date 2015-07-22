@@ -14,9 +14,6 @@ import java.util.List;
 public class ItemBagCement extends Item {
 
     public ItemBagCement() {
-        this.setUnlocalizedName("bagCement");
-        this.setTextureName(MilitaryBaseDecor.PREFIX + "bag_cement");
-        this.setMaxStackSize(1);
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
 

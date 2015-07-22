@@ -21,12 +21,11 @@ public class WorldWar2Module extends AbstractLoadable {
         if (MilitaryBaseDecor.CHOCOLATE_ENABLED) {
             chocolate = MilitaryBaseDecor.INSTANCE.getManager().newItem("chocolate", new ItemChocolate(0, 0F, false).setPotionEffect(20, 60, 1, 1F).setTextureName(MilitaryBaseDecor.DOMAIN + "chocolate").setUnlocalizedName("chocolate").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB));
         }
-
         ammunitionBox = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAmmunitionBox.class, ItemBlockWorldWar2.class);
         corrugatedGalvanisedIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockCorrugatedGalvanisedIron.class, ItemBlockCorrugatedGalvanisedIron.class);
         oliveDrabTexturedBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockOliveDrabTexturedBlock.class, ItemBlockWorldWar2.class);
 
-        MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(chocolate);
+        MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(ammunitionBox);
     }
 
     @Override

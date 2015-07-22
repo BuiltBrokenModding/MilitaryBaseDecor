@@ -11,8 +11,6 @@ import java.util.List;
 public class ItemRope extends Item {
 
     public ItemRope() {
-        this.setUnlocalizedName("rope");
-        this.setTextureName(MilitaryBaseDecor.PREFIX + "rope");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
 

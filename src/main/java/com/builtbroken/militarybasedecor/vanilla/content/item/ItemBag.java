@@ -14,8 +14,7 @@ import java.util.List;
 public class ItemBag extends Item {
 
     public ItemBag() {
-        this.setUnlocalizedName("Bag");
-        this.setTextureName(MilitaryBaseDecor.PREFIX + "bag");
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
 
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {

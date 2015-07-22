@@ -20,9 +20,9 @@ public class FutureModule extends AbstractLoadable {
     @Override
     public void preInit() {
 
-        meshedFloorPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileMeshedFloorPanel.class);
-        glassFloorPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileGlassFloorPanel.class);
-        reinforcedGlassPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock(TileReinforcedGlassFloorPanel.class);
+        meshedFloorPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock("meshed_floor_panel", new TileMeshedFloorPanel()).setBlockName("meshed_floor_panel");
+        glassFloorPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock("glass_floor_panel", new TileGlassFloorPanel()).setBlockName("glass_floor_panel");
+        reinforcedGlassPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock("reinforced_glass_floor_panel", new TileReinforcedGlassFloorPanel()).setBlockName("reinforced_glass_floor_panel");
     }
 
     @Override
