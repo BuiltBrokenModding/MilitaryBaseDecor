@@ -127,6 +127,6 @@ public class VanillaModule extends AbstractLoadable {
         GameRegistry.addShapelessRecipe(new ItemStack(bagCement, 1, 0), Blocks.gravel, Blocks.sand, leatherBag);
 
         // Basic Sandbag
-        GameRegistry.addShapedRecipe(new ItemStack(sandBag, 1, 0), new Object[]{"WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', new ItemStack(Blocks.sand, 1, 0)});
+        GameRegistry.addShapedRecipe(new ItemStack(sandBag, 1, 0), "WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', new ItemStack(Blocks.sand, 1, 0));
     }
 }
