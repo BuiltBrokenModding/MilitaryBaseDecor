@@ -71,7 +71,6 @@ public final class MilitaryBaseDecor extends AbstractMod {
         super.preInit(event);
 
         CREATIVE_TAB = new ModCreativeTab("MilitaryBaseDecor");
-        CREATIVE_TAB.itemSorter = new ModCreativeTab.NameSorter(); // Temporary Solution to an nullpointerexception error on creativetab rendering. TODO Rearrange the creative tab sorting system.
         getManager().setTab(CREATIVE_TAB);
 
         // Config
