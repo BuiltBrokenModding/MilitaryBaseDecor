@@ -15,7 +15,7 @@ public class BlockReinforcedGlass extends Block {
 
     public BlockReinforcedGlass() {
         super(Material.glass);
-        this.setBlockName("glassReinforced");
+        this.setBlockName("reinforced_glass");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
         this.setResistance(48);
         this.setHardness(6.0F);
@@ -24,7 +24,7 @@ public class BlockReinforcedGlass extends Block {
     @Override
     public void registerBlockIcons(IIconRegister iconRegistry) {
         for (int i = 0; i < 47; i++)
-            textures[i] = iconRegistry.registerIcon(MilitaryBaseDecor.DOMAIN + ":" + "reinforcedglass/reinforced_glass_" + (i + 1));
+            textures[i] = iconRegistry.registerIcon(MilitaryBaseDecor.DOMAIN + ":" + "reinforced_glass/reinforced_glass_" + (i + 1));
     }
 
     @Override

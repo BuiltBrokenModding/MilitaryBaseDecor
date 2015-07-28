@@ -8,8 +8,8 @@ public class BlockBasicSandBag extends Block {
 
     public BlockBasicSandBag() {
         super(Material.cloth);
-        this.setBlockName("sandBag");
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "sandBag");
+        this.setBlockName("sand_bag");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "sand_bag");
         this.setHardness(0.5f);
         this.setResistance(1);
         this.setStepSound(Block.soundTypeCloth);

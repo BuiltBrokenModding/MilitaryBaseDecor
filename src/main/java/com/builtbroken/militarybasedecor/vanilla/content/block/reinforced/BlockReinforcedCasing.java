@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class BlockReinforcedCasing extends BlockReinforced {
     public BlockReinforcedCasing() {
-        super(Material.ground, "reinforcedCasing");
+        super(Material.ground, "reinforced_casing");
         this.setStepSound(soundTypeWood);
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "wood_casing");
     }

@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.prefab;
+package com.builtbroken.militarybasedecor.vanilla.content.block;
 
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
 import cpw.mods.fml.relauncher.Side;
@@ -15,16 +15,12 @@ import java.util.List;
 /**
  * Created by Ole on 4/28/2015.
  */
-public class BlockWallPrefab extends BlockWall {
+public class BlockBasicConcreteWall extends BlockWall {
 
-    public BlockWallPrefab(Block p_i45435_1_) {
+    public BlockBasicConcreteWall(Block p_i45435_1_) {
         super(p_i45435_1_);
     }
 
-    /**
-     * We need to find a proper way to do this for the future!
-     * until then this will have to do! -Hennamann
-     */
     @SideOnly(Side.CLIENT)
     @Override
     public IIcon getIcon(int p_149691_1_, int p_149691_2_) {

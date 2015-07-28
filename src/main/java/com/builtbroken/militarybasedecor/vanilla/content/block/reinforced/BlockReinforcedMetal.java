@@ -20,7 +20,7 @@ public class BlockReinforcedMetal extends BlockReinforced {
     public static float RESISTANCE_SCALE = 7;
 
     public BlockReinforcedMetal() {
-        super(Material.iron, "reinforcedMetal");
+        super(Material.iron, "reinforced_metal");
         this.setStepSound(soundTypeMetal);
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_metal");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);

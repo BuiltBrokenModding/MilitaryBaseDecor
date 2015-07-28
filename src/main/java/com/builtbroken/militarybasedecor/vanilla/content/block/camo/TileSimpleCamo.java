@@ -29,20 +29,15 @@ public class TileSimpleCamo extends TileEnt implements IPacketReceiver {
     ItemStack stack = null;
     boolean locked = false;
 
-    public TileSimpleCamo() {
-        super("camo_simple", Material.rock);
+    public TileSimpleCamo(String name, Material material) {
+        super(name, material);
         this.itemBlock = ItemBlockCamo.class;
-        this.setTextureName(MilitaryBaseDecor.PREFIX + "camo_simple");
+        this.setTextureName(MilitaryBaseDecor.PREFIX + "simple_camo");
     }
 
     @Override
     public Tile newTile() {
-        return new TileSimpleCamo();
-    }
-
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon() {
-        return Blocks.vine.getIcon(0, 0);
+        return new TileSimpleCamo("simple_camo", Material.rock);
     }
 
     @Override

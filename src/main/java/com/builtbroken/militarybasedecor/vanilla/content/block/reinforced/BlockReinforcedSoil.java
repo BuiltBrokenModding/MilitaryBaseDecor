@@ -22,7 +22,7 @@ public class BlockReinforcedSoil extends BlockReinforced {
     public static float RESISTANCE_SCALE = 5;
 
     public BlockReinforcedSoil() {
-        super(Material.ground, "reinforcedSoil");
+        super(Material.ground, "reinforced_soil");
         this.setStepSound(soundTypeWood);
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_dirt");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);

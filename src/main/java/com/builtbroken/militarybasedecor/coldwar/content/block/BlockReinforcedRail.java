@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 public class BlockReinforcedRail extends BlockRail {
     public BlockReinforcedRail() {
         super();
-        this.setBlockName("reinforcedRail");
+        this.setBlockName("reinforced_rail");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_rail");
         this.setHardness(10F);
         this.setResistance(10F);

@@ -22,7 +22,7 @@ public class BlockReinforcedStone extends BlockReinforced {
     public static float RESISTANCE_SCALE = 5;
 
     public BlockReinforcedStone() {
-        super(Material.rock, "reinforcedStone");
+        super(Material.rock, "reinforced_stone");
         this.setStepSound(soundTypeStone);
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_stone");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
