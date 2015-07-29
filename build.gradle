@@ -32,7 +32,7 @@ if (project.getProperty("bambooshortPlanName") == "BBM-Dev") {
     group = "dev.builtbroken.militarybasedecor"
     archivesBaseName = "MilitaryBaseDecor"
 } else {
-    group = "dev.builtbroken.militarybasedecor"
+    group = "com.builtbroken.militarybasedecor"
     archivesBaseName = "MilitaryBaseDecor"
 }
 
