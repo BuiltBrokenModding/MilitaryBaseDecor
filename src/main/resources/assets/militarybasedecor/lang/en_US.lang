@@ -44,6 +44,7 @@ tile.camouflage_block.0.name=Woodlands Camouflage Textured Block
 tile.camouflage_block.1.name=Desert Camouflage Textured Block
 tile.camouflage_block.2.name=Urban Camouflage Textured Block
 ## Concrete
+
 # Basic Concrete
 tile.concrete_basic.0.name=White Basic Concrete
 tile.concrete_basic.1.name=Orange Basic Concrete
@@ -78,6 +79,7 @@ tile.concrete_basic_stairs_12.0.name=Brown Basic Concrete Stairs
 tile.concrete_basic_stairs_13.0.name=Green Basic Concrete Stairs
 tile.concrete_basic_stairs_14.0.name=Red Basic Concrete Stairs
 tile.concrete_basic_stairs_15.0.name=Black Basic Concrete Stairs
+
 # Reinforced Concrete
 tile.concrete_reinforced.0.name=White Reinforced Concrete
 tile.concrete_reinforced.1.name=Orange Reinforced Concrete
@@ -96,7 +98,6 @@ tile.concrete_reinforced.13.name=Green Reinforced Concrete
 tile.concrete_reinforced.14.name=Red Reinforced Concrete
 tile.concrete_reinforced.15.name=Black Reinforced Concrete
 
-
 tile.concrete_reinforced_stairs_0.0.name=White Reinforced Concrete Stairs
 tile.concrete_reinforced_stairs_1.0.name=Orange Reinforced Concrete Stairs
 tile.concrete_reinforced_stairs_2.0.name=Magenta Reinforced Concrete Stairs
@@ -113,6 +114,7 @@ tile.concrete_reinforced_stairs_12.0.name=Brown Reinforced Concrete Stairs
 tile.concrete_reinforced_stairs_13.0.name=Green Reinforced Concrete Stairs
 tile.concrete_reinforced_stairs_14.0.name=Red Reinforced Concrete Stairs
 tile.concrete_reinforced_stairs_15.0.name=Black Reinforced Concrete Stairs
+
 # Misc Items
 item.cement_bag.name=Bag of Cement
 item.bag.name=Bag
