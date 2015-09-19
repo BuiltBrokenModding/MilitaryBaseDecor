@@ -73,7 +73,7 @@ public class VanillaModule extends AbstractLoadable {
         reinforcedMetal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetal.class, ItemBlockVanilla.class);
         reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class, ItemBlockVanilla.class);
         reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class, ItemBlockVanilla.class);
-        basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_basic", new BlockColored(Material.rock).setHardness(15).setResistance(150).setStepSound(Block.soundTypeStone).setBlockName("basic_concrete").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
+        basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_basic", new BlockColored(Material.rock).setHardness(15).setResistance(150).setStepSound(Block.soundTypeStone).setBlockName("concrete_basic").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
         for (int i = 0; i < 16; i++) {
             basicConcreteStairs[i] = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_basic_stairs_" + i, new BlockColoredStairs(basicConcrete, i).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
         }
