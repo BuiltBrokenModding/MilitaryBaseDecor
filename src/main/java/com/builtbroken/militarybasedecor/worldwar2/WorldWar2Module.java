@@ -2,6 +2,7 @@ package com.builtbroken.militarybasedecor.worldwar2;
 
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.managers.ConfigManager;
 import com.builtbroken.militarybasedecor.prefab.BlockColoredStairs;
 import com.builtbroken.militarybasedecor.worldwar2.content.block.*;
 import com.builtbroken.militarybasedecor.worldwar2.content.item.ItemChocolate;
@@ -44,7 +45,7 @@ public class WorldWar2Module extends AbstractLoadable {
 
     @Override
     public void preInit() {
-        if (MilitaryBaseDecor.CHOCOLATE_ENABLED) {
+        if (ConfigManager.CHOCOLATE_ENABLED) {
             chocolate = MilitaryBaseDecor.INSTANCE.getManager().newItem("chocolate", new ItemChocolate(0, 0F, false).setPotionEffect(20, 60, 1, 1F).setUnlocalizedName("chocolate").setTextureName(MilitaryBaseDecor.DOMAIN + "chocolate").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB));
         }
         ammunitionBox = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAmmunitionBox.class, ItemBlockWorldWar2.class);

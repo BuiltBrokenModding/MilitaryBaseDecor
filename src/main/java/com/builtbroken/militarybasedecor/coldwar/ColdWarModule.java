@@ -30,10 +30,6 @@ public class ColdWarModule extends AbstractLoadable {
 
     @Override
     public void postInit() {
-        // Blocks
-        // Asphalt
-            // GameRegistry.addShapelessRecipe(new ItemStack(asphalt, 1, 0), VanillaModule.basicConcrete, new ItemStack(Items.dye, 1, 0));
-            // Reinforced Rail
-            // GameRegistry.addShapelessRecipe(new ItemStack(reinforcedRail, 1, 0), VanillaModule.basicConcrete, Blocks.rail);
+
         }
     }

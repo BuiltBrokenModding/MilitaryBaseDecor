@@ -96,25 +96,6 @@ public class VanillaModule extends AbstractLoadable {
 
     @Override
     public void postInit() {
-        // Blocks
-        // Reinforced wood casing
-        // GameRegistry.addShapedRecipe(new ItemStack(reinforcedCasing, 1, 0), "SWS", "WSW", "SWS", 'S', Items.stick, 'W', Blocks.planks);
-        // Concrete
-        // GameRegistry.addShapelessRecipe(new ItemStack(basicConcrete, 2, 0), Items.water_bucket, bagCement);
-        // Wired Fence
-        // GameRegistry.addShapedRecipe(new ItemStack(wiredFence, 6, 0), "WWW", "   ", "WWW", 'W', bundledWire);
-        // Simple Camo Block
-        // GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(simpleCamoBlock, 8), "WWW", "WCW", "WWW", 'W', Blocks.vine, 'C', UniversalRecipe.CIRCUIT_T1.get()));
-        // Reinforced Glass
-        // GameRegistry.addShapedRecipe(new ItemStack(reinforcedGlass, 8, 0), "IGI", "GIG", "IGI", 'I', Items.iron_ingot, 'G', Blocks.glass);
 
-        // Items
-        // Leather Bag
-        // GameRegistry.addShapedRecipe(new ItemStack(leatherBag, 1, 0), "S S", "L L", "LLL", 'S', Items.string, 'L', Items.leather);
-        // Bag of Concrete
-        // GameRegistry.addShapelessRecipe(new ItemStack(bagCement, 1, 0), Blocks.gravel, Blocks.sand, leatherBag);
-
-        // Basic Sandbag
-        // GameRegistry.addShapedRecipe(new ItemStack(sandBag, 1, 0), "WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', new ItemStack(Blocks.sand, 1, 0));
     }
 }
