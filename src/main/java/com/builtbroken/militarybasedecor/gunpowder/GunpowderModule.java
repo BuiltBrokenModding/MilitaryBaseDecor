@@ -45,14 +45,14 @@ public class GunpowderModule implements ILoadable {
     public void postInit() {
         // Blocks
         // Picket Fence
-        GameRegistry.addShapedRecipe(new ItemStack(picketFence, 3, 0), "SSS", "S S", "S S", 'S', Items.stick);
+        // GameRegistry.addShapedRecipe(new ItemStack(picketFence, 3, 0), "SSS", "S S", "S S", 'S', Items.stick);
         // Rope Fence
-        GameRegistry.addShapedRecipe(new ItemStack(ropeFence, 1, 0), "PRP", "PRP", "PRP", 'P', Blocks.planks, 'R', rope);
+        // GameRegistry.addShapedRecipe(new ItemStack(ropeFence, 1, 0), "PRP", "PRP", "PRP", 'P', Blocks.planks, 'R', rope);
         // Items
         // Rope
-        GameRegistry.addShapedRecipe(new ItemStack(rope, 3, 0), "   ", "SSS", "   ", 'S', Items.string);
+        // GameRegistry.addShapedRecipe(new ItemStack(rope, 3, 0), "   ", "SSS", "   ", 'S', Items.string);
         // Tangled Rope
-        GameRegistry.addShapelessRecipe(new ItemStack(tangledRope, 4, 0), rope);
+        // GameRegistry.addShapelessRecipe(new ItemStack(tangledRope, 4, 0), rope);
 
     }
 }

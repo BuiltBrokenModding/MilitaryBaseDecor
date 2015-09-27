@@ -32,10 +32,8 @@ public class ColdWarModule extends AbstractLoadable {
     public void postInit() {
         // Blocks
         // Asphalt
-        if (MilitaryBaseDecor.VANILLA_ENABLED) { // Temp solution until we have a complete recipe system figured out!
-            GameRegistry.addShapelessRecipe(new ItemStack(asphalt, 1, 0), VanillaModule.basicConcrete, new ItemStack(Items.dye, 1, 0));
+            // GameRegistry.addShapelessRecipe(new ItemStack(asphalt, 1, 0), VanillaModule.basicConcrete, new ItemStack(Items.dye, 1, 0));
             // Reinforced Rail
-            GameRegistry.addShapelessRecipe(new ItemStack(reinforcedRail, 1, 0), VanillaModule.basicConcrete, Blocks.rail);
+            // GameRegistry.addShapelessRecipe(new ItemStack(reinforcedRail, 1, 0), VanillaModule.basicConcrete, Blocks.rail);
         }
     }
-}
