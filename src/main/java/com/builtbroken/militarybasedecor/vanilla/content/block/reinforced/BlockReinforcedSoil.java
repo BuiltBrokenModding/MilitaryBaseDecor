@@ -21,10 +21,14 @@ import java.util.List;
 public class BlockReinforcedSoil extends BlockReinforced {
     public static float RESISTANCE_SCALE = 5;
 
+    @SideOnly(Side.CLIENT)
+    private IIcon[] texture;
+
+    final static String[] subBlocks = new String[] {"dirt", "sand", "grass"};
+
     public BlockReinforcedSoil() {
         super(Material.ground, "reinforced_soil");
         this.setStepSound(soundTypeWood);
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_dirt");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
     }
 
@@ -34,12 +38,17 @@ public class BlockReinforcedSoil extends BlockReinforced {
     @SideOnly(Side.CLIENT)
     @Override
     public IIcon getIcon(int side, int metadata) {
-        return blockIcon;
+        return texture[metadata];
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister iconRegister) {
+        texture = new IIcon[subBlocks.length];
+
+        for(int i = 0; i < subBlocks.length; i++) {
+            texture[i] = iconRegister.registerIcon(MilitaryBaseDecor.PREFIX + "reinforced_soil_" + subBlocks[i]);
+        }
     }
 
     @Override
@@ -59,9 +68,10 @@ public class BlockReinforcedSoil extends BlockReinforced {
     }
 
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item item, CreativeTabs tab, List list) {
-        for (ReinforcedSoilMeta type : ReinforcedSoilMeta.values()) {
-            list.add(new ItemStack(item, 1, type.ordinal()));
+    public void getSubBlocks(Item block, CreativeTabs creativeTabs, List list) {
+
+        for (int i = 0; i < subBlocks.length; i++) {
+            list.add(new ItemStack(block, 1, i));
         }
     }
 
