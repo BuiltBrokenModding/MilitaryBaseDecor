@@ -35,6 +35,7 @@ tile.pane_barbs.0.name=Pane Barbs
 tile.meshed_floor_panel.0.name=Meshed Floor Panel
 tile.glass_floor_panel.0.name=Glass Floor Panel
 tile.reinforced_glass_floor_panel.0.name=Reinforced Glass Panel
+tile.metal_mesh_block.0.name=Metal Mesh Block
 tile.advanced_sandbag.0.name=Advanced Sandbag
 tile.corrugated_galvanised_iron_block.0.name=Corrugated Galvanised Iron
 tile.olive_drab_textured_block.0.name=Olive Drab Textured Block

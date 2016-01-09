@@ -2,9 +2,7 @@ package com.builtbroken.militarybasedecor.future;
 
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.future.content.block.TileGlassFloorPanel;
-import com.builtbroken.militarybasedecor.future.content.block.TileMeshedFloorPanel;
-import com.builtbroken.militarybasedecor.future.content.block.TileReinforcedGlassFloorPanel;
+import com.builtbroken.militarybasedecor.future.content.block.*;
 import net.minecraft.block.Block;
 
 /**
@@ -16,6 +14,7 @@ public class FutureModule extends AbstractLoadable {
     public static Block meshedFloorPanel;
     public static Block glassFloorPanel;
     public static Block reinforcedGlassPanel;
+    public static Block metalMeshBlock;
 
     @Override
     public void preInit() {
@@ -23,6 +22,7 @@ public class FutureModule extends AbstractLoadable {
         meshedFloorPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock("meshed_floor_panel", new TileMeshedFloorPanel()).setBlockName("meshed_floor_panel");
         glassFloorPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock("glass_floor_panel", new TileGlassFloorPanel()).setBlockName("glass_floor_panel");
         reinforcedGlassPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock("reinforced_glass_floor_panel", new TileReinforcedGlassFloorPanel()).setBlockName("reinforced_glass_floor_panel");
+        metalMeshBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_mesh_block", new BlockMetalMeshBlock().setBlockName("metal_mesh_block"), ItemBlockFuture.class);
     }
 
     @Override

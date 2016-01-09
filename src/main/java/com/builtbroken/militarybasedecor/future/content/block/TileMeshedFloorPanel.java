@@ -4,6 +4,7 @@ import com.builtbroken.mc.api.items.ISimpleItemRenderer;
 import com.builtbroken.mc.lib.transform.region.Cube;
 import com.builtbroken.mc.lib.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
+import com.builtbroken.militarybasedecor.future.FutureModule;
 import com.builtbroken.militarybasedecor.references.Assets;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
@@ -38,7 +39,7 @@ public class TileMeshedFloorPanel extends Tile implements ISimpleItemRenderer {
 
     @SideOnly(Side.CLIENT)
     public IIcon getIcon() {
-        return Blocks.iron_block.getIcon(0, 0);
+        return FutureModule.metalMeshBlock.getIcon(0, 0);
     }
 
     public void renderInventoryItem(IItemRenderer.ItemRenderType type, ItemStack itemStack, Object... data) {
