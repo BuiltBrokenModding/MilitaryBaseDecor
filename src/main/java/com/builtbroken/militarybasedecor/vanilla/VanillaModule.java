@@ -1,25 +1,20 @@
 package com.builtbroken.militarybasedecor.vanilla;
 
-import com.builtbroken.mc.lib.helper.recipe.UniversalRecipe;
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.prefab.BlockColoredStairs;
 import com.builtbroken.militarybasedecor.vanilla.content.block.*;
-import com.builtbroken.militarybasedecor.vanilla.content.block.camo.ItemBlockCamo;
 import com.builtbroken.militarybasedecor.vanilla.content.block.camo.TileSimpleCamo;
 import com.builtbroken.militarybasedecor.vanilla.content.block.reinforced.*;
 import com.builtbroken.militarybasedecor.vanilla.content.item.VanillaItems;
 import com.builtbroken.militarybasedecor.vanilla.content.item.tool.ItemWireCutters;
-import cpw.mods.fml.common.registry.GameRegistry;
+import com.builtbroken.militarybasedecor.worldwar1.content.block.TilePaneBarbs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockColored;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.material.Material;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.ShapedOreRecipe;
 
 /**
  * Content themed to vanilla MC rather than any set mod or History era
@@ -59,7 +54,6 @@ public class VanillaModule extends AbstractLoadable {
     public static Block metalFence;
     public static Block metalWall;
     public static Block chainLinkFence;
-    public static Block paneBarbs;
 
     public static Item bagCement;
     public static Item leatherBag;
@@ -84,7 +78,6 @@ public class VanillaModule extends AbstractLoadable {
         metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB).setStepSound(Block.soundTypeMetal), ItemBlockVanilla.class);
         metalWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_wall", new BlockMetalWall(reinforcedMetal).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB), ItemBlockVanilla.class);
         chainLinkFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockChainLinkFence.class, ItemBlockVanilla.class).setBlockUnbreakable();
-        paneBarbs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("pane_barbs", new TilePaneBarbs()).setBlockName("pane_barbs");
 
         bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem("cement_bag", new VanillaItems()).setUnlocalizedName("cement_bag").setMaxStackSize(1).setTextureName(MilitaryBaseDecor.PREFIX + "cement_bag");
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag", new VanillaItems()).setUnlocalizedName("bag").setTextureName(MilitaryBaseDecor.PREFIX + "bag");

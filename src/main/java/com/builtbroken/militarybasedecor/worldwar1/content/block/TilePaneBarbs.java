@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.vanilla.content.block;
+package com.builtbroken.militarybasedecor.worldwar1.content.block;
 
 import com.builtbroken.mc.api.items.ISimpleItemRenderer;
 import com.builtbroken.mc.lib.transform.region.Cube;
@@ -6,6 +6,7 @@ import com.builtbroken.mc.lib.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
 import com.builtbroken.mc.prefab.tile.TileMachine;
 import com.builtbroken.militarybasedecor.references.Assets;
+import com.builtbroken.militarybasedecor.vanilla.content.block.ItemBlockVanilla;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -25,7 +26,7 @@ public class TilePaneBarbs extends TileMachine implements ISimpleItemRenderer {
         this.isOpaque = false;
         this.renderNormalBlock = false;
         this.renderTileEntity = true;
-        this.itemBlock = ItemBlockVanilla.class;
+        this.itemBlock = ItemBlockWorldWar1.class;
         this.bounds = new Cube(0F, 0F, 0F, 1F, 0.35F, 1F);
     }
 
