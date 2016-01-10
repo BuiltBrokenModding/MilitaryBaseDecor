@@ -37,7 +37,8 @@ public class WorldWar1Module extends AbstractLoadable {
 
     @Override
     public void postInit() {
-
+        WW1Recipes.initItemRecipes();
+        WW1Recipes.initBlockRecipes();
     }
 
 }
