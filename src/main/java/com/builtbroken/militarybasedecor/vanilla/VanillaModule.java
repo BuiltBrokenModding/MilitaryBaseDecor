@@ -96,6 +96,7 @@ public class VanillaModule extends AbstractLoadable {
 
     @Override
     public void postInit() {
-
+        VanillaRecipes.initItemRecipes();
+        VanillaRecipes.initBlockRecipes();
     }
 }
