@@ -10,11 +10,7 @@ import net.minecraft.item.ItemStack;
  */
 public class WW2Recipes {
 
-    public static void initItemRecipes() {
-
-
-
-    }
+    public static void initItemRecipes() {}
 
     public static void initBlockRecipes() {
 
