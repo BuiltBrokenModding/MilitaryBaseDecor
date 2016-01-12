@@ -37,13 +37,11 @@ public class GunpowderModule implements ILoadable {
     }
 
     @Override
-    public void init() {
-
-    }
+    public void init() {}
 
     @Override
     public void postInit() {
-
-
+        GunpowderRecipes.initItemRecipes();
+        GunpowderRecipes.initBlockRecipes();
     }
 }

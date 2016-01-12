@@ -3,6 +3,7 @@ package com.builtbroken.militarybasedecor.future;
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.future.content.block.*;
+import com.builtbroken.militarybasedecor.managers.ConfigManager;
 import net.minecraft.block.Block;
 
 /**
@@ -21,12 +22,16 @@ public class FutureModule extends AbstractLoadable {
 
         meshedFloorPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock("meshed_floor_panel", new TileMeshedFloorPanel()).setBlockName("meshed_floor_panel");
         glassFloorPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock("glass_floor_panel", new TileGlassFloorPanel()).setBlockName("glass_floor_panel");
-        reinforcedGlassPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock("reinforced_glass_floor_panel", new TileReinforcedGlassFloorPanel()).setBlockName("reinforced_glass_floor_panel");
         metalMeshBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_mesh_block", new BlockMetalMeshBlock().setBlockName("metal_mesh_block"), ItemBlockFuture.class);
+
+        if (ConfigManager.VANILLA_ENABLED) {
+            reinforcedGlassPanel = MilitaryBaseDecor.INSTANCE.getManager().newBlock("reinforced_glass_floor_panel", new TileReinforcedGlassFloorPanel()).setBlockName("reinforced_glass_floor_panel");
+        }
     }
 
     @Override
     public void postInit() {
-
+        FutureRecipes.initItemRecipes();
+        FutureRecipes.initBlockRecipes();
     }
 }
