@@ -5,7 +5,7 @@ Military Base Decor
 
 Ever played with destructive mods like ICBM? And then realised that the blocks in vanilla minecraft sucks for defending and decorating your military style base? Well fear no more as Military Base Decor has got you covered!
 
-NOTE: The mod is still not finished, please do not post issues on missing content, broken stuff, and similar chances are that we are already aware of bugs and such, please be patient!
+NOTE: The mod is still not finished, please do not post issues on missing content, broken stuff, and similar. Chances are we are already aware of the bugs and missing content, please be patient!
 
 ##License
 https://raw.githubusercontent.com/BuiltBrokenModding/ICBM/development/license.md
