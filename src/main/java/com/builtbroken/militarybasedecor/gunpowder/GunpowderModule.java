@@ -33,7 +33,7 @@ public class GunpowderModule implements ILoadable {
 
         rope = MilitaryBaseDecor.INSTANCE.getManager().newItem("rope", new GunpowderItems()).setUnlocalizedName("rope").setTextureName(MilitaryBaseDecor.PREFIX + "rope");
 
-        MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(ropeFence);
+        MilitaryBaseDecor.CREATIVE_TAB_1.itemStack = new ItemStack(ropeFence);
     }
 
     @Override

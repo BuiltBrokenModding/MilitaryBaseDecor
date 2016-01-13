@@ -32,7 +32,7 @@ public class WorldWar1Module extends AbstractLoadable {
 
         barbedBundledWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("barbed_bundled_wire", new WorldWar1Items()).setUnlocalizedName("barbed_bundled_wire").setTextureName(MilitaryBaseDecor.PREFIX + "barbed_bundled_wire");
 
-        MilitaryBaseDecor.CREATIVE_TAB.itemStack = new ItemStack(barbedWireFence);
+        MilitaryBaseDecor.CREATIVE_TAB_1.itemStack = new ItemStack(barbedWireFence);
     }
 
     @Override

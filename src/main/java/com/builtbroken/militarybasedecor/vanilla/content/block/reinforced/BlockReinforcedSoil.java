@@ -29,7 +29,7 @@ public class BlockReinforcedSoil extends BlockReinforced {
     public BlockReinforcedSoil() {
         super(Material.ground, "reinforced_soil");
         this.setStepSound(soundTypeWood);
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
     }
 
     /**

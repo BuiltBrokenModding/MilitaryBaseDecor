@@ -15,7 +15,7 @@ public class WorldWar1Items extends Item {
 
     public WorldWar1Items() {
         super();
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
     }
 
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {

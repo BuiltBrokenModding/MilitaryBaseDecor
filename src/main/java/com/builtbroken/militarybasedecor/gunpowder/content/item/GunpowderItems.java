@@ -14,7 +14,7 @@ import java.util.List;
 public class GunpowderItems extends Item {
 
     public GunpowderItems() {
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
     }
 
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {

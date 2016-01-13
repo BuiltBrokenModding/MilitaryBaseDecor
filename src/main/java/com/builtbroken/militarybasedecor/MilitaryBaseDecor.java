@@ -2,6 +2,7 @@ package com.builtbroken.militarybasedecor;
 
 import com.builtbroken.mc.lib.mod.AbstractMod;
 import com.builtbroken.mc.lib.mod.ModCreativeTab;
+import com.builtbroken.militarybasedecor.blastcraft.Blastcraft;
 import com.builtbroken.militarybasedecor.coldwar.ColdWarModule;
 import com.builtbroken.militarybasedecor.future.FutureModule;
 import com.builtbroken.militarybasedecor.gunpowder.GunpowderModule;
@@ -52,7 +53,8 @@ public final class MilitaryBaseDecor extends AbstractMod {
     @SidedProxy(clientSide = "com.builtbroken.militarybasedecor.ClientProxy", serverSide = "com.builtbroken.militarybasedecor.CommonProxy")
     public static CommonProxy proxy;
 
-    public static ModCreativeTab CREATIVE_TAB;
+    public static ModCreativeTab CREATIVE_TAB_1;
+    public static ModCreativeTab CREATIVE_TAB_2;
 
     public MilitaryBaseDecor() {
         super(DOMAIN, "MilitaryBaseDecor");
@@ -62,14 +64,13 @@ public final class MilitaryBaseDecor extends AbstractMod {
     public void preInit(FMLPreInitializationEvent event) {
         super.preInit(event);
 
-        CREATIVE_TAB = new ModCreativeTab("MilitaryBaseDecor");
-        getManager().setTab(CREATIVE_TAB);
+        CREATIVE_TAB_1 = new ModCreativeTab("MilitaryBaseDecor");
+        getManager().setTab(CREATIVE_TAB_1);
+
+        CREATIVE_TAB_2 = new ModCreativeTab("Blastcraft");
+        getManager().setTab(CREATIVE_TAB_2);
 
         ConfigManager.initConfig();
-
-        if (ConfigManager.WORLD_WAR_TWO_ENABLED) {
-            ConfigManager.CHOCOLATE_ENABLED = getConfig().getBoolean("Enable Chocolate", "Settings", false, "Should the chocolate item(joke item) be enabled/disabled?");
-        }
 
         // Module Loading
         if (ConfigManager.VANILLA_ENABLED) {
@@ -94,6 +95,9 @@ public final class MilitaryBaseDecor extends AbstractMod {
 
         if (ConfigManager.FUTURE_ENABLED) {
             loader.applyModule(new FutureModule());
+        }
+        if (ConfigManager.BLASTCRAFT_ENABLED) {
+            loader.applyModule(new Blastcraft());
         }
     }
 

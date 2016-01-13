@@ -23,7 +23,7 @@ public class BlockReinforcedMetal extends BlockReinforced {
         super(Material.iron, "reinforced_metal");
         this.setStepSound(soundTypeMetal);
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_metal");
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
     }
 
     /**

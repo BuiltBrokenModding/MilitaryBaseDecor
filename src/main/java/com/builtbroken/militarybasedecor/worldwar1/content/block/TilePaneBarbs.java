@@ -5,6 +5,7 @@ import com.builtbroken.mc.lib.transform.region.Cube;
 import com.builtbroken.mc.lib.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
 import com.builtbroken.mc.prefab.tile.TileMachine;
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.references.Assets;
 import com.builtbroken.militarybasedecor.vanilla.content.block.ItemBlockVanilla;
 import cpw.mods.fml.client.FMLClientHandler;
@@ -23,6 +24,7 @@ public class TilePaneBarbs extends TileMachine implements ISimpleItemRenderer {
 
     public TilePaneBarbs() {
         super("pane_barbs", Material.iron);
+        this.creativeTab = (MilitaryBaseDecor.CREATIVE_TAB_1);
         this.isOpaque = false;
         this.renderNormalBlock = false;
         this.renderTileEntity = true;

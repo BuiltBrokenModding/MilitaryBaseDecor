@@ -16,7 +16,7 @@ public class BlockReinforcedGlass extends Block {
     public BlockReinforcedGlass() {
         super(Material.glass);
         this.setBlockName("reinforced_glass");
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
         this.setResistance(48);
         this.setHardness(6.0F);
     }

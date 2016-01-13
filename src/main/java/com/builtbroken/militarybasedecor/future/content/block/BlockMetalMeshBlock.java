@@ -18,7 +18,7 @@ public class BlockMetalMeshBlock extends Block {
         this.setHardness(2.5f);
         this.setResistance(1);
         this.setStepSound(Block.soundTypeMetal);
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
     }
 
     @SideOnly(Side.CLIENT)

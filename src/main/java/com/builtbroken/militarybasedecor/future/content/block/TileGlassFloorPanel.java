@@ -4,6 +4,7 @@ import com.builtbroken.mc.api.items.ISimpleItemRenderer;
 import com.builtbroken.mc.lib.transform.region.Cube;
 import com.builtbroken.mc.lib.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.references.Assets;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
@@ -25,6 +26,7 @@ public class TileGlassFloorPanel extends Tile implements ISimpleItemRenderer {
 
     public TileGlassFloorPanel() {
         super("glass_floor_panel", Material.glass);
+        this.creativeTab = (MilitaryBaseDecor.CREATIVE_TAB_1);
         this.isOpaque = false;
         this.renderNormalBlock = false;
         this.renderTileEntity = true;

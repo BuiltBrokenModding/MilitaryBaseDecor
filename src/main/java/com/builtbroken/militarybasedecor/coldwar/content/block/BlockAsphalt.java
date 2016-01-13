@@ -16,6 +16,6 @@ public class BlockAsphalt extends Block {
         this.setHardness(2.8f);
         this.setResistance(18);
         this.setStepSound(Block.soundTypeStone);
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
     }
 }

@@ -17,7 +17,7 @@ public class BlockTangledRope extends Block {
         super(Material.cloth);
         this.setHardness(1.0F);
         this.setResistance(7.0F);
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
         this.setBlockName("tangled_rope");
         this.setStepSound(soundTypeCloth);
         this.setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "tangled_rope");

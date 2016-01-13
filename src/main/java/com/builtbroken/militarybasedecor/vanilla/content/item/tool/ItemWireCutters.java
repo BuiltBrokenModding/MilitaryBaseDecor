@@ -17,7 +17,7 @@ public class ItemWireCutters extends Item {
     public ItemWireCutters() {
         this.setMaxStackSize(1);
         this.setMaxDamage(64);
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
     }
 
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {

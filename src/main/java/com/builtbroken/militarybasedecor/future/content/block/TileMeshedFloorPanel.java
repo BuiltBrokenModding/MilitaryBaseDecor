@@ -4,6 +4,7 @@ import com.builtbroken.mc.api.items.ISimpleItemRenderer;
 import com.builtbroken.mc.lib.transform.region.Cube;
 import com.builtbroken.mc.lib.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.future.FutureModule;
 import com.builtbroken.militarybasedecor.references.Assets;
 import cpw.mods.fml.client.FMLClientHandler;
@@ -25,6 +26,7 @@ public class TileMeshedFloorPanel extends Tile implements ISimpleItemRenderer {
 
     public TileMeshedFloorPanel() {
         super("meshed_floor_panel", Material.iron);
+        this.creativeTab = (MilitaryBaseDecor.CREATIVE_TAB_1);
         this.isOpaque = false;
         this.renderNormalBlock = false;
         this.renderTileEntity = true;

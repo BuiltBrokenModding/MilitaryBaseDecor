@@ -12,7 +12,7 @@ public class BlockAmmunitionBox extends Block {
 
     public BlockAmmunitionBox() {
         super(Material.iron);
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
         this.setBlockName("ammunition_box");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "ammunition_box");
         this.setHardness(1);

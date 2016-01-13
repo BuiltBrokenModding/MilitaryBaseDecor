@@ -17,7 +17,7 @@ public class BlockConcertinaWire extends Block {
         super(Material.iron);
         this.setHardness(3.0F);
         this.setResistance(10.0F);
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
         this.setBlockName("concertina_wire");
         this.setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "concertina_wire");
     }

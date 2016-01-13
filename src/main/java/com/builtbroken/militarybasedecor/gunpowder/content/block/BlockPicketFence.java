@@ -17,6 +17,6 @@ public class BlockPicketFence extends BlockPane {
         this.setHardness(3.0F);
         this.setResistance(10.0F);
         this.setStepSound(soundTypeWood);
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
     }
 }

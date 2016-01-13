@@ -14,7 +14,7 @@ import java.util.List;
 public class VanillaItems extends Item {
 
     public VanillaItems() {
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB);
+        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
     }
 
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
