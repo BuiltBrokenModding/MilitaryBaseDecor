@@ -1,4 +1,7 @@
 ## Master language file
+
+## Military Base Decor
+
 itemGroup.MilitaryBaseDecor=Military Base Decor
 ## Misc Blocks
 tile.militarybasedecor:simple_camo.0.name=Basic Camo Block
@@ -123,3 +126,9 @@ item.barbed_bundled_wire.name=Barbed Bundled Wire
 item.rope.name=Rope
 item.wire_cutters.name=Wire Cutters
 
+## Blastcraft
+
+itemGroup.Blastcraft=Blastcraft
+
+tile.blast_proof_block.0.name=Blastproof Brick
+tile.blast_proof_glass.0.name=Blastproof Glass
