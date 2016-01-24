@@ -24,7 +24,7 @@ public class WorldWar1Module extends AbstractLoadable {
 
     @Override
     public void preInit() {
-        barbedWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBarbedWireFence.class, ItemBlockWorldWar1.class).setBlockUnbreakable();
+        barbedWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBarbedWireFence.class, ItemBlockWorldWar1.class);
         concertinaWire = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcertinaWire.class, ItemBlockWorldWar1.class);
         advancedSandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock("advanced_sandbag", new TileAdvancedSandbag()).setBlockName("advanced_sandbag");
         camouflageBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("camouflage_block", new BlockCamouflageBlock().setBlockName("camouflage_block"), ItemBlockWorldWar1.class);

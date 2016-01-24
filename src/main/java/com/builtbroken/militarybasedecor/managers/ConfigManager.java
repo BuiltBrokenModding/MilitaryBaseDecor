@@ -16,6 +16,7 @@ public class ConfigManager {
     public static boolean BLASTCRAFT_ENABLED = true;
 
     public static boolean CHOCOLATE_ENABLED = true;
+    public static boolean WIRECUTTERS_CHAT = true;
 
     public static void initConfig() {
         VANILLA_ENABLED = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable Vanilla Module", "Modules", true, "Enables/Disables the Vanilla module.");
@@ -29,6 +30,7 @@ public class ConfigManager {
         if (WORLD_WAR_TWO_ENABLED) {
             CHOCOLATE_ENABLED = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable Chocolate", "Settings", false, "Should the chocolate item(joke item) be enabled/disabled?");
         }
+        WIRECUTTERS_CHAT = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable Wire Cutters chat message", "Items", true, "Should the wire cutters post to chat whenever someone uses it on specific blocks?");
     }
 
 }

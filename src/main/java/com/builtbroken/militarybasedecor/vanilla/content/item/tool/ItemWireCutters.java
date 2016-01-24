@@ -17,15 +17,11 @@ public class ItemWireCutters extends Item {
     public ItemWireCutters() {
         this.setMaxStackSize(1);
         this.setMaxDamage(64);
+        this.setNoRepair();
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
     }
 
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
         list.add(EnumChatFormatting.BLUE + "Vanilla Module");
     }
-
-    public boolean onItemUse(ItemStack p_77648_1_, EntityPlayer p_77648_2_, World p_77648_3_, int p_77648_4_, int p_77648_5_, int p_77648_6_, int p_77648_7_, float p_77648_8_, float p_77648_9_, float p_77648_10_) {
-        return false;
-    }
-
 }
