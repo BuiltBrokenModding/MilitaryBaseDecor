@@ -5,6 +5,7 @@ import com.builtbroken.militarybasedecor.managers.ConfigManager;
 import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.PlayerCapabilities;
@@ -15,8 +16,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
 public class BlockConcertinaWire extends Block {
-
-    public PlayerCapabilities capabilities = new PlayerCapabilities();
 
     public BlockConcertinaWire() {
         super(Material.iron);
@@ -54,13 +53,12 @@ public class BlockConcertinaWire extends Block {
         }
     }
 
-    // TODO make it 100% creative mode, not just flying...
-    public void onEntityCollidedWithBlock(World world, int i, int j, int k, Entity entity) {
-        if (!this.capabilities.isCreativeMode && !this.capabilities.isFlying) {
-            entity.setInWeb();
-            entity.attackEntityFrom(DamageSource.cactus, 1.0F);
+    public void onEntityCollidedWithBlock(World world, int i, int j, int k, Entity player) {
+        if (!Minecraft.getMinecraft().thePlayer.capabilities.isCreativeMode) {
+            player.setInWeb();
+            player.attackEntityFrom(DamageSource.cactus, 1.0F);
         }
-        if (this.capabilities.isCreativeMode && this.capabilities.isFlying) {
+        if (Minecraft.getMinecraft().thePlayer.capabilities.isCreativeMode) {
 
         }
     }

@@ -13,6 +13,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
@@ -73,9 +74,14 @@ public class TilePaneBarbs extends TileEnt implements ISimpleItemRenderer, IRota
     }
 
     @Override
-    public void onCollide(Entity entity) {
-        entity.setInWeb();
-        entity.attackEntityFrom(DamageSource.cactus, 1.0F);
+    public void onCollide(Entity player) {
+        if (!Minecraft.getMinecraft().thePlayer.capabilities.isCreativeMode) {
+            player.setInWeb();
+            player.attackEntityFrom(DamageSource.cactus, 1.0F);
+        }
+        if (Minecraft.getMinecraft().thePlayer.capabilities.isCreativeMode) {
+
+        }
     }
 
     @Override
