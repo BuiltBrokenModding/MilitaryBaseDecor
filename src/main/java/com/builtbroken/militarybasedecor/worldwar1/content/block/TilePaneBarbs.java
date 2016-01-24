@@ -1,31 +1,31 @@
 package com.builtbroken.militarybasedecor.worldwar1.content.block;
 
 import com.builtbroken.mc.api.items.ISimpleItemRenderer;
+import com.builtbroken.mc.api.tile.IRotation;
 import com.builtbroken.mc.lib.transform.region.Cube;
 import com.builtbroken.mc.lib.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
-import com.builtbroken.mc.prefab.tile.TileMachine;
+import com.builtbroken.mc.prefab.tile.TileEnt;
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.managers.ConfigManager;
 import com.builtbroken.militarybasedecor.references.Assets;
-import com.builtbroken.militarybasedecor.vanilla.VanillaModule;
-import com.builtbroken.militarybasedecor.vanilla.content.block.ItemBlockVanilla;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import io.netty.buffer.ByteBuf;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ChatComponentText;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
 import net.minecraftforge.client.IItemRenderer;
+import net.minecraftforge.common.util.ForgeDirection;
 import org.lwjgl.opengl.GL11;
 
-public class TilePaneBarbs extends TileMachine implements ISimpleItemRenderer {
+public class TilePaneBarbs extends TileEnt implements ISimpleItemRenderer, IRotation {
+    protected ForgeDirection facing;
 
     public TilePaneBarbs() {
         super("pane_barbs", Material.iron);
@@ -35,6 +35,41 @@ public class TilePaneBarbs extends TileMachine implements ISimpleItemRenderer {
         this.renderTileEntity = true;
         this.itemBlock = ItemBlockWorldWar1.class;
         this.bounds = new Cube(0F, 0F, 0F, 1F, 0.35F, 1F);
+        this.facing = ForgeDirection.NORTH;
+    }
+
+    public void onPlaced(EntityLivingBase entityLiving, ItemStack itemStack) {
+        super.onPlaced(entityLiving, itemStack);
+        this.facing = this.determineForgeDirection(entityLiving);
+    }
+
+    public ForgeDirection getDirection() {
+        if(this.facing == null) {
+            this.facing = ForgeDirection.NORTH;
+        }
+        return this.facing;
+    }
+
+    public void readFromNBT(NBTTagCompound nbt) {
+        super.readFromNBT(nbt);
+        if(nbt.hasKey("facing")) {
+            this.facing = ForgeDirection.getOrientation(nbt.getByte("facing"));
+        }
+    }
+
+    public void writeToNBT(NBTTagCompound nbt) {
+        super.writeToNBT(nbt);
+        if(this.facing != null && this.facing != ForgeDirection.NORTH) {
+            nbt.setByte("facing", (byte)this.facing.ordinal());
+        }
+    }
+
+    public void readDescPacket(ByteBuf buf) {
+        this.facing = ForgeDirection.getOrientation(buf.readByte());
+    }
+
+    public void writeDescPacket(ByteBuf buf) {
+        buf.writeByte(this.facing != null?this.facing.ordinal():2);
     }
 
     @Override
