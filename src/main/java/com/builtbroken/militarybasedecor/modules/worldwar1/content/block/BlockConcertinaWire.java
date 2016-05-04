@@ -12,7 +12,7 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
-
+//https://en.wikipedia.org/wiki/Concertina_wire
 public class BlockConcertinaWire extends Block
 {
 

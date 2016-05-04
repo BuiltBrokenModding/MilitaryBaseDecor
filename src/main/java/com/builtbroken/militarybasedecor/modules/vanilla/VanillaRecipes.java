@@ -31,8 +31,6 @@ public class VanillaRecipes
         GameRegistry.addShapelessRecipe(new ItemStack(VanillaModule.basicConcrete, 1, 0), VanillaModule.bagCement, Items.water_bucket);
         // Basic Colored Concrete
         // N/A
-        // Basic Concrete Wall
-        GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.basicConcreteWall, 6, 0), "   ", "CCC", "CCC", 'C', VanillaModule.basicConcrete);
         // Basic Concrete Stairs
         // N/A
         // Reinforced Glass
@@ -45,7 +43,7 @@ public class VanillaRecipes
         GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.sandBag, 8, 0), "WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', Blocks.sand);
         GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.sandBag, 8, 0), "LLL", "LSL", "LLL", 'L', Items.leather, 'S', Blocks.sand);
         // Chain Link Fence
-        GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.chainLinkFence, 6, 0), "I I", " I ", "I I", 'I', Items.iron_ingot);
+        //GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.chainLinkFence, 6, 0), "I I", " I ", "I I", 'I', Items.iron_ingot);
         // Simple Camo Block
         GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.simpleCamoBlock, 1, 0), "VVV", "VRV", "VSV", 'V', Blocks.vine, 'R', Items.redstone, 'S', Blocks.stone);
     }

@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.modules.vanilla.content.block;
+package com.builtbroken.militarybasedecor.modules.worldwar1.content.block;
 
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import net.minecraft.block.Block;
@@ -6,7 +6,6 @@ import net.minecraft.block.material.Material;
 
 public class BlockBasicSandBag extends Block
 {
-
     public BlockBasicSandBag()
     {
         super(Material.cloth);
@@ -17,5 +16,4 @@ public class BlockBasicSandBag extends Block
         this.setStepSound(Block.soundTypeCloth);
         this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
-
 }

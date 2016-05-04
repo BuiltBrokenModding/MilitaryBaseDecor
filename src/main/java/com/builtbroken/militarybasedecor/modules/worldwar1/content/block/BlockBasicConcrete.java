@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.modules.vanilla.content.block;
+package com.builtbroken.militarybasedecor.modules.worldwar1.content.block;
 
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import net.minecraft.block.Block;
@@ -9,7 +9,6 @@ import net.minecraft.block.material.Material;
  */
 public class BlockBasicConcrete extends Block
 {
-
     public BlockBasicConcrete()
     {
         super(Material.rock);

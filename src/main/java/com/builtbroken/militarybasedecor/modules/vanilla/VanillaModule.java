@@ -7,6 +7,7 @@ import com.builtbroken.militarybasedecor.modules.vanilla.content.block.camo.Tile
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.reinforced.*;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.item.VanillaItems;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.item.tool.ItemWireCutters;
+import com.builtbroken.militarybasedecor.modules.worldwar1.content.block.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -25,12 +26,8 @@ public class VanillaModule extends AbstractLoadable
     public static Block reinforcedCasing;
     public static Block simpleCamoBlock;
     public static Block basicConcrete;
-    public static Block basicConcreteWall;
     public static Block wiredFence;
     public static Block sandBag;
-    public static Block metalFence;
-    public static Block metalWall;
-    public static Block chainLinkFence;
 
     public static Item bagCement;
     public static Item leatherBag;
@@ -46,11 +43,9 @@ public class VanillaModule extends AbstractLoadable
         reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class, ItemBlockVanilla.class);
         reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class, ItemBlockVanilla.class);
         basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicConcrete.class, ItemBlockVanilla.class);
-        basicConcreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall", new BlockBasicConcreteWall(basicConcrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("simple_camo", new TileSimpleCamo("simple_camo", Material.rock));
-        wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_fence", new BlockWiredFence("militarybasedecor:wired_fence", "militarybasedecor:wired_fence_top", Material.iron, true).setBlockName("wired_fence"), ItemBlockVanilla.class);
+        wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_fence", new BlockWireFence(), ItemBlockVanilla.class);
         sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class, ItemBlockVanilla.class);
-        chainLinkFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockChainLinkFence.class, ItemBlockVanilla.class);
 
         bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem("cement_bag", new VanillaItems()).setUnlocalizedName("cement_bag").setMaxStackSize(1).setTextureName(MilitaryBaseDecor.PREFIX + "cement_bag");
         leatherBag = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag", new VanillaItems()).setUnlocalizedName("bag").setTextureName(MilitaryBaseDecor.PREFIX + "bag");

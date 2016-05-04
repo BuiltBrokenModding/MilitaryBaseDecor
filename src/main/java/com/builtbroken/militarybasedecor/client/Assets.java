@@ -12,11 +12,9 @@ public final class Assets
 {
     //Models
     public static final IModelCustom PANE_BARBS_MODEL = model("Pane_Barbs.tcn");
-    public static final IModelCustom ADVANCED_SANDBAG_MODEL = model("Advanced_Sandbag.tcn");
 
     //Textures
     public static final ResourceLocation PANE_BARBS_TEXTURE = texture("Pane_Barbs");
-    public static final ResourceLocation ADVANCED_SANDBAG_TEXTURE = texture("Advanced_Sandbag");
 
     public static IModelCustom model(String name)
     {
