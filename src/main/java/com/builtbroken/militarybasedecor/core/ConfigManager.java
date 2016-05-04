@@ -13,8 +13,6 @@ public class ConfigManager
     public static boolean WORLD_WAR_TWO_ENABLED = true;
     public static boolean FUTURE_ENABLED = true;
     public static boolean BLASTCRAFT_ENABLED = true;
-
-    public static boolean CHOCOLATE_ENABLED = true;
     public static boolean WIRECUTTERS_CHAT = true;
 
     public static void initConfig()
@@ -26,11 +24,6 @@ public class ConfigManager
         WORLD_WAR_TWO_ENABLED = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable WW2 Module", "Modules", true, "Enables/Disables the WW2 module.");
         FUTURE_ENABLED = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable Future Module", "Modules", true, "Enables/Disables the Future module.");
         BLASTCRAFT_ENABLED = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable Blastcraft", "Settings", true, "Enables/Disables Blastcraft");
-
-        if (WORLD_WAR_TWO_ENABLED)
-        {
-            CHOCOLATE_ENABLED = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable Chocolate", "Settings", false, "Should the chocolate item(joke item) be enabled/disabled?");
-        }
         WIRECUTTERS_CHAT = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable Wire Cutters chat message", "Items", true, "Should the wire cutters post to chat whenever someone uses it on specific blocks?");
     }
 

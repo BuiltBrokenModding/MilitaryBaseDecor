@@ -8,7 +8,6 @@ import com.builtbroken.militarybasedecor.modules.vanilla.content.block.reinforce
 import com.builtbroken.militarybasedecor.modules.vanilla.content.item.VanillaItems;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.item.tool.ItemWireCutters;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFence;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -51,8 +50,6 @@ public class VanillaModule extends AbstractLoadable
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("simple_camo", new TileSimpleCamo("simple_camo", Material.rock));
         wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_fence", new BlockWiredFence("militarybasedecor:wired_fence", "militarybasedecor:wired_fence_top", Material.iron, true).setBlockName("wired_fence"), ItemBlockVanilla.class);
         sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class, ItemBlockVanilla.class);
-        metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setStepSound(Block.soundTypeMetal), ItemBlockVanilla.class);
-        metalWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_wall", new BlockMetalWall(reinforcedMetal).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(MilitaryBaseDecor.MAIN_TAB), ItemBlockVanilla.class);
         chainLinkFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockChainLinkFence.class, ItemBlockVanilla.class);
 
         bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem("cement_bag", new VanillaItems()).setUnlocalizedName("cement_bag").setMaxStackSize(1).setTextureName(MilitaryBaseDecor.PREFIX + "cement_bag");

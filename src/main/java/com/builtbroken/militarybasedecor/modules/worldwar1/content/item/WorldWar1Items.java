@@ -13,7 +13,6 @@ import java.util.List;
  */
 public class WorldWar1Items extends Item
 {
-
     public WorldWar1Items()
     {
         super();
