@@ -10,8 +10,6 @@ import net.minecraft.item.ItemStack;
 
 public class WorldWar1Module extends AbstractLoadable
 {
-
-    public static Block advancedSandBag;
     public static Block barbedWireFence;
     public static Block paneBarbs;
     public static Block concertinaWire;
@@ -24,7 +22,6 @@ public class WorldWar1Module extends AbstractLoadable
     {
         barbedWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBarbedWireFence.class, ItemBlockWorldWar1.class);
         concertinaWire = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcertinaWire.class, ItemBlockWorldWar1.class);
-        advancedSandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock("advanced_sandbag", new TileAdvancedSandbag()).setBlockName("advanced_sandbag");
         camouflageBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("camouflage_block", new BlockCamouflageBlock().setBlockName("camouflage_block"), ItemBlockWorldWar1.class);
         paneBarbs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("pane_barbs", new TilePaneBarbs()).setBlockName("pane_barbs");
 

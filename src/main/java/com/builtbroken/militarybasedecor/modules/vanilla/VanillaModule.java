@@ -2,7 +2,6 @@ package com.builtbroken.militarybasedecor.modules.vanilla;
 
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.modules.prefab.BlockPrefabStairs;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.*;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.camo.TileSimpleCamo;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.reinforced.*;
@@ -28,7 +27,6 @@ public class VanillaModule extends AbstractLoadable
     public static Block simpleCamoBlock;
     public static Block basicConcrete;
     public static Block basicConcreteWall;
-    public static Block basicConcreteStairs;
     public static Block wiredFence;
     public static Block sandBag;
     public static Block metalFence;
@@ -50,7 +48,6 @@ public class VanillaModule extends AbstractLoadable
         reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class, ItemBlockVanilla.class);
         basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicConcrete.class, ItemBlockVanilla.class);
         basicConcreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall", new BlockBasicConcreteWall(basicConcrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
-        basicConcreteStairs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("basic_concrete_stairs", new BlockPrefabStairs(basicConcrete, 1).setBlockName("basic_concrete_stairs").setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("simple_camo", new TileSimpleCamo("simple_camo", Material.rock));
         wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_fence", new BlockWiredFence("militarybasedecor:wired_fence", "militarybasedecor:wired_fence_top", Material.iron, true).setBlockName("wired_fence"), ItemBlockVanilla.class);
         sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class, ItemBlockVanilla.class);

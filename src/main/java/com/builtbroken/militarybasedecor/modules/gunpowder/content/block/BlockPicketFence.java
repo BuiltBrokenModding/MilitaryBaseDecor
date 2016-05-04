@@ -10,7 +10,6 @@ import net.minecraft.block.material.Material;
 
 public class BlockPicketFence extends BlockPane
 {
-
     public BlockPicketFence()
     {
         super("militarybasedecor:picket_fence", "militarybasedecor:picket_fence_top", Material.wood, true);

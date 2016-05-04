@@ -6,7 +6,6 @@ import net.minecraft.block.material.Material;
 
 public class BlockLimecrete extends Block
 {
-
     public BlockLimecrete()
     {
         super(Material.rock);

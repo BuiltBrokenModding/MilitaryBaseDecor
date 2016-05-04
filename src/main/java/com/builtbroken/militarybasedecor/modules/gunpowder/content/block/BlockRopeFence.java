@@ -8,7 +8,6 @@ import net.minecraft.world.IBlockAccess;
 
 public class BlockRopeFence extends BlockPane
 {
-
     public BlockRopeFence()
     {
         super("militarybasedecor:rope_fence", "militarybasedecor:rope_fence_top", Material.wood, true);

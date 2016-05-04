@@ -3,7 +3,6 @@ package com.builtbroken.militarybasedecor.modules.worldwar2;
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.ConfigManager;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.modules.prefab.BlockPrefabStairs;
 import com.builtbroken.militarybasedecor.modules.worldwar2.content.block.*;
 import com.builtbroken.militarybasedecor.modules.worldwar2.content.item.ItemChocolate;
 import net.minecraft.block.Block;
@@ -18,7 +17,6 @@ public class WorldWar2Module extends AbstractLoadable
     public static Block ammunitionBox;
     public static Block equipmentCrate;
     public static Block reinforcedConcrete;
-    public static Block reinforcedConcreteStairs;
 
 
     public static Item chocolate;
@@ -35,7 +33,6 @@ public class WorldWar2Module extends AbstractLoadable
         oliveDrabTexturedBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockOliveDrabTexturedBlock.class, ItemBlockWorldWar2.class);
         equipmentCrate = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockEquipmentCrate.class, ItemBlockWorldWar2.class);
         reinforcedConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedConcrete.class, ItemBlockWorldWar2.class);
-        reinforcedConcreteStairs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("reinforced_concrete_stairs", new BlockPrefabStairs(reinforcedConcrete, 1).setBlockName("reinforced_concrete_stairs").setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setStepSound(Block.soundTypeStone), ItemBlockWorldWar2.class);
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(ammunitionBox);
     }
 

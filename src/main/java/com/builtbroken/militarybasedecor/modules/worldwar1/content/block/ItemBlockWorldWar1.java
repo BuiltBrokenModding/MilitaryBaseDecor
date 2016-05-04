@@ -10,7 +10,6 @@ import java.util.List;
 
 public class ItemBlockWorldWar1 extends ItemBlockMetadata
 {
-
     public ItemBlockWorldWar1(Block block)
     {
         super(block);
@@ -21,5 +20,4 @@ public class ItemBlockWorldWar1 extends ItemBlockMetadata
     {
         list.add(EnumChatFormatting.BLUE + "WW1 Module");
     }
-
 }

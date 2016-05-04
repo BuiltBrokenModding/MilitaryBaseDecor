@@ -13,7 +13,6 @@ import java.util.Random;
 
 public class BlockTangledRope extends Block
 {
-
     public BlockTangledRope()
     {
         super(Material.cloth);
