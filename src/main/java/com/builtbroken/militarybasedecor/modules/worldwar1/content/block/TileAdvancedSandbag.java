@@ -4,8 +4,8 @@ import com.builtbroken.mc.api.items.ISimpleItemRenderer;
 import com.builtbroken.mc.lib.transform.region.Cube;
 import com.builtbroken.mc.lib.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
-import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.client.Assets;
+import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.vanilla.VanillaModule;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
@@ -21,9 +21,11 @@ import org.lwjgl.opengl.GL11;
 /**
  * Created by Ole on 5/17/2015.
  */
-public class TileAdvancedSandbag extends Tile implements ISimpleItemRenderer {
+public class TileAdvancedSandbag extends Tile implements ISimpleItemRenderer
+{
 
-    public TileAdvancedSandbag() {
+    public TileAdvancedSandbag()
+    {
         super("advanced_sandbag", Material.cloth);
         this.creativeTab = (MilitaryBaseDecor.CREATIVE_TAB_1);
         this.isOpaque = false;
@@ -33,22 +35,28 @@ public class TileAdvancedSandbag extends Tile implements ISimpleItemRenderer {
     }
 
     @Override
-    public Tile newTile() {
+    public Tile newTile()
+    {
         return new TileAdvancedSandbag();
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon() {
+    public IIcon getIcon()
+    {
         return VanillaModule.sandBag.getIcon(0, 0);
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
-    public AxisAlignedBB getRenderBoundingBox() {
+    public AxisAlignedBB getRenderBoundingBox()
+    {
         return new Cube(0, 0, 0, 1, 3, 1).add(x(), y(), z()).toAABB();
     }
 
     @Override
-    public void renderInventoryItem(IItemRenderer.ItemRenderType itemRenderType, ItemStack itemStack, Object... objects) {
+    public void renderInventoryItem(IItemRenderer.ItemRenderType itemRenderType, ItemStack itemStack, Object... objects)
+    {
         GL11.glTranslatef(-0.5f, -0.5f, -0.5f);
         GL11.glScaled(.8f, .8f, .8f);
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(Assets.ADVANCED_SANDBAG_TEXTURE);
@@ -57,7 +65,8 @@ public class TileAdvancedSandbag extends Tile implements ISimpleItemRenderer {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void renderDynamic(Pos pos, float frame, int pass) {
+    public void renderDynamic(Pos pos, float frame, int pass)
+    {
         //Render Advanced Sandbag
         GL11.glPushMatrix();
         GL11.glTranslatef(pos.xf() + 0.5f, pos.yf() + 0.5f, pos.zf() + 0.5f);
@@ -66,8 +75,10 @@ public class TileAdvancedSandbag extends Tile implements ISimpleItemRenderer {
         GL11.glPopMatrix();
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IIconRegister iconRegister)
+    {
 
     }
 }

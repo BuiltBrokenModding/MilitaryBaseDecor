@@ -8,8 +8,10 @@ import net.minecraft.world.World;
 /**
  * Created by robert on 1/24/2015.
  */
-public abstract class BlockReinforced extends Block {
-    public BlockReinforced(Material material, String name) {
+public abstract class BlockReinforced extends Block
+{
+    public BlockReinforced(Material material, String name)
+    {
         super(material);
         this.setBlockName(name);
         this.setBlockTextureName(name);
@@ -18,14 +20,16 @@ public abstract class BlockReinforced extends Block {
     }
 
     @Override
-    public float getBlockHardness(World world, int x, int y, int z) {
+    public float getBlockHardness(World world, int x, int y, int z)
+    {
         return getBlockHardness(world.getBlockMetadata(x, y, z));
     }
 
     public abstract float getBlockHardness(int meta);
 
     @Override
-    public float getExplosionResistance(Entity entity, World world, int x, int y, int z, double explosionX, double explosionY, double explosionZ) {
+    public float getExplosionResistance(Entity entity, World world, int x, int y, int z, double explosionX, double explosionY, double explosionZ)
+    {
         return getBlockHardness(world.getBlockMetadata(x, y, z));
     }
 

@@ -11,13 +11,17 @@ import java.util.List;
 /**
  * Created by Ole on 4/27/2015.
  */
-public class ItemBlockFuture extends ItemBlockMetadata {
+public class ItemBlockFuture extends ItemBlockMetadata
+{
 
-    public ItemBlockFuture(Block block) {
+    public ItemBlockFuture(Block block)
+    {
         super(block);
     }
 
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+    @Override
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    {
         list.add(EnumChatFormatting.BLUE + "Future Module");
     }
 }

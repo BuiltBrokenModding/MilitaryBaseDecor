@@ -1,8 +1,8 @@
 package com.builtbroken.militarybasedecor.modules.worldwar2;
 
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
-import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.core.ConfigManager;
+import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.prefab.BlockPrefabStairs;
 import com.builtbroken.militarybasedecor.modules.worldwar2.content.block.*;
 import com.builtbroken.militarybasedecor.modules.worldwar2.content.item.ItemChocolate;
@@ -10,7 +10,8 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class WorldWar2Module extends AbstractLoadable {
+public class WorldWar2Module extends AbstractLoadable
+{
 
     public static Block corrugatedGalvanisedIronBlock;
     public static Block oliveDrabTexturedBlock;
@@ -23,8 +24,10 @@ public class WorldWar2Module extends AbstractLoadable {
     public static Item chocolate;
 
     @Override
-    public void preInit() {
-        if (ConfigManager.CHOCOLATE_ENABLED) {
+    public void preInit()
+    {
+        if (ConfigManager.CHOCOLATE_ENABLED)
+        {
             chocolate = MilitaryBaseDecor.INSTANCE.getManager().newItem("chocolate", new ItemChocolate(0, 0F, false).setPotionEffect(20, 60, 1, 1F).setUnlocalizedName("chocolate").setTextureName(MilitaryBaseDecor.DOMAIN + "chocolate").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1));
         }
         ammunitionBox = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAmmunitionBox.class, ItemBlockWorldWar2.class);
@@ -37,7 +40,8 @@ public class WorldWar2Module extends AbstractLoadable {
     }
 
     @Override
-    public void postInit() {
+    public void postInit()
+    {
 
         WW2Recipes.initItemRecipes();
         WW2Recipes.initBlockRecipes();

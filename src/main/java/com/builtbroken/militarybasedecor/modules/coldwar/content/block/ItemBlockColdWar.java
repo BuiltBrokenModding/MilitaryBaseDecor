@@ -8,13 +8,17 @@ import net.minecraft.util.EnumChatFormatting;
 
 import java.util.List;
 
-public class ItemBlockColdWar extends ItemBlockMetadata {
+public class ItemBlockColdWar extends ItemBlockMetadata
+{
 
-    public ItemBlockColdWar(Block block) {
+    public ItemBlockColdWar(Block block)
+    {
         super(block);
     }
 
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+    @Override
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    {
         list.add(EnumChatFormatting.BLUE + "Cold War Module");
     }
 

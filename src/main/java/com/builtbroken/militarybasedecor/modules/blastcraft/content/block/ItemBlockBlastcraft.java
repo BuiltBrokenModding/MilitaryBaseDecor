@@ -11,13 +11,17 @@ import java.util.List;
 /**
  * Created by Ole on 13.01.2016.
  */
-public class ItemBlockBlastcraft extends ItemBlockMetadata {
+public class ItemBlockBlastcraft extends ItemBlockMetadata
+{
 
-    public ItemBlockBlastcraft(Block block) {
+    public ItemBlockBlastcraft(Block block)
+    {
         super(block);
     }
 
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+    @Override
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    {
         list.add(EnumChatFormatting.BLUE + "Blastcraft");
     }
 }

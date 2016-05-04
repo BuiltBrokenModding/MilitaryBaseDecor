@@ -9,9 +9,11 @@ import net.minecraft.block.material.Material;
 /**
  * Created by Ole on 09.01.2016.
  */
-public class BlockMetalMeshBlock extends Block {
+public class BlockMetalMeshBlock extends Block
+{
 
-    public BlockMetalMeshBlock() {
+    public BlockMetalMeshBlock()
+    {
         super(Material.iron);
         this.setBlockName("metal_mesh_block");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "metal_mesh_block");
@@ -23,17 +25,20 @@ public class BlockMetalMeshBlock extends Block {
 
     @SideOnly(Side.CLIENT)
     @Override
-    public int getRenderBlockPass() {
+    public int getRenderBlockPass()
+    {
         return 0;
     }
 
     @Override
-    public boolean isOpaqueCube() {
+    public boolean isOpaqueCube()
+    {
         return false;
     }
 
     @Override
-    public boolean renderAsNormalBlock() {
+    public boolean renderAsNormalBlock()
+    {
         return false;
     }
 }

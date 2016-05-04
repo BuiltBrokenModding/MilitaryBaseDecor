@@ -17,8 +17,10 @@ import java.util.List;
  * Mainly for crafting reinforced blocks, can be used as a decoration if players want
  * Created by robert on 1/24/2015.
  */
-public class BlockReinforcedCasing extends BlockReinforced {
-    public BlockReinforcedCasing() {
+public class BlockReinforcedCasing extends BlockReinforced
+{
+    public BlockReinforcedCasing()
+    {
         super(Material.ground, "reinforced_casing");
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
         this.setStepSound(soundTypeWood);
@@ -26,24 +28,31 @@ public class BlockReinforcedCasing extends BlockReinforced {
     }
 
     @Override
-    public float getBlockHardness(int meta) {
-        if (meta < ReinforcedCasing.values().length) {
+    public float getBlockHardness(int meta)
+    {
+        if (meta < ReinforcedCasing.values().length)
+        {
             return ReinforcedCasing.values()[meta].hardness;
         }
         return this.blockHardness;
     }
 
     @Override
-    public float getBlockResistance(int meta) {
-        if (meta < ReinforcedCasing.values().length) {
+    public float getBlockResistance(int meta)
+    {
+        if (meta < ReinforcedCasing.values().length)
+        {
             return ReinforcedCasing.values()[meta].base_resistance;
         }
         return 35;
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item item, CreativeTabs tab, List list) {
-        for (ReinforcedCasing type : ReinforcedCasing.values()) {
+    public void getSubBlocks(Item item, CreativeTabs tab, List list)
+    {
+        for (ReinforcedCasing type : ReinforcedCasing.values())
+        {
             list.add(new ItemStack(item, 1, type.ordinal()));
         }
     }
@@ -51,18 +60,21 @@ public class BlockReinforcedCasing extends BlockReinforced {
     /**
      * Sub types for this block
      */
-    public enum ReinforcedCasing {
+    public enum ReinforcedCasing
+    {
         WOOD(Blocks.planks);
 
         public final float hardness;
         public final float base_resistance;
 
-        ReinforcedCasing(Block block) {
+        ReinforcedCasing(Block block)
+        {
             hardness = BlockUtility.getBlockHardness(block);
             base_resistance = BlockUtility.getBlockResistance(block);
         }
 
-        ReinforcedCasing(float hardness, float base_resistance) {
+        ReinforcedCasing(float hardness, float base_resistance)
+        {
             this.hardness = hardness;
             this.base_resistance = base_resistance;
         }
@@ -70,17 +82,20 @@ public class BlockReinforcedCasing extends BlockReinforced {
 
     @SideOnly(Side.CLIENT)
     @Override
-    public int getRenderBlockPass() {
+    public int getRenderBlockPass()
+    {
         return 0;
     }
 
     @Override
-    public boolean renderAsNormalBlock() {
+    public boolean renderAsNormalBlock()
+    {
         return false;
     }
 
     @Override
-    public boolean isOpaqueCube() {
+    public boolean isOpaqueCube()
+    {
         return false;
     }
 }

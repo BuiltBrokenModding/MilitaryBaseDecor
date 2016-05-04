@@ -4,9 +4,11 @@ import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class BlockLimecrete extends Block {
+public class BlockLimecrete extends Block
+{
 
-    public BlockLimecrete() {
+    public BlockLimecrete()
+    {
         super(Material.rock);
         this.setBlockName("limecrete");
         this.setBlockTextureName(MilitaryBaseDecor.DOMAIN + ":" + "limecrete");

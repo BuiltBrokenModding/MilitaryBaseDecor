@@ -8,11 +8,15 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by Ole on 11.01.2016.
  */
-public class WW2Recipes {
+public class WW2Recipes
+{
 
-    public static void initItemRecipes() {}
+    public static void initItemRecipes()
+    {
+    }
 
-    public static void initBlockRecipes() {
+    public static void initBlockRecipes()
+    {
 
         // Ammunition Block
         GameRegistry.addShapedRecipe(new ItemStack(WorldWar2Module.ammunitionBox, 8, 0), "III", "IYI", "III", 'I', Items.iron_ingot, 'Y', new ItemStack(Items.dye, 1, 11));

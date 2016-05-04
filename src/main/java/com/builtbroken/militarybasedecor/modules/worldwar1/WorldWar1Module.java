@@ -8,7 +8,8 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class WorldWar1Module extends AbstractLoadable {
+public class WorldWar1Module extends AbstractLoadable
+{
 
     public static Block advancedSandBag;
     public static Block barbedWireFence;
@@ -19,7 +20,8 @@ public class WorldWar1Module extends AbstractLoadable {
     public static Item barbedBundledWire;
 
     @Override
-    public void preInit() {
+    public void preInit()
+    {
         barbedWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBarbedWireFence.class, ItemBlockWorldWar1.class);
         concertinaWire = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcertinaWire.class, ItemBlockWorldWar1.class);
         advancedSandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock("advanced_sandbag", new TileAdvancedSandbag()).setBlockName("advanced_sandbag");
@@ -32,7 +34,8 @@ public class WorldWar1Module extends AbstractLoadable {
     }
 
     @Override
-    public void postInit() {
+    public void postInit()
+    {
         WW1Recipes.initItemRecipes();
         WW1Recipes.initBlockRecipes();
     }

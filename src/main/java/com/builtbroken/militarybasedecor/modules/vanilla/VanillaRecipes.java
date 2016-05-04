@@ -8,9 +8,11 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by Ole on 09.01.2016.
  */
-public class VanillaRecipes {
+public class VanillaRecipes
+{
 
-    public static void initItemRecipes() {
+    public static void initItemRecipes()
+    {
 
         // Leather Bag
         GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.leatherBag, 3, 0), "S S", "L L", "LLL", 'S', Items.string, 'L', Items.leather);
@@ -22,7 +24,8 @@ public class VanillaRecipes {
         GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.wireCutters, 1, 0), " I ", "I I", "W W", 'I', Items.iron_ingot, 'W', Blocks.wool);
     }
 
-    public static void initBlockRecipes() {
+    public static void initBlockRecipes()
+    {
 
         // Basic Concrete
         GameRegistry.addShapelessRecipe(new ItemStack(VanillaModule.basicConcrete, 1, 0), VanillaModule.bagCement, Items.water_bucket);
@@ -42,7 +45,7 @@ public class VanillaRecipes {
         GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.sandBag, 8, 0), "WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', Blocks.sand);
         GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.sandBag, 8, 0), "LLL", "LSL", "LLL", 'L', Items.leather, 'S', Blocks.sand);
         // Chain Link Fence
-        GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.chainLinkFence, 6, 0), "I I", " I ", "I I", 'I',Items.iron_ingot);
+        GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.chainLinkFence, 6, 0), "I I", " I ", "I I", 'I', Items.iron_ingot);
         // Simple Camo Block
         GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.simpleCamoBlock, 1, 0), "VVV", "VRV", "VSV", 'V', Blocks.vine, 'R', Items.redstone, 'S', Blocks.stone);
     }

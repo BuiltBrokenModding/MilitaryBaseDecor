@@ -9,17 +9,21 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by Ole on 10.01.2016.
  */
-public class WW1Recipes {
+public class WW1Recipes
+{
 
-    public static void initItemRecipes() {
+    public static void initItemRecipes()
+    {
         // Barbed Bundled Wire
         GameRegistry.addShapedRecipe(new ItemStack(WorldWar1Module.barbedBundledWire, 6, 0), "IF ", "I F", "FII", 'I', Items.iron_ingot, 'F', Items.flint);
-        if (ConfigManager.VANILLA_ENABLED) {
+        if (ConfigManager.VANILLA_ENABLED)
+        {
             GameRegistry.addShapelessRecipe(new ItemStack(WorldWar1Module.barbedBundledWire, 1, 0), VanillaModule.bundledWire, Items.flint);
         }
     }
 
-    public static void initBlockRecipes() {
+    public static void initBlockRecipes()
+    {
         // Barbed Wire Fence
         GameRegistry.addShapedRecipe(new ItemStack(WorldWar1Module.barbedWireFence, 6, 0), "WWW", "   ", "WWW", 'W', WorldWar1Module.barbedBundledWire);
         // Concertina Wire

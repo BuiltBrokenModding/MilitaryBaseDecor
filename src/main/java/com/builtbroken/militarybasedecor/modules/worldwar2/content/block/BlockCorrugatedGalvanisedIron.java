@@ -7,9 +7,11 @@ import net.minecraft.block.material.Material;
 /**
  * Created by Ole on 6/8/2015.
  */
-public class BlockCorrugatedGalvanisedIron extends Block {
+public class BlockCorrugatedGalvanisedIron extends Block
+{
 
-    public BlockCorrugatedGalvanisedIron() {
+    public BlockCorrugatedGalvanisedIron()
+    {
         super(Material.iron);
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
         this.setBlockName("corrugated_galvanised_iron_block");

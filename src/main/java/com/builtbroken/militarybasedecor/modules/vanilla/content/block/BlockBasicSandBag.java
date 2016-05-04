@@ -4,9 +4,11 @@ import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class BlockBasicSandBag extends Block {
+public class BlockBasicSandBag extends Block
+{
 
-    public BlockBasicSandBag() {
+    public BlockBasicSandBag()
+    {
         super(Material.cloth);
         this.setBlockName("sand_bag");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "sand_bag");

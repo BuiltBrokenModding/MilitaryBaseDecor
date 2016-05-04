@@ -11,14 +11,18 @@ import java.util.List;
 /**
  * Created by Ole on 7/22/2015.
  */
-public class WorldWar1Items extends Item {
+public class WorldWar1Items extends Item
+{
 
-    public WorldWar1Items() {
+    public WorldWar1Items()
+    {
         super();
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
     }
 
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+    @Override
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    {
         list.add(EnumChatFormatting.BLUE + "WW1 Module");
     }
 }

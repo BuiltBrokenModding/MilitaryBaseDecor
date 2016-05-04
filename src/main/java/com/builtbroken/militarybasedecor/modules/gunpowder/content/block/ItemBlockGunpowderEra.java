@@ -8,13 +8,17 @@ import net.minecraft.util.EnumChatFormatting;
 
 import java.util.List;
 
-public class ItemBlockGunpowderEra extends ItemBlockMetadata {
+public class ItemBlockGunpowderEra extends ItemBlockMetadata
+{
 
-    public ItemBlockGunpowderEra(Block block) {
+    public ItemBlockGunpowderEra(Block block)
+    {
         super(block);
     }
 
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+    @Override
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    {
         list.add(EnumChatFormatting.BLUE + "Gunpowder Era Module");
     }
 

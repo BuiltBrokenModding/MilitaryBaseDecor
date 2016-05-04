@@ -11,9 +11,11 @@ import net.minecraft.world.World;
 /**
  * Created by Ole on 13.01.2016.
  */
-public class BlockBlastProof extends Block {
+public class BlockBlastProof extends Block
+{
 
-    public BlockBlastProof() {
+    public BlockBlastProof()
+    {
         super(Material.glass); // Glass can't burn unlike most other materials except air.
         this.setHardness(50f);
         this.setResistance(6000000.0F);
@@ -21,12 +23,20 @@ public class BlockBlastProof extends Block {
     }
 
     @Override
-    public boolean canEntityDestroy(IBlockAccess world, int x, int y, int z, Entity entity) {return false;}
+    public boolean canEntityDestroy(IBlockAccess world, int x, int y, int z, Entity entity)
+    {
+        return false;
+    }
 
     @Override
-    public void onBlockExploded(World world, int x, int y, int z, Explosion explosion) {;}
+    public void onBlockExploded(World world, int x, int y, int z, Explosion explosion)
+    {
+    }
 
     @Override
-    public boolean canDropFromExplosion(Explosion p_149659_1_) {return false;}
+    public boolean canDropFromExplosion(Explosion p_149659_1_)
+    {
+        return false;
+    }
 
 }

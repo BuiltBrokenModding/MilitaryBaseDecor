@@ -7,9 +7,11 @@ import net.minecraft.block.material.Material;
 /**
  * Created by Ole on 6/8/2015.
  */
-public class BlockOliveDrabTexturedBlock extends Block {
+public class BlockOliveDrabTexturedBlock extends Block
+{
 
-    public BlockOliveDrabTexturedBlock() {
+    public BlockOliveDrabTexturedBlock()
+    {
         super(Material.cloth);
         this.setBlockName("olive_drab_textured_block");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "olive_drab_textured_block");

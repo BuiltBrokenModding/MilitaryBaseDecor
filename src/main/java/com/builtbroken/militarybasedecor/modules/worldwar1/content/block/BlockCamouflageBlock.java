@@ -16,14 +16,16 @@ import java.util.List;
 /**
  * Created by Ole on 28/07/2015.
  */
-public class BlockCamouflageBlock extends Block {
+public class BlockCamouflageBlock extends Block
+{
 
     @SideOnly(Side.CLIENT)
     private IIcon[] texture;
 
-    final static String[] subBlocks = new String[] {"woodlands", "desert", "urban"};
+    final static String[] subBlocks = new String[]{"woodlands", "desert", "urban"};
 
-    public BlockCamouflageBlock() {
+    public BlockCamouflageBlock()
+    {
         super(Material.cloth);
         this.setHardness(0.5f);
         this.setResistance(1);
@@ -31,26 +33,34 @@ public class BlockCamouflageBlock extends Block {
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister) {
+    public void registerBlockIcons(IIconRegister iconRegister)
+    {
 
         texture = new IIcon[subBlocks.length];
 
-        for(int i = 0; i < subBlocks.length; i++) {
+        for (int i = 0; i < subBlocks.length; i++)
+        {
             texture[i] = iconRegister.registerIcon(MilitaryBaseDecor.PREFIX + "camouflage_block_" + subBlocks[i]);
         }
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item block, CreativeTabs creativeTabs, List list) {
+    public void getSubBlocks(Item block, CreativeTabs creativeTabs, List list)
+    {
 
-        for (int i = 0; i < subBlocks.length; i++) {
+        for (int i = 0; i < subBlocks.length; i++)
+        {
             list.add(new ItemStack(block, 1, i));
         }
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int side, int meta) {
+    public IIcon getIcon(int side, int meta)
+    {
         return texture[meta];
     }
 

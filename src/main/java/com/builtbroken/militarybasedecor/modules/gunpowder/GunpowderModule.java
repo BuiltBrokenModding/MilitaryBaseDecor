@@ -12,7 +12,8 @@ import net.minecraft.item.ItemStack;
  * Content themed after the civil war
  * Created by Ole on 25.1.2015
  */
-public class GunpowderModule implements ILoadable {
+public class GunpowderModule implements ILoadable
+{
 
     public static Block picketFence;
     public static Block ropeFence;
@@ -22,7 +23,8 @@ public class GunpowderModule implements ILoadable {
     public static Item rope;
 
     @Override
-    public void preInit() {
+    public void preInit()
+    {
         limecrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockLimecrete.class, ItemBlockGunpowderEra.class);
         ropeFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRopeFence.class, ItemBlockGunpowderEra.class);
         tangledRope = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockTangledRope.class, ItemBlockGunpowderEra.class);
@@ -34,10 +36,13 @@ public class GunpowderModule implements ILoadable {
     }
 
     @Override
-    public void init() {}
+    public void init()
+    {
+    }
 
     @Override
-    public void postInit() {
+    public void postInit()
+    {
         GunpowderRecipes.initItemRecipes();
         GunpowderRecipes.initBlockRecipes();
     }

@@ -11,16 +11,20 @@ import java.util.List;
 /**
  * Created by Ole on 5/16/2015.
  */
-public class ItemWireCutters extends Item {
+public class ItemWireCutters extends Item
+{
 
-    public ItemWireCutters() {
+    public ItemWireCutters()
+    {
         this.setMaxStackSize(1);
         this.setMaxDamage(64);
         this.setNoRepair();
         this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
     }
 
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+    @Override
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    {
         list.add(EnumChatFormatting.BLUE + "Vanilla Module");
     }
 }

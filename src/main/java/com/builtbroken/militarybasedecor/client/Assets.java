@@ -8,7 +8,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.IModelCustom;
 
 @SideOnly(Side.CLIENT)
-public final class Assets {
+public final class Assets
+{
     //Models
     public static final IModelCustom PANE_BARBS_MODEL = model("Pane_Barbs.tcn");
     public static final IModelCustom MESHED_FLOOR_PANEL_MODEL = model("Meshed_Floor_Panel.tcn");
@@ -23,11 +24,13 @@ public final class Assets {
     public static final ResourceLocation REINFORCED_GLASS_FLOOR_PANEL_TEXTURE = texture("Reinforced_Glass_Floor_Panel");
     public static final ResourceLocation ADVANCED_SANDBAG_TEXTURE = texture("Advanced_Sandbag");
 
-    public static IModelCustom model(String name) {
+    public static IModelCustom model(String name)
+    {
         return EngineModelLoader.loadModel(new ResourceLocation(MilitaryBaseDecor.DOMAIN, MilitaryBaseDecor.MODEL_PATH + name));
     }
 
-    public static ResourceLocation texture(String name) {
+    public static ResourceLocation texture(String name)
+    {
         return new ResourceLocation(MilitaryBaseDecor.DOMAIN, "textures/models/" + name + ".png");
     }
 }

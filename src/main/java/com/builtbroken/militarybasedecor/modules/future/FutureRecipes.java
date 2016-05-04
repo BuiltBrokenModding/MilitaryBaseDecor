@@ -9,14 +9,19 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by Ole on 11.01.2016.
  */
-public class FutureRecipes {
+public class FutureRecipes
+{
 
-    public static void initItemRecipes() {}
+    public static void initItemRecipes()
+    {
+    }
 
-    public static void initBlockRecipes() {
+    public static void initBlockRecipes()
+    {
 
         // Reinforced Glass Panel
-        if (ConfigManager.VANILLA_ENABLED) {
+        if (ConfigManager.VANILLA_ENABLED)
+        {
             GameRegistry.addShapedRecipe(new ItemStack(FutureModule.reinforcedGlassPanel, 3, 0), "GGG", "   ", "   ", 'G', VanillaModule.reinforcedGlass);
         }
         // Glass Floor Panel

@@ -8,8 +8,10 @@ import net.minecraft.world.World;
 /**
  * @author DarkGuardsman
  */
-public class BlockReinforcedRail extends BlockRail {
-    public BlockReinforcedRail() {
+public class BlockReinforcedRail extends BlockRail
+{
+    public BlockReinforcedRail()
+    {
         super();
         this.setBlockName("reinforced_rail");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_rail");
@@ -20,7 +22,8 @@ public class BlockReinforcedRail extends BlockRail {
     }
 
     @Override
-    public float getRailMaxSpeed(World world, EntityMinecart cart, int y, int x, int z) {
+    public float getRailMaxSpeed(World world, EntityMinecart cart, int y, int x, int z)
+    {
         return 0.6f;
     }
 }

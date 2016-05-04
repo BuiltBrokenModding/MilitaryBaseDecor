@@ -10,13 +10,15 @@ import net.minecraft.block.Block;
 /**
  * Created by ole on 13/01/16.
  */
-public class Blastcraft extends AbstractLoadable {
+public class Blastcraft extends AbstractLoadable
+{
 
     public static Block blastProofBrick;
     public static Block blastProofGlass;
 
     @Override
-    public void preInit() {
+    public void preInit()
+    {
 
         blastProofBrick = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBlastProofBrick.class, ItemBlockBlastcraft.class);
         blastProofGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBlastProofGlass.class, ItemBlockBlastcraft.class);

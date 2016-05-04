@@ -12,12 +12,14 @@ import net.minecraft.item.ItemStack;
  * Content themed after cold ware military bunkers and bases
  * Created by robert on 12/7/2014.
  */
-public class ColdWarModule extends AbstractLoadable {
+public class ColdWarModule extends AbstractLoadable
+{
     public static Block asphalt;
     public static Block reinforcedRail;
 
     @Override
-    public void preInit() {
+    public void preInit()
+    {
         asphalt = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAsphalt.class, ItemBlockColdWar.class);
         reinforcedRail = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedRail.class, ItemBlockColdWar.class);
 
@@ -25,7 +27,8 @@ public class ColdWarModule extends AbstractLoadable {
     }
 
     @Override
-    public void postInit() {
+    public void postInit()
+    {
 
-        }
     }
+}

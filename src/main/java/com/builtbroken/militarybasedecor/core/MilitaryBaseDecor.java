@@ -61,6 +61,7 @@ public final class MilitaryBaseDecor extends AbstractMod
         super(DOMAIN, "MilitaryBaseDecor");
     }
 
+    @Override
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
@@ -110,12 +111,14 @@ public final class MilitaryBaseDecor extends AbstractMod
         }
     }
 
+    @Override
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
         super.init(event);
     }
 
+    @Override
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {

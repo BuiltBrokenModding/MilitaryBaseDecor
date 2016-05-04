@@ -7,9 +7,11 @@ import net.minecraft.block.material.Material;
 /**
  * Created by Ole on 10.02.2015.
  */
-public class BlockAsphalt extends Block {
+public class BlockAsphalt extends Block
+{
 
-    public BlockAsphalt() {
+    public BlockAsphalt()
+    {
         super(Material.rock);
         this.setBlockName("asphalt");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "asphalt");

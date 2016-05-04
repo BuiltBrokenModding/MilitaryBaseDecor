@@ -8,9 +8,11 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by Ole on 11.01.2016.
  */
-public class GunpowderRecipes {
+public class GunpowderRecipes
+{
 
-    public static void initItemRecipes() {
+    public static void initItemRecipes()
+    {
 
         // Rope
         GameRegistry.addShapedRecipe(new ItemStack(GunpowderModule.rope, 6, 0), "SS ", "S S", "SS ", 'S', Items.string);
@@ -18,7 +20,8 @@ public class GunpowderRecipes {
 
     }
 
-    public static void initBlockRecipes() {
+    public static void initBlockRecipes()
+    {
 
         // Tangled Rope
         GameRegistry.addShapelessRecipe(new ItemStack(GunpowderModule.tangledRope, 2, 0), new ItemStack(GunpowderModule.rope, 4, 0));

@@ -7,9 +7,11 @@ import net.minecraft.block.material.Material;
 /**
  * Created by Ole on 24.01.2016.
  */
-public class BlockBasicConcrete extends Block {
+public class BlockBasicConcrete extends Block
+{
 
-    public BlockBasicConcrete() {
+    public BlockBasicConcrete()
+    {
         super(Material.rock);
         this.setHardness(15);
         this.setResistance(150);

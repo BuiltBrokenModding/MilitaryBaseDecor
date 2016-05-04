@@ -97,7 +97,7 @@ public class TilePaneBarbs extends TileEnt implements ISimpleItemRenderer, IRota
     @Override
     public void onCollide(Entity entity)
     {
-        if (!(entity instanceof EntityPlayer) || !((EntityPlayer)entity).capabilities.isCreativeMode)
+        if (!(entity instanceof EntityPlayer) || !((EntityPlayer) entity).capabilities.isCreativeMode)
         {
             entity.setInWeb();
             entity.attackEntityFrom(DamageSource.cactus, 1.0F); //TODO use custom damage source
@@ -110,6 +110,7 @@ public class TilePaneBarbs extends TileEnt implements ISimpleItemRenderer, IRota
         return new TilePaneBarbs();
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public IIcon getIcon()
     {

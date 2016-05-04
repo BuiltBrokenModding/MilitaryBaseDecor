@@ -17,7 +17,8 @@ import net.minecraft.item.ItemStack;
 /**
  * Content themed to vanilla MC rather than any set mod or History era
  */
-public class VanillaModule extends AbstractLoadable {
+public class VanillaModule extends AbstractLoadable
+{
 
     public static Block reinforcedSoil;
     public static Block reinforcedStone;
@@ -40,7 +41,8 @@ public class VanillaModule extends AbstractLoadable {
     public static Item wireCutters;
 
     @Override
-    public void preInit() {
+    public void preInit()
+    {
         reinforcedSoil = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedSoil.class, ItemBlockVanilla.class);
         reinforcedStone = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedStone.class, ItemBlockVanilla.class);
         reinforcedMetal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetal.class, ItemBlockVanilla.class);
@@ -65,7 +67,8 @@ public class VanillaModule extends AbstractLoadable {
     }
 
     @Override
-    public void postInit() {
+    public void postInit()
+    {
         VanillaRecipes.initItemRecipes();
         VanillaRecipes.initBlockRecipes();
     }
