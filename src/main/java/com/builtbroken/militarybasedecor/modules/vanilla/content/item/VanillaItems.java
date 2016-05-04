@@ -16,7 +16,7 @@ public class VanillaItems extends Item
 
     public VanillaItems()
     {
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
+        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
 
     @Override

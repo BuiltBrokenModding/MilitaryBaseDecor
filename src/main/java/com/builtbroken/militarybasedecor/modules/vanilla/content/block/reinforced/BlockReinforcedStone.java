@@ -27,7 +27,7 @@ public class BlockReinforcedStone extends BlockReinforced
         super(Material.rock, "reinforced_stone");
         this.setStepSound(soundTypeStone);
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_stone");
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
+        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
 
     /**

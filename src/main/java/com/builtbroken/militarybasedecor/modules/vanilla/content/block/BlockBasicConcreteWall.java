@@ -17,7 +17,6 @@ import java.util.List;
  */
 public class BlockBasicConcreteWall extends BlockWall
 {
-
     public BlockBasicConcreteWall(Block p_i45435_1_)
     {
         super(p_i45435_1_);

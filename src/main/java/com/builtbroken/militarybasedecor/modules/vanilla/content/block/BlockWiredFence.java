@@ -24,7 +24,7 @@ public class BlockWiredFence extends BlockPane
         this.setHardness(3.0F);
         this.setResistance(10.0F);
         this.setStepSound(soundTypeMetal);
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
+        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
         this.setBlockUnbreakable();
     }
 

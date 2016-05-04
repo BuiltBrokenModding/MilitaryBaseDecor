@@ -13,7 +13,7 @@ public class BlockCorrugatedGalvanisedIron extends Block
     public BlockCorrugatedGalvanisedIron()
     {
         super(Material.iron);
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
+        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
         this.setBlockName("corrugated_galvanised_iron_block");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "corrugated_galvanised_iron_block");
         this.setHardness(1);

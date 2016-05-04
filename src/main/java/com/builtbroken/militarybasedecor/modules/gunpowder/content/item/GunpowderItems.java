@@ -16,7 +16,7 @@ public class GunpowderItems extends Item
 
     public GunpowderItems()
     {
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
+        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
 
     @Override

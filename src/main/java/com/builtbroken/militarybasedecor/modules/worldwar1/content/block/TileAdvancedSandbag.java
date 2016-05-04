@@ -27,7 +27,7 @@ public class TileAdvancedSandbag extends Tile implements ISimpleItemRenderer
     public TileAdvancedSandbag()
     {
         super("advanced_sandbag", Material.cloth);
-        this.creativeTab = (MilitaryBaseDecor.CREATIVE_TAB_1);
+        this.creativeTab = (MilitaryBaseDecor.MAIN_TAB);
         this.isOpaque = false;
         this.renderNormalBlock = false;
         this.renderTileEntity = true;

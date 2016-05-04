@@ -49,13 +49,13 @@ public class VanillaModule extends AbstractLoadable
         reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class, ItemBlockVanilla.class);
         reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class, ItemBlockVanilla.class);
         basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicConcrete.class, ItemBlockVanilla.class);
-        basicConcreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall", new BlockBasicConcreteWall(basicConcrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
-        basicConcreteStairs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("basic_concrete_stairs", new BlockPrefabStairs(basicConcrete, 1).setBlockName("basic_concrete_stairs").setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
+        basicConcreteWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("concrete_wall", new BlockBasicConcreteWall(basicConcrete).setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
+        basicConcreteStairs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("basic_concrete_stairs", new BlockPrefabStairs(basicConcrete, 1).setBlockName("basic_concrete_stairs").setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setStepSound(Block.soundTypeStone), ItemBlockVanilla.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("simple_camo", new TileSimpleCamo("simple_camo", Material.rock));
         wiredFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wired_fence", new BlockWiredFence("militarybasedecor:wired_fence", "militarybasedecor:wired_fence_top", Material.iron, true).setBlockName("wired_fence"), ItemBlockVanilla.class);
         sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class, ItemBlockVanilla.class);
-        metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1).setStepSound(Block.soundTypeMetal), ItemBlockVanilla.class);
-        metalWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_wall", new BlockMetalWall(reinforcedMetal).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1), ItemBlockVanilla.class);
+        metalFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_fence", new BlockFence("iron_block", Material.iron).setBlockTextureName("iron_block").setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setStepSound(Block.soundTypeMetal), ItemBlockVanilla.class);
+        metalWall = MilitaryBaseDecor.INSTANCE.getManager().newBlock("metal_wall", new BlockMetalWall(reinforcedMetal).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setCreativeTab(MilitaryBaseDecor.MAIN_TAB), ItemBlockVanilla.class);
         chainLinkFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockChainLinkFence.class, ItemBlockVanilla.class);
 
         bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem("cement_bag", new VanillaItems()).setUnlocalizedName("cement_bag").setMaxStackSize(1).setTextureName(MilitaryBaseDecor.PREFIX + "cement_bag");
@@ -63,7 +63,7 @@ public class VanillaModule extends AbstractLoadable
         bundledWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("bundled_wire", new VanillaItems()).setUnlocalizedName("bundled_wire").setTextureName(MilitaryBaseDecor.PREFIX + "bundled_wire");
         wireCutters = MilitaryBaseDecor.INSTANCE.getManager().newItem("wire_cutters", new ItemWireCutters()).setUnlocalizedName("wire_cutters").setTextureName(MilitaryBaseDecor.PREFIX + "wire_cutters");
 
-        MilitaryBaseDecor.CREATIVE_TAB_1.itemStack = new ItemStack(basicConcrete);
+        MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(basicConcrete);
     }
 
     @Override

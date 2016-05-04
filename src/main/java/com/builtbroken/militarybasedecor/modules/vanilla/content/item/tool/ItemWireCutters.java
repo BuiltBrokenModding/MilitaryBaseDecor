@@ -19,7 +19,7 @@ public class ItemWireCutters extends Item
         this.setMaxStackSize(1);
         this.setMaxDamage(64);
         this.setNoRepair();
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
+        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
 
     @Override

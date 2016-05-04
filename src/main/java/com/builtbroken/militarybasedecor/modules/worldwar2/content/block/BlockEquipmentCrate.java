@@ -24,7 +24,7 @@ public class BlockEquipmentCrate extends Block
     public BlockEquipmentCrate()
     {
         super(Material.iron);
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
+        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
         this.setBlockName("equipment_crate");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "equipment_crate_side");
         this.setHardness(1);

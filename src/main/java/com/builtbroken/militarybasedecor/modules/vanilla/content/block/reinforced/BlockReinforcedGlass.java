@@ -18,7 +18,7 @@ public class BlockReinforcedGlass extends Block
     {
         super(Material.glass);
         this.setBlockName("reinforced_glass");
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
+        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
         this.setResistance(48);
         this.setHardness(6.0F);
     }
@@ -89,9 +89,7 @@ public class BlockReinforcedGlass extends Block
     @Override
     public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
     {
-
-        Block i1 = par1IBlockAccess.getBlock(par2, par3, par4);
-        return i1 == this ? false : super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5);
+        return par1IBlockAccess.getBlock(par2, par3, par4) != this && super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5);
     }
 
     @SideOnly(Side.CLIENT)

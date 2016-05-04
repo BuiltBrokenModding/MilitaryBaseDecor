@@ -17,7 +17,7 @@ public class WorldWar1Items extends Item
     public WorldWar1Items()
     {
         super();
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
+        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
 
     @Override

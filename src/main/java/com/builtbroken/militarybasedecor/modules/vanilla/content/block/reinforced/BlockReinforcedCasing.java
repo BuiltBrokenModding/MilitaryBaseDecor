@@ -22,7 +22,7 @@ public class BlockReinforcedCasing extends BlockReinforced
     public BlockReinforcedCasing()
     {
         super(Material.ground, "reinforced_casing");
-        this.setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1);
+        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
         this.setStepSound(soundTypeWood);
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "wood_casing");
     }

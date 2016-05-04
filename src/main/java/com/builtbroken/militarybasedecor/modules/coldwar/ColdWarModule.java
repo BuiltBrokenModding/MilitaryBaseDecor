@@ -23,7 +23,7 @@ public class ColdWarModule extends AbstractLoadable
         asphalt = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAsphalt.class, ItemBlockColdWar.class);
         reinforcedRail = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedRail.class, ItemBlockColdWar.class);
 
-        MilitaryBaseDecor.CREATIVE_TAB_1.itemStack = new ItemStack(asphalt);
+        MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(asphalt);
     }
 
     @Override

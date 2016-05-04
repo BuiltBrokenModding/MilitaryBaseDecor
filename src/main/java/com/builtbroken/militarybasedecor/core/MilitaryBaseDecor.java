@@ -4,7 +4,6 @@ import com.builtbroken.mc.lib.mod.AbstractMod;
 import com.builtbroken.mc.lib.mod.ModCreativeTab;
 import com.builtbroken.militarybasedecor.modules.blastcraft.Blastcraft;
 import com.builtbroken.militarybasedecor.modules.coldwar.ColdWarModule;
-import com.builtbroken.militarybasedecor.modules.future.FutureModule;
 import com.builtbroken.militarybasedecor.modules.gunpowder.GunpowderModule;
 import com.builtbroken.militarybasedecor.modules.vanilla.VanillaModule;
 import com.builtbroken.militarybasedecor.modules.worldwar1.WorldWar1Module;
@@ -18,34 +17,16 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 /**
  * Created by robert on 11/18/2014.
  */
-@Mod(modid = MilitaryBaseDecor.DOMAIN, name = MilitaryBaseDecor.NAME, version = MilitaryBaseDecor.VERSION, dependencies = "required-after:VoltzEngine")
+@Mod(modid = MilitaryBaseDecor.DOMAIN, name = "Military Base Decor", version = "@MAJOR@.@MINOR@.@REVIS@.@BUILD@", dependencies = "required-after:VoltzEngine")
 public final class MilitaryBaseDecor extends AbstractMod
 {
-    /**
-     * Name of the channel and mod ID.
-     */
-    public static final String NAME = "Military Base Decor";
+
+    /** Mod ID and asset file name */
     public static final String DOMAIN = "militarybasedecor";
+    /** Prefix to place in from resource locations to load from the mod's asset folder */
     public static final String PREFIX = DOMAIN + ":";
-
-    /**
-     * The version of MilitaryBaseDecor.
-     */
-    public static final String MAJOR_VERSION = "@MAJOR@";
-    public static final String MINOR_VERSION = "@MINOR@";
-    public static final String REVISION_VERSION = "@REVIS@";
-    public static final String BUILD_VERSION = "@BUILD@";
-    public static final String VERSION = MAJOR_VERSION + "." + MINOR_VERSION + "." + REVISION_VERSION + "." + BUILD_VERSION;
-
-    public static final String ASSETS_PATH = "/assets/militarybasedecor/";
-    public static final String TEXTURE_PATH = "textures/";
-    public static final String GUI_PATH = TEXTURE_PATH + "gui/";
+    /** Path to the models folder */
     public static final String MODEL_PATH = "models/";
-    public static final String MODEL_DIRECTORY = ASSETS_PATH + MODEL_PATH;
-
-    public static final String MODEL_TEXTURE_PATH = TEXTURE_PATH + MODEL_PATH;
-    public static final String BLOCK_PATH = TEXTURE_PATH + "blocks/";
-    public static final String ITEM_PATH = TEXTURE_PATH + "items/";
 
     @Mod.Instance(DOMAIN)
     public static MilitaryBaseDecor INSTANCE;
@@ -53,12 +34,13 @@ public final class MilitaryBaseDecor extends AbstractMod
     @SidedProxy(clientSide = "com.builtbroken.militarybasedecor.client.ClientProxy", serverSide = "com.builtbroken.militarybasedecor.core.CommonProxy")
     public static CommonProxy proxy;
 
-    public static ModCreativeTab CREATIVE_TAB_1;
-    public static ModCreativeTab CREATIVE_TAB_2;
+    /** Primary creative tab for the mod */
+    public static ModCreativeTab MAIN_TAB;
 
     public MilitaryBaseDecor()
     {
         super(DOMAIN, "MilitaryBaseDecor");
+        MAIN_TAB = new ModCreativeTab("MilitaryBaseDecor");
     }
 
     @Override
@@ -66,49 +48,14 @@ public final class MilitaryBaseDecor extends AbstractMod
     public void preInit(FMLPreInitializationEvent event)
     {
         super.preInit(event);
-
-        CREATIVE_TAB_1 = new ModCreativeTab("MilitaryBaseDecor");
-        getManager().setTab(CREATIVE_TAB_1);
-
-        CREATIVE_TAB_2 = new ModCreativeTab("Blastcraft");
-        getManager().setTab(CREATIVE_TAB_2);
-
+        getManager().setTab(MAIN_TAB);
         ConfigManager.initConfig();
-
-        // Module Loading
-        if (ConfigManager.VANILLA_ENABLED)
-        {
-            loader.applyModule(new VanillaModule());
-        }
-
-        if (ConfigManager.GUNPOWDER_ERA_ENABLED)
-        {
-            loader.applyModule(new GunpowderModule());
-        }
-
-        if (ConfigManager.WORLD_WAR_ONE_ENABLED)
-        {
-            loader.applyModule(new WorldWar1Module());
-        }
-
-        if (ConfigManager.WORLD_WAR_TWO_ENABLED)
-        {
-            loader.applyModule(new WorldWar2Module());
-        }
-
-        if (ConfigManager.COLD_WAR_ENABLED)
-        {
-            loader.applyModule(new ColdWarModule());
-        }
-
-        if (ConfigManager.FUTURE_ENABLED)
-        {
-            loader.applyModule(new FutureModule());
-        }
-        if (ConfigManager.BLASTCRAFT_ENABLED)
-        {
-            loader.applyModule(new Blastcraft());
-        }
+        loader.applyModule(VanillaModule.class, ConfigManager.VANILLA_ENABLED);
+        loader.applyModule(GunpowderModule.class, ConfigManager.GUNPOWDER_ERA_ENABLED);
+        loader.applyModule(WorldWar1Module.class, ConfigManager.WORLD_WAR_ONE_ENABLED);
+        loader.applyModule(WorldWar2Module.class, ConfigManager.WORLD_WAR_TWO_ENABLED);
+        loader.applyModule(ColdWarModule.class, ConfigManager.COLD_WAR_ENABLED);
+        loader.applyModule(Blastcraft.class, ConfigManager.BLASTCRAFT_ENABLED);
     }
 
     @Override

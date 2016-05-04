@@ -28,15 +28,15 @@ public class WorldWar2Module extends AbstractLoadable
     {
         if (ConfigManager.CHOCOLATE_ENABLED)
         {
-            chocolate = MilitaryBaseDecor.INSTANCE.getManager().newItem("chocolate", new ItemChocolate(0, 0F, false).setPotionEffect(20, 60, 1, 1F).setUnlocalizedName("chocolate").setTextureName(MilitaryBaseDecor.DOMAIN + "chocolate").setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1));
+            chocolate = MilitaryBaseDecor.INSTANCE.getManager().newItem("chocolate", new ItemChocolate(0, 0F, false).setPotionEffect(20, 60, 1, 1F).setUnlocalizedName("chocolate").setTextureName(MilitaryBaseDecor.DOMAIN + "chocolate").setCreativeTab(MilitaryBaseDecor.MAIN_TAB));
         }
         ammunitionBox = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAmmunitionBox.class, ItemBlockWorldWar2.class);
         corrugatedGalvanisedIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockCorrugatedGalvanisedIron.class, ItemBlockCorrugatedGalvanisedIron.class);
         oliveDrabTexturedBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockOliveDrabTexturedBlock.class, ItemBlockWorldWar2.class);
         equipmentCrate = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockEquipmentCrate.class, ItemBlockWorldWar2.class);
         reinforcedConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedConcrete.class, ItemBlockWorldWar2.class);
-        reinforcedConcreteStairs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("reinforced_concrete_stairs", new BlockPrefabStairs(reinforcedConcrete, 1).setBlockName("reinforced_concrete_stairs").setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.CREATIVE_TAB_1).setStepSound(Block.soundTypeStone), ItemBlockWorldWar2.class);
-        MilitaryBaseDecor.CREATIVE_TAB_1.itemStack = new ItemStack(ammunitionBox);
+        reinforcedConcreteStairs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("reinforced_concrete_stairs", new BlockPrefabStairs(reinforcedConcrete, 1).setBlockName("reinforced_concrete_stairs").setResistance(150).setHardness(15).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setStepSound(Block.soundTypeStone), ItemBlockWorldWar2.class);
+        MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(ammunitionBox);
     }
 
     @Override

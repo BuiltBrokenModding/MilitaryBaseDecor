@@ -36,7 +36,7 @@ public class TilePaneBarbs extends TileEnt implements ISimpleItemRenderer, IRota
     public TilePaneBarbs()
     {
         super("pane_barbs", Material.iron);
-        this.creativeTab = (MilitaryBaseDecor.CREATIVE_TAB_1);
+        this.creativeTab = (MilitaryBaseDecor.MAIN_TAB);
         this.isOpaque = false;
         this.renderNormalBlock = false;
         this.renderTileEntity = true;
