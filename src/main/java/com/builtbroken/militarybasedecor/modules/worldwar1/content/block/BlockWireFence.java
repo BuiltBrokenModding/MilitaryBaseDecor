@@ -1,25 +1,34 @@
 package com.builtbroken.militarybasedecor.modules.worldwar1.content.block;
 
+import com.builtbroken.mc.core.registry.implement.IRecipeContainer;
+import com.builtbroken.mc.lib.helper.recipe.OreNames;
 import com.builtbroken.militarybasedecor.core.ConfigManager;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.modules.vanilla.VanillaModule;
+import com.builtbroken.militarybasedecor.modules.worldwar1.WorldWar1Module;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.oredict.OreDictionary;
+
+import java.util.List;
 
 
-public class BlockWireFence extends BlockPane
+public class BlockWireFence extends BlockPane implements IRecipeContainer
 {
     @SideOnly(Side.CLIENT)
     IIcon chainLinkIcon;
@@ -48,7 +57,7 @@ public class BlockWireFence extends BlockPane
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float xhit, float yhit, float zhit)
     {
-        if (player.getHeldItem() != null && player.getHeldItem().getItem() == VanillaModule.wireCutters)
+        if (player.getHeldItem() != null && player.getHeldItem().getItem() == WorldWar1Module.itemWireCutters)
         {
             if (!world.isRemote)
             {
@@ -89,11 +98,33 @@ public class BlockWireFence extends BlockPane
         return true;
     }
 
+    @Override
+    public void genRecipes(List<IRecipe> recipes)
+    {
+        if (OreDictionary.doesOreNameExist(OreNames.ROD_IRON))
+        {
+            recipes.add(newShapedRecipe(new ItemStack(WorldWar1Module.blockWireFence, 8, 0), "RWR", "WWW", "RWR", 'W', WorldWar1Module.itemWire, 'R', OreNames.ROD_IRON));
+        }
+        else
+        {
+            recipes.add(newShapedRecipe(new ItemStack(WorldWar1Module.blockWireFence, 8, 0), "RWR", "WWW", "RWR", 'W', WorldWar1Module.itemWire, 'R', Items.stick));
+        }
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void getSubBlocks(Item item, CreativeTabs tab, List list)
+    {
+        list.add(new ItemStack(item, 1, 0));
+        list.add(new ItemStack(item, 1, 1));
+        list.add(new ItemStack(item, 1, 2));
+    }
+
     /** Enum of wire types */
     public enum WireFence
     {
         WIRE,
-        LINK,
+        CHAIN,
         BARBED;
 
         public static WireFence getType(World world, int x, int y, int z)

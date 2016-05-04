@@ -2,39 +2,48 @@ package com.builtbroken.militarybasedecor.modules.worldwar1;
 
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.modules.vanilla.content.block.camo.TileSimpleCamo;
+import com.builtbroken.militarybasedecor.modules.vanilla.content.item.VanillaItems;
+import com.builtbroken.militarybasedecor.modules.vanilla.content.item.tool.ItemWireCutters;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.block.*;
-import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.WorldWar1Items;
+import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.ItemWire;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class WorldWar1Module extends AbstractLoadable
 {
-    public static Block barbedWireFence;
-    public static Block paneBarbs;
-    public static Block concertinaWire;
+    public static Block blockWireFence;
+    public static Block blockFenceTopper;
     public static Block camouflageBlock;
+    public static Block simpleCamoBlock;
+    public static Block basicConcrete;
+    public static Block sandBag;
 
-    public static Item barbedBundledWire;
+    public static Item itemBag;
+    public static Item itemWire;
+    public static Item itemWireCutters;
 
     @Override
     public void preInit()
     {
-        barbedWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWireFence.class, ItemBlockWorldWar1.class);
-        concertinaWire = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockConcertinaWire.class, ItemBlockWorldWar1.class);
+        basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicConcrete.class, ItemBlockWorldWar1.class);
+        simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("simple_camo", new TileSimpleCamo("simple_camo", Material.rock));
         camouflageBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("camouflage_block", new BlockCamouflageBlock().setBlockName("camouflage_block"), ItemBlockWorldWar1.class);
-        paneBarbs = MilitaryBaseDecor.INSTANCE.getManager().newBlock("pane_barbs", new TilePaneBarbs()).setBlockName("pane_barbs");
 
-        barbedBundledWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("barbed_bundled_wire", new WorldWar1Items()).setUnlocalizedName("barbed_bundled_wire").setTextureName(MilitaryBaseDecor.PREFIX + "barbed_bundled_wire");
+        sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class, ItemBlockWorldWar1.class);
+        itemBag = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag", new VanillaItems()).setUnlocalizedName("bag").setTextureName(MilitaryBaseDecor.PREFIX + "bag");
 
-        MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(barbedWireFence);
+        itemWireCutters = MilitaryBaseDecor.INSTANCE.getManager().newItem("wire_cutters", new ItemWireCutters()).setUnlocalizedName("wire_cutters").setTextureName(MilitaryBaseDecor.PREFIX + "wire_cutters");
+
+        itemWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("bundled_wire", new ItemWire());
+
+        blockWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWireFence.class, ItemBlockWorldWar1.class);
+        blockFenceTopper = MilitaryBaseDecor.INSTANCE.getManager().newBlock("pane_barbs", new TileFenceTopper()).setBlockName("pane_barbs");
+
+
+
+        MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(blockWireFence);
     }
-
-    @Override
-    public void postInit()
-    {
-        WW1Recipes.initItemRecipes();
-        WW1Recipes.initBlockRecipes();
-    }
-
 }
