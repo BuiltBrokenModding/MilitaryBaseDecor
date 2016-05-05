@@ -43,14 +43,22 @@ public class TileFenceTopper extends TileEnt implements ISimpleItemRenderer, IRo
 
     public TileFenceTopper()
     {
-        super("pane_barbs", Material.iron);
-        this.creativeTab = (MilitaryBaseDecor.MAIN_TAB);
+        super("fenceTopper", Material.iron);
+        this.creativeTab = MilitaryBaseDecor.MAIN_TAB;
         this.isOpaque = false;
         this.renderNormalBlock = false;
         this.renderTileEntity = true;
         this.itemBlock = ItemBlockWorldWar1.class;
         this.bounds = new Cube(0F, 0F, 0F, 1F, 0.35F, 1F);
         this.facing = ForgeDirection.NORTH;
+        this.hardness = 1;
+        this.resistance = 1;
+    }
+
+    @Override
+    public boolean canUpdate()
+    {
+        return false;
     }
 
     @Override

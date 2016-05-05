@@ -11,11 +11,12 @@ import java.util.List;
  * @see <a href="https://github.com/BuiltBrokenModding/VoltzEngine/blob/development/license.md">License</a> for what you can and can't do with the code.
  * Created by Dark(DarkGuardsman, Robert) on 5/4/2016.
  */
-public class ItemWireFence extends ItemBlockWorldWar1
+public class ItemBlockWireFence extends ItemBlockWorldWar1
 {
-    public ItemWireFence(Block block)
+    public ItemBlockWireFence(Block block)
     {
         super(block);
+        this.setHasSubtypes(true);
     }
 
     @Override
