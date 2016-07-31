@@ -5,8 +5,6 @@
 itemGroup.MilitaryBaseDecor=Military Base Decor
 ## Misc Blocks
 tile.militarybasedecor:simple_camo.0.name=Basic Camo Block
-
-tile.militarybasedecor:concrete_wall.0.name=Basic Concrete Wall
 tile.asphalt.0.name=Asphalt
 tile.reinforced_casing.0.name=Reinforced Casing
 tile.reinforced_glass.0.name=Reinforced Glass
@@ -24,20 +22,12 @@ tile.wired_fence.0.name=Wired Fence
 tile.rusty_wired_fence.0.name=Rusty Wired Fence
 tile.sand_bag.0.name=Basic Sandbag
 tile.advanced_sandBag.0.name=Advanced Sandbag
-tile.militarybasedecor:metal_fence.0.name=Metal Fence
-tile.militarybasedecor:metal_wall.0.name=Iron Wall
-tile.militarybasedecor:metal_wall.1.name=Gold Wall
 tile.concertina_wire.0.name=Concertina Wire
 tile.rope_fence.0.name=Rope Fence
 tile.tangled_rope.0.name=Tangled Rope
 tile.limecrete.0.name=Limecrete
 tile.chain_link_fence.0.name=Chain Link Fence
-tile.pane_barbs.0.name=Pane Barbs
-tile.meshed_floor_panel.0.name=Meshed Floor Panel
-tile.glass_floor_panel.0.name=Glass Floor Panel
-tile.reinforced_glass_floor_panel.0.name=Reinforced Glass Panel
-tile.metal_mesh_block.0.name=Metal Mesh Block
-tile.advanced_sandbag.0.name=Advanced Sandbag
+tile.militarybasedecor:fenceTopper.0.name=Fence Topper
 tile.corrugated_galvanised_iron_block.0.name=Corrugated Galvanised Iron
 tile.olive_drab_textured_block.0.name=Olive Drab Textured Block
 tile.ammunition_box.0.name=Ammunition Box
@@ -68,14 +58,12 @@ tile.reinforced_concrete_stairs.4.name=Reinforced Concrete Stairs
 # Misc Items
 item.cement_bag.name=Bag of Cement
 item.bag.name=Bag
-item.militarybasedecor:chocolate.name=Chocolate
 item.bundled_wire.name=Bundled Wire
 item.barbed_bundled_wire.name=Barbed Bundled Wire
 item.rope.name=Rope
 item.wire_cutters.name=Wire Cutters
 
 ## Blastcraft
-itemGroup.Blastcraft=Blastcraft
 
 tile.blast_proof_block.0.name=Blastproof Brick
 tile.blast_proof_glass.0.name=Blastproof Glass
