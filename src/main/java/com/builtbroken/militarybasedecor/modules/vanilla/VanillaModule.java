@@ -2,6 +2,7 @@ package com.builtbroken.militarybasedecor.modules.vanilla;
 
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.modules.vanilla.content.block.BlockReinforcedButton;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.ItemBlockVanilla;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.reinforced.*;
 import net.minecraft.block.Block;
@@ -18,6 +19,7 @@ public class VanillaModule extends AbstractLoadable
     public static Block reinforcedMetal;
     public static Block reinforcedGlass;
     public static Block reinforcedCasing;
+    public static Block reinforcedButton;
 
 
     @Override
@@ -28,6 +30,7 @@ public class VanillaModule extends AbstractLoadable
         reinforcedMetal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetal.class, ItemBlockVanilla.class);
         reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class, ItemBlockVanilla.class);
         reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class, ItemBlockVanilla.class);
+        reinforcedButton = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedButton.class, ItemBlockVanilla.class);
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(reinforcedSoil);
     }
 
