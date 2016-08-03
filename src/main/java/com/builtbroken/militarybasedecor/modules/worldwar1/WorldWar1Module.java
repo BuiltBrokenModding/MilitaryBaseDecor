@@ -42,8 +42,6 @@ public class WorldWar1Module extends AbstractLoadable
         blockWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWireFence.class, ItemBlockWireFence.class);
         blockFenceTopper = MilitaryBaseDecor.INSTANCE.getManager().newBlock("pane_barbs", new TileFenceTopper());
 
-
-
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(blockWireFence);
     }
 }
