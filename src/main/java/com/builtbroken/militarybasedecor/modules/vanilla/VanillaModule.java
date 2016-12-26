@@ -2,7 +2,7 @@ package com.builtbroken.militarybasedecor.modules.vanilla;
 
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.modules.vanilla.content.block.BlockReinforcedButton;
+import com.builtbroken.militarybasedecor.modules.vanilla.content.block.reinforced.BlockReinforcedButton;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.ItemBlockVanilla;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.reinforced.*;
 import net.minecraft.block.Block;

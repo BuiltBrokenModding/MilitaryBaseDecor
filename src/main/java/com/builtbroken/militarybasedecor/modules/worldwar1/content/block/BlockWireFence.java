@@ -43,6 +43,7 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
         this.setHardness(3.0F);
         this.setResistance(10.0F);
         this.setStepSound(soundTypeMetal);
+        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
 
     @Override

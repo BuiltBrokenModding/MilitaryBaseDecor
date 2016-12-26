@@ -18,8 +18,9 @@ tile.reinforced_metal.1.name=Reinforced Gold Block
 tile.reinforced_rail.0.name=Reinforced Rail
 tile.picket_fence.0.name=Picket Fence
 tile.barbed_wire_fence.0.name=Barbed Wire Fence
-tile.wired_fence.0.name=Wired Fence
-tile.rusty_wired_fence.0.name=Rusty Wired Fence
+tile.wire_fence.0.name=Wired Fence
+tile.wire_fence.1.name=Chain-link Fence
+tile.wire_fence.2.name=Barbed Wire Fence
 tile.sand_bag.0.name=Basic Sandbag
 tile.advanced_sandBag.0.name=Advanced Sandbag
 tile.concertina_wire.0.name=Concertina Wire
@@ -35,6 +36,7 @@ tile.equipment_crate.0.name=Equipment Crate
 tile.camouflage_block.0.name=Woodlands Camouflage Textured Block
 tile.camouflage_block.1.name=Desert Camouflage Textured Block
 tile.camouflage_block.2.name=Urban Camouflage Textured Block
+tile.reinforced_button.0.name=Reinforced Button
 
 ## Concrete
 # Basic Concrete
