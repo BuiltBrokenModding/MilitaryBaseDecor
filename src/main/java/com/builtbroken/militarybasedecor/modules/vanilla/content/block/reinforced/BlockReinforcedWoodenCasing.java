@@ -6,53 +6,33 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
 
 import java.util.List;
 
-public class BlockReinforcedMetal extends BlockReinforced
+/**
+ * Mainly for crafting reinforced blocks, can be used as a decoration if players want
+ * Created by robert on 1/24/2015.
+ */
+public class BlockReinforcedWoodenCasing extends BlockReinforced
 {
-
-    public static float RESISTANCE_SCALE = 7;
-
-
-
-    public BlockReinforcedMetal()
+    public BlockReinforcedWoodenCasing()
     {
-        super(Material.iron, "reinforced_metal");
-        this.setStepSound(soundTypeMetal);
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "reinforced_metal");
+        super(Material.ground, "wood_casing");
         this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
-    }
-
-    /**
-     * TODO Once we get the textures we need to specify them here!
-     */
-    @SideOnly(Side.CLIENT)
-    @Override
-    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
-    {
-        return blockIcon;
-
-    }
-
-    @SideOnly(Side.CLIENT)
-    @Override
-    public void registerBlockIcons(IIconRegister iconRegister)
-    {
+        this.setStepSound(soundTypeWood);
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "wood_casing");
     }
 
     @Override
     public float getBlockHardness(int meta)
     {
-        if (meta < ReinforcedMetalMeta.values().length)
+        if (meta < ReinforcedCasing.values().length)
         {
-            return ReinforcedMetalMeta.values()[meta].hardness;
+            return ReinforcedCasing.values()[meta].hardness;
         }
         return this.blockHardness;
     }
@@ -60,9 +40,9 @@ public class BlockReinforcedMetal extends BlockReinforced
     @Override
     public float getBlockResistance(int meta)
     {
-        if (meta < ReinforcedMetalMeta.values().length)
+        if (meta < ReinforcedCasing.values().length)
         {
-            return ReinforcedMetalMeta.values()[meta].base_resistance * RESISTANCE_SCALE;
+            return ReinforcedCasing.values()[meta].base_resistance;
         }
         return 35;
     }
@@ -71,7 +51,7 @@ public class BlockReinforcedMetal extends BlockReinforced
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item item, CreativeTabs tab, List list)
     {
-        for (ReinforcedMetalMeta type : ReinforcedMetalMeta.values())
+        for (ReinforcedCasing type : ReinforcedCasing.values())
         {
             list.add(new ItemStack(item, 1, type.ordinal()));
         }
@@ -80,24 +60,42 @@ public class BlockReinforcedMetal extends BlockReinforced
     /**
      * Sub types for this block
      */
-    public enum ReinforcedMetalMeta
+    public enum ReinforcedCasing
     {
-        IRON(Blocks.iron_block),
-        GOLD(Blocks.gold_block);
+        WOOD(Blocks.planks);
 
         public final float hardness;
         public final float base_resistance;
 
-        ReinforcedMetalMeta(Block block)
+        ReinforcedCasing(Block block)
         {
             hardness = BlockUtility.getBlockHardness(block);
             base_resistance = BlockUtility.getBlockResistance(block);
         }
 
-        ReinforcedMetalMeta(float hardness, float base_resistance)
+        ReinforcedCasing(float hardness, float base_resistance)
         {
             this.hardness = hardness;
             this.base_resistance = base_resistance;
         }
+    }
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    public int getRenderBlockPass()
+    {
+        return 0;
+    }
+
+    @Override
+    public boolean renderAsNormalBlock()
+    {
+        return false;
+    }
+
+    @Override
+    public boolean isOpaqueCube()
+    {
+        return false;
     }
 }

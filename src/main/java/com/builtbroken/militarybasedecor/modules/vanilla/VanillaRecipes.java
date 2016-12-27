@@ -38,7 +38,7 @@ public class VanillaRecipes
         // Wired Fence
         //GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.wiredFence, 6, 0), "WWW", "   ", "WWW", 'W', VanillaModule.bundledWire);
         // Wood Casing
-        GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.reinforcedCasing, 3, 0), "SSS", "S S", "SSS", 'S', Items.stick);
+        GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.reinforcedWoodenCasing, 3, 0), "SSS", "S S", "SSS", 'S', Items.stick);
         // Basic Sandbag
         //GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.sandBag, 8, 0), "WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', Blocks.sand);
         //GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.sandBag, 8, 0), "LLL", "LSL", "LLL", 'L', Items.leather, 'S', Blocks.sand);

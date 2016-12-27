@@ -34,9 +34,6 @@ public class BlockReinforcedSoil extends BlockReinforced
         this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
 
-    /**
-     * TODO Once we get the textures we need to specify them here!
-     */
     @SideOnly(Side.CLIENT)
     @Override
     public IIcon getIcon(int side, int metadata)

@@ -14,25 +14,24 @@ import net.minecraft.item.ItemStack;
 import java.util.List;
 
 /**
- * Mainly for crafting reinforced blocks, can be used as a decoration if players want
- * Created by robert on 1/24/2015.
+ * Created by Ole Henrik Stabell on 27.12.2016.
  */
-public class BlockReinforcedCasing extends BlockReinforced
+public class BlockReinforcedMetalCasing extends BlockReinforced
 {
-    public BlockReinforcedCasing()
+    public BlockReinforcedMetalCasing()
     {
-        super(Material.ground, "reinforced_casing");
+        super(Material.ground, "metal_casing");
         this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
-        this.setStepSound(soundTypeWood);
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "wood_casing");
+        this.setStepSound(soundTypeMetal);
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "metal_casing");
     }
 
     @Override
     public float getBlockHardness(int meta)
     {
-        if (meta < ReinforcedCasing.values().length)
+        if (meta < ReinforcedMetalCasing.values().length)
         {
-            return ReinforcedCasing.values()[meta].hardness;
+            return ReinforcedMetalCasing.values()[meta].hardness;
         }
         return this.blockHardness;
     }
@@ -40,9 +39,9 @@ public class BlockReinforcedCasing extends BlockReinforced
     @Override
     public float getBlockResistance(int meta)
     {
-        if (meta < ReinforcedCasing.values().length)
+        if (meta < ReinforcedMetalCasing.values().length)
         {
-            return ReinforcedCasing.values()[meta].base_resistance;
+            return ReinforcedMetalCasing.values()[meta].base_resistance;
         }
         return 35;
     }
@@ -51,7 +50,7 @@ public class BlockReinforcedCasing extends BlockReinforced
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item item, CreativeTabs tab, List list)
     {
-        for (ReinforcedCasing type : ReinforcedCasing.values())
+        for (ReinforcedMetalCasing type : ReinforcedMetalCasing.values())
         {
             list.add(new ItemStack(item, 1, type.ordinal()));
         }
@@ -60,20 +59,20 @@ public class BlockReinforcedCasing extends BlockReinforced
     /**
      * Sub types for this block
      */
-    public enum ReinforcedCasing
+    public enum ReinforcedMetalCasing
     {
-        WOOD(Blocks.planks);
+        METAL(Blocks.planks);
 
         public final float hardness;
         public final float base_resistance;
 
-        ReinforcedCasing(Block block)
+        ReinforcedMetalCasing(Block block)
         {
             hardness = BlockUtility.getBlockHardness(block);
             base_resistance = BlockUtility.getBlockResistance(block);
         }
 
-        ReinforcedCasing(float hardness, float base_resistance)
+        ReinforcedMetalCasing(float hardness, float base_resistance)
         {
             this.hardness = hardness;
             this.base_resistance = base_resistance;

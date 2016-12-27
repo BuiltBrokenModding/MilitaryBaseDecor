@@ -22,6 +22,11 @@ public class BlockReinforcedStone extends BlockReinforced
 {
     public static float RESISTANCE_SCALE = 5;
 
+    @SideOnly(Side.CLIENT)
+    private IIcon[] texture;
+
+    final static String[] subBlocks = new String[]{"cobblestone", "stone", "stonebrick"};
+
     public BlockReinforcedStone()
     {
         super(Material.rock, "reinforced_stone");
@@ -30,22 +35,23 @@ public class BlockReinforcedStone extends BlockReinforced
         this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
 
-    /**
-     * TODO Once we get the textures we need to specify them here!
-     */
     @SideOnly(Side.CLIENT)
     @Override
-    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+    public IIcon getIcon(int side, int metadata)
     {
-        return blockIcon;
-
+        return texture[metadata];
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister iconRegister)
     {
+        texture = new IIcon[subBlocks.length];
 
+        for (int i = 0; i < subBlocks.length; i++)
+        {
+            texture[i] = iconRegister.registerIcon(MilitaryBaseDecor.PREFIX + "reinforced_stone_" + subBlocks[i]);
+        }
     }
 
     @Override
@@ -83,6 +89,7 @@ public class BlockReinforcedStone extends BlockReinforced
      */
     public enum ReinforcedStoneMeta
     {
+        COBBLE(Blocks.cobblestone),
         STONE(Blocks.stone),
         BRICK(Blocks.stonebrick);
 
@@ -102,6 +109,3 @@ public class BlockReinforcedStone extends BlockReinforced
         }
     }
 }
-
-
-

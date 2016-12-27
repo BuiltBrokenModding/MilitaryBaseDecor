@@ -18,7 +18,8 @@ public class VanillaModule extends AbstractLoadable
     public static Block reinforcedStone;
     public static Block reinforcedMetal;
     public static Block reinforcedGlass;
-    public static Block reinforcedCasing;
+    public static Block reinforcedWoodenCasing;
+    public static Block reinforcedMetalCasing;
     public static Block reinforcedButton;
 
 
@@ -29,7 +30,8 @@ public class VanillaModule extends AbstractLoadable
         reinforcedStone = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedStone.class, ItemBlockVanilla.class);
         reinforcedMetal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetal.class, ItemBlockVanilla.class);
         reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class, ItemBlockVanilla.class);
-        reinforcedCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedCasing.class, ItemBlockVanilla.class);
+        reinforcedWoodenCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedWoodenCasing.class, ItemBlockVanilla.class);
+        reinforcedMetalCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetalCasing.class, ItemBlockVanilla.class);
         reinforcedButton = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedButton.class, ItemBlockVanilla.class);
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(reinforcedSoil);
     }
