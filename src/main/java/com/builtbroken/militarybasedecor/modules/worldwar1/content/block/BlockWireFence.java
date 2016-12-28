@@ -71,7 +71,7 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
 
                     if (ConfigManager.WIRECUTTERS_CHAT)
                     {
-                        player.addChatMessage(new ChatComponentText(player.getDisplayName() + " cut a Barbed Wire Fence"));
+                        player.addChatMessage(new ChatComponentText(player.getDisplayName() + " cut a Fence"));
                     }
                 }
             }

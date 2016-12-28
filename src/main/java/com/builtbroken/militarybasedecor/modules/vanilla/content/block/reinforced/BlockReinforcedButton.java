@@ -1,11 +1,10 @@
 package com.builtbroken.militarybasedecor.modules.vanilla.content.block.reinforced;
 
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.modules.worldwar1.WorldWar1Module;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockButton;
-import net.minecraft.block.BlockButtonStone;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.Explosion;
@@ -17,17 +16,19 @@ import net.minecraft.world.World;
  */
 public class BlockReinforcedButton extends BlockButton {
 
-    @SideOnly(Side.CLIENT)
-    IIcon reinforcedButtonIcon;
-
     public BlockReinforcedButton() {
         super(false);
-
         this.setBlockName("reinforced_button");
         this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
         this.setHardness(2.5F);
         this.setResistance(35);
         this.setStepSound(soundTypeStone);
+    }
+
+    @SideOnly(Side.CLIENT)
+    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+    {
+        return WorldWar1Module.basicConcrete.getBlockTextureFromSide(1);
     }
 
     public boolean canEntityDestroy(IBlockAccess world, int x, int y, int z, Entity entity) {
@@ -41,13 +42,5 @@ public class BlockReinforcedButton extends BlockButton {
     @Override
     public boolean canDropFromExplosion(Explosion p_149659_1_) {
         return false;
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister reg)
-    {
-        super.registerBlockIcons(reg);
-        reinforcedButtonIcon = reg.registerIcon(MilitaryBaseDecor.PREFIX + "concrete_basic");
     }
 }

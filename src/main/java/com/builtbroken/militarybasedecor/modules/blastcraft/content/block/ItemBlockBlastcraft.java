@@ -22,6 +22,6 @@ public class ItemBlockBlastcraft extends ItemBlockMetadata
     @Override
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
-        list.add(EnumChatFormatting.BLUE + "Blastcraft");
+        list.add(EnumChatFormatting.BLUE + "Blastcraft Module");
     }
 }
