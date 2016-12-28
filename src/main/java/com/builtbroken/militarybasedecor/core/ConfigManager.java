@@ -23,8 +23,8 @@ public class ConfigManager
         WORLD_WAR_ONE_ENABLED = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable WW1 Module", "Modules", true, "Enables/Disables the WW1 module.");
         WORLD_WAR_TWO_ENABLED = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable WW2 Module", "Modules", true, "Enables/Disables the WW2 module.");
         FUTURE_ENABLED = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable Future Module", "Modules", true, "Enables/Disables the Future module.");
-        BLASTCRAFT_ENABLED = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable Blastcraft", "Settings", true, "Enables/Disables Blastcraft");
-        WIRECUTTERS_CHAT = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable Wire Cutters chat message", "Items", true, "Should the wire cutters post to chat whenever someone uses it on specific blocks?");
+        BLASTCRAFT_ENABLED = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable Blastcraft", "Modules", true, "Enables/Disables the Blastcraft Module");
+        WIRECUTTERS_CHAT = MilitaryBaseDecor.INSTANCE.getConfig().getBoolean("Enable Wire Cutters chat message", "Items", true, "Enables/Disables wire cutters chat messagess");
     }
 
 }
