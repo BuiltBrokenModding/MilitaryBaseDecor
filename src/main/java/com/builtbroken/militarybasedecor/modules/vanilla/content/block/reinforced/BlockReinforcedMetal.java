@@ -20,7 +20,10 @@ public class BlockReinforcedMetal extends BlockReinforced
 
     public static float RESISTANCE_SCALE = 7;
 
+    @SideOnly(Side.CLIENT)
+    private IIcon[] texture;
 
+    final static String[] subBlocks = new String[]{"iron", "gold"};
 
     public BlockReinforcedMetal()
     {
@@ -30,21 +33,23 @@ public class BlockReinforcedMetal extends BlockReinforced
         this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
 
-    /**
-     * TODO Once we get the textures we need to specify them here!
-     */
     @SideOnly(Side.CLIENT)
     @Override
-    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+    public IIcon getIcon(int side, int metadata)
     {
-        return blockIcon;
-
+        return texture[metadata];
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister iconRegister)
     {
+        texture = new IIcon[subBlocks.length];
+
+        for (int i = 0; i < subBlocks.length; i++)
+        {
+            texture[i] = iconRegister.registerIcon(MilitaryBaseDecor.PREFIX + "reinforced_metal_" + subBlocks[i]);
+        }
     }
 
     @Override
