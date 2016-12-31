@@ -41,5 +41,8 @@ public class VanillaRecipes
         GameRegistry.addShapelessRecipe(new ItemStack(VanillaModule.reinforcedMetal, 1, 0), Blocks.iron_block, VanillaModule.reinforcedMetalCasing);
         // Reinforced Metal (Gold)
         GameRegistry.addShapelessRecipe(new ItemStack(VanillaModule.reinforcedMetal, 1, 1), Blocks.gold_block, VanillaModule.reinforcedMetalCasing);
+        // Simple Camo Block
+        GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.simpleCamoBlock, 1, 0), "VVV", "VRV", "VSV", 'V', Blocks.vine, 'R', Items.redstone, 'S', Blocks.stone);
     }
 }
+

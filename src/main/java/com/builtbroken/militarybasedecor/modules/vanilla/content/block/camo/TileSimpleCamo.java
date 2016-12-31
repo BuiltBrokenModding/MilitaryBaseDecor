@@ -99,7 +99,7 @@ public class TileSimpleCamo extends TileEnt implements IPacketReceiver
         {
             return block.getIcon(side, stack.getItem().getMetadata(stack.getItemDamage()));
         }
-        return super.getIcon();
+        return simpleCamoTexture;
     }
 
     @Override
