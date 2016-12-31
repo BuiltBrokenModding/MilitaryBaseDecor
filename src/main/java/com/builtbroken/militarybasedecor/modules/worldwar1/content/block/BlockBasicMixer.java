@@ -56,7 +56,7 @@ public class BlockBasicMixer extends Block implements IRecipeContainer {
     @SideOnly(Side.CLIENT)
     public IIcon getIcon(int side, int meta)
     {
-        return side == 1 ? this.textures[3] : (side == 0 ? this.textures[0] : this.textures[2]);
+        return side == 1 ? textures[3] : (side == 0 ? textures[0] : textures[2]);
     }
 
     @Override
