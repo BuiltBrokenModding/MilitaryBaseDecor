@@ -48,7 +48,10 @@ tile.camouflage_block.2.name=Urban Camouflage Textured Block
 tile.reinforced_button.0.name=Reinforced Button
 tile.basic_mixer.name=Basic Mixer
 tile.basic_mixer.0.name=Basic Mixer
+tile.basic_mixer.3.name=Basic Mixer
 item.basic_mixer.name=Basic Mixer
+tile.rebar_mesh.0.name=Rebar Mesh
+
 
 death.attack.concreteSolidify=%1$s was solidified in Liquid Concrete
 
@@ -80,6 +83,7 @@ item.bundled_wire.name=Bundled Wire
 item.barbed_bundled_wire.name=Barbed Bundled Wire
 item.rope.name=Rope
 item.wire_cutters.name=Wire Cutters
+item.rebar.name=Rebar
 
 ## Blastcraft
 

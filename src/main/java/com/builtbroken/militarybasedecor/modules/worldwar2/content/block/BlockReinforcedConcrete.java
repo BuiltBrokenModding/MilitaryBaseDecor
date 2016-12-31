@@ -14,11 +14,10 @@ public class BlockReinforcedConcrete extends Block
     {
         super(Material.rock);
         this.setHardness(20);
-        this.setResistance(175);
+        this.setResistance(40);
         this.setStepSound(Block.soundTypeStone);
         this.setBlockName("concrete_reinforced");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "concrete_reinforced");
         this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
-
     }
 }
