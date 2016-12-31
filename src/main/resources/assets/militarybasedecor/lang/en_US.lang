@@ -47,7 +47,10 @@ tile.camouflage_block.1.name=Desert Camouflage Textured Block
 tile.camouflage_block.2.name=Urban Camouflage Textured Block
 tile.reinforced_button.0.name=Reinforced Button
 tile.basic_mixer.name=Basic Mixer
+tile.basic_mixer.0.name=Basic Mixer
 item.basic_mixer.name=Basic Mixer
+
+death.attack.concreteSolidify=%1$s was solidified in Liquid Concrete
 
 
 ## Concrete
@@ -70,8 +73,9 @@ tile.reinforced_concrete_stairs.3.name=Reinforced Concrete Stairs
 tile.reinforced_concrete_stairs.4.name=Reinforced Concrete Stairs
 
 # Misc Items
-item.cement_bag.name=Bag of Cement
+item.bag_cement.name=Bag of Cement
 item.bag.name=Bag
+item.bucket_liquid_concrete.name=Bucket of Liquid Concrete
 item.bundled_wire.name=Bundled Wire
 item.barbed_bundled_wire.name=Barbed Bundled Wire
 item.rope.name=Rope

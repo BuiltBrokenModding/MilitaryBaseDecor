@@ -13,7 +13,7 @@ public class BlockBasicConcrete extends Block
     {
         super(Material.rock);
         this.setHardness(15);
-        this.setResistance(150);
+        this.setResistance(100);
         this.setStepSound(Block.soundTypeStone);
         this.setBlockName("concrete_basic");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "concrete_basic");

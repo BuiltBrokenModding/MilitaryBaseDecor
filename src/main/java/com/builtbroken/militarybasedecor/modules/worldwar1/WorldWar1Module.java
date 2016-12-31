@@ -5,12 +5,15 @@ import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.camo.TileSimpleCamo;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.item.VanillaItems;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.item.tool.ItemWireCutters;
+import com.builtbroken.militarybasedecor.modules.worldwar1.content.DamageSourceConcreteSolidify;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.block.*;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.ItemWire;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemReed;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.DamageSource;
 
 public class WorldWar1Module extends AbstractLoadable
 {
@@ -20,10 +23,16 @@ public class WorldWar1Module extends AbstractLoadable
     public static Block simpleCamoBlock;
     public static Block basicConcrete;
     public static Block sandBag;
+    public static Block basicMixer;
 
-    public static Item itemBag;
     public static Item itemWire;
     public static Item itemWireCutters;
+    public static Item basicMixerItem;
+    public static Item bag;
+    public static Item bagCement;
+    public static Item liquidConcreteBucket;
+
+    public static DamageSource concreteSolidify;
 
     @Override
     public void preInit()
@@ -31,16 +40,19 @@ public class WorldWar1Module extends AbstractLoadable
         basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicConcrete.class, ItemBlockWorldWar1.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("simple_camo", new TileSimpleCamo("simple_camo", Material.rock));
         camouflageBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("camouflage_block", new BlockCamouflageBlock().setBlockName("camouflage_block"), ItemBlockWorldWar1.class);
-
-        sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class, ItemBlockWorldWar1.class);
-        itemBag = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag", new VanillaItems()).setUnlocalizedName("bag").setTextureName(MilitaryBaseDecor.PREFIX + "bag");
-
-        itemWireCutters = MilitaryBaseDecor.INSTANCE.getManager().newItem("wire_cutters", new ItemWireCutters()).setUnlocalizedName("wire_cutters").setTextureName(MilitaryBaseDecor.PREFIX + "wire_cutters");
-
-        itemWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("bundled_wire", new ItemWire());
-
+        basicMixer = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicMixer.class, ItemBlockWorldWar1.class);
         blockWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWireFence.class, ItemBlockWireFence.class);
         blockFenceTopper = MilitaryBaseDecor.INSTANCE.getManager().newBlock("pane_barbs", new TileFenceTopper());
+        sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class, ItemBlockWorldWar1.class);
+
+        bag = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag", new Item()).setUnlocalizedName("bag").setTextureName(MilitaryBaseDecor.PREFIX + "bag");
+        bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag_cement", new Item()).setUnlocalizedName("bag_cement").setTextureName(MilitaryBaseDecor.PREFIX + "bag_cement");
+        itemWireCutters = MilitaryBaseDecor.INSTANCE.getManager().newItem("wire_cutters", new ItemWireCutters()).setUnlocalizedName("wire_cutters").setTextureName(MilitaryBaseDecor.PREFIX + "wire_cutters");
+        itemWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("bundled_wire", new ItemWire());
+        basicMixerItem = MilitaryBaseDecor.INSTANCE.getManager().newItem("basic_mixer", new ItemReed(basicMixer).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setUnlocalizedName("basic_mixer").setTextureName(MilitaryBaseDecor.PREFIX + "basic_mixer"));
+        liquidConcreteBucket = MilitaryBaseDecor.INSTANCE.getManager().newItem("bucket_liquid_concrete", new Item()).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setUnlocalizedName("bucket_liquid_concrete").setTextureName(MilitaryBaseDecor.PREFIX + "bucket_liquid_concrete");
+
+        concreteSolidify = new DamageSourceConcreteSolidify();
 
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(blockWireFence);
     }
