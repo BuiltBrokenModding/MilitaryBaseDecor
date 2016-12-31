@@ -13,6 +13,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemBlock;
@@ -29,11 +30,13 @@ public class TileSimpleCamo extends TileEnt implements IPacketReceiver
     ItemStack stack = null;
     boolean locked = false;
 
+    @SideOnly(Side.CLIENT)
+    public static IIcon simpleCamoTexture;
+
     public TileSimpleCamo(String name, Material material)
     {
         super(name, material);
         this.itemBlock = ItemBlockCamo.class;
-        this.setTextureName(MilitaryBaseDecor.PREFIX + "simple_camo");
         this.creativeTab = (MilitaryBaseDecor.MAIN_TAB);
     }
 
@@ -41,6 +44,13 @@ public class TileSimpleCamo extends TileEnt implements IPacketReceiver
     public Tile newTile()
     {
         return new TileSimpleCamo("simple_camo", Material.rock);
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IIconRegister iconRegister)
+    {
+        simpleCamoTexture = iconRegister.registerIcon(MilitaryBaseDecor.PREFIX + "simple_camo");
     }
 
     @Override

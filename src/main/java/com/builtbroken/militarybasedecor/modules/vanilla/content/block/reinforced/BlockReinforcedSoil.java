@@ -25,7 +25,7 @@ public class BlockReinforcedSoil extends BlockReinforced
     @SideOnly(Side.CLIENT)
     private IIcon[] texture;
 
-    final static String[] subBlocks = new String[]{"dirt", "sand", "grass"};
+    final static String[] subBlocks = new String[]{"dirt", "sand"};
 
     public BlockReinforcedSoil()
     {
@@ -90,8 +90,8 @@ public class BlockReinforcedSoil extends BlockReinforced
     public enum ReinforcedSoilMeta
     {
         DIRT(Blocks.dirt),
-        SAND(Blocks.sand),
-        GRASS(Blocks.grass);
+        SAND(Blocks.sand);//,
+        // GRASS(Blocks.grass);
 
         public final float hardness;
         public final float base_resistance;

@@ -2,14 +2,11 @@ package com.builtbroken.militarybasedecor.modules.worldwar1;
 
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.modules.vanilla.content.block.camo.TileSimpleCamo;
-import com.builtbroken.militarybasedecor.modules.vanilla.content.item.VanillaItems;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.item.tool.ItemWireCutters;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.DamageSourceConcreteSolidify;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.block.*;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.ItemWire;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemReed;
 import net.minecraft.item.ItemStack;
@@ -20,7 +17,6 @@ public class WorldWar1Module extends AbstractLoadable
     public static Block blockWireFence;
     public static Block blockFenceTopper;
     public static Block camouflageBlock;
-    public static Block simpleCamoBlock;
     public static Block basicConcrete;
     public static Block sandBag;
     public static Block basicMixer;
@@ -38,7 +34,6 @@ public class WorldWar1Module extends AbstractLoadable
     public void preInit()
     {
         basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicConcrete.class, ItemBlockWorldWar1.class);
-        simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("simple_camo", new TileSimpleCamo("simple_camo", Material.rock));
         camouflageBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("camouflage_block", new BlockCamouflageBlock().setBlockName("camouflage_block"), ItemBlockWorldWar1.class);
         basicMixer = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicMixer.class, ItemBlockWorldWar1.class);
         blockWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWireFence.class, ItemBlockWireFence.class);
@@ -55,5 +50,12 @@ public class WorldWar1Module extends AbstractLoadable
         concreteSolidify = new DamageSourceConcreteSolidify();
 
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(blockWireFence);
+    }
+
+    @Override
+    public void postInit()
+    {
+        WW1Recipes.initItemRecipes();
+        WW1Recipes.initBlockRecipes();
     }
 }

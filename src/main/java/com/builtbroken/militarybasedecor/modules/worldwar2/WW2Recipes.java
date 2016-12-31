@@ -13,6 +13,8 @@ public class WW2Recipes
 
     public static void initItemRecipes()
     {
+        // Rebar
+        GameRegistry.addShapelessRecipe(new ItemStack(WorldWar2Module.rebar, 2, 0), Items.iron_ingot, Items.iron_ingot);
     }
 
     public static void initBlockRecipes()

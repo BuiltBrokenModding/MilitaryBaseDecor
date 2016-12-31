@@ -1,20 +1,25 @@
 package com.builtbroken.militarybasedecor.modules.worldwar1.content.block;
 
+import com.builtbroken.mc.core.registry.implement.IRecipeContainer;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.vanilla.VanillaModule;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.render.RenderBasicMixer;
 import com.builtbroken.militarybasedecor.modules.worldwar1.WorldWar1Module;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
@@ -27,7 +32,7 @@ import java.util.Random;
 /**
  * Created by hennamann on 30.12.2016.
  */
-public class BlockBasicMixer extends Block {
+public class BlockBasicMixer extends Block implements IRecipeContainer {
 
     @SideOnly(Side.CLIENT)
     public static IIcon[] textures;
@@ -43,6 +48,11 @@ public class BlockBasicMixer extends Block {
     }
 
     @Override
+    public CreativeTabs getCreativeTabToDisplayOn() {
+        return null;
+    }
+
+    @Override
     @SideOnly(Side.CLIENT)
     public IIcon getIcon(int side, int meta)
     {
@@ -53,7 +63,6 @@ public class BlockBasicMixer extends Block {
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister register)
     {
-
         textures = new IIcon[5];
 
         textures[0] = register.registerIcon(this.getTextureName() +  "_bottom");
@@ -231,5 +240,10 @@ public class BlockBasicMixer extends Block {
     {
         int j = MathHelper.clamp_int(p_150025_0_, 0, 3);
         return (float)(6 + 3 * j) / 16.0F;
+    }
+
+    @Override
+    public void genRecipes(List<IRecipe> recipes) {
+        GameRegistry.addShapedRecipe(new ItemStack(WorldWar1Module.basicMixerItem, 1, 0), "W W", "W W", "WWW", 'W', Blocks.planks);
     }
 }
