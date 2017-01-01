@@ -37,7 +37,7 @@ public class WorldWar1Module extends AbstractLoadable
         camouflageBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("camouflage_block", new BlockCamouflageBlock().setBlockName("camouflage_block"), ItemBlockWorldWar1.class);
         basicMixer = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicMixer.class, ItemBlockWorldWar1.class);
         blockWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWireFence.class, ItemBlockWireFence.class);
-        blockFenceTopper = MilitaryBaseDecor.INSTANCE.getManager().newBlock("pane_barbs", new TileFenceTopper());
+        blockFenceTopper = MilitaryBaseDecor.INSTANCE.getManager().newBlock("fence_topper", new TileFenceTopper());
         sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class, ItemBlockWorldWar1.class);
 
         bag = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag", new Item()).setUnlocalizedName("bag").setTextureName(MilitaryBaseDecor.PREFIX + "bag");
