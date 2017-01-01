@@ -45,7 +45,7 @@ public class WorldWar1Module extends AbstractLoadable
         itemWireCutters = MilitaryBaseDecor.INSTANCE.getManager().newItem("wire_cutters", new ItemWireCutters()).setUnlocalizedName("wire_cutters").setTextureName(MilitaryBaseDecor.PREFIX + "wire_cutters");
         itemWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("bundled_wire", new ItemWire());
         basicMixerItem = MilitaryBaseDecor.INSTANCE.getManager().newItem("basic_mixer", new ItemReed(basicMixer).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setUnlocalizedName("basic_mixer").setTextureName(MilitaryBaseDecor.PREFIX + "basic_mixer"));
-        liquidConcreteBucket = MilitaryBaseDecor.INSTANCE.getManager().newItem("bucket_liquid_concrete", new Item()).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setUnlocalizedName("bucket_liquid_concrete").setTextureName(MilitaryBaseDecor.PREFIX + "bucket_liquid_concrete");
+        liquidConcreteBucket = MilitaryBaseDecor.INSTANCE.getManager().newItem("bucket_liquid_concrete", new Item()).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setUnlocalizedName("bucket_liquid_concrete").setTextureName(MilitaryBaseDecor.PREFIX + "bucket_liquid_concrete").setMaxStackSize(1);
 
         concreteSolidify = new DamageSourceConcreteSolidify();
 
