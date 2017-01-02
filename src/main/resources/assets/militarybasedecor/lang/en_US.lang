@@ -80,6 +80,10 @@ item.rope.name=Rope
 item.wire_cutters.name=Wire Cutters
 item.rebar.name=Rebar
 
+item.bituminous_coal.name=Bituminous Coal
+item.bituminous_coal_bucket.name=Bituminous Coal in a Bucket
+item.liquid_bitumine_bucket.name=Bucket of Liquid Bitumine
+
 ## Blastcraft
 
 tile.blast_proof_block.0.name=Blastproof Brick
