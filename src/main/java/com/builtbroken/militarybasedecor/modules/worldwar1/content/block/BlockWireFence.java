@@ -56,6 +56,7 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float xhit, float yhit, float zhit)
     {
         if (player.getHeldItem() != null && player.getHeldItem().getItem() == WorldWar1Module.itemWireCutters)
