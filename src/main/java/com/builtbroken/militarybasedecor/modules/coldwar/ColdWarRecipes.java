@@ -14,7 +14,7 @@ public class ColdWarRecipes {
     public static void initItemRecipes()
     {
         // Bituminous Coal
-        GameRegistry.addSmelting(Items.coal, new ItemStack(ColdWarModule.bituminousCoal), 0);
+        GameRegistry.addSmelting(new ItemStack(Items.coal, 1, 0), new ItemStack(ColdWarModule.bituminousCoal), 0);
         // Bituminous Coal in a Bucket
         GameRegistry.addShapelessRecipe(new ItemStack(ColdWarModule.bituminousCoalBucket, 1, 0), Items.bucket, ColdWarModule.bituminousCoal);
         // Bucket of Liquid Bitumine
