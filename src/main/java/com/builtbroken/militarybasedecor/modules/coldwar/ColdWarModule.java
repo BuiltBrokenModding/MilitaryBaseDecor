@@ -22,7 +22,7 @@ public class ColdWarModule extends AbstractLoadable
     public static Item bituminousCoal;
     public static Item bituminousCoalBucket;
     public static Item liquidBitumineBucket;
--
+
     @Override
     public void preInit()
     {
