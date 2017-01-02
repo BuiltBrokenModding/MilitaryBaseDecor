@@ -68,12 +68,7 @@ tile.basic_concrete_stairs.4.name=Basic Concrete Stairs
 
 # Reinforced Concrete
 tile.concrete_reinforced.0.name=Reinforced Concrete
-
-tile.reinforced_concrete_stairs.0.name=Reinforced Concrete Stairs
-tile.reinforced_concrete_stairs.1.name=Reinforced Concrete Stairs
-tile.reinforced_concrete_stairs.2.name=Reinforced Concrete Stairs
-tile.reinforced_concrete_stairs.3.name=Reinforced Concrete Stairs
-tile.reinforced_concrete_stairs.4.name=Reinforced Concrete Stairs
+tile.concrete_reinforced.1.name=Liquid Reinforced Concrete
 
 # Misc Items
 item.bag_cement.name=Bag of Cement

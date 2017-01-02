@@ -16,6 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
 
+import java.util.EnumSet;
 import java.util.List;
 
 /**
@@ -54,7 +55,8 @@ public class BlockRebarMesh extends Block implements IRecipeContainer {
             } else {
                 if (itemstack.getItem() == WorldWar1Module.liquidConcreteBucket) {
                         player.inventory.setInventorySlotContents(player.inventory.currentItem, new ItemStack(Items.bucket));
-                        world.setBlock(x, y, z, WorldWar2Module.reinforcedConcrete);
+                        world.setBlock(x, y, z, WorldWar2Module.reinforcedConcrete, 1, 1);
+                        world.scheduleBlockUpdate(x, y, z, WorldWar2Module.reinforcedConcrete, 200);
                 }
                 return true;
             }
