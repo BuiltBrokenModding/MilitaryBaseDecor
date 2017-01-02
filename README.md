@@ -3,9 +3,11 @@ Military Base Decor
 
 [![Build Status](https://travis-ci.org/BuiltBrokenModding/MilitaryBaseDecor.svg?branch=master)](https://travis-ci.org/BuiltBrokenModding/MilitaryBaseDecor)
 
-Ever played with destructive mods like ICBM? And then realised that the blocks in vanilla minecraft sucks for defending and decorating your military style base? Well fear no more as Military Base Decor has got you covered!
+This mod is a split off from the ICBM 2 rewrite that removed concrete. The mod started as a way to keep some of the old decoration blocks alive. However, has evolved into providing any and all decoration needed for military bases. This includes decorations from several different military eras. As well provides generic era based blocks that would have exists during those time periods
 
-NOTE: The mod is still not finished, please do not post issues on missing content, broken stuff, and similar. Chances are we are already aware of the bugs and missing content, please be patient!
+If you want documentation while we still work on an improved in-game documentation system, check out hennamann´s youtube channel located here: https://www.youtube.com/channel/UCkoVUnZP6Gn6ODBX-fbCeSg
+
+NOTE: The mod is still not finished, please do not post issues on missing content, broken stuff, and similar. Chances are we are already aware of the bugs and missing content, please be patient! 
 
 ##License
 https://raw.githubusercontent.com/BuiltBrokenModding/ICBM/development/license.md
@@ -29,14 +31,14 @@ https://docs.google.com/document/d/105N6q63OJnzrWjMbydFYFUlHmK6spc8P8da8qkduFRs/
 ##Credits
 ###Developers
 * Darkguardsman - Owner, Code
-* Hennamann - Project Lead, Code
+* Hennamann - Project Lead, Code, Textures
 
 ###Credits
 * Morton - Assets
 * Viridian Ouroboros - Textures
 
 ## Download Locations
-* http://www.builtbroken.com/pages/militarybasedecor/
+* https://minecraft.curseforge.com/projects/military-base-decor
 
 ##Installing
 * Install Minecraft Forge.
