@@ -15,7 +15,7 @@ public class WW1Recipes {
     public static void initItemRecipes()
     {
         // Leather Bag
-        GameRegistry.addShapedRecipe(new ItemStack(WorldWar1Module.bag, 3, 0), "S S", "L L", "LLL", 'S', Items.string, 'L', Items.leather);
+        GameRegistry.addShapedRecipe(new ItemStack(WorldWar1Module.bag, 1, 0), "S S", "L L", "LLL", 'S', Items.string, 'L', Items.leather);
         // Bag of Cement
         GameRegistry.addShapelessRecipe(new ItemStack(WorldWar1Module.bagCement, 1, 0), Blocks.gravel, Blocks.sand, WorldWar1Module.bag);
         // Bucket of Liquid Concrete
