@@ -36,4 +36,21 @@ public class BlockBlastProofGlass extends Block
     {
         return true;
     }
+    
+    @Override		
+     public boolean canEntityDestroy(IBlockAccess world, int x, int y, int z, Entity entity)		
+     {		
+         return false;		
+     }		
+ 		
+     @Override		
+     public void onBlockExploded(World world, int x, int y, int z, Explosion explosion)		
+     {		
+     }		
+ 		
+     @Override		
+     public boolean canDropFromExplosion(Explosion p_149659_1_)		
+     {		
+         return false;		
+     }
 }
