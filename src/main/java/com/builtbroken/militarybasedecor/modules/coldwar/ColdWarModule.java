@@ -30,8 +30,8 @@ public class ColdWarModule extends AbstractLoadable
         reinforcedRail = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedRail.class, ItemBlockColdWar.class);
 
         bituminousCoal = MilitaryBaseDecor.INSTANCE.getManager().newItem("bituminous_coal", new Item().setTextureName(MilitaryBaseDecor.PREFIX + "bituminous_coal").setUnlocalizedName("bituminous_coal").setCreativeTab(MilitaryBaseDecor.MAIN_TAB));
-        bituminousCoalBucket = MilitaryBaseDecor.INSTANCE.getManager().newItem("bituminous_coal_bucket", new Item().setTextureName(MilitaryBaseDecor.PREFIX + "bituminous_coal_bucket").setUnlocalizedName("bituminous_coal_bucket").setCreativeTab(MilitaryBaseDecor.MAIN_TAB));
-        liquidBitumineBucket = MilitaryBaseDecor.INSTANCE.getManager().newItem("liquid_bitumine_bucket", new ItemLiquidBitumineBucket(asphalt).setTextureName(MilitaryBaseDecor.PREFIX + "liquid_bitumine_bucket").setUnlocalizedName("liquid_bitumine_bucket").setCreativeTab(MilitaryBaseDecor.MAIN_TAB));
+        bituminousCoalBucket = MilitaryBaseDecor.INSTANCE.getManager().newItem("bituminous_coal_bucket", new Item().setTextureName(MilitaryBaseDecor.PREFIX + "bituminous_coal_bucket").setUnlocalizedName("bituminous_coal_bucket").setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setMaxStackSize(1));
+        liquidBitumineBucket = MilitaryBaseDecor.INSTANCE.getManager().newItem("liquid_bitumine_bucket", new ItemLiquidBitumineBucket(asphalt).setTextureName(MilitaryBaseDecor.PREFIX + "liquid_bitumine_bucket").setUnlocalizedName("liquid_bitumine_bucket").setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setMaxStackSize(1));
 
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(asphalt);
     }
