@@ -27,5 +27,9 @@ public class ItemBlockWireFence extends ItemBlockWorldWar1
         {
             list.add(EnumChatFormatting.RED + "Warning: Causes damage to entities");
         }
+        if (itemStack.getItemDamage() == 3)
+        {
+            list.add(EnumChatFormatting.RED + "Warning: Causes damage to entities");
+        }
     }
 }

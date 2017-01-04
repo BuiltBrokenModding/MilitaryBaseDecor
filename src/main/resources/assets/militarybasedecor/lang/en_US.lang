@@ -51,6 +51,10 @@ tile.basic_mixer.0.name=Basic Mixer
 tile.basic_mixer.3.name=Basic Mixer
 item.basic_mixer.name=Basic Mixer
 tile.rebar_mesh.0.name=Rebar Mesh
+tile.icbm_concrete.0.name=Basic ICBM Concrete
+tile.icbm_concrete.1.name=Compact ICBM Concrete
+tile.icbm_concrete.2.name=Reinforced ICBM Concrete
+tile.icbm_concrete.3.name=Dark Basic ICBM Concrete
 
 
 death.attack.concreteSolidify=%1$s was solidified in Liquid Concrete

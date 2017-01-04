@@ -24,22 +24,21 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
+import org.apache.http.impl.conn.Wire;
 
 import java.util.List;
 
 
 public class BlockWireFence extends BlockPane implements IRecipeContainer
 {
-    @SideOnly(Side.CLIENT)
-    IIcon chainLinkIcon;
-    @SideOnly(Side.CLIENT)
-    IIcon wireIcon;
+
+    private static final IIcon[] icon = new IIcon[4];
+    private static final IIcon[] iconTop = new IIcon[4];
 
     public BlockWireFence()
     {
-        super(MilitaryBaseDecor.PREFIX + "barbed_wire_fence", MilitaryBaseDecor.PREFIX + "wired_fence_top", Material.iron, true);
+        super(MilitaryBaseDecor.PREFIX + "wirefence", MilitaryBaseDecor.PREFIX + "wired_fence_top", Material.iron, false);
         this.setBlockName("wire_fence");
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "wire_fence");
         this.setHardness(3.0F);
         this.setResistance(10.0F);
         this.setStepSound(soundTypeMetal);
@@ -48,20 +47,38 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister reg)
+    public IIcon func_149735_b(int meta, int side)
     {
-        super.registerBlockIcons(reg);
-        chainLinkIcon = reg.registerIcon(MilitaryBaseDecor.PREFIX + "chain_link_fence");
-        wireIcon = reg.registerIcon(MilitaryBaseDecor.PREFIX + "wired_fence");
+        return icon[side % icon.length];
     }
 
     @Override
     @SideOnly(Side.CLIENT)
+    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+    {
+        return this.func_149735_b(p_149691_1_, ~p_149691_2_ & 3);
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister reg)
+    {
+        super.registerBlockIcons(reg);
+
+        icon[0] = reg.registerIcon(MilitaryBaseDecor.PREFIX + "barbed_wire_fence_bloody");
+        icon[1] = reg.registerIcon(MilitaryBaseDecor.PREFIX + "barbed_wire_fence");
+        icon[2] = reg.registerIcon(MilitaryBaseDecor.PREFIX + "chain_link_fence");
+        icon[3] = reg.registerIcon(MilitaryBaseDecor.PREFIX + "wired_fence");
+        iconTop[0] = reg.registerIcon(MilitaryBaseDecor.PREFIX + "wired_fence_top");
+        iconTop[1] = reg.registerIcon(MilitaryBaseDecor.PREFIX + "wired_fence_top");
+        iconTop[2] = reg.registerIcon(MilitaryBaseDecor.PREFIX + "wired_fence_top");
+        iconTop[3] = reg.registerIcon(MilitaryBaseDecor.PREFIX + "wired_fence_top");
+    }
+
+    @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float xhit, float yhit, float zhit)
     {
         if (player.getHeldItem() != null && player.getHeldItem().getItem() == WorldWar1Module.itemWireCutters)
-        {
-            if (!world.isRemote)
             {
                 if (world.setBlockToAir(x, y, z) && !player.capabilities.isCreativeMode)
                 {
@@ -78,8 +95,6 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
             }
             return true;
         }
-        return false;
-    }
 
     @Override
     public void onEntityCollidedWithBlock(World world, int i, int j, int k, Entity player)
@@ -91,7 +106,12 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
                 player.setInWeb();
                 player.attackEntityFrom(DamageSource.cactus, 1.0F);
             }
-        }
+        } else
+            if (WireFence.getType(world, i, j, k) == WireFence.BARBEDBlOOD)
+            {
+                player.setInWeb();
+                player.attackEntityFrom(DamageSource.cactus, 1.0F);
+            }
     }
 
     @Override
@@ -120,6 +140,14 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
         list.add(new ItemStack(item, 1, 0));
         list.add(new ItemStack(item, 1, 1));
         list.add(new ItemStack(item, 1, 2));
+        list.add(new ItemStack(item, 1, 3));
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return 1;
     }
 
     /** Enum of wire types */
@@ -127,7 +155,8 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
     {
         WIRE,
         CHAIN,
-        BARBED;
+        BARBED,
+        BARBEDBlOOD;
 
         public static WireFence getType(World world, int x, int y, int z)
         {
