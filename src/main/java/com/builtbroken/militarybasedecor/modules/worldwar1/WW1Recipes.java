@@ -19,7 +19,7 @@ public class WW1Recipes {
         // Bag of Cement
         GameRegistry.addShapelessRecipe(new ItemStack(WorldWar1Module.bagCement, 1, 0), Blocks.gravel, Blocks.sand, WorldWar1Module.bag);
         // Bucket of Liquid Concrete
-        GameRegistry.addShapelessRecipe(new ItemStack(WorldWar1Module.liquidConcreteBucket, 1, 0), WorldWar1Module.bagCement, Items.water_bucket);
+        GameRegistry.addShapelessRecipe(new ItemStack(WorldWar1Module.liquidConcreteBucket, 1, 0), WorldWar1Module.bagCement, Items.water_bucket.setContainerItem(null));
     }
 
     public static void initBlockRecipes()
