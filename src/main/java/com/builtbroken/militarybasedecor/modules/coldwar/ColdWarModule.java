@@ -3,6 +3,7 @@ package com.builtbroken.militarybasedecor.modules.coldwar;
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.coldwar.content.block.BlockAsphalt;
+import com.builtbroken.militarybasedecor.modules.coldwar.content.block.BlockICBMConcrete;
 import com.builtbroken.militarybasedecor.modules.coldwar.content.block.BlockReinforcedRail;
 import com.builtbroken.militarybasedecor.modules.coldwar.content.block.ItemBlockColdWar;
 import com.builtbroken.militarybasedecor.modules.coldwar.content.item.ItemLiquidBitumineBucket;
@@ -18,6 +19,7 @@ public class ColdWarModule extends AbstractLoadable
 {
     public static Block asphalt;
     public static Block reinforcedRail;
+    public static Block icbmConcrete;
 
     public static Item bituminousCoal;
     public static Item bituminousCoalBucket;
@@ -28,6 +30,7 @@ public class ColdWarModule extends AbstractLoadable
     {
         asphalt = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAsphalt.class, ItemBlockColdWar.class);
         reinforcedRail = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedRail.class, ItemBlockColdWar.class);
+        icbmConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("icbm_concrete",BlockICBMConcrete.class, ItemBlockColdWar.class);
 
         bituminousCoal = MilitaryBaseDecor.INSTANCE.getManager().newItem("bituminous_coal", new Item().setTextureName(MilitaryBaseDecor.PREFIX + "bituminous_coal").setUnlocalizedName("bituminous_coal").setCreativeTab(MilitaryBaseDecor.MAIN_TAB));
         bituminousCoalBucket = MilitaryBaseDecor.INSTANCE.getManager().newItem("bituminous_coal_bucket", new Item().setTextureName(MilitaryBaseDecor.PREFIX + "bituminous_coal_bucket").setUnlocalizedName("bituminous_coal_bucket").setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setMaxStackSize(1));

@@ -28,10 +28,10 @@ tile.reinforced_rail.7.name=Reinforced Rail
 tile.reinforced_rail.8.name=Reinforced Rail
 tile.reinforced_rail.9.name=Reinforced Rail
 tile.picket_fence.0.name=Picket Fence
-tile.barbed_wire_fence.0.name=Barbed Wire Fence
 tile.wire_fence.0.name=Wired Fence
 tile.wire_fence.1.name=Chain-link Fence
 tile.wire_fence.2.name=Barbed Wire Fence
+tile.wire_fence.3.name=Bloody Barbed Wire Fence
 tile.sand_bag.0.name=Basic Sandbag
 tile.rope_fence.0.name=Rope Fence
 tile.tangled_rope.0.name=Tangled Rope
@@ -51,10 +51,10 @@ tile.basic_mixer.0.name=Basic Mixer
 tile.basic_mixer.3.name=Basic Mixer
 item.basic_mixer.name=Basic Mixer
 tile.rebar_mesh.0.name=Rebar Mesh
-tile.icbm_concrete.0.name=Basic ICBM Concrete
-tile.icbm_concrete.1.name=Compact ICBM Concrete
-tile.icbm_concrete.2.name=Reinforced ICBM Concrete
-tile.icbm_concrete.3.name=Dark Basic ICBM Concrete
+tile.militarybasedecor:icbm_concrete.0.name=Basic ICBM Concrete
+tile.militarybasedecor:icbm_concrete.1.name=Compact ICBM Concrete
+tile.militarybasedecor:icbm_concrete.2.name=Reinforced ICBM Concrete
+tile.militarybasedecor:icbm_concrete.3.name=Dark Basic ICBM Concrete
 
 
 death.attack.concreteSolidify=%1$s was solidified in Liquid Concrete
@@ -89,6 +89,5 @@ item.bituminous_coal_bucket.name=Bituminous Coal in a Bucket
 item.liquid_bitumine_bucket.name=Bucket of Liquid Bitumine
 
 ## Blastcraft
-
 tile.blast_proof_block.0.name=Blastproof Brick
 tile.blast_proof_glass.0.name=Blastproof Glass
