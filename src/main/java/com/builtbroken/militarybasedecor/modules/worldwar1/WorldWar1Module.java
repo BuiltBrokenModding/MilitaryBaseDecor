@@ -2,7 +2,7 @@ package com.builtbroken.militarybasedecor.modules.worldwar1;
 
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.modules.vanilla.content.item.tool.ItemWireCutters;
+import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.tool.ItemWireCutters;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.DamageSourceConcreteSolidify;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.block.*;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.ItemWire;
