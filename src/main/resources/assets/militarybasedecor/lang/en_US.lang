@@ -51,14 +51,12 @@ tile.basic_mixer.0.name=Basic Mixer
 tile.basic_mixer.3.name=Basic Mixer
 item.basic_mixer.name=Basic Mixer
 tile.rebar_mesh.0.name=Rebar Mesh
-tile.militarybasedecor:icbm_concrete.0.name=Basic ICBM Concrete
-tile.militarybasedecor:icbm_concrete.1.name=Compact ICBM Concrete
-tile.militarybasedecor:icbm_concrete.2.name=Reinforced ICBM Concrete
-tile.militarybasedecor:icbm_concrete.3.name=Dark Basic ICBM Concrete
-
+tile.militarybasedecor:icbm_concrete.0.name=Basic Classic Concrete
+tile.militarybasedecor:icbm_concrete.1.name=Compact Classic Concrete
+tile.militarybasedecor:icbm_concrete.2.name=Reinforced Classic Concrete
+tile.militarybasedecor:icbm_concrete.3.name=Dark Basic Classic Concrete
 
 death.attack.concreteSolidify=%1$s was solidified in Liquid Concrete
-
 
 ## Concrete
 # Basic Concrete
@@ -86,7 +84,7 @@ item.rebar.name=Rebar
 
 item.bituminous_coal.name=Bituminous Coal
 item.bituminous_coal_bucket.name=Bituminous Coal in a Bucket
-item.liquid_bitumine_bucket.name=Bucket of Liquid Bitumine
+item.liquid_bitumen_bucket.name=Bucket of Liquid Bitumen
 
 ## Blastcraft
 tile.blast_proof_block.0.name=Blastproof Brick

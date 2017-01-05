@@ -2,7 +2,6 @@ package com.builtbroken.militarybasedecor.modules.coldwar.content.block;
 
 import com.builtbroken.mc.core.registry.implement.IRecipeContainer;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.modules.coldwar.ColdWarModule;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

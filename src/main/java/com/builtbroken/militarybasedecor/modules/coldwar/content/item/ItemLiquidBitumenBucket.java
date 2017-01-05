@@ -12,11 +12,11 @@ import net.minecraft.world.World;
 /**
  * Created by henna on 02.01.2017.
  */
-public class ItemLiquidBitumineBucket extends Item {
+public class ItemLiquidBitumenBucket extends Item {
     
         private Block block;
 
-        public ItemLiquidBitumineBucket(Block block)
+        public ItemLiquidBitumenBucket(Block block)
         {
             this.block = block;
         }

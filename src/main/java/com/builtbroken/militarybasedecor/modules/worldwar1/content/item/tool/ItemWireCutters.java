@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.modules.vanilla.content.item.tool;
+package com.builtbroken.militarybasedecor.modules.worldwar1.content.item.tool;
 
 import com.builtbroken.mc.core.registry.implement.IRecipeContainer;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
@@ -30,7 +30,7 @@ public class ItemWireCutters extends Item implements IRecipeContainer
     @Override
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
-        list.add(EnumChatFormatting.BLUE + "Vanilla Module");
+        list.add(EnumChatFormatting.BLUE + "World War 1 Module");
     }
 
     @Override
