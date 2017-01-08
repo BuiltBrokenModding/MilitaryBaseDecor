@@ -27,7 +27,7 @@ import net.minecraft.util.IIcon;
  */
 public class TileSimpleCamo extends TileEnt implements IPacketReceiver
 {
-    ItemStack stack = null;
+    public ItemStack stack = null;
     boolean locked = false;
 
     @SideOnly(Side.CLIENT)
@@ -114,7 +114,7 @@ public class TileSimpleCamo extends TileEnt implements IPacketReceiver
         return super.getColorMultiplier();
     }
 
-    protected Block getMimicBlock()
+    public Block getMimicBlock()
     {
         if (stack != null && stack.getItem() instanceof ItemBlock)
         {

@@ -37,7 +37,7 @@ public class BlockBasicMixer extends Block implements IRecipeContainer {
     @SideOnly(Side.CLIENT)
     public static IIcon[] textures;
 
-    int stickCount = 0;
+    public static int stickCount = 0;
 
     public BlockBasicMixer() {
         super(Material.wood);
@@ -206,7 +206,7 @@ public class BlockBasicMixer extends Block implements IRecipeContainer {
                 System.out.println("stick");
                 world.spawnEntityInWorld(new EntityItem(world, x, y, z, new ItemStack(Item.getItemFromBlock(WorldWar1Module.basicConcrete))));
                 stickCount = 0;
-                this.func_150024_a(world, x, y, z, j1 - 3);
+                func_150024_a(world, x, y, z, j1 - 3);
             }
         }
 
