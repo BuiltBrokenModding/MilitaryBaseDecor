@@ -29,12 +29,6 @@ public class BlockICBMConcrete extends Block implements IRecipeContainer
     @SideOnly(Side.CLIENT)
     private IIcon[] texture;
 
-    public static World world;
-
-    int x;
-    int y;
-    int z;
-
     final static String[] subBlocks = new String[]{"normal", "compact", "reinforced", "dark"};
 
     public BlockICBMConcrete()
@@ -75,25 +69,6 @@ public class BlockICBMConcrete extends Block implements IRecipeContainer
     public IIcon getIcon(int side, int meta)
     {
         return texture[meta];
-    }
-
-    @Override
-    public float getExplosionResistance(Entity entity)
-    {
-
-        int metadata = world.getBlockMetadata(x, y, z);
-
-        switch (metadata)
-        {
-            case 1:
-                return 38;
-            case 2:
-                return 48;
-            case 3:
-                return 50;
-        }
-
-        return this.getExplosionResistance(entity);
     }
 
     @Override
