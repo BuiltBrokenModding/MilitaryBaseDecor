@@ -24,7 +24,6 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
-import org.apache.http.impl.conn.Wire;
 
 import java.util.List;
 
@@ -32,12 +31,12 @@ import java.util.List;
 public class BlockWireFence extends BlockPane implements IRecipeContainer
 {
 
-    private static final IIcon[] icon = new IIcon[4];
-    private static final IIcon[] iconTop = new IIcon[4];
+    public static final IIcon[] icon = new IIcon[4];
+    public static final IIcon[] iconTop = new IIcon[4];
 
     public BlockWireFence()
     {
-        super(MilitaryBaseDecor.PREFIX + "wirefence", MilitaryBaseDecor.PREFIX + "wired_fence_top", Material.iron, false);
+        super("wire_fence", MilitaryBaseDecor.PREFIX + "wired_fence_top", Material.iron, false);
         this.setBlockName("wire_fence");
         this.setHardness(3.0F);
         this.setResistance(10.0F);
@@ -47,9 +46,15 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
 
     @Override
     @SideOnly(Side.CLIENT)
-    public IIcon func_149735_b(int meta, int side)
+    public IIcon func_149735_b(int p_149735_1_, int p_149735_2_)
     {
-        return icon[side % icon.length];
+        return icon[p_149735_2_ % iconTop.length];
+    }
+
+    @SideOnly(Side.CLIENT)
+    public IIcon func_150104_b(int p_150104_1_)
+    {
+        return iconTop[~p_150104_1_ & 3];
     }
 
     @Override
@@ -78,6 +83,7 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float xhit, float yhit, float zhit)
     {
+        if (!world.isRemote) {
         if (player.getHeldItem() != null && player.getHeldItem().getItem() == WorldWar1Module.itemWireCutters)
             {
                 if (world.setBlockToAir(x, y, z) && !player.capabilities.isCreativeMode)
@@ -93,6 +99,7 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
                     }
                 }
             }
+        }
             return true;
         }
 
@@ -131,6 +138,13 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
         {
             recipes.add(newShapedRecipe(new ItemStack(WorldWar1Module.blockWireFence, 8, 0), "RWR", "WWW", "RWR", 'W', WorldWar1Module.itemWire, 'R', Items.stick));
         }
+        recipes.add(newShapedRecipe(new ItemStack(WorldWar1Module.blockWireFence, 8, 1), "R R", " R ", "R R", 'R', WorldWar1Module.itemWire));
+    }
+
+    @SideOnly(Side.CLIENT)
+    public static int func_150103_c(int p_150103_0_)
+    {
+        return p_150103_0_ & 3;
     }
 
     @Override
