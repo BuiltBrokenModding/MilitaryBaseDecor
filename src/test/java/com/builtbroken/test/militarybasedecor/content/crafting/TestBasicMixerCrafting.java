@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * Junit Test for basic concrete crafting. Creates a basic mixer tile and crafts 1 basic concrete block.
+ * Junit Test for basic concrete crafting {@link BlockBaserMixer}.  Creates a basic mixer tile and crafts 1 basic concrete block.
  *
  * @see <a href="https://github.com/BuiltBrokenModding/VoltzEngine/blob/development/license.md">License</a> for what you can and can't do with the code.
  * Created by Hennamann(Henry) on 10/22/2015.

@@ -1,3 +1,11 @@
+/**
+ * Junit test for {@link TileSimpleCamo}. Tests blockplacement, and block mimic functionality.
+ *
+ * @see <a href="https://github.com/BuiltBrokenModding/VoltzEngine/blob/development/license.md">License</a> for what you can and can't do with the code.
+ * Created by Hennamann(Henry) on 10/22/2015.
+ *
+ * Not working! will fix later
+
 package com.builtbroken.test.militarybasedecor.content.tile;
 
 import com.builtbroken.mc.testing.junit.VoltzTestRunner;
@@ -10,13 +18,8 @@ import net.minecraft.item.ItemStack;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-/**
- * Junit test for {@link TileSimpleCamo}. Tests blockplacement, and block mimic functionality.
- *
- * @see <a href="https://github.com/BuiltBrokenModding/VoltzEngine/blob/development/license.md">License</a> for what you can and can't do with the code.
- * Created by Hennamann(Henry) on 10/22/2015.
- *
- */
+
+
 @RunWith(VoltzTestRunner.class)
 public class TestSimpleCamo extends AbstractTileTest<TileSimpleCamo> {
 
@@ -36,7 +39,7 @@ public class TestSimpleCamo extends AbstractTileTest<TileSimpleCamo> {
         world.setTileEntity(0, 10, 0, tileCamo);
     }
 
-    /** Not working! will fix later // Test mimicblock functionality of SimpleCamo
+     // Test mimicblock functionality of SimpleCamo
     @Test
     public void testSimpleCamoMimic(int x, int y, int z)
     {
@@ -45,5 +48,6 @@ public class TestSimpleCamo extends AbstractTileTest<TileSimpleCamo> {
         // Set mimicblock to dirt to make sure it works
         tileCamo.stack = new ItemStack(Blocks.dirt);
     }
-    */
+
 }
+ */
