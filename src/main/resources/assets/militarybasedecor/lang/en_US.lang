@@ -87,5 +87,9 @@ item.bituminous_coal_bucket.name=Bituminous Coal in a Bucket
 item.liquid_bitumen_bucket.name=Bucket of Liquid Bitumen
 
 ## Blastcraft
-tile.blast_proof_block.0.name=Blastproof Brick
-tile.blast_proof_glass.0.name=Blastproof Glass
+tile.hardened_brick.0.name=Hardened Brick
+tile.raw_blast_proof_walling.0.name=Raw Blast Proof Walling
+tile.blast_proof_walling.0.name=Blast Proof Walling
+tile.blast_proof_glass.0.name=Blast Proof Glass
+tile.blast_proof_trapdoor.0.name=Blast Proof Trapdoor
+tile.carbon_plated_walling.0.name=Carbon Plated Walling

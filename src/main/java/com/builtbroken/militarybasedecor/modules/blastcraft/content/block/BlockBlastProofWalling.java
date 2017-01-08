@@ -12,14 +12,14 @@ import net.minecraft.world.World;
 /**
  * Created by Ole on 13.01.2016.
  */
-public class BlockBlastProofBrick extends Block
+public class BlockBlastProofWalling extends Block
 {
-    public BlockBlastProofBrick()
+    public BlockBlastProofWalling()
     {
         super(Material.rock);
-        this.setBlockName("blast_proof_block");
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "blastcraft/blast_proof_brick");
-        this.setHardness(50f);
+        this.setBlockName("blast_proof_walling");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "blastcraft/blast_proof_walling");
+        this.setHardness(50);
         this.setResistance(6000000.0F);
         this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
@@ -38,9 +38,8 @@ public class BlockBlastProofBrick extends Block
      }		
 		
      @Override		
-     public void onBlockExploded(World world, int x, int y, int z, Explosion explosion)		
-     {		
-     }		
+     public void onBlockExploded(World world, int x, int y, int z, Explosion explosion)
+     {}
  		
      @Override		
      public boolean canDropFromExplosion(Explosion p_149659_1_)		
