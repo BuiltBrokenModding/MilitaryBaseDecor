@@ -4,6 +4,8 @@ import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.worldwar2.content.block.*;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockColored;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -25,7 +27,7 @@ public class WorldWar2Module extends AbstractLoadable
         corrugatedGalvanisedIronBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockCorrugatedGalvanisedIron.class, ItemBlockCorrugatedGalvanisedIron.class);
         oliveDrabTexturedBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockOliveDrabTexturedBlock.class, ItemBlockWorldWar2.class);
         equipmentCrate = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockEquipmentCrate.class, ItemBlockWorldWar2.class);
-        reinforcedConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedConcrete.class, ItemBlockWorldWar2.class);
+        reinforcedConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("reinforced_concrete",new BlockColored(Material.rock).setBlockName("concrete_reinforced").setBlockTextureName(MilitaryBaseDecor.PREFIX + "concrete/concrete_reinforced/concrete_reinforced").setHardness(20).setResistance(40).setCreativeTab(MilitaryBaseDecor.MAIN_TAB), ItemBlockWorldWar2.class);
         rebarMesh = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRebarMesh.class, ItemBlockWorldWar2.class);
 
         rebar = MilitaryBaseDecor.INSTANCE.getManager().newItem("rebar", new Item().setUnlocalizedName("rebar").setTextureName(MilitaryBaseDecor.PREFIX + "rebar"));

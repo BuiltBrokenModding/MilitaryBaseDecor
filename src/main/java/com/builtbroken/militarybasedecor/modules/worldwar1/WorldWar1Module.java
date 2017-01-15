@@ -7,6 +7,8 @@ import com.builtbroken.militarybasedecor.modules.worldwar1.content.DamageSourceC
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.block.*;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.ItemWire;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockColored;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemReed;
 import net.minecraft.item.ItemStack;
@@ -33,7 +35,7 @@ public class WorldWar1Module extends AbstractLoadable
     @Override
     public void preInit()
     {
-        basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicConcrete.class, ItemBlockWorldWar1.class);
+        basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("basic_concrete", new BlockColored(Material.rock).setBlockName("concrete_basic").setHardness(15).setResistance(20).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setBlockTextureName(MilitaryBaseDecor.PREFIX + "concrete/concrete_basic/concrete_basic"), ItemBlockWorldWar1.class);
         camouflageBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("camouflage_block", new BlockCamouflageBlock().setBlockName("camouflage_block"), ItemBlockWorldWar1.class);
         basicMixer = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicMixer.class, ItemBlockWorldWar1.class);
         blockWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWireFence.class, ItemBlockWireFence.class);
