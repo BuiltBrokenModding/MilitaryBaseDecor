@@ -23,7 +23,7 @@ public class BlockBlastProofTrapDoor extends BlockTrapDoor implements IRecipeCon
 
     public BlockBlastProofTrapDoor() {
         super(Material.rock);
-        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "blast_proof_walling");
+        this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "blastcraft/blast_proof_walling");
         this.setBlockName("blast_proof_trapdoor");
         this.setHardness(10);
         this.setResistance(6000000.0F);
