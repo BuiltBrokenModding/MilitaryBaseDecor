@@ -9,6 +9,8 @@ import com.builtbroken.militarybasedecor.modules.coldwar.content.block.BlockRein
 import com.builtbroken.militarybasedecor.modules.coldwar.content.block.ItemBlockColdWar;
 import com.builtbroken.militarybasedecor.modules.coldwar.content.item.ItemLiquidBitumenBucket;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockColored;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -21,6 +23,7 @@ public class ColdWarModule extends AbstractLoadable
     public static Block asphalt;
     public static Block reinforcedRail;
     public static Block icbmConcrete;
+    public static Block highStrengthConcrete;
 
     public static Item bituminousCoal;
     public static Item bituminousCoalBucket;
@@ -31,6 +34,7 @@ public class ColdWarModule extends AbstractLoadable
     {
         asphalt = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAsphalt.class, ItemBlockColdWar.class);
         reinforcedRail = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedRail.class, ItemBlockColdWar.class);
+        highStrengthConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("high_strength_concrete", new BlockColored(Material.rock).setBlockName("high_strength_concrete").setBlockTextureName(MilitaryBaseDecor.PREFIX + "concrete/concrete_high_strength/concrete_high_strength").setCreativeTab(MilitaryBaseDecor.MAIN_TAB), ItemBlockColdWar.class);
 
         if (ConfigManager.ICBM_CONCRETE_ENABLED) {
             icbmConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("icbm_concrete",BlockICBMConcrete.class, ItemBlockColdWar.class);
