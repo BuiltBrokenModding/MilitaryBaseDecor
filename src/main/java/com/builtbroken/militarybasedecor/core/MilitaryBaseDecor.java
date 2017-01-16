@@ -2,6 +2,7 @@ package com.builtbroken.militarybasedecor.core;
 
 import com.builtbroken.mc.lib.mod.AbstractMod;
 import com.builtbroken.mc.lib.mod.ModCreativeTab;
+import com.builtbroken.militarybasedecor.client.MBDCreativeTab;
 import com.builtbroken.militarybasedecor.modules.blastcraft.Blastcraft;
 import com.builtbroken.militarybasedecor.modules.coldwar.ColdWarModule;
 import com.builtbroken.militarybasedecor.modules.future.FutureModule;
@@ -41,7 +42,7 @@ public final class MilitaryBaseDecor extends AbstractMod
     public MilitaryBaseDecor()
     {
         super(DOMAIN, "MilitaryBaseDecor");
-        MAIN_TAB = new ModCreativeTab("MilitaryBaseDecor");
+        MAIN_TAB = new MBDCreativeTab();
     }
 
     @Override
