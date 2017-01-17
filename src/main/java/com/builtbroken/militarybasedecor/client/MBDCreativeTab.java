@@ -74,7 +74,9 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, ColdWarModule.bituminousCoalBucket);
             add(list, ColdWarModule.liquidBitumenBucket);
             add(list, ColdWarModule.asphalt);
-            add(list, ColdWarModule.icbmConcrete);
+            if (ConfigManager.ICBM_CONCRETE_ENABLED) {
+                add(list, ColdWarModule.icbmConcrete);
+            }
             add(list, ColdWarModule.highStrengthConcrete);
             add(list, ColdWarModule.reinforcedRail);
         }
