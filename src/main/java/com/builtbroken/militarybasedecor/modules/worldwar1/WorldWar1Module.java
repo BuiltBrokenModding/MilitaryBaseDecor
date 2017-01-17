@@ -20,6 +20,8 @@ public class WorldWar1Module extends AbstractLoadable
     public static Block blockFenceTopper;
     public static Block camouflageBlock;
     public static Block basicConcrete;
+    public static Block perviousConcrete;
+    public static Block glassConcrete;
     public static Block sandBag;
     public static Block basicMixer;
 
@@ -41,6 +43,8 @@ public class WorldWar1Module extends AbstractLoadable
         blockWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWireFence.class, ItemBlockWireFence.class);
         blockFenceTopper = MilitaryBaseDecor.INSTANCE.getManager().newBlock("fence_topper", new TileFenceTopper());
         sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class, ItemBlockWorldWar1.class);
+        perviousConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockPerviousConcrete.class, ItemBlockWorldWar1.class);
+        glassConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockGlassConcrete.class, ItemBlockWorldWar1.class);
 
         bag = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag", new Item()).setUnlocalizedName("bag").setTextureName(MilitaryBaseDecor.PREFIX + "bag");
         bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag_cement", new Item()).setUnlocalizedName("bag_cement").setTextureName(MilitaryBaseDecor.PREFIX + "bag_cement").setContainerItem(bag).setMaxStackSize(1);

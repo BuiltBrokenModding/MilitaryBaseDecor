@@ -52,6 +52,8 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, WorldWar1Module.liquidConcreteBucket);
             add(list, WorldWar1Module.basicMixerItem);
             add(list, WorldWar1Module.basicConcrete);
+            add(list, WorldWar1Module.perviousConcrete);
+            add(list, WorldWar1Module.glassConcrete);
             add(list, WorldWar1Module.blockWireFence);
             add(list, WorldWar1Module.blockFenceTopper);
             add(list, WorldWar1Module.itemWireCutters);

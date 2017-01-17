@@ -132,6 +132,10 @@ tile.ultra_high_performance_concrete.13.name=Green Ultra High Performance Concre
 tile.ultra_high_performance_concrete.14.name=Red Ultra High Performance Concrete
 tile.ultra_high_performance_concrete.15.name=Black Ultra High Performance Concrete
 
+# Various Concrete
+tile.pervious_concrete.0.name=Pervious Concrete
+tile.glass_concrete.0.name=Glass Concrete
+
 # Misc Items
 item.bag_cement.name=Bag of Cement
 item.bag.name=Bag
