@@ -19,5 +19,4 @@ public class BlockPerviousConcrete extends Block {
         this.setResistance(5);
         this.setHardness(2);
     }
-
 }

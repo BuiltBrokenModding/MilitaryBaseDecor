@@ -35,8 +35,6 @@ tile.wire_fence.3.name=Bloody Barbed Wire Fence
 tile.sand_bag.0.name=Basic Sandbag
 tile.rope_fence.0.name=Rope Fence
 tile.tangled_rope.0.name=Tangled Rope
-tile.limecrete.0.name=Limecrete
-tile.chain_link_fence.0.name=Chain Link Fence
 tile.militarybasedecor:fenceTopper.0.name=Fence Topper
 tile.corrugated_galvanised_iron_block.0.name=Corrugated Galvanised Iron
 tile.olive_drab_textured_block.0.name=Olive Drab Textured Block
@@ -135,6 +133,7 @@ tile.ultra_high_performance_concrete.15.name=Black Ultra High Performance Concre
 # Various Concrete
 tile.pervious_concrete.0.name=Pervious Concrete
 tile.glass_concrete.0.name=Glass Concrete
+tile.limecrete.0.name=Limecrete
 
 # Misc Items
 item.bag_cement.name=Bag of Cement
