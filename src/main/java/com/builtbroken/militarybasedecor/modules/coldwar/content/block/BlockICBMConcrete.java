@@ -23,6 +23,7 @@ import java.util.List;
 /**
  * @see <a href="https://github.com/BuiltBrokenModding/VoltzEngine/blob/development/license.md">License</a> for what you can and can't do with the code.
  * Created by Dark(DarkGuardsman, Robert) on 5/5/2016.
+ * @author DarkGuardsman, Hennamann
  */
 public class BlockICBMConcrete extends Block implements IRecipeContainer
 {
@@ -51,6 +52,26 @@ public class BlockICBMConcrete extends Block implements IRecipeContainer
         {
             texture[i] = iconRegister.registerIcon(MilitaryBaseDecor.PREFIX + "icbm_concrete_" + subBlocks[i]);
         }
+    }
+
+    @Override
+    public float getExplosionResistance(Entity par1Entity, World world, int x, int y, int z, double explosionX, double explosionY, double explosionZ)
+    {
+        int metadata = world.getBlockMetadata(x, y, z);
+
+        switch (metadata)
+        {
+            case 1:
+                return 38;
+            case 2:
+                return 48;
+            case 3:
+                return 50;
+            case 4:
+                return 38;
+        }
+
+        return this.getExplosionResistance(par1Entity);
     }
 
     @Override
