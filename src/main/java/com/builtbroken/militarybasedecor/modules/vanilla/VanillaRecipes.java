@@ -17,8 +17,6 @@ public class VanillaRecipes
 
     public static void initBlockRecipes()
     {
-        //Reinforced Glass
-        GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.reinforcedGlass, 8, 0), "GIG", "IGI", "GIG", 'G', Blocks.glass, 'I', Items.iron_ingot);
         // Reinforced Wooden Casing
         GameRegistry.addShapedRecipe(new ItemStack(VanillaModule.reinforcedWoodenCasing, 3, 0), "SSS", "S S", "SSS", 'S', Items.stick);
         // Reinforced Metal Casing

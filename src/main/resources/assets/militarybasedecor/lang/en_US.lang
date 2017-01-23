@@ -8,6 +8,7 @@ tile.militarybasedecor:simple_camo.0.name=Basic Camo Block
 tile.asphalt.0.name=Asphalt
 tile.wood_casing.0.name=Reinforced Wooden Casing
 tile.metal_casing.0.name=Reinforced Metal Casing
+tile.reinforced_glass_normal.0.name=Reinforced Glass
 tile.reinforced_glass.0.name=Reinforced Glass
 tile.reinforced_soil.0.name=Reinforced Dirt
 tile.reinforced_soil.1.name=Reinforced Sand

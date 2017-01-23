@@ -1,15 +1,21 @@
 package com.builtbroken.militarybasedecor.modules.vanilla.content.block.reinforced;
 
+import com.builtbroken.mc.core.registry.implement.IRecipeContainer;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.modules.vanilla.VanillaModule;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockReinforcedGlass extends Block
+import java.util.List;
+
+public class BlockReinforcedGlass extends Block implements IRecipeContainer
 {
     public static IIcon[] textures = new IIcon[47];
     public static int[] textureRefByID = {0, 0, 6, 6, 0, 0, 6, 6, 3, 3, 19, 15, 3, 3, 19, 15, 1, 1, 18, 18, 1, 1, 13, 13, 2, 2, 23, 31, 2, 2, 27, 14, 0, 0, 6, 6, 0, 0, 6, 6, 3, 3, 19, 15, 3, 3, 19, 15, 1, 1, 18, 18, 1, 1, 13, 13, 2, 2, 23, 31, 2, 2, 27, 14, 4, 4, 5, 5, 4, 4, 5, 5, 17, 17, 22, 26, 17, 17, 22, 26, 16, 16, 20, 20, 16, 16, 28, 28, 21, 21, 46, 42, 21, 21, 43, 38, 4, 4, 5, 5, 4, 4, 5, 5, 9, 9, 30, 12, 9, 9, 30, 12, 16, 16, 20, 20, 16, 16, 28, 28, 25, 25, 45, 37, 25, 25, 40, 32, 0, 0, 6, 6, 0, 0, 6, 6, 3, 3, 19, 15, 3, 3, 19, 15, 1, 1, 18, 18, 1, 1, 13, 13, 2, 2, 23, 31, 2, 2, 27, 14, 0, 0, 6, 6, 0, 0, 6, 6, 3, 3, 19, 15, 3, 3, 19, 15, 1, 1, 18, 18, 1, 1, 13, 13, 2, 2, 23, 31, 2, 2, 27, 14, 4, 4, 5, 5, 4, 4, 5, 5, 17, 17, 22, 26, 17, 17, 22, 26, 7, 7, 24, 24, 7, 7, 10, 10, 29, 29, 44, 41, 29, 29, 39, 33, 4, 4, 5, 5, 4, 4, 5, 5, 9, 9, 30, 12, 9, 9, 30, 12, 7, 7, 24, 24, 7, 7, 10, 10, 8, 8, 36, 35, 8, 8, 34, 11};
@@ -18,7 +24,6 @@ public class BlockReinforcedGlass extends Block
     {
         super(Material.glass);
         this.setBlockName("reinforced_glass");
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
         this.setResistance(48);
         this.setHardness(6.0F);
     }
@@ -121,5 +126,11 @@ public class BlockReinforcedGlass extends Block
     public boolean hasTileEntity(int metadata)
     {
         return false;
+    }
+
+    @Override
+    public void genRecipes(List<IRecipe> recipes)
+    {
+        recipes.add(newShapedRecipe(new ItemStack(VanillaModule.reinforcedGlass, 8, 0), "GGG", "GGG", "GGG", 'G', VanillaModule.reinforcedGlassNormal));
     }
 }

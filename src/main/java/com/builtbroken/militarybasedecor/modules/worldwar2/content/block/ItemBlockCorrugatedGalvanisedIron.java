@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by Ole on 6/17/2015.
  */
-public class ItemBlockCorrugatedGalvanisedIron extends ItemBlockMetadata
+public class ItemBlockCorrugatedGalvanisedIron extends ItemBlockWorldWar2
 {
 
     public ItemBlockCorrugatedGalvanisedIron(Block block)
@@ -22,7 +22,7 @@ public class ItemBlockCorrugatedGalvanisedIron extends ItemBlockMetadata
     @Override
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
-        list.add(EnumChatFormatting.BLUE + "WW2 Module");
+        super.addInformation(itemStack, player, list, par4);
         list.add(EnumChatFormatting.ITALIC + "Used to create Quonset huts");
     }
 

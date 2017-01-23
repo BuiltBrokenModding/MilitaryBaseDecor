@@ -33,11 +33,12 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, VanillaModule.reinforcedMetalCasing);
             add(list, VanillaModule.reinforcedStone);
             add(list, VanillaModule.reinforcedMetal);
+            add(list, VanillaModule.reinforcedGlassNormal);
             add(list, VanillaModule.reinforcedGlass);
             add(list, VanillaModule.reinforcedButton);
             add(list, VanillaModule.simpleCamoBlock);
         }
-
+        // Gunpowder Era Module Blocks
         if (ConfigManager.GUNPOWDER_ERA_ENABLED) {
             add(list, GunpowderModule.limecrete);
             add(list, GunpowderModule.picketFence);
@@ -45,7 +46,7 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, GunpowderModule.tangledRope);
             add(list, GunpowderModule.ropeFence);
         }
-
+        // WW1 Module Blocks
         if (ConfigManager.WORLD_WAR_ONE_ENABLED) {
             add(list, WorldWar1Module.bag);
             add(list, WorldWar1Module.bagCement);
@@ -60,7 +61,7 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, WorldWar1Module.sandBag);
             add(list, WorldWar1Module.camouflageBlock);
         }
-
+        // WW2 Module Blocks
         if (ConfigManager.WORLD_WAR_TWO_ENABLED) {
             add(list, WorldWar2Module.rebar);
             add(list, WorldWar2Module.rebarMesh);
@@ -70,7 +71,7 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, WorldWar2Module.ammunitionBox);
             add(list, WorldWar2Module.equipmentCrate);
         }
-
+        // Cold War Module Blocks
         if (ConfigManager.COLD_WAR_ENABLED) {
             add(list, ColdWarModule.bituminousCoal);
             add(list, ColdWarModule.bituminousCoalBucket);
@@ -82,11 +83,11 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, ColdWarModule.highStrengthConcrete);
             add(list, ColdWarModule.reinforcedRail);
         }
-
+        // Future Module Blocks
         if (ConfigManager.FUTURE_ENABLED) {
             add(list, FutureModule.ultraHighPerformanceConcrete);
         }
-
+        // Blastcraft Blocks
         if (ConfigManager.BLASTCRAFT_ENABLED) {
             add(list, Blastcraft.hardenedBrick);
             add(list, Blastcraft.rawBlastProofWalling);

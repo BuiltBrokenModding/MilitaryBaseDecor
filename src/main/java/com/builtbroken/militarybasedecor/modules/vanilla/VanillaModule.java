@@ -24,6 +24,7 @@ public class VanillaModule extends AbstractLoadable
     public static Block reinforcedSoil;
     public static Block reinforcedStone;
     public static Block reinforcedMetal;
+    public static Block reinforcedGlassNormal;
     public static Block reinforcedGlass;
     public static Block reinforcedWoodenCasing;
     public static Block reinforcedMetalCasing;
@@ -36,7 +37,8 @@ public class VanillaModule extends AbstractLoadable
         reinforcedSoil = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedSoil.class, ItemBlockVanilla.class);
         reinforcedStone = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedStone.class, ItemBlockVanilla.class);
         reinforcedMetal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetal.class, ItemBlockVanilla.class);
-        reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class, ItemBlockVanilla.class);
+        reinforcedGlassNormal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlassNormal.class, ItemBlockReinforcedGlassNormal.class);
+        reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class, ItemBlockReinforcedGlass.class);
         reinforcedWoodenCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedWoodenCasing.class, ItemBlockVanilla.class);
         reinforcedMetalCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetalCasing.class, ItemBlockVanilla.class);
         reinforcedButton = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedButton.class, ItemBlockVanilla.class);
