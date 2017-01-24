@@ -198,7 +198,6 @@ public class BlockBasicMixer extends Block implements IRecipeContainer {
 
         if (!world.isRemote) {
             if (stickCount == 5) {
-                System.out.println("stick");
                 world.spawnEntityInWorld(new EntityItem(world, x, y, z, new ItemStack(Item.getItemFromBlock(WorldWar1Module.basicConcrete), 5, 0)));
                 stickCount = 0;
                 func_150024_a(world, x, y, z, j1 - 3);
