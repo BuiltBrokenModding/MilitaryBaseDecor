@@ -21,6 +21,7 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
@@ -83,7 +84,8 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float xhit, float yhit, float zhit)
     {
-        if (!world.isRemote) {
+        if (!world.isRemote)
+        {
         if (player.getHeldItem() != null && player.getHeldItem().getItem() == WorldWar1Module.itemWireCutters)
             {
                 if (world.setBlockToAir(x, y, z) && !player.capabilities.isCreativeMode)
@@ -95,7 +97,7 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
 
                     if (ConfigManager.WIRECUTTERS_CHAT)
                     {
-                        player.addChatMessage(new ChatComponentText(player.getDisplayName() + " cut a Fence"));
+                        player.addChatMessage(new ChatComponentText(player.getDisplayName() + " " + StatCollector.translateToLocal("wire_cutters.chattext")));
                     }
                 }
             }

@@ -144,6 +144,7 @@ item.bundled_wire.name=Bundled Wire
 item.barbed_bundled_wire.name=Barbed Bundled Wire
 item.rope.name=Rope
 item.wire_cutters.name=Wire Cutters
+wire_cutters.chattext=Cut a Fence
 item.rebar.name=Rebar
 
 item.bituminous_coal.name=Bituminous Coal
