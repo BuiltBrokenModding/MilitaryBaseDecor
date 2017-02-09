@@ -22,6 +22,7 @@ plugins {
   id 'net.saliman.cobertura' version '2.2.5'
   id 'com.github.kt3k.coveralls' version '2.0.1'
   id "com.github.johnrengelman.shadow" version "1.2.2"
+  id "se.bjurr.gitchangelog.git-changelog-gradle-plugin" version "1.32"
 }
 
 apply from: 'https://raw.githubusercontent.com/BuiltBrokenModding/BuiltBrokenScripts/buildScripts/index/index.gradle'
@@ -31,14 +32,14 @@ apply plugin: 'com.github.kt3k.coveralls'
 apply plugin: 'jacoco'
 apply from: 'https://raw.githubusercontent.com/BuiltBrokenModding/BuiltBrokenScripts/buildScripts/scripts/forge/deps.gradle'
 
-minecraft {    
+minecraft {
     replace "required-after:VoltzEngine", "required-after:VoltzEngine@[$voltz_engine_version,)"
 }
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-dependencies 
+dependencies
 {
     compile "dev.builtbroken.voltzengine:VoltzEngine:1.7.10-$voltz_engine_version+:deobf-dev"
 }
