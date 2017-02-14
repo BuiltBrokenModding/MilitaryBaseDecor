@@ -131,6 +131,6 @@ public class BlockReinforcedGlass extends Block implements IRecipeContainer
     @Override
     public void genRecipes(List<IRecipe> recipes)
     {
-        recipes.add(newShapedRecipe(new ItemStack(VanillaModule.reinforcedGlass, 8, 0), "GGG", "GGG", "GGG", 'G', VanillaModule.reinforcedGlassNormal));
+        recipes.add(newShapelessRecipe(new ItemStack(this, 1, 0), VanillaModule.reinforcedGlassNormal));
     }
 }
