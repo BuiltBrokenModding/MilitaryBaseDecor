@@ -54,6 +54,16 @@ tile.militarybasedecor:icbm_concrete.0.name=Basic Classic Concrete
 tile.militarybasedecor:icbm_concrete.1.name=Compact Classic Concrete
 tile.militarybasedecor:icbm_concrete.2.name=Reinforced Classic Concrete
 tile.militarybasedecor:icbm_concrete.3.name=Dark Basic Classic Concrete
+tile.militarybasedecor:reinforced_door.0.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.1.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.2.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.3.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.4.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.5.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.6.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.7.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.8.name=Reinforced Door
+item.reinforced_door_item.name=Reinforced Door
 
 death.attack.concreteSolidify=%1$s was solidified in Liquid Concrete
 

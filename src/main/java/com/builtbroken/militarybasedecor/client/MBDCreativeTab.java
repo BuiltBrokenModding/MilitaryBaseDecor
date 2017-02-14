@@ -80,6 +80,7 @@ public class MBDCreativeTab extends ModCreativeTab {
             if (ConfigManager.ICBM_CONCRETE_ENABLED) {
                 add(list, ColdWarModule.icbmConcrete);
             }
+            add(list, ColdWarModule.reinforcedDoorItem);
             add(list, ColdWarModule.highStrengthConcrete);
             add(list, ColdWarModule.reinforcedRail);
         }
