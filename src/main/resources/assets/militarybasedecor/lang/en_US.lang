@@ -37,7 +37,7 @@ tile.sand_bag.0.name=Basic Sandbag
 tile.rope_fence.0.name=Rope Fence
 tile.tangled_rope.0.name=Tangled Rope
 tile.militarybasedecor:fenceTopper.0.name=Fence Topper
-tile.corrugated_galvanised_iron_block.0.name=Corrugated Galvanised Iron
+tile.corrugated_galvanised_iron_block.0.name=Corrugated Galvanised Iron Block
 tile.olive_drab_textured_block.0.name=Olive Drab Textured Block
 tile.ammunition_box.0.name=Ammunition Box
 tile.equipment_crate.0.name=Equipment Crate
@@ -168,3 +168,20 @@ tile.blast_proof_walling.0.name=Blast Proof Walling
 tile.blast_proof_glass.0.name=Blast Proof Glass
 tile.blast_proof_trapdoor.0.name=Blast Proof Trapdoor
 tile.carbon_plated_walling.0.name=Carbon Plated Walling
+
+## Tooltips - Modules
+tooltip.vanilla=Vanilla Module
+tooltip.gunpowder=Gunpowder Module
+tooltip.worldwar1=World War 1 Module
+tooltip.worldwar2=World War 2 Module
+tooltip.coldwar=Cold War Module
+tooltip.future=Future Module
+tooltip.blastcraft=Blastcraft Module
+
+## Tooltips - Blocks and Items
+tooltip.wire_fence=Warning: Causes damage to entities
+tooltip.seamless=Seamless Version
+tooltip.nonseamless=Non-Seamless Version
+tooltip.quonsethut=Used to Create Quonset Huts
+
+

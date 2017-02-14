@@ -5,6 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class ItemBlockCamo extends ItemBlockMetadata
     @Override
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
-        list.add(EnumChatFormatting.BLUE + "Vanilla Module");
+        list.add(EnumChatFormatting.BLUE + StatCollector.translateToLocal("tooltip.vanilla"));
     }
 
 }

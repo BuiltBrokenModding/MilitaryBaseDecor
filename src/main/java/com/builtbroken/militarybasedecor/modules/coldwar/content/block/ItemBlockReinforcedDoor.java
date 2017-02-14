@@ -12,6 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -32,7 +33,7 @@ public class ItemBlockReinforcedDoor extends Item implements IRecipeContainer {
     @Override
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
-        list.add(EnumChatFormatting.BLUE + "Cold War Module");
+        list.add(EnumChatFormatting.BLUE + StatCollector.translateToLocal("tooltip.coldwar"));
     }
 
     public boolean onItemUse(ItemStack p_77648_1_, EntityPlayer p_77648_2_, World p_77648_3_, int p_77648_4_, int p_77648_5_, int p_77648_6_, int p_77648_7_, float p_77648_8_, float p_77648_9_, float p_77648_10_)

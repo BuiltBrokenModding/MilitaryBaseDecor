@@ -7,7 +7,11 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 /**
  * Created by henna on 02.01.2017.
@@ -21,10 +25,6 @@ public class ItemLiquidBitumenBucket extends Item {
             this.block = block;
         }
 
-        /**
-         * Callback for item usage. If the item does something special on right clicking, he will have one of those. Return
-         * True if something happen and false if it don't. This is for ITEMS, not BLOCKS
-         */
         public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int x, int y, int z, int par4, float par5, float par6, float par7)
         {
             Block block = world.getBlock(x, y, z);
@@ -96,5 +96,11 @@ public class ItemLiquidBitumenBucket extends Item {
                 return true;
             }
         }
+
+    @Override
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    {
+        list.add(EnumChatFormatting.BLUE + StatCollector.translateToLocal("tooltip.coldwar"));
+    }
 }
 

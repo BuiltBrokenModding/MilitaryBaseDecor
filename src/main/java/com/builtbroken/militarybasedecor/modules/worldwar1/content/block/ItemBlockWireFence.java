@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 
 import java.util.List;
 
@@ -25,11 +26,11 @@ public class ItemBlockWireFence extends ItemBlockWorldWar1
         super.addInformation(itemStack, player, list, par4);
         if (itemStack.getItemDamage() == 2)
         {
-            list.add(EnumChatFormatting.RED + "Warning: Causes damage to entities");
+            list.add(EnumChatFormatting.RED + StatCollector.translateToLocal("tooltip.wire_fence"));
         }
         if (itemStack.getItemDamage() == 3)
         {
-            list.add(EnumChatFormatting.RED + "Warning: Causes damage to entities");
+            list.add(EnumChatFormatting.RED + StatCollector.translateToLocal("tooltip.wire_fence"));
         }
     }
 }

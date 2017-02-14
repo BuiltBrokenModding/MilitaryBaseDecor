@@ -3,6 +3,7 @@ package com.builtbroken.militarybasedecor.modules.worldwar2;
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.worldwar2.content.block.*;
+import com.builtbroken.militarybasedecor.modules.worldwar2.content.item.ItemWorldWar2;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockColored;
 import net.minecraft.block.material.Material;
@@ -32,7 +33,7 @@ public class WorldWar2Module extends AbstractLoadable
         reinforcedLiquidConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("reinforced_liquid_concrete", BlockLiquidReinforcedConcrete.class, ItemBlockWorldWar2.class);
         rebarMesh = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRebarMesh.class, ItemBlockWorldWar2.class);
 
-        rebar = MilitaryBaseDecor.INSTANCE.getManager().newItem("rebar", new Item().setUnlocalizedName("rebar").setTextureName(MilitaryBaseDecor.PREFIX + "rebar"));
+        rebar = MilitaryBaseDecor.INSTANCE.getManager().newItem("rebar", new ItemWorldWar2().setUnlocalizedName("rebar").setTextureName(MilitaryBaseDecor.PREFIX + "rebar"));
 
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(ammunitionBox);
     }
