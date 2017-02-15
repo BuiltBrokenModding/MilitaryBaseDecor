@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.modules.worldwar1.content.block;
+package com.builtbroken.militarybasedecor.modules.vanilla.content.block;
 
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import net.minecraft.block.Block;
@@ -12,7 +12,6 @@ public class BlockGlassConcrete extends Block {
 
     public BlockGlassConcrete() {
         super(Material.rock);
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
         this.setBlockName("glass_concrete");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "concrete/concrete_glass");
         this.setResistance(5);

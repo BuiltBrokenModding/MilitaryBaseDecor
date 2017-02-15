@@ -37,6 +37,8 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, VanillaModule.reinforcedGlass);
             add(list, VanillaModule.reinforcedButton);
             add(list, VanillaModule.simpleCamoBlock);
+            add(list, VanillaModule.perviousConcrete);
+            add(list, VanillaModule.glassConcrete);
         }
         // Gunpowder Era Module Blocks
         if (ConfigManager.GUNPOWDER_ERA_ENABLED) {
@@ -53,8 +55,6 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, WorldWar1Module.liquidConcreteBucket);
             add(list, WorldWar1Module.basicMixerItem);
             add(list, WorldWar1Module.basicConcrete);
-            add(list, WorldWar1Module.perviousConcrete);
-            add(list, WorldWar1Module.glassConcrete);
             add(list, WorldWar1Module.blockWireFence);
             add(list, WorldWar1Module.blockFenceTopper);
             add(list, WorldWar1Module.itemWireCutters);
