@@ -29,7 +29,7 @@ public class BlockBlastProofGlass extends Block implements IRecipeContainer
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "blastcraft/blast_proof_glass");
         this.setHardness(50f);
         this.setResistance(6000000.0F);
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
+
     }
 
     @Override

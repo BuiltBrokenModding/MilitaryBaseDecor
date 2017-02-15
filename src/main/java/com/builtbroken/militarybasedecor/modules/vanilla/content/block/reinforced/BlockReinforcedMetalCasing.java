@@ -21,7 +21,7 @@ public class BlockReinforcedMetalCasing extends BlockReinforced
     public BlockReinforcedMetalCasing()
     {
         super(Material.ground, "metal_casing");
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
+
         this.setStepSound(soundTypeMetal);
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "metal_casing");
     }

@@ -29,7 +29,7 @@ public class BlockReinforcedDoor extends BlockDoor {
         this.setHardness(10F);
         this.setResistance(10F);
         this.setStepSound(Block.soundTypeMetal);
-        this.setCreativeTab((CreativeTabs)null);
+        this.setCreativeTab(null);
     }
 
     @SideOnly(Side.CLIENT)

@@ -27,7 +27,7 @@ public class BlockReinforcedButton extends BlockButton implements IRecipeContain
     public BlockReinforcedButton() {
         super(false);
         this.setBlockName("reinforced_button");
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
+
         this.setHardness(2.5F);
         this.setResistance(35);
         this.setStepSound(soundTypeStone);

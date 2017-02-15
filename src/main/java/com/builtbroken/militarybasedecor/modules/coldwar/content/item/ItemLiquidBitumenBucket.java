@@ -76,7 +76,7 @@ public class ItemLiquidBitumenBucket extends Item {
             }
             else
             {
-                if (world.canPlaceEntityOnSide(this.block, x, y, z, false, par4, (Entity)null, item))
+                if (world.canPlaceEntityOnSide(this.block, x, y, z, false, par4, null, item))
                 {
                     int i1 = this.block.onBlockPlaced(world, x, y, z, par4, par5, par6, par7, 0);
 

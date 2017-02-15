@@ -24,7 +24,6 @@ public class ItemWireCutters extends Item implements IRecipeContainer
         this.setMaxStackSize(1);
         this.setMaxDamage(64);
         this.setNoRepair();
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
 
     @Override

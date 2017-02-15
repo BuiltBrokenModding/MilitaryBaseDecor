@@ -18,7 +18,7 @@ public class BlockReinforcedRail extends BlockRail
         this.setHardness(10F);
         this.setResistance(10F);
         this.setStepSound(soundTypeMetal);
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
+
     }
 
     @Override
