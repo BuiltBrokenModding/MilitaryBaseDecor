@@ -31,7 +31,6 @@ import java.util.List;
 
 public class BlockWireFence extends BlockPane implements IRecipeContainer
 {
-
     public static final IIcon[] icon = new IIcon[4];
     public static final IIcon[] iconTop = new IIcon[4];
 
@@ -50,12 +49,6 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
     public IIcon func_149735_b(int p_149735_1_, int p_149735_2_)
     {
         return icon[p_149735_2_ % iconTop.length];
-    }
-
-    @SideOnly(Side.CLIENT)
-    public IIcon func_150104_b(int p_150104_1_)
-    {
-        return iconTop[~p_150104_1_ & 3];
     }
 
     @Override
@@ -91,7 +84,7 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
                 if (world.setBlockToAir(x, y, z) && !player.capabilities.isCreativeMode)
                 {
                     world.playSoundEffect(x, y, z, "militarybasedecor:wirecutters", 2.0F, 1.0F);
-                    player.inventory.addItemStackToInventory(new ItemStack(this.getItem(world, x, y, z)));
+                    player.inventory.addItemStackToInventory(new ItemStack(this));
                     player.inventoryContainer.detectAndSendChanges();
                     player.getHeldItem().damageItem(1, player);
 
