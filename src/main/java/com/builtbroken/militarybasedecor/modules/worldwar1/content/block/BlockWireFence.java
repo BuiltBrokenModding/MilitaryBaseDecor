@@ -95,7 +95,7 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
                 }
             }
         }
-            return true;
+            return false;
         }
 
     @Override
