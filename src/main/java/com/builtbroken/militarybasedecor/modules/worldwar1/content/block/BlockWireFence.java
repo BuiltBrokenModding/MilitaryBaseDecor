@@ -44,11 +44,22 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
         this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
 
+    @SideOnly(Side.CLIENT)
+    public IIcon func_150104_b(int p_150104_1_)
+    {
+        return icon[~p_150104_1_ & 3];
+    }
+
     @Override
     @SideOnly(Side.CLIENT)
     public IIcon func_149735_b(int p_149735_1_, int p_149735_2_)
     {
         return icon[p_149735_2_ % iconTop.length];
+    }
+
+    @SideOnly(Side.CLIENT)
+    public static int func_150103_c(int p_150103_0_) {
+        return p_150103_0_ & 3;
     }
 
     @Override
@@ -134,12 +145,6 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
             recipes.add(newShapedRecipe(new ItemStack(WorldWar1Module.blockWireFence, 8, 0), "RWR", "WWW", "RWR", 'W', WorldWar1Module.itemWire, 'R', Items.stick));
         }
         recipes.add(newShapedRecipe(new ItemStack(WorldWar1Module.blockWireFence, 8, 1), "R R", " R ", "R R", 'R', WorldWar1Module.itemWire));
-    }
-
-    @SideOnly(Side.CLIENT)
-    public static int func_150103_c(int p_150103_0_)
-    {
-        return p_150103_0_ & 3;
     }
 
     @Override
