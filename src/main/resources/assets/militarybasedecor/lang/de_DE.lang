@@ -72,6 +72,7 @@ tile.militarybasedecor:reinforced_door.5.name=Verstärkte Tür
 tile.militarybasedecor:reinforced_door.6.name=Verstärkte Tür
 tile.militarybasedecor:reinforced_door.7.name=Verstärkte Tür
 tile.militarybasedecor:reinforced_door.8.name=Verstärkte Tür
+tile.militarybasedecor:reinforced_door.9.name=Verstärkte Tür
 item.reinforced_door_item.name=Verstärkte Tür
 
 death.attack.concreteSolidify=%1$s wurde im flüssigen Beton verfestigt
