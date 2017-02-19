@@ -1,11 +1,11 @@
 package com.builtbroken.militarybasedecor.modules.worldwar1.content;
 
-import net.minecraft.util.DamageSource;
+import com.builtbroken.mc.prefab.AbstractDamageSource;
 
 /**
  * Created by hennamann on 31.12.2016.
  */
-public class DamageSourceConcreteSolidify extends DamageSource {
+public class DamageSourceConcreteSolidify extends AbstractDamageSource {
 
     public DamageSourceConcreteSolidify() {
         super("concreteSolidify");

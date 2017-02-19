@@ -96,8 +96,10 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
                         world.playSoundEffect(x, y, z, "militarybasedecor:wirecutters", 2.0F, 1.0F);
                         player.inventory.addItemStackToInventory(new ItemStack(this, 1, 0));
                         player.inventoryContainer.detectAndSendChanges();
-                        player.getHeldItem().damageItem(1, player);
-
+                        if (!player.capabilities.isCreativeMode)
+                        {
+                            player.getHeldItem().damageItem(1, player);
+                        }
                         if (ConfigManager.WIRECUTTERS_CHAT) {
                             player.addChatMessage(new ChatComponentText(player.getDisplayName() + " " + StatCollector.translateToLocal("wire_cutters.chattext.wiredfence")));
                         }
@@ -109,8 +111,10 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
                         world.playSoundEffect(x, y, z, "militarybasedecor:wirecutters", 2.0F, 1.0F);
                         player.inventory.addItemStackToInventory(new ItemStack(this, 1, 1));
                         player.inventoryContainer.detectAndSendChanges();
-                        player.getHeldItem().damageItem(1, player);
-
+                        if (!player.capabilities.isCreativeMode)
+                        {
+                            player.getHeldItem().damageItem(1, player);
+                        }
                         if (ConfigManager.WIRECUTTERS_CHAT) {
                             player.addChatMessage(new ChatComponentText(player.getDisplayName() + " " + StatCollector.translateToLocal("wire_cutters.chattext.chainfence")));
                         }
@@ -122,8 +126,10 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
                         world.playSoundEffect(x, y, z, "militarybasedecor:wirecutters", 2.0F, 1.0F);
                         player.inventory.addItemStackToInventory(new ItemStack(this, 1, 2));
                         player.inventoryContainer.detectAndSendChanges();
-                        player.getHeldItem().damageItem(1, player);
-
+                        if (!player.capabilities.isCreativeMode)
+                        {
+                            player.getHeldItem().damageItem(1, player);
+                        }
                         if (ConfigManager.WIRECUTTERS_CHAT) {
                             player.addChatMessage(new ChatComponentText(player.getDisplayName() + " " + StatCollector.translateToLocal("wire_cutters.chattext.barbedfence")));
                         }
@@ -135,8 +141,10 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
                         world.playSoundEffect(x, y, z, "militarybasedecor:wirecutters", 2.0F, 1.0F);
                         player.inventory.addItemStackToInventory(new ItemStack(this, 1, 3));
                         player.inventoryContainer.detectAndSendChanges();
-                        player.getHeldItem().damageItem(1, player);
-
+                        if (!player.capabilities.isCreativeMode)
+                        {
+                            player.getHeldItem().damageItem(1, player);
+                        }
                         if (ConfigManager.WIRECUTTERS_CHAT) {
                             player.addChatMessage(new ChatComponentText(player.getDisplayName() + " " + StatCollector.translateToLocal("wire_cutters.chattext.barbedfence")));
                         }
