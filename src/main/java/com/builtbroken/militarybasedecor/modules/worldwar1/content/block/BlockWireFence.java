@@ -90,18 +90,56 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
     {
         if (!world.isRemote)
         {
-        if (player.getHeldItem() != null && player.getHeldItem().getItem() == WorldWar1Module.itemWireCutters)
-            {
-                if (world.setBlockToAir(x, y, z) && !player.capabilities.isCreativeMode)
-                {
-                    world.playSoundEffect(x, y, z, "militarybasedecor:wirecutters", 2.0F, 1.0F);
-                    player.inventory.addItemStackToInventory(new ItemStack(this));
-                    player.inventoryContainer.detectAndSendChanges();
-                    player.getHeldItem().damageItem(1, player);
+            if (WireFence.getType(world, x, y, z) == WireFence.WIRE) {
+                if (player.getHeldItem() != null && player.getHeldItem().getItem() == WorldWar1Module.itemWireCutters) {
+                    if (world.setBlockToAir(x, y, z)) {
+                        world.playSoundEffect(x, y, z, "militarybasedecor:wirecutters", 2.0F, 1.0F);
+                        player.inventory.addItemStackToInventory(new ItemStack(this, 1, 0));
+                        player.inventoryContainer.detectAndSendChanges();
+                        player.getHeldItem().damageItem(1, player);
 
-                    if (ConfigManager.WIRECUTTERS_CHAT)
-                    {
-                        player.addChatMessage(new ChatComponentText(player.getDisplayName() + " " + StatCollector.translateToLocal("wire_cutters.chattext")));
+                        if (ConfigManager.WIRECUTTERS_CHAT) {
+                            player.addChatMessage(new ChatComponentText(player.getDisplayName() + " " + StatCollector.translateToLocal("wire_cutters.chattext.wiredfence")));
+                        }
+                    }
+                }
+            } else if (WireFence.getType(world, x, y, z) == WireFence.CHAIN) {
+                if (player.getHeldItem() != null && player.getHeldItem().getItem() == WorldWar1Module.itemWireCutters) {
+                    if (world.setBlockToAir(x, y, z)) {
+                        world.playSoundEffect(x, y, z, "militarybasedecor:wirecutters", 2.0F, 1.0F);
+                        player.inventory.addItemStackToInventory(new ItemStack(this, 1, 1));
+                        player.inventoryContainer.detectAndSendChanges();
+                        player.getHeldItem().damageItem(1, player);
+
+                        if (ConfigManager.WIRECUTTERS_CHAT) {
+                            player.addChatMessage(new ChatComponentText(player.getDisplayName() + " " + StatCollector.translateToLocal("wire_cutters.chattext.chainfence")));
+                        }
+                    }
+                }
+            } else if (WireFence.getType(world, x, y, z) == WireFence.BARBED) {
+                if (player.getHeldItem() != null && player.getHeldItem().getItem() == WorldWar1Module.itemWireCutters) {
+                    if (world.setBlockToAir(x, y, z)) {
+                        world.playSoundEffect(x, y, z, "militarybasedecor:wirecutters", 2.0F, 1.0F);
+                        player.inventory.addItemStackToInventory(new ItemStack(this, 1, 2));
+                        player.inventoryContainer.detectAndSendChanges();
+                        player.getHeldItem().damageItem(1, player);
+
+                        if (ConfigManager.WIRECUTTERS_CHAT) {
+                            player.addChatMessage(new ChatComponentText(player.getDisplayName() + " " + StatCollector.translateToLocal("wire_cutters.chattext.barbedfence")));
+                        }
+                    }
+                }
+            } else if (WireFence.getType(world, x, y, z) == WireFence.BARBEDBlOOD) {
+                if (player.getHeldItem() != null && player.getHeldItem().getItem() == WorldWar1Module.itemWireCutters) {
+                    if (world.setBlockToAir(x, y, z)) {
+                        world.playSoundEffect(x, y, z, "militarybasedecor:wirecutters", 2.0F, 1.0F);
+                        player.inventory.addItemStackToInventory(new ItemStack(this, 1, 3));
+                        player.inventoryContainer.detectAndSendChanges();
+                        player.getHeldItem().damageItem(1, player);
+
+                        if (ConfigManager.WIRECUTTERS_CHAT) {
+                            player.addChatMessage(new ChatComponentText(player.getDisplayName() + " " + StatCollector.translateToLocal("wire_cutters.chattext.barbedfence")));
+                        }
                     }
                 }
             }
@@ -119,12 +157,13 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
                 player.setInWeb();
                 player.attackEntityFrom(DamageSource.cactus, 1.0F);
             }
-        } else
-            if (WireFence.getType(world, i, j, k) == WireFence.BARBEDBlOOD)
-            {
+        } else if (WireFence.getType(world, i, j, k) == WireFence.BARBEDBlOOD)
+        {
+            if (!(player instanceof EntityPlayer) || !((EntityPlayer) player).capabilities.isCreativeMode) {
                 player.setInWeb();
                 player.attackEntityFrom(DamageSource.cactus, 1.0F);
             }
+        }
     }
 
     @Override
