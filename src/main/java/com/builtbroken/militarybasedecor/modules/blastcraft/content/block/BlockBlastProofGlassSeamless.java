@@ -1,31 +1,36 @@
-package com.builtbroken.militarybasedecor.modules.vanilla.content.block.reinforced;
+package com.builtbroken.militarybasedecor.modules.blastcraft.content.block;
 
 import com.builtbroken.mc.core.registry.implement.IRecipeContainer;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.modules.vanilla.VanillaModule;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import com.builtbroken.militarybasedecor.modules.blastcraft.Blastcraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 import java.util.List;
 
-public class BlockReinforcedGlass extends Block implements IRecipeContainer
-{
+/**
+ * @see <a href="https://github.com/BuilBrokenModding/VoltzEngine/blob/development/license.md">License</a> for what you can and can't do with the code.
+ * Created by Hennamann(Henry Stabell) on 22.02.2017 for VoltzEngine.
+ */
+public class BlockBlastProofGlassSeamless extends Block implements IRecipeContainer {
+
     public static IIcon[] textures = new IIcon[47];
     public static int[] textureRefByID = {0, 0, 6, 6, 0, 0, 6, 6, 3, 3, 19, 15, 3, 3, 19, 15, 1, 1, 18, 18, 1, 1, 13, 13, 2, 2, 23, 31, 2, 2, 27, 14, 0, 0, 6, 6, 0, 0, 6, 6, 3, 3, 19, 15, 3, 3, 19, 15, 1, 1, 18, 18, 1, 1, 13, 13, 2, 2, 23, 31, 2, 2, 27, 14, 4, 4, 5, 5, 4, 4, 5, 5, 17, 17, 22, 26, 17, 17, 22, 26, 16, 16, 20, 20, 16, 16, 28, 28, 21, 21, 46, 42, 21, 21, 43, 38, 4, 4, 5, 5, 4, 4, 5, 5, 9, 9, 30, 12, 9, 9, 30, 12, 16, 16, 20, 20, 16, 16, 28, 28, 25, 25, 45, 37, 25, 25, 40, 32, 0, 0, 6, 6, 0, 0, 6, 6, 3, 3, 19, 15, 3, 3, 19, 15, 1, 1, 18, 18, 1, 1, 13, 13, 2, 2, 23, 31, 2, 2, 27, 14, 0, 0, 6, 6, 0, 0, 6, 6, 3, 3, 19, 15, 3, 3, 19, 15, 1, 1, 18, 18, 1, 1, 13, 13, 2, 2, 23, 31, 2, 2, 27, 14, 4, 4, 5, 5, 4, 4, 5, 5, 17, 17, 22, 26, 17, 17, 22, 26, 7, 7, 24, 24, 7, 7, 10, 10, 29, 29, 44, 41, 29, 29, 39, 33, 4, 4, 5, 5, 4, 4, 5, 5, 9, 9, 30, 12, 9, 9, 30, 12, 7, 7, 24, 24, 7, 7, 10, 10, 8, 8, 36, 35, 8, 8, 34, 11};
 
-    public BlockReinforcedGlass()
-    {
+
+    public BlockBlastProofGlassSeamless() {
         super(Material.glass);
-        this.setBlockName("reinforced_glass");
-        this.setResistance(48);
-        this.setHardness(6.0F);
+        this.setBlockName("blast_proof_glass_seamless");
+        this.setHardness(50f);
+        this.setResistance(6000000.0F);
     }
 
     @Override
@@ -33,7 +38,7 @@ public class BlockReinforcedGlass extends Block implements IRecipeContainer
     {
         for (int i = 0; i < 47; i++)
         {
-            textures[i] = iconRegistry.registerIcon(MilitaryBaseDecor.PREFIX + "reinforced_glass/reinforced_glass_" + (i + 1));
+            textures[i] = iconRegistry.registerIcon(MilitaryBaseDecor.PREFIX + "blastcraft/blast_proof_glass/blast_proof_glass_" + (i + 1));
         }
     }
 
@@ -97,40 +102,37 @@ public class BlockReinforcedGlass extends Block implements IRecipeContainer
         return par1IBlockAccess.getBlock(par2, par3, par4) != this && super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5);
     }
 
-    @SideOnly(Side.CLIENT)
     @Override
-    public int getRenderBlockPass()
-    {
-        return 0;
-    }
-
-    @Override
-    public boolean isOpaqueCube()
-    {
+    public boolean isOpaqueCube() {
         return false;
     }
 
     @Override
-    public boolean renderAsNormalBlock()
-    {
+    public boolean renderAsNormalBlock() {
         return false;
     }
 
     @Override
-    protected boolean canSilkHarvest()
-    {
+    protected boolean canSilkHarvest() {
         return true;
     }
 
     @Override
-    public boolean hasTileEntity(int metadata)
-    {
+    public boolean canEntityDestroy(IBlockAccess world, int x, int y, int z, Entity entity) {
         return false;
     }
 
     @Override
-    public void genRecipes(List<IRecipe> recipes)
-    {
-        recipes.add(newShapelessRecipe(new ItemStack(this, 1, 0), VanillaModule.reinforcedGlassNormal));
+    public void onBlockExploded(World world, int x, int y, int z, Explosion explosion) {
+    }
+
+    @Override
+    public boolean canDropFromExplosion(Explosion p_149659_1_) {
+        return false;
+    }
+
+    @Override
+    public void genRecipes(List<IRecipe> recipes) {
+        recipes.add(newShapelessRecipe(new ItemStack(this, 1, 0), Blastcraft.blastProofGlassNormal));
     }
 }

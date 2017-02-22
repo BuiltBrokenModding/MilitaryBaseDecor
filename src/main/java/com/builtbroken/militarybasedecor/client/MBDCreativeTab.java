@@ -93,7 +93,8 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, Blastcraft.hardenedBrick);
             add(list, Blastcraft.rawBlastProofWalling);
             add(list, Blastcraft.blastProofWalling);
-            add(list, Blastcraft.blastProofGlass);
+            add(list, Blastcraft.blastProofGlassNormal);
+            add(list, Blastcraft.blastProofGlassSeamless);
             add(list, Blastcraft.blastProofTrapDoor);
             add(list, Blastcraft.carbonPlatedWalling);
         }
