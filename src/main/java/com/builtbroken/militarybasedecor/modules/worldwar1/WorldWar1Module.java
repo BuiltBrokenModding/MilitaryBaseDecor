@@ -1,5 +1,6 @@
 package com.builtbroken.militarybasedecor.modules.worldwar1;
 
+import com.builtbroken.mc.lib.mod.compat.nei.NEIProxy;
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.ItemWorldWar1;
@@ -55,6 +56,9 @@ public class WorldWar1Module extends AbstractLoadable
         concreteSolidify = new DamageSourceConcreteSolidify();
 
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(blockWireFence);
+
+        // Hide the basic mixer block from NEI, to avoid confusion!
+        NEIProxy.hideItem(basicMixer);
     }
 
     @Override
