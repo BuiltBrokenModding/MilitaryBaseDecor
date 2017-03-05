@@ -41,7 +41,7 @@ targetCompatibility = 1.8
 
 dependencies
 {
-    compile "dev.builtbroken.voltzengine:VoltzEngine:1.7.10-$voltz_engine_version+:deobf-dev"
+    compile "dev.builtbroken.voltzengine:VoltzEngine:1.7.10-$voltz_engine_version+:deobf-dev" { changing = true }
 }
 
 task makeChangelog(type: se.bjurr.gitchangelog.plugin.gradle.GitChangelogTask) {
@@ -55,7 +55,7 @@ task makeChangelog(type: se.bjurr.gitchangelog.plugin.gradle.GitChangelogTask) {
   <h3>{{name}}</h3>
   <ul>
     {{#commits}}
-    <li> <a href="https://github.com/BuiltBrokenModding/VoltzEngine/commit/{{hash}}" target=_blank> {{{message}}}</a>
+    <li> <a href="https://github.com/BuiltBrokenModding/MilitaryBaseDecor/commit/{{hash}}" target=_blank> {{{message}}}</a>
 </li>
     {{/commits}}
   </ul>
