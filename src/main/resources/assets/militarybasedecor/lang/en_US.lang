@@ -74,7 +74,7 @@ tile.militarybasedecor:reinforced_door.7.name=Reinforced Door
 tile.militarybasedecor:reinforced_door.8.name=Reinforced Door
 tile.militarybasedecor:reinforced_door.9.name=Reinforced Door
 item.reinforced_door_item.name=Reinforced Door
-
+tile.militarybasedecor:dragons_teeth.0.name=Dragon's Teeth
 death.attack.concreteSolidify=%1$s was solidified in Liquid Concrete
 
 ## Concrete

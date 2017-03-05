@@ -19,6 +19,7 @@ public class WorldWar2Module extends AbstractLoadable
     public static Block reinforcedConcrete;
     public static Block reinforcedLiquidConcrete;
     public static Block rebarMesh;
+    public static Block dragonsTeeth;
 
     public static Item rebar;
 
@@ -32,6 +33,7 @@ public class WorldWar2Module extends AbstractLoadable
         reinforcedConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("reinforced_concrete", new BlockColored(Material.rock).setBlockName("concrete_reinforced").setBlockTextureName(MilitaryBaseDecor.PREFIX + "concrete/concrete_reinforced/concrete_reinforced").setHardness(20).setResistance(40).setCreativeTab(MilitaryBaseDecor.MAIN_TAB), ItemBlockWorldWar2.class);
         reinforcedLiquidConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("reinforced_liquid_concrete", BlockLiquidReinforcedConcrete.class, ItemBlockWorldWar2.class);
         rebarMesh = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRebarMesh.class, ItemBlockWorldWar2.class);
+        dragonsTeeth = MilitaryBaseDecor.INSTANCE.getManager().newBlock("dragons_teeth", new TileDragonsTeeth());
 
         rebar = MilitaryBaseDecor.INSTANCE.getManager().newItem("rebar", new ItemWorldWar2().setUnlocalizedName("rebar").setTextureName(MilitaryBaseDecor.PREFIX + "rebar"));
 
@@ -41,7 +43,6 @@ public class WorldWar2Module extends AbstractLoadable
     @Override
     public void postInit()
     {
-
         WW2Recipes.initItemRecipes();
         WW2Recipes.initBlockRecipes();
     }

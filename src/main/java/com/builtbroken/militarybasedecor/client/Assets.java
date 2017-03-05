@@ -6,15 +6,18 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.IModelCustom;
+import net.minecraftforge.client.model.obj.WavefrontObject;
 
 @SideOnly(Side.CLIENT)
 public final class Assets
 {
     //Models
     public static final IModelCustom PANE_BARBS_MODEL = model("Pane_Barbs.tcn");
+    public static final WavefrontObject DRAGONS_TEETH = (WavefrontObject) model("dragons_teeth.obj");
 
     //Textures
     public static final ResourceLocation PANE_BARBS_TEXTURE = texture("Pane_Barbs");
+    public static final ResourceLocation DRAGONS_TEETH_TEXTURE = texture("dragons_teeth");
 
     public static IModelCustom model(String name)
     {

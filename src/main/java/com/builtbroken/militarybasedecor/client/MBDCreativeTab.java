@@ -70,6 +70,7 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, WorldWar2Module.corrugatedGalvanisedIronBlock);
             add(list, WorldWar2Module.ammunitionBox);
             add(list, WorldWar2Module.equipmentCrate);
+            add(list, WorldWar2Module.dragonsTeeth);
         }
         // Cold War Module Blocks
         if (ConfigManager.COLD_WAR_ENABLED) {
