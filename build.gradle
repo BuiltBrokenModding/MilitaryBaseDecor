@@ -41,7 +41,7 @@ targetCompatibility = 1.8
 
 dependencies
 {
-    compile "dev.builtbroken.voltzengine:VoltzEngine:1.7.10-$voltz_engine_version+:deobf-dev" { changing = true }
+    compile ("dev.builtbroken.voltzengine:VoltzEngine:1.7.10-$voltz_engine_version+:deobf-dev") { changing = true }
 }
 
 task makeChangelog(type: se.bjurr.gitchangelog.plugin.gradle.GitChangelogTask) {
