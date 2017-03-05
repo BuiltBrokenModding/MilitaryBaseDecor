@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.modules.worldwar1.content.block;
+package com.builtbroken.militarybasedecor.modules.vanilla.content.block;
 
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import net.minecraft.block.Block;
@@ -12,7 +12,6 @@ public class BlockPerviousConcrete extends Block {
 
     public BlockPerviousConcrete() {
         super(Material.rock);
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
         this.setBlockName("pervious_concrete");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "concrete/concrete_pervious");
         this.setStepSound(Block.soundTypeStone);

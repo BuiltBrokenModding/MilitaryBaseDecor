@@ -21,7 +21,7 @@ public class BlockBlastProofWalling extends Block
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "blastcraft/blast_proof_walling");
         this.setHardness(50);
         this.setResistance(6000000.0F);
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
+
     }
 
     // Gives the block the right color on minimaps and vanilla maps.

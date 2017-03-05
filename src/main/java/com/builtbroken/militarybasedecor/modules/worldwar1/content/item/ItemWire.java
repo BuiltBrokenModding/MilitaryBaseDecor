@@ -3,10 +3,13 @@ package com.builtbroken.militarybasedecor.modules.worldwar1.content.item;
 import com.builtbroken.mc.core.registry.implement.IRecipeContainer;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 
 import java.util.List;
 
@@ -21,6 +24,12 @@ public class ItemWire extends Item implements IRecipeContainer
         this.setHasSubtypes(true);
         this.setUnlocalizedName("bundled_wire");
         this.setTextureName(MilitaryBaseDecor.PREFIX + "bundled_wire");
+    }
+
+    @Override
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
+    {
+        list.add(EnumChatFormatting.BLUE + StatCollector.translateToLocal("tooltip.worldwar1"));
     }
 
     @Override

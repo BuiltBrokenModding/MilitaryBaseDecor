@@ -25,7 +25,7 @@ public class BlockRawBlastProofWalling extends Block implements IRecipeContainer
         this.setBlockName("raw_blast_proof_walling");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "blastcraft/raw_blast_proof_walling");
         this.setHardness(10);
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
+
     }
 
     @Override

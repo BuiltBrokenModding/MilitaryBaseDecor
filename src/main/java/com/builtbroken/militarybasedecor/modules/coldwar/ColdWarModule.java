@@ -3,10 +3,8 @@ package com.builtbroken.militarybasedecor.modules.coldwar;
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.ConfigManager;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.modules.coldwar.content.block.BlockAsphalt;
-import com.builtbroken.militarybasedecor.modules.coldwar.content.block.BlockICBMConcrete;
-import com.builtbroken.militarybasedecor.modules.coldwar.content.block.BlockReinforcedRail;
-import com.builtbroken.militarybasedecor.modules.coldwar.content.block.ItemBlockColdWar;
+import com.builtbroken.militarybasedecor.modules.coldwar.content.block.*;
+import com.builtbroken.militarybasedecor.modules.coldwar.content.item.ItemColdWar;
 import com.builtbroken.militarybasedecor.modules.coldwar.content.item.ItemLiquidBitumenBucket;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockColored;
@@ -24,6 +22,8 @@ public class ColdWarModule extends AbstractLoadable
     public static Block reinforcedRail;
     public static Block icbmConcrete;
     public static Block highStrengthConcrete;
+    public static Block reinforcedDoor;
+    public static Item reinforcedDoorItem;
 
     public static Item bituminousCoal;
     public static Item bituminousCoalBucket;
@@ -37,11 +37,13 @@ public class ColdWarModule extends AbstractLoadable
         highStrengthConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("high_strength_concrete", new BlockColored(Material.rock).setBlockName("high_strength_concrete").setBlockTextureName(MilitaryBaseDecor.PREFIX + "concrete/concrete_high_strength/concrete_high_strength").setCreativeTab(MilitaryBaseDecor.MAIN_TAB), ItemBlockColdWar.class);
 
         if (ConfigManager.ICBM_CONCRETE_ENABLED) {
-            icbmConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("icbm_concrete",BlockICBMConcrete.class, ItemBlockColdWar.class);
+            icbmConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("icbm_concrete", BlockICBMConcrete.class, ItemBlockColdWar.class);
         }
+        reinforcedDoor = MilitaryBaseDecor.INSTANCE.getManager().newBlock("reinforced_door", BlockReinforcedDoor.class, ItemBlockColdWar.class);
+        reinforcedDoorItem = MilitaryBaseDecor.INSTANCE.getManager().newItem("reinforced_door_item", ItemBlockReinforcedDoor.class);
 
-        bituminousCoal = MilitaryBaseDecor.INSTANCE.getManager().newItem("bituminous_coal", new Item().setTextureName(MilitaryBaseDecor.PREFIX + "bituminous_coal").setUnlocalizedName("bituminous_coal").setCreativeTab(MilitaryBaseDecor.MAIN_TAB));
-        bituminousCoalBucket = MilitaryBaseDecor.INSTANCE.getManager().newItem("bituminous_coal_bucket", new Item().setTextureName(MilitaryBaseDecor.PREFIX + "bituminous_coal_bucket").setUnlocalizedName("bituminous_coal_bucket").setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setMaxStackSize(1));
+        bituminousCoal = MilitaryBaseDecor.INSTANCE.getManager().newItem("bituminous_coal", new ItemColdWar().setTextureName(MilitaryBaseDecor.PREFIX + "bituminous_coal").setUnlocalizedName("bituminous_coal").setCreativeTab(MilitaryBaseDecor.MAIN_TAB));
+        bituminousCoalBucket = MilitaryBaseDecor.INSTANCE.getManager().newItem("bituminous_coal_bucket", new ItemColdWar().setTextureName(MilitaryBaseDecor.PREFIX + "bituminous_coal_bucket").setUnlocalizedName("bituminous_coal_bucket").setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setMaxStackSize(1));
         liquidBitumenBucket = MilitaryBaseDecor.INSTANCE.getManager().newItem("liquid_bitumen_bucket", new ItemLiquidBitumenBucket(asphalt).setTextureName(MilitaryBaseDecor.PREFIX + "liquid_bitumen_bucket").setUnlocalizedName("liquid_bitumen_bucket").setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setMaxStackSize(1));
 
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(asphalt);

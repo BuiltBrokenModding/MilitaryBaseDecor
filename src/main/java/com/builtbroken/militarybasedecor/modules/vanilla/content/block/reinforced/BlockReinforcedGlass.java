@@ -33,7 +33,7 @@ public class BlockReinforcedGlass extends Block implements IRecipeContainer
     {
         for (int i = 0; i < 47; i++)
         {
-            textures[i] = iconRegistry.registerIcon(MilitaryBaseDecor.DOMAIN + ":" + "reinforced_glass/reinforced_glass_" + (i + 1));
+            textures[i] = iconRegistry.registerIcon(MilitaryBaseDecor.PREFIX + "reinforced_glass/reinforced_glass_" + (i + 1));
         }
     }
 
@@ -131,6 +131,6 @@ public class BlockReinforcedGlass extends Block implements IRecipeContainer
     @Override
     public void genRecipes(List<IRecipe> recipes)
     {
-        recipes.add(newShapedRecipe(new ItemStack(VanillaModule.reinforcedGlass, 8, 0), "GGG", "GGG", "GGG", 'G', VanillaModule.reinforcedGlassNormal));
+        recipes.add(newShapelessRecipe(new ItemStack(this, 1, 0), VanillaModule.reinforcedGlassNormal));
     }
 }

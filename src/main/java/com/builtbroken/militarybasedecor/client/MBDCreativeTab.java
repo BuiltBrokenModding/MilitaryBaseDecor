@@ -37,6 +37,8 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, VanillaModule.reinforcedGlass);
             add(list, VanillaModule.reinforcedButton);
             add(list, VanillaModule.simpleCamoBlock);
+            add(list, VanillaModule.perviousConcrete);
+            add(list, VanillaModule.glassConcrete);
         }
         // Gunpowder Era Module Blocks
         if (ConfigManager.GUNPOWDER_ERA_ENABLED) {
@@ -53,8 +55,6 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, WorldWar1Module.liquidConcreteBucket);
             add(list, WorldWar1Module.basicMixerItem);
             add(list, WorldWar1Module.basicConcrete);
-            add(list, WorldWar1Module.perviousConcrete);
-            add(list, WorldWar1Module.glassConcrete);
             add(list, WorldWar1Module.blockWireFence);
             add(list, WorldWar1Module.blockFenceTopper);
             add(list, WorldWar1Module.itemWireCutters);
@@ -80,6 +80,7 @@ public class MBDCreativeTab extends ModCreativeTab {
             if (ConfigManager.ICBM_CONCRETE_ENABLED) {
                 add(list, ColdWarModule.icbmConcrete);
             }
+            add(list, ColdWarModule.reinforcedDoorItem);
             add(list, ColdWarModule.highStrengthConcrete);
             add(list, ColdWarModule.reinforcedRail);
         }
@@ -92,7 +93,8 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, Blastcraft.hardenedBrick);
             add(list, Blastcraft.rawBlastProofWalling);
             add(list, Blastcraft.blastProofWalling);
-            add(list, Blastcraft.blastProofGlass);
+            add(list, Blastcraft.blastProofGlassNormal);
+            add(list, Blastcraft.blastProofGlassSeamless);
             add(list, Blastcraft.blastProofTrapDoor);
             add(list, Blastcraft.carbonPlatedWalling);
         }

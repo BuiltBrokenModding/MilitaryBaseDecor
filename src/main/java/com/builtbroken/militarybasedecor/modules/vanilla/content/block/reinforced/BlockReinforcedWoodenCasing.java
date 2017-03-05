@@ -22,7 +22,6 @@ public class BlockReinforcedWoodenCasing extends BlockReinforced
     public BlockReinforcedWoodenCasing()
     {
         super(Material.ground, "wood_casing");
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
         this.setStepSound(soundTypeWood);
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "wood_casing");
     }

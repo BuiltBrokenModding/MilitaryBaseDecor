@@ -36,7 +36,7 @@ public class BlockICBMConcrete extends Block implements IRecipeContainer
     {
         super(Material.rock);
         this.setBlockName(MilitaryBaseDecor.PREFIX + "icbm_concrete");
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
+
         this.setResistance(50);
         this.setHardness(3.8F);
     }

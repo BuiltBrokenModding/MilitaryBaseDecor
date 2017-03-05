@@ -23,7 +23,7 @@ public class BlockHardenedBrick extends Block implements IRecipeContainer {
         this.setBlockName("hardened_brick");
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "blastcraft/hardened_brick");
         this.setHardness(10);
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
+
     }
 
     @Override

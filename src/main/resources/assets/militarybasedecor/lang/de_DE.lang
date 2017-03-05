@@ -1,0 +1,207 @@
+## Master language file
+
+## Military Base Decor
+
+itemGroup.MilitaryBaseDecor=Military Base Decor
+## Misc Blocks
+tile.militarybasedecor:simple_camo.0.name=Einfacher Tarnblock
+tile.asphalt.0.name=Asphalt
+tile.wood_casing.0.name=Verstärktes Holzgehäuse
+tile.metal_casing.0.name=Verstärktes Metallgehäuse
+tile.reinforced_glass_normal.0.name=Verstärktes Glas
+tile.reinforced_glass.0.name=Verstärktes Glas
+tile.reinforced_soil.0.name=Verstärkte Erde
+tile.reinforced_soil.1.name=Verstärkter Sand
+tile.reinforced_soil.2.name=Verstärktes Gras
+tile.reinforced_stone.0.name=Verstärkter Bruchstein
+tile.reinforced_stone.1.name=Verstärkter Stein
+tile.reinforced_stone.2.name=Verstärkte Steinziegel
+tile.reinforced_metal.0.name=Verstärkter Eisenblock
+tile.reinforced_metal.1.name=Verstärkter Goldblock
+tile.reinforced_rail.0.name=Verstärkte Schiene
+tile.reinforced_rail.1.name=Verstärkte Schiene
+tile.reinforced_rail.2.name=Verstärkte Schiene
+tile.reinforced_rail.3.name=Verstärkte Schiene
+tile.reinforced_rail.4.name=Verstärkte Schiene
+tile.reinforced_rail.5.name=Verstärkte Schiene
+tile.reinforced_rail.6.name=Verstärkte Schiene
+tile.reinforced_rail.7.name=Verstärkte Schiene
+tile.reinforced_rail.8.name=Verstärkte Schiene
+tile.reinforced_rail.9.name=Verstärkte Schiene
+tile.picket_fence.0.name=Lattenzaun
+tile.wire_fence.0.name=Drahtzaun
+tile.wire_fence.1.name=Maschendrahtzaun
+tile.wire_fence.2.name=Stacheldrahtzaun
+tile.wire_fence.3.name=Blutiger Stacheldrahtzaun
+tile.sand_bag.0.name=Einfacher Sandsack
+tile.rope_fence.0.name=Seilzaun
+tile.tangled_rope.0.name=Verwickeltes Seil
+tile.militarybasedecor:fenceTopper.0.name=Zaunaufsatz
+tile.corrugated_galvanised_iron_block.0.name=Gewellter Verzinkter Eisenblock
+tile.olive_drab_textured_block.0.name=Eintönig Olivfarbener Block
+tile.ammunition_box.0.name=Munnitionskasten
+tile.equipment_crate.0.name=Ausrüstungskiste
+tile.camouflage_block.0.name=Waldgebiets-Tarnblock
+tile.camouflage_block.1.name=Wüsten-Tarnblock
+tile.camouflage_block.2.name=Städtischer Tarnblock
+tile.reinforced_button.0.name=Verstärkter Knopf
+tile.reinforced_button.1.name=Verstärkter Knopf
+tile.reinforced_button.2.name=Verstärkter Knopf
+tile.reinforced_button.3.name=Verstärkter Knopf
+tile.reinforced_button.4.name=Verstärkter Knopf
+tile.reinforced_button.5.name=Verstärkter Knopf
+tile.reinforced_button.6.name=Verstärkter Knopf
+tile.reinforced_button.7.name=Verstärkter Knopf
+tile.reinforced_button.8.name=Verstärkter Knopf
+tile.reinforced_button.9.name=Verstärkter Knopf
+tile.basic_mixer.name=Einfacher Mischer
+tile.basic_mixer.0.name=Einfacher Mischer
+tile.basic_mixer.3.name=Einfacher Mischer
+item.basic_mixer.name=Einfacher Mischer
+tile.rebar_mesh.0.name=Bewehrungsgitter
+tile.militarybasedecor:icbm_concrete.0.name=Einfacher Klassischer Beton
+tile.militarybasedecor:icbm_concrete.1.name=Kompakter Klassischer Beton
+tile.militarybasedecor:icbm_concrete.2.name=Verstärkter Klassischer Beton
+tile.militarybasedecor:icbm_concrete.3.name=Dunkler Einfacher Klassischer Beton
+tile.militarybasedecor:reinforced_door.0.name=Verstärkte Tür
+tile.militarybasedecor:reinforced_door.1.name=Verstärkte Tür
+tile.militarybasedecor:reinforced_door.2.name=Verstärkte Tür
+tile.militarybasedecor:reinforced_door.3.name=Verstärkte Tür
+tile.militarybasedecor:reinforced_door.4.name=Verstärkte Tür
+tile.militarybasedecor:reinforced_door.5.name=Verstärkte Tür
+tile.militarybasedecor:reinforced_door.6.name=Verstärkte Tür
+tile.militarybasedecor:reinforced_door.7.name=Verstärkte Tür
+tile.militarybasedecor:reinforced_door.8.name=Verstärkte Tür
+tile.militarybasedecor:reinforced_door.9.name=Verstärkte Tür
+item.reinforced_door_item.name=Verstärkte Tür
+
+death.attack.concreteSolidify=%1$s wurde im flüssigen Beton verfestigt
+
+## Concrete
+# Basic Concrete
+tile.concrete_basic.0.name=Weißer Einfacher Beton
+tile.concrete_basic.1.name=Oranger Einfacher Beton
+tile.concrete_basic.2.name=Magenta Einfacher Beton
+tile.concrete_basic.3.name=Hellblauer Einfacher Beton
+tile.concrete_basic.4.name=Gelber Einfacher Beton
+tile.concrete_basic.5.name=Hellgrüner Einfacher Beton
+tile.concrete_basic.6.name=Rosa Einfacher Beton
+tile.concrete_basic.7.name=Grauer Einfacher Beton
+tile.concrete_basic.8.name=Hellgrauer Einfacher Beton
+tile.concrete_basic.9.name=Türkiser Einfacher Beton
+tile.concrete_basic.10.name=Violetter Einfacher Beton
+tile.concrete_basic.11.name=Blauer Einfacher Beton
+tile.concrete_basic.12.name=Brauner Einfacher Beton
+tile.concrete_basic.13.name=Grüner Einfacher Beton
+tile.concrete_basic.14.name=Roter Einfacher Beton
+tile.concrete_basic.15.name=Schwarzer Einfacher Beton
+
+# Reinforced Concrete
+tile.concrete_reinforced.0.name=Weißer Verstärkter Beton
+tile.concrete_reinforced.1.name=Oranger Verstärkter Beton
+tile.concrete_reinforced.2.name=Magenta Verstärkter Beton
+tile.concrete_reinforced.3.name=Hellblauer Verstärkter Beton
+tile.concrete_reinforced.4.name=Gelber Verstärkter Beton
+tile.concrete_reinforced.5.name=Hellgrüner Verstärkter Beton
+tile.concrete_reinforced.6.name=Rosa Verstärkter Beton
+tile.concrete_reinforced.7.name=Grauer Verstärkter Beton
+tile.concrete_reinforced.8.name=Hellgrauer Verstärkter Beton
+tile.concrete_reinforced.9.name=Türkiser Verstärkter Beton
+tile.concrete_reinforced.10.name=Violetter Verstärkter Beton
+tile.concrete_reinforced.11.name=Blauer Verstärkter Beton
+tile.concrete_reinforced.12.name=Brauner Verstärkter Beton
+tile.concrete_reinforced.13.name=Grüner Verstärkter Beton
+tile.concrete_reinforced.14.name=Roter Verstärkter Beton
+tile.concrete_reinforced.15.name=Schwarzer Verstärkter Beton
+tile.liquid_reinforced_concrete.0.name=Verstärkter Beton
+
+# High Strength Concrete
+tile.high_strength_concrete.0.name=Weißer Hochfester Beton
+tile.high_strength_concrete.1.name=Oranger Hochfester Beton
+tile.high_strength_concrete.2.name=Magenta Hochfester Beton
+tile.high_strength_concrete.3.name=Hellblauer Hochfester Beton
+tile.high_strength_concrete.4.name=Gelber Hochfester Beton
+tile.high_strength_concrete.5.name=Hellgrüner Hochfester Beton
+tile.high_strength_concrete.6.name=Rosa Hochfester Beton
+tile.high_strength_concrete.7.name=Grauer Hochfester Beton
+tile.high_strength_concrete.8.name=Hellgrauer Hochfester Beton
+tile.high_strength_concrete.9.name=Türkiser Hochfester Beton
+tile.high_strength_concrete.10.name=Violetter Hochfester Beton
+tile.high_strength_concrete.11.name=Blauer Hochfester Beton
+tile.high_strength_concrete.12.name=Brauner Hochfester Beton
+tile.high_strength_concrete.13.name=Grüner Hochfester Beton
+tile.high_strength_concrete.14.name=Roter Hochfester Beton
+tile.high_strength_concrete.15.name=Schwarzer Hochfester Beton
+
+# Ultra High Performance Concrete
+tile.ultra_high_performance_concrete.0.name=Weißer Ultrahochfester Beton
+tile.ultra_high_performance_concrete.1.name=Oranger Ultrahochfester Beton
+tile.ultra_high_performance_concrete.2.name=Magenta Ultrahochfester Beton
+tile.ultra_high_performance_concrete.3.name=Hellblauer Ultrahochfester Beton
+tile.ultra_high_performance_concrete.4.name=Gelber Ultrahochfester Beton
+tile.ultra_high_performance_concrete.5.name=Hellgrüner Ultrahochfester Beton
+tile.ultra_high_performance_concrete.6.name=Rosa Ultrahochfester Beton
+tile.ultra_high_performance_concrete.7.name=Grauer Ultrahochfester Beton
+tile.ultra_high_performance_concrete.8.name=Hellgrauer Ultrahochfester Beton
+tile.ultra_high_performance_concrete.9.name=Türkiser Ultrahochfester Beton
+tile.ultra_high_performance_concrete.10.name=Violetter Ultrahochfester Beton
+tile.ultra_high_performance_concrete.11.name=Blauer Ultrahochfester Beton
+tile.ultra_high_performance_concrete.12.name=Brauner Ultrahochfester Beton
+tile.ultra_high_performance_concrete.13.name=Grüner Ultrahochfester Beton
+tile.ultra_high_performance_concrete.14.name=Roter Ultrahochfester Beton
+tile.ultra_high_performance_concrete.15.name=Schwarzer Ultrahochfester Beton
+
+# Various Concrete
+tile.pervious_concrete.0.name=Durchlässiger Beton
+tile.glass_concrete.0.name=Glasbeton
+tile.limecrete.0.name=Limecrete
+
+# Misc Items
+item.bag_cement.name=Zementsack
+item.bag.name=Sack
+item.bucket_liquid_concrete.name=Eimer mit flüssigem Beton
+item.bundled_wire.name=Gebündelter Draht
+item.barbed_bundled_wire.name=Gebündelter Stacheldraht
+item.rope.name=Seil
+item.wire_cutters.name=Drahtschere
+wire_cutters.chattext.wiredfence=Schneide einen Drahtzaun
+wire_cutters.chattext.chainfence=Schneide einen Maschendrahtzaun
+wire_cutters.chattext.barbedfence=Schneide einen Stacheldrahtzaun
+item.rebar.name=Bewehrungsstab
+
+item.bituminous_coal.name=Pechkohle
+item.bituminous_coal_bucket.name=Pechkohle im Eimer
+item.liquid_bitumen_bucket.name=Eimer mit flüssigem Pech
+
+## Blastcraft
+tile.hardened_brick.0.name=Gehärtete Ziegel
+tile.raw_blast_proof_walling.0.name=Rohes Sprengsicheres Mauerwerk
+tile.blast_proof_walling.0.name=Sprengsicheres Mauerwerk
+tile.blast_proof_glass_normal.0.name=Sprengsicheres Glas
+tile.blast_proof_glass_seamless.0.name=Sprengsicheres Glas
+tile.blast_proof_trapdoor.0.name=Sprengsichere Falltür
+tile.blast_proof_trapdoor.1.name=Sprengsichere Falltür
+tile.blast_proof_trapdoor.2.name=Sprengsichere Falltür
+tile.blast_proof_trapdoor.3.name=Sprengsichere Falltür
+tile.blast_proof_trapdoor.4.name=Sprengsichere Falltür
+tile.blast_proof_trapdoor.5.name=Sprengsichere Falltür
+tile.blast_proof_trapdoor.6.name=Sprengsichere Falltür
+tile.blast_proof_trapdoor.7.name=Sprengsichere Falltür
+tile.blast_proof_trapdoor.8.name=Sprengsichere Falltür
+tile.blast_proof_trapdoor.9.name=Sprengsichere Falltür
+tile.carbon_plated_walling.0.name=Karbongepanzertes Mauerwerk
+
+## Tooltips - Modules
+tooltip.vanilla=Vanilla-Modul
+tooltip.gunpowder=Schwarzpulver-Modul
+tooltip.worldwar1=Erster Weltkrieg-Modul
+tooltip.worldwar2=Zweiter Weltkrieg-Modul
+tooltip.coldwar=Kalter Krieg-Modul
+tooltip.future=Zukunft-Modul
+tooltip.blastcraft=Blastcraft-Modul
+
+## Tooltips - Blocks and Items
+tooltip.wire_fence=Warnung: Fügt Lebewesen Schaden zu
+tooltip.seamless=Nahtlose Version
+tooltip.nonseamless=Nicht-Nahtlose Version
+tooltip.quonsethut=Wird verwendet, um Wellblechhütten zu erstellen

@@ -37,7 +37,7 @@ tile.sand_bag.0.name=Basic Sandbag
 tile.rope_fence.0.name=Rope Fence
 tile.tangled_rope.0.name=Tangled Rope
 tile.militarybasedecor:fenceTopper.0.name=Fence Topper
-tile.corrugated_galvanised_iron_block.0.name=Corrugated Galvanised Iron
+tile.corrugated_galvanised_iron_block.0.name=Corrugated Galvanised Iron Block
 tile.olive_drab_textured_block.0.name=Olive Drab Textured Block
 tile.ammunition_box.0.name=Ammunition Box
 tile.equipment_crate.0.name=Equipment Crate
@@ -45,6 +45,15 @@ tile.camouflage_block.0.name=Woodlands Camouflage Textured Block
 tile.camouflage_block.1.name=Desert Camouflage Textured Block
 tile.camouflage_block.2.name=Urban Camouflage Textured Block
 tile.reinforced_button.0.name=Reinforced Button
+tile.reinforced_button.1.name=Reinforced Button
+tile.reinforced_button.2.name=Reinforced Button
+tile.reinforced_button.3.name=Reinforced Button
+tile.reinforced_button.4.name=Reinforced Button
+tile.reinforced_button.5.name=Reinforced Button
+tile.reinforced_button.6.name=Reinforced Button
+tile.reinforced_button.7.name=Reinforced Button
+tile.reinforced_button.8.name=Reinforced Button
+tile.reinforced_button.9.name=Reinforced Button
 tile.basic_mixer.name=Basic Mixer
 tile.basic_mixer.0.name=Basic Mixer
 tile.basic_mixer.3.name=Basic Mixer
@@ -54,6 +63,17 @@ tile.militarybasedecor:icbm_concrete.0.name=Basic Classic Concrete
 tile.militarybasedecor:icbm_concrete.1.name=Compact Classic Concrete
 tile.militarybasedecor:icbm_concrete.2.name=Reinforced Classic Concrete
 tile.militarybasedecor:icbm_concrete.3.name=Dark Basic Classic Concrete
+tile.militarybasedecor:reinforced_door.0.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.1.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.2.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.3.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.4.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.5.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.6.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.7.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.8.name=Reinforced Door
+tile.militarybasedecor:reinforced_door.9.name=Reinforced Door
+item.reinforced_door_item.name=Reinforced Door
 
 death.attack.concreteSolidify=%1$s was solidified in Liquid Concrete
 
@@ -144,7 +164,9 @@ item.bundled_wire.name=Bundled Wire
 item.barbed_bundled_wire.name=Barbed Bundled Wire
 item.rope.name=Rope
 item.wire_cutters.name=Wire Cutters
-wire_cutters.chattext=Cut a Fence
+wire_cutters.chattext.wiredfence=Cut a Wired Fence
+wire_cutters.chattext.chainfence=Cut a Chain-link Fence
+wire_cutters.chattext.barbedfence=Cut a Barbed Wire Fence
 item.rebar.name=Rebar
 
 item.bituminous_coal.name=Bituminous Coal
@@ -155,6 +177,33 @@ item.liquid_bitumen_bucket.name=Bucket of Liquid Bitumen
 tile.hardened_brick.0.name=Hardened Brick
 tile.raw_blast_proof_walling.0.name=Raw Blast Proof Walling
 tile.blast_proof_walling.0.name=Blast Proof Walling
-tile.blast_proof_glass.0.name=Blast Proof Glass
+tile.blast_proof_glass_normal.0.name=Blast Proof Glass
+tile.blast_proof_glass_seamless.0.name=Blast Proof Glass
 tile.blast_proof_trapdoor.0.name=Blast Proof Trapdoor
+tile.blast_proof_trapdoor.1.name=Blast Proof Trapdoor
+tile.blast_proof_trapdoor.2.name=Blast Proof Trapdoor
+tile.blast_proof_trapdoor.3.name=Blast Proof Trapdoor
+tile.blast_proof_trapdoor.4.name=Blast Proof Trapdoor
+tile.blast_proof_trapdoor.5.name=Blast Proof Trapdoor
+tile.blast_proof_trapdoor.6.name=Blast Proof Trapdoor
+tile.blast_proof_trapdoor.7.name=Blast Proof Trapdoor
+tile.blast_proof_trapdoor.8.name=Blast Proof Trapdoor
+tile.blast_proof_trapdoor.9.name=Blast Proof Trapdoor
 tile.carbon_plated_walling.0.name=Carbon Plated Walling
+
+## Tooltips - Modules
+tooltip.vanilla=Vanilla Module
+tooltip.gunpowder=Gunpowder Module
+tooltip.worldwar1=World War 1 Module
+tooltip.worldwar2=World War 2 Module
+tooltip.coldwar=Cold War Module
+tooltip.future=Future Module
+tooltip.blastcraft=Blastcraft Module
+
+## Tooltips - Blocks and Items
+tooltip.wire_fence=Warning: Causes damage to entities
+tooltip.seamless=Seamless Version
+tooltip.nonseamless=Non-Seamless Version
+tooltip.quonsethut=Used to Create Quonset Huts
+
+

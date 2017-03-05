@@ -1,7 +1,9 @@
 package com.builtbroken.militarybasedecor.modules.worldwar1;
 
+import com.builtbroken.mc.lib.mod.compat.nei.NEIProxy;
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.ItemWorldWar1;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.tool.ItemWireCutters;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.DamageSourceConcreteSolidify;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.block.*;
@@ -20,8 +22,6 @@ public class WorldWar1Module extends AbstractLoadable
     public static Block blockFenceTopper;
     public static Block camouflageBlock;
     public static Block basicConcrete;
-    public static Block perviousConcrete;
-    public static Block glassConcrete;
     public static Block sandBag;
     public static Block basicMixer;
 
@@ -43,20 +43,22 @@ public class WorldWar1Module extends AbstractLoadable
         blockWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWireFence.class, ItemBlockWireFence.class);
         blockFenceTopper = MilitaryBaseDecor.INSTANCE.getManager().newBlock("fence_topper", new TileFenceTopper());
         sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class, ItemBlockWorldWar1.class);
-        perviousConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockPerviousConcrete.class, ItemBlockWorldWar1.class);
-        glassConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockGlassConcrete.class, ItemBlockWorldWar1.class);
 
-        bag = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag", new Item()).setUnlocalizedName("bag").setTextureName(MilitaryBaseDecor.PREFIX + "bag");
-        bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag_cement", new Item()).setUnlocalizedName("bag_cement").setTextureName(MilitaryBaseDecor.PREFIX + "bag_cement").setContainerItem(bag).setMaxStackSize(1);
+        bag = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag", new ItemWorldWar1()).setUnlocalizedName("bag").setTextureName(MilitaryBaseDecor.PREFIX + "bag");
+        bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag_cement", new ItemWorldWar1()).setUnlocalizedName("bag_cement").setTextureName(MilitaryBaseDecor.PREFIX + "bag_cement").setContainerItem(bag).setMaxStackSize(1);
 
         itemWireCutters = MilitaryBaseDecor.INSTANCE.getManager().newItem("wire_cutters", new ItemWireCutters()).setUnlocalizedName("wire_cutters").setTextureName(MilitaryBaseDecor.PREFIX + "wire_cutters");
         itemWire = MilitaryBaseDecor.INSTANCE.getManager().newItem("bundled_wire", new ItemWire());
         basicMixerItem = MilitaryBaseDecor.INSTANCE.getManager().newItem("basic_mixer", new ItemReed(basicMixer).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setUnlocalizedName("basic_mixer").setTextureName(MilitaryBaseDecor.PREFIX + "basic_mixer"));
-        liquidConcreteBucket = MilitaryBaseDecor.INSTANCE.getManager().newItem("bucket_liquid_concrete", new Item()).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setUnlocalizedName("bucket_liquid_concrete").setTextureName(MilitaryBaseDecor.PREFIX + "bucket_liquid_concrete").setMaxStackSize(1);
+
+        liquidConcreteBucket = MilitaryBaseDecor.INSTANCE.getManager().newItem("bucket_liquid_concrete", new ItemWorldWar1()).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setUnlocalizedName("bucket_liquid_concrete").setTextureName(MilitaryBaseDecor.PREFIX + "bucket_liquid_concrete").setMaxStackSize(1);
 
         concreteSolidify = new DamageSourceConcreteSolidify();
 
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(blockWireFence);
+
+        // Hide the basic mixer block from NEI, to avoid confusion!
+        NEIProxy.hideItem(basicMixer);
     }
 
     @Override

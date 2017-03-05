@@ -27,7 +27,7 @@ public class BlockBlastProofTrapDoor extends BlockTrapDoor implements IRecipeCon
         this.setBlockName("blast_proof_trapdoor");
         this.setHardness(10);
         this.setResistance(6000000.0F);
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
+        this.setCreativeTab(null);
     }
 
     @Override

@@ -5,6 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class ItemBlockReinforcedGlassNormal extends ItemBlockVanilla {
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
         super.addInformation(itemStack, player, list, par4);
-        list.add(EnumChatFormatting.ITALIC + "Non-Seamless Version");
+        list.add(EnumChatFormatting.ITALIC + StatCollector.translateToLocal("tooltip.nonseamless"));
     }
 
 }

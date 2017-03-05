@@ -10,6 +10,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
+import net.minecraft.world.World;
 
 import java.util.List;
 
@@ -24,13 +26,18 @@ public class ItemWireCutters extends Item implements IRecipeContainer
         this.setMaxStackSize(1);
         this.setMaxDamage(64);
         this.setNoRepair();
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
 
     @Override
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4)
     {
-        list.add(EnumChatFormatting.BLUE + "World War 1 Module");
+        list.add(EnumChatFormatting.BLUE + StatCollector.translateToLocal("tooltip.worldwar1"));
+    }
+
+    public ItemStack onItemRightClick(ItemStack p_77659_1_, World p_77659_2_, EntityPlayer p_77659_3_)
+    {
+        p_77659_3_.swingItem();
+        return p_77659_1_;
     }
 
     @Override

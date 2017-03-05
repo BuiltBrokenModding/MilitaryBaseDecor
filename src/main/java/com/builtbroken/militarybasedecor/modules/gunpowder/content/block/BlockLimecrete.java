@@ -14,6 +14,5 @@ public class BlockLimecrete extends Block
         this.setHardness(2.8F);
         this.setResistance(18F);
         this.setStepSound(Block.soundTypeStone);
-        this.setCreativeTab(MilitaryBaseDecor.MAIN_TAB);
     }
 }
