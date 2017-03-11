@@ -1,5 +1,6 @@
 package com.builtbroken.militarybasedecor.modules.future;
 
+import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.mc.lib.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.future.block.ItemBlockFuture;
@@ -11,7 +12,7 @@ import net.minecraft.block.material.Material;
  * @see <a href="https://github.com/BuiltBrokenModding/VoltzEngine/blog/development/license.md"></a> for what you can and can't do with the code.
  * Created by Hennamann(Henry) on 16/01/2017.
  */
-public class FutureModule implements ILoadable {
+public class FutureModule extends AbstractLoadable implements ILoadable {
 
 
     public static Block ultraHighPerformanceConcrete;
