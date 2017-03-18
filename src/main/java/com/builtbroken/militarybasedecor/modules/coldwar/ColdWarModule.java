@@ -34,7 +34,7 @@ public class ColdWarModule extends AbstractLoadable
     {
         asphalt = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockAsphalt.class, ItemBlockColdWar.class);
         reinforcedRail = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedRail.class, ItemBlockColdWar.class);
-        highStrengthConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("high_strength_concrete", new BlockColored(Material.rock).setBlockName("high_strength_concrete").setBlockTextureName(MilitaryBaseDecor.PREFIX + "concrete/concrete_high_strength/concrete_high_strength").setCreativeTab(MilitaryBaseDecor.MAIN_TAB), ItemBlockColdWar.class);
+        highStrengthConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("high_strength_concrete", new BlockColored(Material.rock).setBlockName("high_strength_concrete").setBlockTextureName(MilitaryBaseDecor.PREFIX + "concrete/concrete_high_strength/concrete_high_strength").setResistance(80).setHardness(40), ItemBlockColdWar.class);
 
         if (ConfigManager.ICBM_CONCRETE_ENABLED) {
             icbmConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("icbm_concrete", BlockICBMConcrete.class, ItemBlockColdWar.class);
