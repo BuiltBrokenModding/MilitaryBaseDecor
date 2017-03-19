@@ -1,5 +1,6 @@
 package com.builtbroken.militarybasedecor.core;
 
+import com.builtbroken.mc.core.Engine;
 import com.builtbroken.mc.lib.mod.AbstractMod;
 import com.builtbroken.mc.lib.mod.ModCreativeTab;
 import com.builtbroken.militarybasedecor.client.MBDCreativeTab;
@@ -49,6 +50,11 @@ public final class MilitaryBaseDecor extends AbstractMod
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        Engine.requestOres();
+        Engine.requestResources();
+        Engine.requestCircuits();
+        Engine.requestCraftingParts();
+
         super.preInit(event);
         getManager().setTab(MAIN_TAB);
         ConfigManager.initConfig();

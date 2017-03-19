@@ -190,6 +190,7 @@ tile.blast_proof_trapdoor.7.name=Blast Proof Trapdoor
 tile.blast_proof_trapdoor.8.name=Blast Proof Trapdoor
 tile.blast_proof_trapdoor.9.name=Blast Proof Trapdoor
 tile.carbon_plated_walling.0.name=Carbon Plated Walling
+tile.militarybasedecor:blast_compressor.0.name=Blast Compressor
 
 ## Tooltips - Modules
 tooltip.vanilla=Vanilla Module
@@ -205,3 +206,6 @@ tooltip.wire_fence=Warning: Causes damage to entities
 tooltip.seamless=Seamless Version
 tooltip.nonseamless=Non-Seamless Version
 tooltip.quonsethut=Used to Create Quonset Huts
+
+## GUIs/Containers
+container.blast_compressor=Blast Compressor

@@ -91,6 +91,7 @@ public class MBDCreativeTab extends ModCreativeTab {
         }
         // Blastcraft Blocks
         if (ConfigManager.BLASTCRAFT_ENABLED) {
+            add(list, Blastcraft.blastCompressor);
             add(list, Blastcraft.hardenedBrick);
             add(list, Blastcraft.rawBlastProofWalling);
             add(list, Blastcraft.blastProofWalling);
