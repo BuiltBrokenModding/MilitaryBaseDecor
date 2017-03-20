@@ -1,7 +1,6 @@
 package com.builtbroken.militarybasedecor.modules.blastcraft.content.machines.blastcompressor.recipes;
 
 import com.builtbroken.militarybasedecor.modules.blastcraft.Blastcraft;
-import icbm.classic.content.explosive.blast.Blast;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
