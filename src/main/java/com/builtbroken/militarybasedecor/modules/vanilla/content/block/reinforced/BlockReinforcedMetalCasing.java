@@ -7,9 +7,11 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.IBlockAccess;
 
 import java.util.List;
 
@@ -77,6 +79,12 @@ public class BlockReinforcedMetalCasing extends BlockReinforced
             this.hardness = hardness;
             this.base_resistance = base_resistance;
         }
+    }
+
+    @Override
+    public boolean isLadder(IBlockAccess world, int x, int y, int z, EntityLivingBase entity)
+    {
+        return true;
     }
 
     @SideOnly(Side.CLIENT)
