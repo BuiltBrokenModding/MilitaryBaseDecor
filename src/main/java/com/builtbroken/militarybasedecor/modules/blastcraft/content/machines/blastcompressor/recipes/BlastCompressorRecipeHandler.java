@@ -1,6 +1,6 @@
 package com.builtbroken.militarybasedecor.modules.blastcraft.content.machines.blastcompressor.recipes;
 
-import com.builtbroken.mc.prefab.recipe.item.MRHandlerItemStack;
+import com.builtbroken.mc.lib.recipe.item.MRHandlerItemStack;
 import com.builtbroken.militarybasedecor.client.MBDRecipeType;
 import net.minecraft.item.ItemStack;
 

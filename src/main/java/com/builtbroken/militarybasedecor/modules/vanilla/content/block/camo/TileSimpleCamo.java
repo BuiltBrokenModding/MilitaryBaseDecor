@@ -3,7 +3,7 @@ package com.builtbroken.militarybasedecor.modules.vanilla.content.block.camo;
 import com.builtbroken.mc.core.network.IPacketReceiver;
 import com.builtbroken.mc.core.network.packet.PacketTile;
 import com.builtbroken.mc.core.network.packet.PacketType;
-import com.builtbroken.mc.lib.transform.vector.Pos;
+import com.builtbroken.mc.imp.transform.vector.Pos;
 import com.builtbroken.mc.prefab.tile.Tile;
 import com.builtbroken.mc.prefab.tile.TileEnt;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;

@@ -1,6 +1,6 @@
 package com.builtbroken.militarybasedecor.modules.worldwar1;
 
-import com.builtbroken.mc.lib.mod.compat.nei.NEIProxy;
+import com.builtbroken.mc.mods.nei.NEIProxy;
 import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.ItemWorldWar1;
