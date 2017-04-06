@@ -20,7 +20,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 /**
  * Created by robert on 11/18/2014.
  */
-@Mod(modid = MilitaryBaseDecor.DOMAIN, name = "Military Base Decor", version = "@MAJOR@.@MINOR@.@REVIS@.@BUILD@", dependencies = "required-after:VoltzEngine")
+@Mod(modid = MilitaryBaseDecor.DOMAIN, name = "Military Base Decor", version = "@MAJOR@.@MINOR@.@REVIS@.@BUILD@", dependencies = "required-after:voltzengine")
 public final class MilitaryBaseDecor extends AbstractMod
 {
 

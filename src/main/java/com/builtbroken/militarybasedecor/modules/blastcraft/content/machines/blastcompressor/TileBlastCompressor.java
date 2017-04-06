@@ -2,7 +2,7 @@ package com.builtbroken.militarybasedecor.modules.blastcraft.content.machines.bl
 
 import com.builtbroken.jlib.type.Pair;
 import com.builtbroken.mc.api.recipe.IMachineRecipeHandler;
-import com.builtbroken.mc.api.tile.IGuiTile;
+import com.builtbroken.mc.api.tile.access.IGuiTile;
 import com.builtbroken.mc.core.registry.implement.IRecipeContainer;
 import com.builtbroken.mc.lib.helper.recipe.OreNames;
 import com.builtbroken.mc.lib.helper.recipe.UniversalRecipe;

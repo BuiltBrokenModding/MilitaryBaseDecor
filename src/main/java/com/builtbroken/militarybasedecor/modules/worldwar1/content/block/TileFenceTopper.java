@@ -1,7 +1,7 @@
 package com.builtbroken.militarybasedecor.modules.worldwar1.content.block;
 
 import com.builtbroken.mc.api.items.ISimpleItemRenderer;
-import com.builtbroken.mc.api.tile.IRotation;
+import com.builtbroken.mc.api.tile.access.IRotation;
 import com.builtbroken.mc.core.network.IPacketIDReceiver;
 import com.builtbroken.mc.core.registry.implement.IRecipeContainer;
 import com.builtbroken.mc.imp.transform.region.Cube;
