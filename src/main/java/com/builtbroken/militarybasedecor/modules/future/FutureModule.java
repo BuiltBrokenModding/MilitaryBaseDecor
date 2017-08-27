@@ -1,7 +1,7 @@
 package com.builtbroken.militarybasedecor.modules.future;
 
-import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
-import com.builtbroken.mc.lib.mod.loadable.ILoadable;
+import com.builtbroken.mc.framework.mod.loadable.AbstractLoadable;
+import com.builtbroken.mc.framework.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.future.block.ItemBlockFuture;
 import net.minecraft.block.Block;

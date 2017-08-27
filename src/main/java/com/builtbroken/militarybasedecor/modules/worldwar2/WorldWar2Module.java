@@ -1,6 +1,6 @@
 package com.builtbroken.militarybasedecor.modules.worldwar2;
 
-import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
+import com.builtbroken.mc.framework.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.worldwar2.content.block.*;
 import com.builtbroken.militarybasedecor.modules.worldwar2.content.item.ItemWorldWar2;

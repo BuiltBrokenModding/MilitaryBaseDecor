@@ -1,6 +1,6 @@
 package com.builtbroken.militarybasedecor.modules.blastcraft;
 
-import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
+import com.builtbroken.mc.framework.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.client.MBDRecipeType;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.blastcraft.content.block.*;

@@ -109,7 +109,7 @@ public class TileSimpleCamo extends TileEnt implements IPacketReceiver
         Block block = getMimicBlock();
         if (block != null)
         {
-            return block.colorMultiplier(world(), xi(), yi(), zi());
+            return block.colorMultiplier(oldWorld(), xi(), yi(), zi());
         }
         return super.getColorMultiplier();
     }
@@ -170,7 +170,7 @@ public class TileSimpleCamo extends TileEnt implements IPacketReceiver
     public void read(ByteBuf buf, EntityPlayer player, PacketType packet)
     {
         readFromNBT(ByteBufUtils.readTag(buf));
-        world().markBlockRangeForRenderUpdate(xi(), yi(), zi(), xi(), yi(), zi());
+        oldWorld().markBlockRangeForRenderUpdate(xi(), yi(), zi(), xi(), yi(), zi());
     }
 
     @Override

@@ -1,13 +1,12 @@
 package com.builtbroken.militarybasedecor.modules.worldwar1;
 
-import com.builtbroken.mc.mods.nei.NEIProxy;
-import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
+import com.builtbroken.mc.framework.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.ItemWorldWar1;
-import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.tool.ItemWireCutters;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.DamageSourceConcreteSolidify;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.block.*;
 import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.ItemWire;
+import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.ItemWorldWar1;
+import com.builtbroken.militarybasedecor.modules.worldwar1.content.item.tool.ItemWireCutters;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockColored;
 import net.minecraft.block.material.Material;
@@ -39,10 +38,10 @@ public class WorldWar1Module extends AbstractLoadable
     {
         basicConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock("basic_concrete", new BlockColored(Material.rock).setBlockName("concrete_basic").setHardness(15).setResistance(20).setCreativeTab(MilitaryBaseDecor.MAIN_TAB).setBlockTextureName(MilitaryBaseDecor.PREFIX + "concrete/concrete_basic/concrete_basic"), ItemBlockWorldWar1.class);
         camouflageBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("camouflage_block", new BlockCamouflageBlock().setBlockName("camouflage_block"), ItemBlockWorldWar1.class);
-        basicMixer = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicMixer.class, ItemBlockWorldWar1.class);
-        blockWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockWireFence.class, ItemBlockWireFence.class);
+        basicMixer = MilitaryBaseDecor.INSTANCE.getManager().newBlock("basicMixer", BlockBasicMixer.class, ItemBlockWorldWar1.class);
+        blockWireFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock("wireFence", BlockWireFence.class, ItemBlockWireFence.class);
         blockFenceTopper = MilitaryBaseDecor.INSTANCE.getManager().newBlock("fence_topper", new TileFenceTopper());
-        sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockBasicSandBag.class, ItemBlockWorldWar1.class);
+        sandBag = MilitaryBaseDecor.INSTANCE.getManager().newBlock("basicSandBag", BlockBasicSandBag.class, ItemBlockWorldWar1.class);
 
         bag = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag", new ItemWorldWar1()).setUnlocalizedName("bag").setTextureName(MilitaryBaseDecor.PREFIX + "bag");
         bagCement = MilitaryBaseDecor.INSTANCE.getManager().newItem("bag_cement", new ItemWorldWar1()).setUnlocalizedName("bag_cement").setTextureName(MilitaryBaseDecor.PREFIX + "bag_cement").setContainerItem(bag).setMaxStackSize(1);
@@ -58,7 +57,7 @@ public class WorldWar1Module extends AbstractLoadable
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(blockWireFence);
 
         // Hide the basic mixer block from NEI, to avoid confusion!
-        NEIProxy.hideItem(basicMixer);
+        //NEIProxy.hideItem(basicMixer); move to JSON
     }
 
     @Override

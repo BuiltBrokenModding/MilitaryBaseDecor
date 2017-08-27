@@ -1,6 +1,6 @@
 package com.builtbroken.militarybasedecor.modules.vanilla;
 
-import com.builtbroken.mc.lib.mod.loadable.AbstractLoadable;
+import com.builtbroken.mc.framework.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.BlockGlassConcrete;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.BlockPerviousConcrete;

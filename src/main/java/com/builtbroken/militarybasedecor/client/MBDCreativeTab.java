@@ -1,6 +1,6 @@
 package com.builtbroken.militarybasedecor.client;
 
-import com.builtbroken.mc.lib.mod.ModCreativeTab;
+import com.builtbroken.mc.framework.mod.ModCreativeTab;
 import com.builtbroken.militarybasedecor.core.ConfigManager;
 import com.builtbroken.militarybasedecor.modules.blastcraft.Blastcraft;
 import com.builtbroken.militarybasedecor.modules.coldwar.ColdWarModule;
