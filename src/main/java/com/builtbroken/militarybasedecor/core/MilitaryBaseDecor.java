@@ -50,7 +50,6 @@ public final class MilitaryBaseDecor extends AbstractMod
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        Engine.requestOres();
         Engine.requestResources();
         Engine.requestCircuits();
         Engine.requestCraftingParts();
