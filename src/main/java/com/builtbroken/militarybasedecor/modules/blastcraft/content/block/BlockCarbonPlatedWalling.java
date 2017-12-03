@@ -29,7 +29,6 @@ public class BlockCarbonPlatedWalling extends Block implements IRecipeContainer{
         this.setBlockTextureName(MilitaryBaseDecor.PREFIX + "blastcraft/carbon_plated_walling");
         this.setHardness(85);
         this.setResistance(6000000.0F);
-
     }
 
     @Override

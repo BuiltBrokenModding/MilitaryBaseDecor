@@ -14,17 +14,18 @@ import com.builtbroken.militarybasedecor.client.MBDRecipeType;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.blastcraft.Blastcraft;
 import com.builtbroken.militarybasedecor.modules.blastcraft.content.block.ItemBlockBlastcraft;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.IIcon;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -120,7 +121,7 @@ public class TileBlastCompressor extends TileModuleMachine implements IRecipeCon
             //Consume fuel when needed
             if (hasRecipe && burnTime <= 0)
             {
-                this.burnTimeItem = this.burnTime = TileEntityFurnace.getItemBurnTime(getStackInSlot(4));
+                this.burnTimeItem = this.burnTime = getItemBurnTime(getStackInSlot(4));
                 isModified = true;
                 if (burnTime > 0)
                 {
@@ -251,9 +252,37 @@ public class TileBlastCompressor extends TileModuleMachine implements IRecipeCon
         }
         else if (slot == 4)
         {
-            return TileEntityFurnace.isItemFuel(stack);
+            return isItemFuel(stack);
         }
         return false;
+    }
+
+    /**
+     * Returns the number of ticks that the supplied fuel item will keep the furnace burning, or 0 if the item isn't
+     * fuel
+     */
+    public static int getItemBurnTime(ItemStack itemStack)
+    {
+        if (itemStack == null)
+        {
+            return 0;
+        }
+        else
+        {
+            Item item = itemStack.getItem();
+
+            if (item == Items.lava_bucket) return 2000;
+            return GameRegistry.getFuelValue(itemStack);
+        }
+    }
+
+    public static boolean isItemFuel(ItemStack itemStack)
+    {
+        /**
+         * Returns the number of ticks that the supplied fuel item will keep the furnace burning, or 0 if the item isn't
+         * fuel
+         */
+        return getItemBurnTime(itemStack) > 0;
     }
 
     @Override
