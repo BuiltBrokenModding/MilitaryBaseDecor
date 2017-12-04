@@ -44,7 +44,7 @@ public class VanillaModule extends AbstractLoadable
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("simple_camo", new TileSimpleCamo("simple_camo", Material.rock));
 
         perviousConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockPerviousConcrete.class, ItemBlockVanilla.class);
-        glassConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockGlassConcrete.class, ItemBlockVanilla.class);
+        // glassConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockGlassConcrete.class, ItemBlockVanilla.class);
 
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(reinforcedSoil);
     }

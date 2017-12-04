@@ -153,7 +153,7 @@ tile.ultra_high_performance_concrete.15.name=Black Ultra High Performance Concre
 
 # Various Concrete
 tile.pervious_concrete.0.name=Pervious Concrete
-tile.glass_concrete.0.name=Glass Concrete
+tile.militarybasedecor:glass_concrete.name=Glass Concrete
 tile.limecrete.0.name=Limecrete
 
 # Misc Items
