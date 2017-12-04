@@ -8,8 +8,7 @@
         "hardness": 2,
         "resistance": 5,
         "mod": "militarybasedecor",
-        "material": "rock",
-        "stepSound": "glass"
+        "material": "rock"
     },
     "render": {
         "contentID": "militarybasedecor:glass_concrete",

@@ -1,0 +1,29 @@
+{
+  "author": {
+    "name": "militarybasedecor"
+  },
+  "block": {
+    "name": "limecrete",
+    "id": "limecrete",
+    "hardness": 2.8,
+    "resistance": 18,
+    "mod": "militarybasedecor",
+    "material": "rock"
+  },
+  "render": {
+    "contentID": "militarybasedecor:limecrete",
+    "type": "block",
+    "states": [
+      {
+        "id": "block",
+        "textureID": "militarybasedecor:limecrete"
+      }
+    ]
+  },
+  "texture": {
+    "key": "militarybasedecor:limecrete",
+    "domain": "militarybasedecor",
+    "name": "limecrete",
+    "type": "block"
+  }
+}

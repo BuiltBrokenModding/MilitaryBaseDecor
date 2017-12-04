@@ -1,0 +1,29 @@
+{
+  "author": {
+    "name": "militarybasedecor"
+  },
+  "block": {
+    "name": "pervious_concrete",
+    "id": "pervious_concrete",
+    "hardness": 2,
+    "resistance": 5,
+    "mod": "militarybasedecor",
+    "material": "rock"
+  },
+  "render": {
+    "contentID": "militarybasedecor:pervious_concrete",
+    "type": "block",
+    "states": [
+      {
+        "id": "block",
+        "textureID": "militarybasedecor:concrete_pervious"
+      }
+    ]
+  },
+  "texture": {
+    "key": "militarybasedecor:concrete_pervious",
+    "domain": "militarybasedecor",
+    "name": "concrete/concrete_pervious",
+    "type": "block"
+  }
+}

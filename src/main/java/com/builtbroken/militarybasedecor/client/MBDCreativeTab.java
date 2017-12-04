@@ -37,12 +37,12 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, VanillaModule.reinforcedGlass);
             add(list, VanillaModule.reinforcedButton);
             add(list, VanillaModule.simpleCamoBlock);
-            add(list, VanillaModule.perviousConcrete);
-            add(list, VanillaModule.glassConcrete);
+            add(list, "militarybasedecor:pervious_concrete");
+            add(list, "militarybasedecor:glass_concrete");
         }
         // Gunpowder Era Module Blocks
         if (ConfigManager.GUNPOWDER_ERA_ENABLED) {
-            add(list, GunpowderModule.limecrete);
+            add(list, "militarybasedecor:limecrete");
             add(list, GunpowderModule.picketFence);
             add(list, GunpowderModule.rope);
             add(list, GunpowderModule.tangledRope);
