@@ -16,7 +16,7 @@ public final class Assets
     public static final WavefrontObject DRAGONS_TEETH = (WavefrontObject) model("dragons_teeth.obj");
 
     //Textures
-    public static final ResourceLocation PANE_BARBS_TEXTURE = texture("Pane_Barbs");
+    public static final ResourceLocation PANE_BARBS_TEXTURE = texture("pane_barbs");
     public static final ResourceLocation DRAGONS_TEETH_TEXTURE = texture("dragons_teeth");
 
     public static IModelCustom model(String name)
