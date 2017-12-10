@@ -2,8 +2,6 @@ package com.builtbroken.militarybasedecor.modules.vanilla;
 
 import com.builtbroken.mc.framework.mod.loadable.AbstractLoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.modules.vanilla.content.block.BlockGlassConcrete;
-import com.builtbroken.militarybasedecor.modules.vanilla.content.block.BlockPerviousConcrete;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.camo.TileSimpleCamo;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.reinforced.BlockReinforcedButton;
 import com.builtbroken.militarybasedecor.modules.vanilla.content.block.ItemBlockVanilla;
@@ -36,15 +34,11 @@ public class VanillaModule extends AbstractLoadable
         reinforcedSoil = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedSoil.class, ItemBlockVanilla.class);
         reinforcedStone = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedStone.class, ItemBlockVanilla.class);
         reinforcedMetal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetal.class, ItemBlockVanilla.class);
-        reinforcedGlassNormal = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlassNormal.class, ItemBlockReinforcedGlassNormal.class);
-        reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class, ItemBlockReinforcedGlass.class);
+        reinforcedGlass = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedGlass.class, ItemBlockVanilla.class);
         reinforcedWoodenCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedWoodenCasing.class, ItemBlockVanilla.class);
         reinforcedMetalCasing = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedMetalCasing.class, ItemBlockVanilla.class);
         reinforcedButton = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockReinforcedButton.class, ItemBlockVanilla.class);
         simpleCamoBlock = MilitaryBaseDecor.INSTANCE.getManager().newBlock("simple_camo", new TileSimpleCamo("simple_camo", Material.rock));
-
-        perviousConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockPerviousConcrete.class, ItemBlockVanilla.class);
-        // glassConcrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockGlassConcrete.class, ItemBlockVanilla.class);
 
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(reinforcedSoil);
     }

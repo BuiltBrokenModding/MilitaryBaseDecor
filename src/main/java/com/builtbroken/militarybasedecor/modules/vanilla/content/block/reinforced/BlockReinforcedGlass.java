@@ -8,6 +8,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.IIcon;
@@ -131,6 +133,6 @@ public class BlockReinforcedGlass extends Block implements IRecipeContainer
     @Override
     public void genRecipes(List<IRecipe> recipes)
     {
-        recipes.add(newShapelessRecipe(new ItemStack(this, 1, 0), VanillaModule.reinforcedGlassNormal));
+        recipes.add(newShapedRecipe(new ItemStack(VanillaModule.reinforcedGlass, 8, 0), "IGI", "GIG", "IGI", 'G', Blocks.glass, 'I', Items.iron_ingot));
     }
 }

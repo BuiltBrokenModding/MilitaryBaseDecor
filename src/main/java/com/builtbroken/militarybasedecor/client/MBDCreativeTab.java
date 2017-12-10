@@ -33,7 +33,7 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, VanillaModule.reinforcedMetalCasing);
             add(list, VanillaModule.reinforcedStone);
             add(list, VanillaModule.reinforcedMetal);
-            add(list, VanillaModule.reinforcedGlassNormal);
+            add(list, "militarybasedecor:reinforced_glass_normal");
             add(list, VanillaModule.reinforcedGlass);
             add(list, VanillaModule.reinforcedButton);
             add(list, VanillaModule.simpleCamoBlock);
