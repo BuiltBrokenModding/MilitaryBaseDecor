@@ -1,0 +1,38 @@
+{
+  "author": {
+    "name": "militarybasedecor"
+  },
+  "block": {
+    "name": "reinforced_cobblestone",
+    "id": "reinforced_cobblestone",
+    "hardness": 2.5,
+    "resistance": 140,
+    "mod": "militarybasedecor",
+    "material": "rock"
+  },
+  "render": {
+    "contentID": "militarybasedecor:reinforced_cobblestone",
+    "type": "block",
+    "states": [
+      {
+        "id": "block",
+        "textureID": "militarybasedecor:reinforced_cobblestone"
+      }
+    ]
+  },
+  "texture": {
+    "key": "militarybasedecor:reinforced_cobblestone",
+    "domain": "militarybasedecor",
+    "name": "reinforced_cobblestone",
+    "type": "block"
+  },
+  "craftingGridRecipe": {
+    "type": "shaped",
+    "output": "block@militarybasedecor:reinforced_cobblestone",
+    "grid": "   ,   , SC",
+    "items": {
+      "S": "block@minecraft:cobblestone",
+      "C": "block@militarybasedecor:metal_casing"
+    }
+  }
+}

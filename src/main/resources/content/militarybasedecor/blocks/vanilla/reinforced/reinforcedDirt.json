@@ -1,0 +1,38 @@
+{
+  "author": {
+    "name": "militarybasedecor"
+  },
+  "block": {
+    "name": "reinforced_dirt",
+    "id": "reinforced_dirt",
+    "hardness": 2.5,
+    "resistance": 70,
+    "mod": "militarybasedecor",
+    "material": "ground"
+  },
+  "render": {
+    "contentID": "militarybasedecor:reinforced_dirt",
+    "type": "block",
+    "states": [
+      {
+        "id": "block",
+        "textureID": "militarybasedecor:reinforced_dirt"
+      }
+    ]
+  },
+  "texture": {
+    "key": "militarybasedecor:reinforced_dirt",
+    "domain": "militarybasedecor",
+    "name": "reinforced_dirt",
+    "type": "block"
+  },
+  "craftingGridRecipe": {
+    "type": "shaped",
+    "output": "block@militarybasedecor:reinforced_dirt",
+    "grid": "   ,   , DC",
+    "items": {
+      "D": "block@minecraft:dirt",
+      "C": "block@militarybasedecor:wood_casing"
+    }
+  }
+}

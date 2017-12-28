@@ -28,11 +28,15 @@ public class MBDCreativeTab extends ModCreativeTab {
     {
         // Vanilla Module Blocks
         if (ConfigManager.VANILLA_ENABLED) {
-            add(list, VanillaModule.reinforcedWoodenCasing);
-            add(list, VanillaModule.reinforcedSoil);
-            add(list, VanillaModule.reinforcedMetalCasing);
-            add(list, VanillaModule.reinforcedStone);
-            add(list, VanillaModule.reinforcedMetal);
+            add(list, "militarybasedecor:wood_casing");
+            add(list, "militarybasedecor:reinforced_dirt");
+            add(list, "militarybasedecor:reinforced_sand");
+            add(list, "militarybasedecor:metal_casing");
+            add(list, "militarybasedecor:reinforced_cobblestone");
+            add(list, "militarybasedecor:reinforced_stone");
+            add(list, "militarybasedecor:reinforced_stonebrick");
+            add(list, "militarybasedecor:reinforced_iron");
+            add(list, "militarybasedecor:reinforced_gold");
             add(list, "militarybasedecor:reinforced_glass_normal");
             add(list, VanillaModule.reinforcedGlass);
             add(list, VanillaModule.reinforcedButton);

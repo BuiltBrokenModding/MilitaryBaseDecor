@@ -1,0 +1,38 @@
+{
+  "author": {
+    "name": "militarybasedecor"
+  },
+  "block": {
+    "name": "reinforced_sand",
+    "id": "reinforced_sand",
+    "hardness": 2.5,
+    "resistance": 70,
+    "mod": "militarybasedecor",
+    "material": "ground"
+  },
+  "render": {
+    "contentID": "militarybasedecor:reinforced_sand",
+    "type": "block",
+    "states": [
+      {
+        "id": "block",
+        "textureID": "militarybasedecor:reinforced_sand"
+      }
+    ]
+  },
+  "texture": {
+    "key": "militarybasedecor:reinforced_sand",
+    "domain": "militarybasedecor",
+    "name": "reinforced_sand",
+    "type": "block"
+  },
+  "craftingGridRecipe": {
+    "type": "shaped",
+    "output": "block@militarybasedecor:reinforced_sand",
+    "grid": "   ,   , SC",
+    "items": {
+      "S": "block@minecraft:sand",
+      "C": "block@militarybasedecor:wood_casing"
+    }
+  }
+}

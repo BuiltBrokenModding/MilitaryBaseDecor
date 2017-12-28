@@ -1,0 +1,42 @@
+{
+  "author": {
+    "name": "militarybasedecor"
+  },
+  "block": {
+    "name": "metal_casing",
+    "id": "metal_casing",
+    "hardness": 2.5,
+    "resistance": 35,
+    "mod": "militarybasedecor",
+    "material": "metal",
+    "isOpaque": false
+  },
+  "missingMappingEvent": {
+    "oldValue": "militarybasedecor:BlockReinforcedMetalCasing",
+    "newValue": "militarybasedecor:metal_casing"
+  },
+  "render": {
+    "contentID": "militarybasedecor:metal_casing",
+    "type": "block",
+    "states": [
+      {
+        "id": "block",
+        "textureID": "militarybasedecor:metal_casing"
+      }
+    ]
+  },
+  "texture": {
+    "key": "militarybasedecor:metal_casing",
+    "domain": "militarybasedecor",
+    "name": "metal_casing",
+    "type": "block"
+  },
+  "craftingGridRecipe": {
+    "type": "shaped",
+    "output": "block@militarybasedecor:metal_casing",
+    "grid": "III,I I,III",
+    "items": {
+      "I": "item@minecraft:iron_ingot"
+    }
+  }
+}

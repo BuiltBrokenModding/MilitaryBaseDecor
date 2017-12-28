@@ -1,0 +1,42 @@
+{
+  "author": {
+    "name": "militarybasedecor"
+  },
+  "block": {
+    "name": "wood_casing",
+    "id": "wood_casing",
+    "hardness": 2.5,
+    "resistance": 35,
+    "mod": "militarybasedecor",
+    "material": "wood",
+    "isOpaque": false
+  },
+  "missingMappingEvent": {
+    "oldValue": "militarybasedecor:BlockReinforcedWoodenCasing",
+    "newValue": "militarybasedecor:wood_casing"
+  },
+  "render": {
+    "contentID": "militarybasedecor:wood_casing",
+    "type": "block",
+    "states": [
+      {
+        "id": "block",
+        "textureID": "militarybasedecor:wood_casing"
+      }
+    ]
+  },
+  "texture": {
+    "key": "militarybasedecor:wood_casing",
+    "domain": "militarybasedecor",
+    "name": "wood_casing",
+    "type": "block"
+  },
+  "craftingGridRecipe": {
+    "type": "shaped",
+    "output": "block@militarybasedecor:wood_casing",
+    "grid": "SSS,S S,SSS",
+    "items": {
+      "S": "item@minecraft:stick"
+    }
+  }
+}

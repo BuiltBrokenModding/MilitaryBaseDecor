@@ -1,0 +1,38 @@
+{
+  "author": {
+    "name": "militarybasedecor"
+  },
+  "block": {
+    "name": "reinforced_stonebrick",
+    "id": "reinforced_stonebrick",
+    "hardness": 2.5,
+    "resistance": 140,
+    "mod": "militarybasedecor",
+    "material": "rock"
+  },
+  "render": {
+    "contentID": "militarybasedecor:reinforced_stonebrick",
+    "type": "block",
+    "states": [
+      {
+        "id": "block",
+        "textureID": "militarybasedecor:reinforced_stonebrick"
+      }
+    ]
+  },
+  "texture": {
+    "key": "militarybasedecor:reinforced_stonebrick",
+    "domain": "militarybasedecor",
+    "name": "reinforced_stonebrick",
+    "type": "block"
+  },
+  "craftingGridRecipe": {
+    "type": "shaped",
+    "output": "block@militarybasedecor:reinforced_stonebrick",
+    "grid": "   ,   , SC",
+    "items": {
+      "S": "block@minecraft:stonebrick",
+      "C": "block@militarybasedecor:metal_casing"
+    }
+  }
+}

@@ -19,14 +19,12 @@ public class GunpowderModule extends AbstractLoadable implements ILoadable
     public static Block picketFence;
     public static Block ropeFence;
     public static Block tangledRope;
-    public static Block limecrete;
 
     public static Item rope;
 
     @Override
     public void preInit()
     {
-        limecrete = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockLimecrete.class, ItemBlockGunpowderEra.class);
         ropeFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRopeFence.class, ItemBlockGunpowderEra.class);
         tangledRope = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockTangledRope.class, ItemBlockGunpowderEra.class);
         picketFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockPicketFence.class, ItemBlockGunpowderEra.class);

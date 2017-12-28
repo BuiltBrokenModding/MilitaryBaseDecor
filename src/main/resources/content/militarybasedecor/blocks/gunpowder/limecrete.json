@@ -10,6 +10,10 @@
     "mod": "militarybasedecor",
     "material": "rock"
   },
+  "missingMappingEvent": {
+    "oldValue": "militarybasedecor:BlockLimecrete",
+    "newValue": "militarybasedecor:limecrete"
+  },
   "render": {
     "contentID": "militarybasedecor:limecrete",
     "type": "block",
