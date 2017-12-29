@@ -24,18 +24,6 @@ public class BlockTangledRope extends Block
     }
 
     @Override
-    public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
-    {
-        return GunpowderModule.rope;
-    }
-
-    @Override
-    public int quantityDropped(Random random)
-    {
-        return random.nextInt(4) + 1;
-    }
-
-    @Override
     public void onEntityCollidedWithBlock(World world, int i, int j, int k, Entity entity)
     {
         entity.setInWeb();
@@ -65,9 +53,4 @@ public class BlockTangledRope extends Block
         return false;
     }
 
-    @Override
-    protected boolean canSilkHarvest()
-    {
-        return true;
-    }
 }

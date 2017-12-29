@@ -55,9 +55,6 @@ public class WorldWar1Module extends AbstractLoadable
         concreteSolidify = new DamageSourceConcreteSolidify();
 
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(blockWireFence);
-
-        // Hide the basic mixer block from NEI, to avoid confusion!
-        //NEIProxy.hideItem(basicMixer); move to JSON
     }
 
     @Override

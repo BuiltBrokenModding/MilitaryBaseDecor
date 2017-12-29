@@ -11,24 +11,8 @@ import net.minecraft.item.ItemStack;
 public class GunpowderRecipes
 {
 
-    public static void initItemRecipes()
-    {
-
-        // Rope
-        GameRegistry.addShapedRecipe(new ItemStack(GunpowderModule.rope, 6, 0), "SS ", "S S", "SS ", 'S', Items.string);
-        //
-
-    }
-
     public static void initBlockRecipes()
     {
-
-        // Tangled Rope
-        GameRegistry.addShapelessRecipe(new ItemStack(GunpowderModule.tangledRope, 2, 0), new ItemStack(GunpowderModule.rope, 4, 0));
-        // Rope Fence
-        GameRegistry.addShapedRecipe(new ItemStack(GunpowderModule.ropeFence, 6, 0), "   ", "SRS", "SRS", 'S', Items.stick, 'R', GunpowderModule.rope);
-        // Picket Fence
         GameRegistry.addShapedRecipe(new ItemStack(GunpowderModule.picketFence, 6, 0), "S S", "WWW", "S S", 'S', Items.stick, 'W', Blocks.planks);
     }
-
 }

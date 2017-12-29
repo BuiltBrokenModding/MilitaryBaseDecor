@@ -4,9 +4,7 @@ import com.builtbroken.mc.framework.mod.loadable.AbstractLoadable;
 import com.builtbroken.mc.framework.mod.loadable.ILoadable;
 import com.builtbroken.militarybasedecor.core.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.modules.gunpowder.content.block.*;
-import com.builtbroken.militarybasedecor.modules.gunpowder.content.item.GunpowderItems;
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 /**
@@ -20,16 +18,12 @@ public class GunpowderModule extends AbstractLoadable implements ILoadable
     public static Block ropeFence;
     public static Block tangledRope;
 
-    public static Item rope;
-
     @Override
     public void preInit()
     {
         ropeFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockRopeFence.class, ItemBlockGunpowderEra.class);
         tangledRope = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockTangledRope.class, ItemBlockGunpowderEra.class);
         picketFence = MilitaryBaseDecor.INSTANCE.getManager().newBlock(BlockPicketFence.class, ItemBlockGunpowderEra.class);
-
-        rope = MilitaryBaseDecor.INSTANCE.getManager().newItem("rope", new GunpowderItems()).setUnlocalizedName("rope").setTextureName(MilitaryBaseDecor.PREFIX + "rope");
 
         MilitaryBaseDecor.MAIN_TAB.itemStack = new ItemStack(ropeFence);
     }
@@ -42,7 +36,6 @@ public class GunpowderModule extends AbstractLoadable implements ILoadable
     @Override
     public void postInit()
     {
-        GunpowderRecipes.initItemRecipes();
         GunpowderRecipes.initBlockRecipes();
     }
 }

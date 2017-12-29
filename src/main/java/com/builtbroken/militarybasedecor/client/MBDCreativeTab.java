@@ -48,7 +48,6 @@ public class MBDCreativeTab extends ModCreativeTab {
         if (ConfigManager.GUNPOWDER_ERA_ENABLED) {
             add(list, "militarybasedecor:limecrete");
             add(list, GunpowderModule.picketFence);
-            add(list, GunpowderModule.rope);
             add(list, GunpowderModule.tangledRope);
             add(list, GunpowderModule.ropeFence);
         }
