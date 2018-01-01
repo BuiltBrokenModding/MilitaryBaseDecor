@@ -6,7 +6,6 @@ import com.builtbroken.mc.framework.mod.ModCreativeTab;
 import com.builtbroken.militarybasedecor.client.MBDCreativeTab;
 import com.builtbroken.militarybasedecor.modules.blastcraft.Blastcraft;
 import com.builtbroken.militarybasedecor.modules.coldwar.ColdWarModule;
-import com.builtbroken.militarybasedecor.modules.future.FutureModule;
 import com.builtbroken.militarybasedecor.modules.gunpowder.GunpowderModule;
 import com.builtbroken.militarybasedecor.modules.vanilla.VanillaModule;
 import com.builtbroken.militarybasedecor.modules.worldwar1.WorldWar1Module;
@@ -62,7 +61,6 @@ public final class MilitaryBaseDecor extends AbstractMod
         loader.applyModule(WorldWar1Module.class, ConfigManager.WORLD_WAR_ONE_ENABLED);
         loader.applyModule(WorldWar2Module.class, ConfigManager.WORLD_WAR_TWO_ENABLED);
         loader.applyModule(ColdWarModule.class, ConfigManager.COLD_WAR_ENABLED);
-        loader.applyModule(FutureModule.class, ConfigManager.FUTURE_ENABLED);
         loader.applyModule(Blastcraft.class, ConfigManager.BLASTCRAFT_ENABLED);
     }
 
