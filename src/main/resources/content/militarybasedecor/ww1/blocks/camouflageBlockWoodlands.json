@@ -1,0 +1,29 @@
+{
+  "author": {
+    "name": "militarybasedecor"
+  },
+  "block": {
+    "name": "camouflage_block_woodlands",
+    "id": "camouflage_block_woodlands",
+    "hardness": 0.5,
+    "resistance": 1,
+    "mod": "militarybasedecor",
+    "material": "cloth"
+  },
+    "render": {
+      "contentID": "militarybasedecor:camouflage_block_woodlands",
+      "type": "block",
+      "states": [
+        {
+          "id": "block",
+          "textureID": "militarybasedecor:camouflage_block_woodlands"
+        }
+      ]
+    },
+    "texture": {
+      "key": "militarybasedecor:camouflage_block_woodlands",
+      "domain": "militarybasedecor",
+      "name": "camouflage_block_woodlands",
+      "type": "block"
+    }
+}

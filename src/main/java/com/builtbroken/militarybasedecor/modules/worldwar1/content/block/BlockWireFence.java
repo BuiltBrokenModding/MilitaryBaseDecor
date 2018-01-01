@@ -185,13 +185,13 @@ public class BlockWireFence extends BlockPane implements IRecipeContainer
     {
         if (OreDictionary.doesOreNameExist(OreNames.ROD_IRON))
         {
-            recipes.add(newShapedRecipe(new ItemStack(WorldWar1Module.blockWireFence, 8, 0), "RWR", "WWW", "RWR", 'W', WorldWar1Module.itemWire, 'R', OreNames.ROD_IRON));
+            recipes.add(newShapedRecipe(new ItemStack(WorldWar1Module.blockWireFence, 8, 0), "RWR", "WWW", "RWR", 'W', "militarybasedecor:bundled_wire", 'R', OreNames.ROD_IRON));
         }
         else
         {
-            recipes.add(newShapedRecipe(new ItemStack(WorldWar1Module.blockWireFence, 8, 0), "RWR", "WWW", "RWR", 'W', WorldWar1Module.itemWire, 'R', Items.stick));
+            recipes.add(newShapedRecipe(new ItemStack(WorldWar1Module.blockWireFence, 8, 0), "RWR", "WWW", "RWR", 'W', "militarybasedecor:bundled_wire", 'R', Items.stick));
         }
-        recipes.add(newShapedRecipe(new ItemStack(WorldWar1Module.blockWireFence, 8, 1), "R R", " R ", "R R", 'R', WorldWar1Module.itemWire));
+        recipes.add(newShapedRecipe(new ItemStack(WorldWar1Module.blockWireFence, 8, 1), "R R", " R ", "R R", 'R', "militarybasedecor:bundled_wire"));
     }
 
     @Override

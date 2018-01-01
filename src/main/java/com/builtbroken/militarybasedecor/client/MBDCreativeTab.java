@@ -4,7 +4,6 @@ import com.builtbroken.mc.framework.mod.ModCreativeTab;
 import com.builtbroken.militarybasedecor.core.ConfigManager;
 import com.builtbroken.militarybasedecor.modules.blastcraft.Blastcraft;
 import com.builtbroken.militarybasedecor.modules.coldwar.ColdWarModule;
-import com.builtbroken.militarybasedecor.modules.future.FutureModule;
 import com.builtbroken.militarybasedecor.modules.gunpowder.GunpowderModule;
 import com.builtbroken.militarybasedecor.modules.vanilla.VanillaModule;
 import com.builtbroken.militarybasedecor.modules.worldwar1.WorldWar1Module;
@@ -55,14 +54,17 @@ public class MBDCreativeTab extends ModCreativeTab {
         if (ConfigManager.WORLD_WAR_ONE_ENABLED) {
             add(list, WorldWar1Module.bag);
             add(list, WorldWar1Module.bagCement);
+            add(list, "militarybasedecor:bundled_wire");
             add(list, WorldWar1Module.liquidConcreteBucket);
             add(list, WorldWar1Module.basicMixerItem);
             add(list, WorldWar1Module.basicConcrete);
             add(list, WorldWar1Module.blockWireFence);
             add(list, WorldWar1Module.blockFenceTopper);
             add(list, WorldWar1Module.itemWireCutters);
-            add(list, WorldWar1Module.sandBag);
-            add(list, WorldWar1Module.camouflageBlock);
+            add(list, "militarybasedecor:sand_bag");
+            add(list, "militarybasedecor:camouflage_block_woodlands");
+            add(list, "militarybasedecor:camouflage_block_desert");
+            add(list, "militarybasedecor:camouflage_block_urban");
         }
         // WW2 Module Blocks
         if (ConfigManager.WORLD_WAR_TWO_ENABLED) {
@@ -87,10 +89,6 @@ public class MBDCreativeTab extends ModCreativeTab {
             add(list, ColdWarModule.reinforcedDoorItem);
             add(list, ColdWarModule.highStrengthConcrete);
             add(list, ColdWarModule.reinforcedRail);
-        }
-        // Future Module Blocks
-        if (ConfigManager.FUTURE_ENABLED) {
-            add(list, FutureModule.ultraHighPerformanceConcrete);
         }
         // Blastcraft Blocks
         if (ConfigManager.BLASTCRAFT_ENABLED) {

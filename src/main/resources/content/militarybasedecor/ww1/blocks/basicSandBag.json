@@ -1,0 +1,51 @@
+{
+  "author": {
+    "name": "militarybasedecor"
+  },
+  "block": {
+    "name": "sand_bag",
+    "id": "sand_bag",
+    "hardness": 0.5,
+    "resistance": 1,
+    "mod": "militarybasedecor",
+    "material": "cloth"
+  },
+  "missingMappingEvent": {
+    "oldValue": "militarybasedecor:basicSandBag",
+    "newValue": "militarybasedecor:sand_bag"
+  },
+  "render": {
+    "contentID": "militarybasedecor:sand_bag",
+    "type": "block",
+    "states": [
+      {
+        "id": "block",
+        "textureID": "militarybasedecor:sand_bag"
+      }
+    ]
+  },
+  "texture": {
+    "key": "militarybasedecor:sand_bag",
+    "domain": "militarybasedecor",
+    "name": "sand_bag",
+    "type": "block"
+  },
+  "craftingGridRecipe": {
+    "type": "shaped",
+    "output": "block@militarybasedecor:sand_bag",
+    "grid": "WWW,WSW,WWW",
+    "items": {
+      "W": "block@minecraft:wool",
+      "S": "block@minecraft:sand"
+    }
+  },
+    "craftingGridRecipe": {
+      "type": "shaped",
+      "output": "block@militarybasedecor:sand_bag",
+      "grid": "LLL,LSL,LLL",
+      "items": {
+        "L": "item@minecraft:leather",
+        "S": "block@minecraft:sand"
+      }
+    }
+}

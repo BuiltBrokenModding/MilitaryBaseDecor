@@ -21,11 +21,4 @@ public class WW1Recipes {
         // Bucket of Liquid Concrete
         GameRegistry.addShapelessRecipe(new ItemStack(WorldWar1Module.liquidConcreteBucket, 1, 0), WorldWar1Module.bagCement, Items.water_bucket);
     }
-
-    public static void initBlockRecipes()
-    {
-        // Basic Sandbag
-        GameRegistry.addShapedRecipe(new ItemStack(WorldWar1Module.sandBag, 8, 0), "WWW", "WSW", "WWW", 'W', Blocks.wool, 'S', Blocks.sand);
-        GameRegistry.addShapedRecipe(new ItemStack(WorldWar1Module.sandBag, 8, 0), "LLL", "LSL", "LLL", 'L', Items.leather, 'S', Blocks.sand);
-    }
 }
