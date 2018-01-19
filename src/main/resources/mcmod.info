@@ -1,0 +1,16 @@
+[
+{
+  "modid": "militarybasedecor",
+  "name": "Military Base Decor",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Builtbroken"],
+  "credits": "Hennamann, Darkcow, Dmodoomsirius, Diamonddragoon",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
