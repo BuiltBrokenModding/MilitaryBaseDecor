@@ -1,2 +1,17 @@
 # Master Language File
+itemGroup.militarybasedecor=Military Base Decor
+
+tile.wooden_casing.name=Wooden Casing
+tile.metal_casing.name=Metal Casing
 tile.reinforced_dirt.name=Reinforced Dirt
+tile.reinforced_sand.name=Reinforced Sand
+tile.reinforced_stone.name=Reinforced Stone
+tile.reinforced_bricks.name=Reinforced Stonebrick
+tile.reinforced_cobblestone.name=Reinforced Cobblestone
+tile.reinforced_iron.name=Reinforced Iron Block
+tile.reinforced_gold.name=Reinforced Gold Block
+
+tile.reinforced_button.name=Reinforced Button
+
+tile.reinforced_glass.name=Reinforced Glass
+

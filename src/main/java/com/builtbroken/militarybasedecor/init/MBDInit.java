@@ -17,7 +17,18 @@ public class MBDInit {
     public static final List<Block> BLOCKS = new ArrayList<Block>();
 
     // BLOCKS
-    public static final Block BLOCK_REINFORCED_DIRT = new BlockBase("reinforced_dirt", Material.GROUND, MapColor.DIRT, SoundType.GROUND);
+    public static final Block BLOCK_WOODEN_CASING = new BlockTransparent("wooden_casing", Material.WOOD, MapColor.WOOD, SoundType.WOOD);
+    public static final Block BLOCK_METAL_CASING = new BlockTransparent("metal_casing", Material.IRON, MapColor.IRON, SoundType.METAL);
+
+    public static final Block BLOCK_REINFORCED_DIRT = new BlockBase("reinforced_dirt", Material.WOOD, MapColor.DIRT, SoundType.WOOD);
+    public static final Block BLOCK_REINFORCED_SAND = new BlockBase("reinforced_sand", Material.WOOD, MapColor.SAND, SoundType.WOOD);
+    public static final Block BLOCK_REINFORCED_COBBLESTONE = new BlockBase("reinforced_cobblestone", Material.IRON, MapColor.STONE, SoundType.METAL);
+    public static final Block BLOCK_REINFORCED_STONE = new BlockBase("reinforced_stone", Material.WOOD, MapColor.STONE, SoundType.METAL);
+    public static final Block BLOCK_REINFORCED_BRICKS = new BlockBase("reinforced_bricks", Material.WOOD, MapColor.STONE, SoundType.METAL);
+    public static final Block BLOCK_REINFORCED_IRON = new BlockBase("reinforced_iron", Material.IRON, MapColor.IRON, SoundType.METAL);
+    public static final Block BLOCK_REINFORCED_GOLD = new BlockBase("reinforced_gold", Material.IRON, MapColor.GOLD, SoundType.METAL);
+    public static final Block BLOCK_REINFORCED_BUTTON = new BlockReinforcedButton("reinforced_button");
+    public static final Block BLOCK_REINFORCED_GLASS = new BlockTransparent("reinforced_glass", Material.GLASS, MapColor.AIR, SoundType.GLASS);
 
     // ITEMS
 
