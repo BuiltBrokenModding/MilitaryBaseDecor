@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "militarybasedecor:blocks/barbed_wire_fence_bloody"
+  }
+}

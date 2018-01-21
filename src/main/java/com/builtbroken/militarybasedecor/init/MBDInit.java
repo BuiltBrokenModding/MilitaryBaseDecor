@@ -1,6 +1,9 @@
 package com.builtbroken.militarybasedecor.init;
 
-import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.block.BlockDamagingWireFence;
+import com.builtbroken.militarybasedecor.block.BlockReinforcedButton;
+import com.builtbroken.militarybasedecor.block.BlockTransparent;
+import com.builtbroken.militarybasedecor.block.BlockWireFence;
 import com.builtbroken.militarybasedecor.util.BlockBase;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -29,6 +32,11 @@ public class MBDInit {
     public static final Block BLOCK_REINFORCED_GOLD = new BlockBase("reinforced_gold", Material.IRON, MapColor.GOLD, SoundType.METAL);
     public static final Block BLOCK_REINFORCED_BUTTON = new BlockReinforcedButton("reinforced_button");
     public static final Block BLOCK_REINFORCED_GLASS = new BlockTransparent("reinforced_glass", Material.GLASS, MapColor.AIR, SoundType.GLASS);
+
+    public static final Block BLOCK_WIRED_FENCE = new BlockWireFence("wired_fence", Material.IRON, true, SoundType.METAL);
+    public static final Block BLOCK_CHAIN_LINK_FENCE = new BlockWireFence("chain_link_fence", Material.IRON, true, SoundType.METAL);
+    public static final Block BLOCK_BARBED_WIRE_FENCE = new BlockDamagingWireFence("barbed_wire_fence", Material.IRON, true, SoundType.METAL);
+    public static final Block BLOCK_BARBED_WIRE_FENCE_BLOODY = new BlockDamagingWireFence("barbed_wire_fence_bloody", Material.IRON, true, SoundType.METAL);
 
     // ITEMS
 

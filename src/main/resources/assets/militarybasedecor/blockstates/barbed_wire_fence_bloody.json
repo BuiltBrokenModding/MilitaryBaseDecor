@@ -1,0 +1,29 @@
+{
+  "multipart": [
+    {   "apply": { "model": "militarybasedecor:barbed_wire_fence_bloody_post" }},
+    {   "when": { "north": true },
+      "apply": { "model": "militarybasedecor:barbed_wire_fence_bloody_side" }
+    },
+    {   "when": { "east": true },
+      "apply": { "model": "militarybasedecor:barbed_wire_fence_bloody_side", "y": 90 }
+    },
+    {   "when": { "south": true },
+      "apply": { "model": "militarybasedecor:barbed_wire_fence_bloody_side_alt" }
+    },
+    {   "when": { "west": true },
+      "apply": { "model": "militarybasedecor:barbed_wire_fence_bloody_side_alt", "y": 90 }
+    },
+    {   "when": { "north": false },
+      "apply": { "model": "militarybasedecor:barbed_wire_fence_bloody_noside" }
+    },
+    {   "when": { "east": false },
+      "apply": { "model": "militarybasedecor:barbed_wire_fence_bloody_noside_alt" }
+    },
+    {   "when": { "south": false },
+      "apply": { "model": "militarybasedecor:barbed_wire_fence_bloody_noside_alt", "y": 90 }
+    },
+    {   "when": { "west": false },
+      "apply": { "model": "militarybasedecor:barbed_wire_fence_bloody_noside", "y": 270 }
+    }
+  ]
+}

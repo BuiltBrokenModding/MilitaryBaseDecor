@@ -10,8 +10,10 @@ tile.reinforced_bricks.name=Reinforced Stonebrick
 tile.reinforced_cobblestone.name=Reinforced Cobblestone
 tile.reinforced_iron.name=Reinforced Iron Block
 tile.reinforced_gold.name=Reinforced Gold Block
-
 tile.reinforced_button.name=Reinforced Button
-
 tile.reinforced_glass.name=Reinforced Glass
 
+tile.wired_fence.name=Wired Fence
+tile.chain_link_fence.name=Chain Link Fence
+tile.barbed_wire_fence.name=Barbed Wire Fence
+tile.barbed_wire_fence_bloody.name=Bloody Barbed Wire Fence

@@ -1,0 +1,6 @@
+{
+  "parent": "block/pane_noside",
+  "textures": {
+    "pane": "militarybasedecor:blocks/chain_link_fence"
+  }
+}

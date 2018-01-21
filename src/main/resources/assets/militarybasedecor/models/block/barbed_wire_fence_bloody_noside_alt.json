@@ -1,0 +1,6 @@
+{
+  "parent": "block/pane_noside_alt",
+  "textures": {
+    "pane": "militarybasedecor:blocks/barbed_wire_fence_bloody"
+  }
+}

@@ -2,6 +2,6 @@
   "parent": "block/pane_side",
   "textures": {
     "edge": "militarybasedecor:blocks/wired_fence_top",
-    "pane": "militarybasedecor:blocks/wired_fence"
+    "pane": "militarybasedecor:blocks/barbed_wire_fence_bloody"
   }
 }
