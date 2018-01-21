@@ -36,6 +36,7 @@ public class MBDInit {
     public static final Block BLOCK_BARBED_WIRE_FENCE_BLOODY = new BlockDamagingWireFence("barbed_wire_fence_bloody", Material.IRON, true, SoundType.METAL);
 
     public static final Block BLOCK_FENCE_TOPPER = new BlockFenceTopper("fence_topper", Material.IRON, MapColor.IRON, SoundType.METAL);
+    public static final Block BLOCK_FENCE_TOPPER_BLOODY = new BlockFenceTopper("fence_topper_bloody", Material.IRON, MapColor.IRON, SoundType.METAL);
 
     // ITEMS
 

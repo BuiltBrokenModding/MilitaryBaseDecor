@@ -17,3 +17,6 @@ tile.wired_fence.name=Wired Fence
 tile.chain_link_fence.name=Chain Link Fence
 tile.barbed_wire_fence.name=Barbed Wire Fence
 tile.barbed_wire_fence_bloody.name=Bloody Barbed Wire Fence
+
+tile.fence_topper.name=Fence Topper
+tile.fence_topper_bloody.name=Bloody Fence Topper
