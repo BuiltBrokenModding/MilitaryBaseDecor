@@ -2,7 +2,7 @@
 	"parent": "block/block",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "militarybasedecor:blocks/fence_topper:barbs",
+		"particle": "militarybasedecor:blocks/fence_topper_barbs",
 		"edge": "militarybasedecor:blocks/fence_topper_bars",
 		"bars": "militarybasedecor:blocks/fence_topper_bars",
 		"barbs": "militarybasedecor:blocks/fence_topper_barbs"
