@@ -21,3 +21,5 @@ tile.rope_fence.name=Rope Fence
 
 tile.fence_topper.name=Fence Topper
 tile.fence_topper_bloody.name=Bloody Fence Topper
+tile.fence_topper_corner.name=Fence Topper Corner
+tile.fence_topper_corner_bloody.name=Bloody Fence Topper Corner

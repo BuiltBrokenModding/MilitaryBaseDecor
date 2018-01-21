@@ -30,14 +30,16 @@ public class MBDInit {
     public static final Block BLOCK_REINFORCED_BUTTON = new BlockReinforcedButton("reinforced_button");
     public static final Block BLOCK_REINFORCED_GLASS = new BlockTransparent("reinforced_glass", Material.GLASS, MapColor.AIR, SoundType.GLASS);
 
+    public static final Block BLOCK_ROPE_FENCE = new BlockPaneFence("rope_fence", Material.WOOD, true, SoundType.WOOD);
     public static final Block BLOCK_WIRED_FENCE = new BlockPaneFence("wired_fence", Material.IRON, true, SoundType.METAL);
     public static final Block BLOCK_CHAIN_LINK_FENCE = new BlockPaneFence("chain_link_fence", Material.IRON, true, SoundType.METAL);
     public static final Block BLOCK_BARBED_WIRE_FENCE = new BlockDamagingPaneFence("barbed_wire_fence", Material.IRON, true, SoundType.METAL);
     public static final Block BLOCK_BARBED_WIRE_FENCE_BLOODY = new BlockDamagingPaneFence("barbed_wire_fence_bloody", Material.IRON, true, SoundType.METAL);
-    public static final Block BLOCK_ROPE_FENCE = new BlockPaneFence("rope_fence", Material.WOOD, true, SoundType.WOOD);
 
     public static final Block BLOCK_FENCE_TOPPER = new BlockFenceTopper("fence_topper", Material.IRON, MapColor.IRON, SoundType.METAL);
+    public static final Block BLOCK_FENCE_TOPPER_CORNER = new BlockFenceTopperCorner("fence_topper_corner", Material.IRON, MapColor.IRON, SoundType.METAL);
     public static final Block BLOCK_FENCE_TOPPER_BLOODY = new BlockFenceTopper("fence_topper_bloody", Material.IRON, MapColor.IRON, SoundType.METAL);
+    public static final Block BLOCK_FENCE_TOPPER_CORNER_BLOODY = new BlockFenceTopperCorner("fence_topper_corner_bloody", Material.IRON, MapColor.IRON, SoundType.METAL);
 
     // ITEMS
 
