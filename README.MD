@@ -35,8 +35,8 @@ https://docs.google.com/document/d/105N6q63OJnzrWjMbydFYFUlHmK6spc8P8da8qkduFRs/
 
 ### Extra Credits
 * Morton - Assets
-* Viridian Ouroboros - Textures
-* ACGaming - German Translation
+* Diamonddragoon - Textures
+* ACGaming - German Translation (1.7.10)
 
 ## Download Locations
 * https://minecraft.curseforge.com/projects/military-base-decor
