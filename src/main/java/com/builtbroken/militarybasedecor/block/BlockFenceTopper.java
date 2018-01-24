@@ -19,12 +19,10 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.BlockRenderLayer;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -66,10 +64,10 @@ public class BlockFenceTopper extends Block implements IIModel {
 
     @Override
     public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
-        if (!(entityIn instanceof EntityLivingBase) || !((EntityPlayer) entityIn).capabilities.isCreativeMode)
+        if (!(entityIn instanceof EntityPlayer) || !((EntityPlayer) entityIn).capabilities.isCreativeMode)
         {
             entityIn.setInWeb();
-            entityIn.attackEntityFrom(DamageSource.CACTUS, 1.5F);
+            entityIn.attackEntityFrom(MBDInit.DAMAGE_WIRED_FENCE, 1.5F);
         }
     }
 
@@ -98,19 +96,7 @@ public class BlockFenceTopper extends Block implements IIModel {
 
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
         EnumFacing enumfacing = placer.getHorizontalFacing().rotateY();
-
-        try {
-            return super.getStateForPlacement(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer).withProperty(FACING, enumfacing);
-        } catch (IllegalArgumentException var11) {
-            if (!worldIn.isRemote) {
-                MilitaryBaseDecor.logger.warn(String.format("Invalid damage property for fence topper at %s. Found %d, must be in [0, 1, 2]", pos, meta >> 2));
-                if (placer instanceof EntityPlayer) {
-                    placer.sendMessage(new TextComponentTranslation("Invalid damage property. Please pick in [0, 1, 2]", new Object[0]));
-                }
-            }
-
-            return super.getStateForPlacement(worldIn, pos, facing, hitX, hitY, hitZ, 0, placer).withProperty(FACING, enumfacing);
-        }
+        return super.getStateForPlacement(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer).withProperty(FACING, enumfacing);
     }
 
     static {

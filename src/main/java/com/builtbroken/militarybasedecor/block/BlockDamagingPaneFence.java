@@ -12,7 +12,6 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -41,10 +40,10 @@ public class BlockDamagingPaneFence extends BlockPane implements IIModel {
 
     @Override
     public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
-        if (!(entityIn instanceof EntityLivingBase) || !((EntityPlayer) entityIn).capabilities.isCreativeMode)
+        if (!(entityIn instanceof EntityPlayer) || !((EntityPlayer) entityIn).capabilities.isCreativeMode)
         {
             entityIn.setInWeb();
-            entityIn.attackEntityFrom(DamageSource.CACTUS, 1.5F);
+            entityIn.attackEntityFrom(MBDInit.DAMAGE_WIRED_FENCE, 1.5F);
         }
     }
 }

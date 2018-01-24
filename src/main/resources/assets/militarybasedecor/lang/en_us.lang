@@ -23,3 +23,8 @@ tile.fence_topper.name=Fence Topper
 tile.fence_topper_bloody.name=Bloody Fence Topper
 tile.fence_topper_corner.name=Fence Topper Corner
 tile.fence_topper_corner_bloody.name=Bloody Fence Topper Corner
+
+item.wire_cutters.name=Wire Cutters
+
+death.attack.wiredFence=%1$s was pricked to death by a fence
+death.attack.wiredFence.player=%1$s walked into a wired fence whilst trying to escape %2$s

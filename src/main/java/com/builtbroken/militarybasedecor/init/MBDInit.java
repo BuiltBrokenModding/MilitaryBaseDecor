@@ -2,11 +2,13 @@ package com.builtbroken.militarybasedecor.init;
 
 import com.builtbroken.militarybasedecor.block.*;
 import com.builtbroken.militarybasedecor.block.BlockBase;
+import com.builtbroken.militarybasedecor.item.ItemBase;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
+import net.minecraft.util.DamageSource;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +17,8 @@ public class MBDInit {
 
     public static final List<Item> ITEMS = new ArrayList<Item>();
     public static final List<Block> BLOCKS = new ArrayList<Block>();
+
+    public static final DamageSource DAMAGE_WIRED_FENCE = (new DamageSource("wiredFence"));
 
     // BLOCKS
     public static final Block BLOCK_WOODEN_CASING = new BlockTransparent("wooden_casing", Material.WOOD, MapColor.WOOD, SoundType.WOOD);
@@ -42,5 +46,6 @@ public class MBDInit {
     public static final Block BLOCK_FENCE_TOPPER_CORNER_BLOODY = new BlockFenceTopperCorner("fence_topper_corner_bloody", Material.IRON, MapColor.IRON, SoundType.METAL);
 
     // ITEMS
+    public static final Item ITEM_WIRE_CUTTERS = new ItemBase("wire_cutters");
 
 }

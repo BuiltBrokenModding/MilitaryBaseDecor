@@ -19,21 +19,23 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.BlockRenderLayer;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nullable;
+
 public class BlockFenceTopperCorner extends Block implements IIModel {
     public static final PropertyDirection FACING;
-    protected static final AxisAlignedBB X_AXIS_AABB;
-    protected static final AxisAlignedBB Z_AXIS_AABB;
+    protected static final AxisAlignedBB CORNER_EAST_AABB;
+    protected static final AxisAlignedBB CORNER_WEST_AABB;
+    protected static final AxisAlignedBB CORNER_SOUTH_AABB;
+    protected static final AxisAlignedBB CORNER_NORTH_AABB;
 
     public BlockFenceTopperCorner(String name, Material material, MapColor mapColor, SoundType soundType) {
         super(material, mapColor);
@@ -66,10 +68,10 @@ public class BlockFenceTopperCorner extends Block implements IIModel {
 
     @Override
     public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
-        if ((entityIn instanceof EntityLivingBase) || !((EntityPlayer) entityIn).capabilities.isCreativeMode)
+        if (!(entityIn instanceof EntityPlayer) || !((EntityPlayer) entityIn).capabilities.isCreativeMode)
         {
             entityIn.setInWeb();
-            entityIn.attackEntityFrom(DamageSource.CACTUS, 1.5F);
+            entityIn.attackEntityFrom(MBDInit.DAMAGE_WIRED_FENCE, 1.5F);
         }
     }
 
@@ -78,8 +80,31 @@ public class BlockFenceTopperCorner extends Block implements IIModel {
     }
 
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-        EnumFacing enumfacing = (EnumFacing)state.getValue(FACING);
-        return enumfacing.getAxis() == EnumFacing.Axis.X ? X_AXIS_AABB : Z_AXIS_AABB;
+        switch((EnumFacing)state.getValue(FACING)) {
+            case EAST:
+            default:
+                return CORNER_EAST_AABB;
+            case WEST:
+                return CORNER_WEST_AABB;
+            case SOUTH:
+                return CORNER_SOUTH_AABB;
+            case NORTH:
+                return CORNER_NORTH_AABB;
+        }
+    }
+
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
+        switch((EnumFacing)blockState.getValue(FACING)) {
+            case EAST:
+            default:
+                return CORNER_EAST_AABB;
+            case WEST:
+                return CORNER_WEST_AABB;
+            case SOUTH:
+                return CORNER_SOUTH_AABB;
+            case NORTH:
+                return CORNER_NORTH_AABB;
+        }
     }
 
     public int getMetaFromState(IBlockState state) {
@@ -98,25 +123,15 @@ public class BlockFenceTopperCorner extends Block implements IIModel {
 
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
         EnumFacing enumfacing = placer.getHorizontalFacing().rotateY();
-
-        try {
-            return super.getStateForPlacement(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer).withProperty(FACING, enumfacing);
-        } catch (IllegalArgumentException var11) {
-            if (!worldIn.isRemote) {
-                MilitaryBaseDecor.logger.warn(String.format("Invalid damage property for fence topper at %s. Found %d, must be in [0, 1, 2]", pos, meta >> 2));
-                if (placer instanceof EntityPlayer) {
-                    placer.sendMessage(new TextComponentTranslation("Invalid damage property. Please pick in [0, 1, 2]", new Object[0]));
-                }
-            }
-
-            return super.getStateForPlacement(worldIn, pos, facing, hitX, hitY, hitZ, 0, placer).withProperty(FACING, enumfacing);
-        }
+        return super.getStateForPlacement(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer).withProperty(FACING, enumfacing);
     }
 
     static {
         FACING = BlockHorizontal.FACING;
-        X_AXIS_AABB = new AxisAlignedBB(1.0D, 0.0D, 1.0D, 0.0D, 0.3D, 0.0D);
-        Z_AXIS_AABB = new AxisAlignedBB(1.0D, 0.0D, 1.0D, 0.0D, 0.3D, 0.0D);
+        CORNER_EAST_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.78D, 0.75D, 0.3D, 0.008D);
+        CORNER_WEST_AABB = new AxisAlignedBB(0.25D, 0.0D, 1.0D, 0.980D, 0.3D, 0.24D);
+        CORNER_SOUTH_AABB = new AxisAlignedBB(0.25D, 0.0D, 0.78D, 0.980D, 0.3D, 0.008D);
+        CORNER_NORTH_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.215D, 0.75D, 0.3D, 1.0D);
     }
 
     @Override
