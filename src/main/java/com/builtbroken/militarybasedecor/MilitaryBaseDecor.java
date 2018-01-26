@@ -16,10 +16,10 @@ public class MilitaryBaseDecor {
 
     public static final String MODID = "militarybasedecor";
     public static final String NAME = "Military Base Decor";
-    public static final String VERSION = "0.0.1";
+    public static final String VERSION = "@MAJOR@.@MINOR@.@REVIS@.@BUILD@";
     public static final String PREFIX = MODID + ":";
 
-    public static Logger logger;
+    private static Logger logger;
 
     @Mod.Instance("militarybasedecor")
     public static MilitaryBaseDecor INSTANCE;

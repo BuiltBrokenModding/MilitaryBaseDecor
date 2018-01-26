@@ -12,6 +12,6 @@ public class MBDCreativeTab extends CreativeTabs {
 
     @Override
     public ItemStack getTabIconItem() {
-        return new ItemStack(MBDInit.BLOCK_REINFORCED_DIRT);
+        return new ItemStack(MBDInit.BLOCK_FENCE_TOPPER_BLOODY);
     }
 }
