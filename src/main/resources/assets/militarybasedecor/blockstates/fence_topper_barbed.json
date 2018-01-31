@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "militarybasedecor:fence_topper_barbed" },
+    "facing=west": { "model": "militarybasedecor:fence_topper_barbed", "y": 90 },
+    "facing=north": { "model": "militarybasedecor:fence_topper_barbed", "y": 180 },
+    "facing=east": { "model": "militarybasedecor:fence_topper_barbed", "y": 270 }
+  }
+}

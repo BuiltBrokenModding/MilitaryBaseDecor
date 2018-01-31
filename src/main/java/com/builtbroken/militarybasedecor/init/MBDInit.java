@@ -40,13 +40,18 @@ public class MBDInit {
     public static final Block BLOCK_BARBED_WIRE_FENCE = new BlockDamagingPaneFence("barbed_wire_fence", Material.IRON, true, SoundType.METAL);
     public static final Block BLOCK_BARBED_WIRE_FENCE_BLOODY = new BlockDamagingPaneFence("barbed_wire_fence_bloody", Material.IRON, true, SoundType.METAL);
 
-    public static final Block BLOCK_FENCE_TOPPER = new BlockFenceTopper("fence_topper", Material.IRON, MapColor.IRON, SoundType.METAL);
-    public static final Block BLOCK_FENCE_TOPPER_CORNER = new BlockFenceTopperCorner("fence_topper_corner", Material.IRON, MapColor.IRON, SoundType.METAL);
-    public static final Block BLOCK_FENCE_TOPPER_BLOODY = new BlockFenceTopper("fence_topper_bloody", Material.IRON, MapColor.IRON, SoundType.METAL);
-    public static final Block BLOCK_FENCE_TOPPER_CORNER_BLOODY = new BlockFenceTopperCorner("fence_topper_corner_bloody", Material.IRON, MapColor.IRON, SoundType.METAL);
+    public static final Block BLOCK_FENCE_TOPPER = new BlockFenceTopper("fence_topper", Material.IRON, MapColor.IRON, SoundType.METAL, 1.5f);
+    public static final Block BLOCK_FENCE_TOPPER_CORNER = new BlockFenceTopperCorner("fence_topper_corner", Material.IRON, MapColor.IRON, SoundType.METAL, 1.5f);
+    public static final Block BLOCK_FENCE_TOPPER_BLOODY = new BlockFenceTopper("fence_topper_bloody", Material.IRON, MapColor.IRON, SoundType.METAL, 1.5f);
+    public static final Block BLOCK_FENCE_TOPPER_CORNER_BLOODY = new BlockFenceTopperCorner("fence_topper_corner_bloody", Material.IRON, MapColor.IRON, SoundType.METAL, 1.5f);
+    public static final Block BLOCK_FENCE_TOPPER_BARBED = new BlockFenceTopper("fence_topper_barbed", Material.IRON, MapColor.IRON, SoundType.METAL, 2f);
+    public static final Block BLOCK_FENCE_TOPPER_BARBED_BLOODY = new BlockFenceTopper("fence_topper_barbed_bloody", Material.IRON, MapColor.IRON, SoundType.METAL, 2f);
 
-    public static final Block BLOCK_WOODEN_BARRIAGE = new BlockBarricade("wooden_barricade", Material.WOOD, MapColor.WOOD, SoundType.WOOD);
+    public static final Block BLOCK_WOODEN_BARRICADE = new BlockBarricade("wooden_barricade", Material.WOOD, MapColor.WOOD, SoundType.WOOD);
+    public static final Block BLOCK_WOODEN_BARRICADE_2 = new BlockBarricade("wooden_barricade_2", Material.WOOD, MapColor.WOOD, SoundType.WOOD);
+    public static final Block BLOCK_STRENGTHENED_WOODEN_BARRICADE = new BlockBarricade("strengthened_wooden_barricade", Material.WOOD, MapColor.WOOD, SoundType.WOOD);
+    public static final Block BLOCK_STRENGTHENED_WOODEN_BARRICADE_2 = new BlockBarricade("strengthened_wooden_barricade_2", Material.WOOD, MapColor.WOOD, SoundType.WOOD);
 
     // ITEMS
-    public static final Item ITEM_WIRE_CUTTERS = new ItemBase("wire_cutters");
+    //public static final Item ITEM_WIRE_CUTTERS = new ItemBase("wire_cutters");
 }

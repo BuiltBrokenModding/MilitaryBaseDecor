@@ -36,14 +36,16 @@ public class BlockFenceTopperCorner extends Block implements IIModel {
     protected static final AxisAlignedBB CORNER_WEST_AABB;
     protected static final AxisAlignedBB CORNER_SOUTH_AABB;
     protected static final AxisAlignedBB CORNER_NORTH_AABB;
+    public static float entityDamageAmount;
 
-    public BlockFenceTopperCorner(String name, Material material, MapColor mapColor, SoundType soundType) {
+    public BlockFenceTopperCorner(String name, Material material, MapColor mapColor, SoundType soundType, Float damageAmount) {
         super(material, mapColor);
         setUnlocalizedName(name);
         setRegistryName(name);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         setLightOpacity(0);
         blockSoundType = soundType;
+        entityDamageAmount = damageAmount;
         MBDInit.BLOCKS.add(this);
         MBDInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
         setCreativeTab(MilitaryBaseDecor.MILITARTYBASEDECORTAB);
@@ -71,7 +73,7 @@ public class BlockFenceTopperCorner extends Block implements IIModel {
         if (!(entityIn instanceof EntityPlayer) || !((EntityPlayer) entityIn).capabilities.isCreativeMode)
         {
             entityIn.setInWeb();
-            entityIn.attackEntityFrom(MBDInit.DAMAGE_WIRED_FENCE, 1.5F);
+            entityIn.attackEntityFrom(MBDInit.DAMAGE_WIRED_FENCE, entityDamageAmount);
         }
     }
 

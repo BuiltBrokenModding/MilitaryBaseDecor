@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "militarybasedecor:strengthened_wooden_barricade", "y": 90},
+    "facing=west": { "model": "militarybasedecor:strengthened_wooden_barricade", "y": 180 },
+    "facing=north": { "model": "militarybasedecor:strengthened_wooden_barricade", "y": 270 },
+    "facing=east": { "model": "militarybasedecor:strengthened_wooden_barricade" }
+  }
+}

@@ -23,8 +23,13 @@ tile.fence_topper.name=Fence Topper
 tile.fence_topper_bloody.name=Bloody Fence Topper
 tile.fence_topper_corner.name=Fence Topper Corner
 tile.fence_topper_corner_bloody.name=Bloody Fence Topper Corner
+tile.fence_topper_barbed.name=Barbed Fence Topper
+tile.fence_topper_barbed_bloody.name=Bloody Barbed Fence Topper
 
 tile.wooden_barricade.name=Wooden Barricade
+tile.wooden_barricade_2.name=Wooden Barricade
+tile.strengthened_wooden_barricade.name=Fortified Wooden Barricade
+tile.strengthened_wooden_barricade_2.name=Fortified Wooden Barricade
 
 item.wire_cutters.name=Wire Cutters
 

@@ -1,0 +1,265 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"planks": "blocks/planks_big_oak",
+		"particle": "blocks/planks_big_oak"
+	},
+	"elements": [
+		{
+			"name": "center_rod",
+			"from": [0, 7.300000000000001, 6.5],
+			"to": [16, 10.3, 9.5],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 16, 1],
+					"texture": "#planks"
+				},
+				"east": {"uv": [9, 4, 13, 7], "texture": "#planks"},
+				"south": {
+					"uv": [0, 0, 16, 1],
+					"texture": "#planks"
+				},
+				"west": {"uv": [9, 4, 13, 7], "texture": "#planks"},
+				"up": {"uv": [0, 0, 16, 1], "texture": "#planks"},
+				"down": {"uv": [0, 0, 16, 1], "texture": "#planks"}
+			},
+			"rotation": {
+				"origin": [8, 8.8, 8],
+				"axis": "x",
+				"angle": -45
+			},
+			"type": "cube"
+		},
+		{
+			"name": "rod_1",
+			"from": [14.2, 5.300000000000001, -2],
+			"to": [15.8, 8.3, 19],
+			"faces": {
+				"north": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"east": {"uv": [0, 0, 16, 4], "texture": "#planks"},
+				"south": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"west": {"uv": [0, 0, 16, 4], "texture": "#planks"},
+				"up": {
+					"uv": [0, 13, 16, 15],
+					"texture": "#planks",
+					"rotation": 90
+				},
+				"down": {
+					"uv": [0, 0, 16, 3],
+					"texture": "#planks",
+					"rotation": 270
+				}
+			},
+			"rotation": {
+				"origin": [15, 6.800000000000001, 6],
+				"axis": "x",
+				"angle": -45
+			},
+			"type": "cube"
+		},
+		{
+			"name": "rod_2",
+			"from": [10.2, 5.300000000000001, -2],
+			"to": [11.8, 8.3, 19],
+			"faces": {
+				"north": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"east": {"uv": [0, 0, 16, 4], "texture": "#planks"},
+				"south": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"west": {"uv": [0, 0, 16, 4], "texture": "#planks"},
+				"up": {
+					"uv": [0, 13, 16, 15],
+					"texture": "#planks",
+					"rotation": 90
+				},
+				"down": {
+					"uv": [0, 0, 16, 3],
+					"texture": "#planks",
+					"rotation": 270
+				}
+			},
+			"rotation": {
+				"origin": [11, 6.800000000000001, 6],
+				"axis": "x",
+				"angle": -45
+			},
+			"type": "cube"
+		},
+		{
+			"name": "rod_3",
+			"from": [6.199999999999999, 5.300000000000001, -2],
+			"to": [7.800000000000001, 8.3, 19],
+			"faces": {
+				"north": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"east": {"uv": [0, 0, 16, 4], "texture": "#planks"},
+				"south": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"west": {"uv": [0, 0, 16, 4], "texture": "#planks"},
+				"up": {
+					"uv": [0, 13, 16, 15],
+					"texture": "#planks",
+					"rotation": 90
+				},
+				"down": {
+					"uv": [0, 0, 16, 3],
+					"texture": "#planks",
+					"rotation": 270
+				}
+			},
+			"rotation": {
+				"origin": [7, 6.800000000000001, 6],
+				"axis": "x",
+				"angle": -45
+			},
+			"type": "cube"
+		},
+		{
+			"name": "rod_4",
+			"from": [2.1999999999999993, 5.300000000000001, -2],
+			"to": [3.8000000000000007, 8.3, 19],
+			"faces": {
+				"north": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"east": {"uv": [0, 0, 16, 4], "texture": "#planks"},
+				"south": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"west": {"uv": [0, 0, 16, 4], "texture": "#planks"},
+				"up": {
+					"uv": [0, 13, 16, 15],
+					"texture": "#planks",
+					"rotation": 90
+				},
+				"down": {
+					"uv": [0, 0, 16, 3],
+					"texture": "#planks",
+					"rotation": 270
+				}
+			},
+			"rotation": {
+				"origin": [3, 6.800000000000001, 6],
+				"axis": "x",
+				"angle": -45
+			},
+			"type": "cube"
+		},
+		{
+			"name": "rod_1",
+			"from": [12.2, 8.8, -1.5],
+			"to": [13.8, 11.8, 19.5],
+			"faces": {
+				"north": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"east": {"uv": [0, 0, 16, 3], "texture": "#planks"},
+				"south": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"west": {"uv": [0, 0, 16, 3], "texture": "#planks"},
+				"up": {
+					"uv": [0, 9, 16, 11],
+					"texture": "#planks",
+					"rotation": 90
+				},
+				"down": {
+					"uv": [0, 0, 16, 4],
+					"texture": "#planks",
+					"rotation": 270
+				}
+			},
+			"rotation": {
+				"origin": [13, 10.3, 6.5],
+				"axis": "x",
+				"angle": 45
+			},
+			"type": "cube"
+		},
+		{
+			"name": "rod_2",
+			"from": [8.2, 8.8, -1.5],
+			"to": [9.8, 11.8, 19.5],
+			"faces": {
+				"north": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"east": {"uv": [0, 0, 16, 3], "texture": "#planks"},
+				"south": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"west": {"uv": [0, 0, 16, 3], "texture": "#planks"},
+				"up": {
+					"uv": [0, 9, 16, 11],
+					"texture": "#planks",
+					"rotation": 90
+				},
+				"down": {
+					"uv": [0, 0, 16, 4],
+					"texture": "#planks",
+					"rotation": 270
+				}
+			},
+			"rotation": {
+				"origin": [9, 10.3, 6.5],
+				"axis": "x",
+				"angle": 45
+			},
+			"type": "cube"
+		},
+		{
+			"name": "rod_3",
+			"from": [4.199999999999999, 8.8, -1.5],
+			"to": [5.800000000000001, 11.8, 19.5],
+			"faces": {
+				"north": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"east": {"uv": [0, 0, 16, 3], "texture": "#planks"},
+				"south": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"west": {"uv": [0, 0, 16, 3], "texture": "#planks"},
+				"up": {
+					"uv": [0, 9, 16, 11],
+					"texture": "#planks",
+					"rotation": 90
+				},
+				"down": {
+					"uv": [0, 0, 16, 4],
+					"texture": "#planks",
+					"rotation": 270
+				}
+			},
+			"rotation": {
+				"origin": [5, 10.3, 6.5],
+				"axis": "x",
+				"angle": 45
+			},
+			"type": "cube"
+		},
+		{
+			"name": "rod_4",
+			"from": [0.1999999999999993, 8.8, -1.5],
+			"to": [1.8000000000000007, 11.8, 19.5],
+			"faces": {
+				"north": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"east": {"uv": [0, 0, 16, 3], "texture": "#planks"},
+				"south": {"uv": [1, 0, 4, 3], "texture": "#planks"},
+				"west": {"uv": [0, 0, 16, 3], "texture": "#planks"},
+				"up": {
+					"uv": [0, 9, 16, 11],
+					"texture": "#planks",
+					"rotation": 90
+				},
+				"down": {
+					"uv": [0, 0, 16, 4],
+					"texture": "#planks",
+					"rotation": 270
+				}
+			},
+			"rotation": {
+				"origin": [1, 10.3, 6.5],
+				"axis": "x",
+				"angle": 45
+			},
+			"type": "cube"
+		}
+	],
+	"groups": [
+		0,
+		{
+			"name": "right_rods",
+			"isOpen": false,
+			"display": {"visibility": true, "autouv": true},
+			"children": [1, 2, 3, 4]
+		},
+		{
+			"name": "left_rods",
+			"isOpen": false,
+			"display": {"visibility": true, "autouv": true},
+			"children": [5, 6, 7, 8]
+		}
+	]
+}
