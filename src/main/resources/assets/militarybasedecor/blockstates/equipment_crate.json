@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": { "model": "militarybasedecor:equipment_crate" },
+    "axis=z": { "model": "militarybasedecor:equipment_crate", "x": 90 },
+    "axis=x": { "model": "militarybasedecor:equipment_crate", "x": 90, "y": 90 }
+  }
+}

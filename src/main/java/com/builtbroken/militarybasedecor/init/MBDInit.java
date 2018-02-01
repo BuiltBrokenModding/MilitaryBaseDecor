@@ -52,6 +52,9 @@ public class MBDInit {
     public static final Block BLOCK_STRENGTHENED_WOODEN_BARRICADE = new BlockBarricade("strengthened_wooden_barricade", Material.WOOD, MapColor.WOOD, SoundType.WOOD);
     public static final Block BLOCK_STRENGTHENED_WOODEN_BARRICADE_2 = new BlockBarricade("strengthened_wooden_barricade_2", Material.WOOD, MapColor.WOOD, SoundType.WOOD);
 
+    public static final Block BLOCK_AMMUNITION_BOX = new BlockBase("ammunition_box", Material.IRON, MapColor.BLACK, SoundType.METAL);
+    public static final Block BLOCK_EQUIPMENT_CRATE = new BlockEquipmentCrate("equipment_crate", Material.IRON, MapColor.BLACK, SoundType.METAL);
+
     // ITEMS
     //public static final Item ITEM_WIRE_CUTTERS = new ItemBase("wire_cutters");
 }

@@ -17,6 +17,7 @@ tile.wired_fence.name=Wired Fence
 tile.chain_link_fence.name=Chain Link Fence
 tile.barbed_wire_fence.name=Barbed Wire Fence
 tile.barbed_wire_fence_bloody.name=Bloody Barbed Wire Fence
+
 tile.rope_fence.name=Rope Fence
 
 tile.fence_topper.name=Fence Topper
@@ -30,6 +31,9 @@ tile.wooden_barricade.name=Wooden Barricade
 tile.wooden_barricade_2.name=Wooden Barricade
 tile.strengthened_wooden_barricade.name=Fortified Wooden Barricade
 tile.strengthened_wooden_barricade_2.name=Fortified Wooden Barricade
+
+tile.ammunition_box.name=Ammunition Box
+tile.equipment_crate.name=Equipment Crate
 
 item.wire_cutters.name=Wire Cutters
 
