@@ -5,7 +5,8 @@ This mod is a split off from the ICBM 2 rewrite that removed concrete. The mod s
 
 If you want documentation while we still work on an improved in-game documentation system, check out Hennamann´s youtube channel located here: https://www.youtube.com/channel/UCkoVUnZP6Gn6ODBX-fbCeSg
 
-NOTE: The mod is still not finished, please do not post issues on missing or broken textures. Chances are we are already aware of it, please be patient! 
+This is still a heavy work in progress as both old and new content is being written from scratch for 1.12.2
+NOTE: The mod no longer requires Voltz Engine to run (1.7.10 still requires it.), the 1.7.10 version will not receive any new features or bug fixes as support has ended for the 1.7.10 version.
 
 ## License
 https://raw.githubusercontent.com/BuiltBrokenModding/ICBM/development/license.md
