@@ -10,7 +10,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 
-public class BlockEquipmentCrate extends BlockRotatedPillar implements IIModel{
+public class BlockEquipmentCrate extends BlockRotatedPillar implements IIModel {
 
     public BlockEquipmentCrate(String name, Material material, MapColor mapColor, SoundType soundType) {
         super(material, mapColor);
