@@ -16,7 +16,7 @@ public class MilitaryBaseDecor {
 
     public static final String MODID = "militarybasedecor";
     public static final String NAME = "Military Base Decor";
-    public static final String VERSION = "@MAJOR@.@MINOR@.@REVIS@.@BUILD@";
+    public static final String VERSION = "@MC@.@MAJOR@.@MINOR@.@REVIS@.@BUILD@";
     public static final String PREFIX = MODID + ":";
 
     private static Logger logger;
