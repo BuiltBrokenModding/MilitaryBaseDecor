@@ -1,7 +1,7 @@
-package com.builtbroken.militarybasedecor.block;
+package com.builtbroken.militarybasedecor.content.block;
 
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.init.MBDInit;
+import com.builtbroken.militarybasedecor.content.init.MBDInit;
 import com.builtbroken.militarybasedecor.util.IIModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHorizontal;
@@ -28,17 +28,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import javax.annotation.Nullable;
-
-public class BlockFenceTopperCorner extends Block implements IIModel {
+public class BlockFenceTopper extends Block implements IIModel {
     public static final PropertyDirection FACING;
-    protected static final AxisAlignedBB CORNER_EAST_AABB;
-    protected static final AxisAlignedBB CORNER_WEST_AABB;
-    protected static final AxisAlignedBB CORNER_SOUTH_AABB;
-    protected static final AxisAlignedBB CORNER_NORTH_AABB;
+    protected static final AxisAlignedBB X_AXIS_AABB;
+    protected static final AxisAlignedBB Z_AXIS_AABB;
     public static float entityDamageAmount;
 
-    public BlockFenceTopperCorner(String name, Material material, MapColor mapColor, SoundType soundType, Float damageAmount) {
+    public BlockFenceTopper(String name, Material material, MapColor mapColor, SoundType soundType, Float damageAmount) {
         super(material, mapColor);
         setUnlocalizedName(name);
         setRegistryName(name);
@@ -82,31 +78,8 @@ public class BlockFenceTopperCorner extends Block implements IIModel {
     }
 
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-        switch((EnumFacing)state.getValue(FACING)) {
-            case EAST:
-            default:
-                return CORNER_EAST_AABB;
-            case WEST:
-                return CORNER_WEST_AABB;
-            case SOUTH:
-                return CORNER_SOUTH_AABB;
-            case NORTH:
-                return CORNER_NORTH_AABB;
-        }
-    }
-
-    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
-        switch((EnumFacing)blockState.getValue(FACING)) {
-            case EAST:
-            default:
-                return CORNER_EAST_AABB;
-            case WEST:
-                return CORNER_WEST_AABB;
-            case SOUTH:
-                return CORNER_SOUTH_AABB;
-            case NORTH:
-                return CORNER_NORTH_AABB;
-        }
+        EnumFacing enumfacing = (EnumFacing)state.getValue(FACING);
+        return enumfacing.getAxis() == EnumFacing.Axis.X ? X_AXIS_AABB : Z_AXIS_AABB;
     }
 
     public int getMetaFromState(IBlockState state) {
@@ -130,10 +103,8 @@ public class BlockFenceTopperCorner extends Block implements IIModel {
 
     static {
         FACING = BlockHorizontal.FACING;
-        CORNER_EAST_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.78D, 0.75D, 0.3D, 0.008D);
-        CORNER_WEST_AABB = new AxisAlignedBB(0.25D, 0.0D, 1.0D, 0.980D, 0.3D, 0.24D);
-        CORNER_SOUTH_AABB = new AxisAlignedBB(0.25D, 0.0D, 0.78D, 0.980D, 0.3D, 0.008D);
-        CORNER_NORTH_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.215D, 0.75D, 0.3D, 1.0D);
+        X_AXIS_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.225D, 1.0D, 0.3D, 0.775D);
+        Z_AXIS_AABB = new AxisAlignedBB(0.225D, 0.0D, 0.0D, 0.775D, 0.3D, 1.0D);
     }
 
     @Override

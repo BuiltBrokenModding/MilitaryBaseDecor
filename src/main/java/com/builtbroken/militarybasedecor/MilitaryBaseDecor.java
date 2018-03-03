@@ -1,5 +1,6 @@
 package com.builtbroken.militarybasedecor;
 
+import com.builtbroken.militarybasedecor.handler.MBDGuiHandler;
 import com.builtbroken.militarybasedecor.handler.RegistryHandler;
 import com.builtbroken.militarybasedecor.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
@@ -9,6 +10,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = MilitaryBaseDecor.MODID, name = MilitaryBaseDecor.NAME, version = MilitaryBaseDecor.VERSION)
@@ -34,6 +36,7 @@ public class MilitaryBaseDecor {
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
         RegistryHandler.preInitRegistries();
+        NetworkRegistry.INSTANCE.registerGuiHandler(this, new MBDGuiHandler());
     }
 
     @EventHandler

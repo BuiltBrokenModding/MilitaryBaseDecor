@@ -1,18 +1,18 @@
-package com.builtbroken.militarybasedecor.block;
+package com.builtbroken.militarybasedecor.content.block;
 
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.init.MBDInit;
+import com.builtbroken.militarybasedecor.content.init.MBDInit;
 import com.builtbroken.militarybasedecor.util.IIModel;
-import net.minecraft.block.BlockRotatedPillar;
+import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 
-public class BlockEquipmentCrate extends BlockRotatedPillar implements IIModel {
+public class BlockBase extends Block implements IIModel {
 
-    public BlockEquipmentCrate(String name, Material material, MapColor mapColor, SoundType soundType) {
+    public BlockBase(String name, Material material, MapColor mapColor, SoundType soundType) {
         super(material, mapColor);
         setUnlocalizedName(name);
         setRegistryName(name);
@@ -24,6 +24,6 @@ public class BlockEquipmentCrate extends BlockRotatedPillar implements IIModel {
 
     @Override
     public void registerModels() {
-        MilitaryBaseDecor.PROXY.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
+       MilitaryBaseDecor.PROXY.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
     }
 }

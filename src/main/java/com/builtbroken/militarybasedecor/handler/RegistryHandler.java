@@ -1,13 +1,15 @@
 package com.builtbroken.militarybasedecor.handler;
 
+import com.builtbroken.militarybasedecor.content.tile.TileEntityAmmoCrate;
 import com.builtbroken.militarybasedecor.util.IIModel;
-import com.builtbroken.militarybasedecor.init.MBDInit;
+import com.builtbroken.militarybasedecor.content.init.MBDInit;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod.EventBusSubscriber
 public class RegistryHandler
@@ -22,6 +24,7 @@ public class RegistryHandler
     public static void onBlockRegister(RegistryEvent.Register<Block> event)
     {
         event.getRegistry().registerAll(MBDInit.BLOCKS.toArray(new Block[0]));
+        GameRegistry.registerTileEntity(TileEntityAmmoCrate.class, MBDInit.BLOCK_AMMO_CRATE.getRegistryName().toString());
     }
 
     @SubscribeEvent

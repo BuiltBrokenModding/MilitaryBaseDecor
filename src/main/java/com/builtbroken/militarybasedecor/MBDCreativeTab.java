@@ -1,6 +1,6 @@
 package com.builtbroken.militarybasedecor;
 
-import com.builtbroken.militarybasedecor.init.MBDInit;
+import com.builtbroken.militarybasedecor.content.init.MBDInit;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 

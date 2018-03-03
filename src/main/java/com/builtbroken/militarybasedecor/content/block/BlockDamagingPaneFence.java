@@ -1,21 +1,24 @@
-package com.builtbroken.militarybasedecor.block;
+package com.builtbroken.militarybasedecor.content.block;
 
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.init.MBDInit;
+import com.builtbroken.militarybasedecor.content.init.MBDInit;
 import com.builtbroken.militarybasedecor.util.IIModel;
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
-public class BlockPaneFence extends BlockPane implements IIModel {
+public class BlockDamagingPaneFence extends BlockPane implements IIModel {
 
-    public BlockPaneFence(String name, Material material, boolean canDrop, SoundType soundType) {
+    public BlockDamagingPaneFence(String name, Material material, boolean canDrop, SoundType soundType) {
         super(material, canDrop);
         setRegistryName(name);
         setUnlocalizedName(name);
@@ -33,5 +36,14 @@ public class BlockPaneFence extends BlockPane implements IIModel {
     @Override
     public void registerModels() {
         MilitaryBaseDecor.PROXY.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
+    }
+
+    @Override
+    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+        if (!(entityIn instanceof EntityPlayer) || !((EntityPlayer) entityIn).capabilities.isCreativeMode)
+        {
+            entityIn.setInWeb();
+            entityIn.attackEntityFrom(MBDInit.DAMAGE_WIRED_FENCE, 1.5F);
+        }
     }
 }

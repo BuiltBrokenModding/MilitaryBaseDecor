@@ -1,8 +1,7 @@
-package com.builtbroken.militarybasedecor.init;
+package com.builtbroken.militarybasedecor.content.init;
 
-import com.builtbroken.militarybasedecor.block.*;
-import com.builtbroken.militarybasedecor.block.BlockBase;
-import com.builtbroken.militarybasedecor.item.ItemBase;
+import com.builtbroken.militarybasedecor.content.block.*;
+import com.builtbroken.militarybasedecor.content.block.BlockBase;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
@@ -52,8 +51,11 @@ public class MBDInit {
     public static final Block BLOCK_STRENGTHENED_WOODEN_BARRICADE = new BlockBarricade("strengthened_wooden_barricade", Material.WOOD, MapColor.WOOD, SoundType.WOOD);
     public static final Block BLOCK_STRENGTHENED_WOODEN_BARRICADE_2 = new BlockBarricade("strengthened_wooden_barricade_2", Material.WOOD, MapColor.WOOD, SoundType.WOOD);
 
-    public static final Block BLOCK_AMMUNITION_BOX = new BlockBase("ammunition_box", Material.IRON, MapColor.BLACK, SoundType.METAL);
     public static final Block BLOCK_EQUIPMENT_CRATE = new BlockEquipmentCrate("equipment_crate", Material.IRON, MapColor.BLACK, SoundType.METAL);
+
+    // Storage Blocks
+    public static final Block BLOCK_AMMO_CRATE = new BlockAmmoCrate();
+    public static final Block BLOCK_AMMUNITION_BOX = new BlockAmmunitionBox();
 
     // ITEMS
     //public static final Item ITEM_WIRE_CUTTERS = new ItemBase("wire_cutters");

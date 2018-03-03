@@ -34,8 +34,7 @@ tile.strengthened_wooden_barricade_2.name=Fortified Wooden Barricade
 
 tile.ammunition_box.name=Ammunition Box
 tile.equipment_crate.name=Equipment Crate
-
-item.wire_cutters.name=Wire Cutters
+tile.ammo_crate.name=Ammo Crate
 
 death.attack.wiredFence=%1$s was pricked to death by a fence
 death.attack.wiredFence.player=%1$s walked into a wired fence whilst trying to escape %2$s
