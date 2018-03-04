@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.handler;
+package com.builtbroken.militarybasedecor.core.handler;
 
 import com.builtbroken.militarybasedecor.content.container.ContainerAmmoCrate;
 import com.builtbroken.militarybasedecor.content.container.ContainerAmmunitionBox;

@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.proxy;
+package com.builtbroken.militarybasedecor.core.proxy;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;

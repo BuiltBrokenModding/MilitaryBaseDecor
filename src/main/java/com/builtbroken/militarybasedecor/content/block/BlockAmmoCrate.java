@@ -1,9 +1,11 @@
 package com.builtbroken.militarybasedecor.content.block;
 
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
+import com.builtbroken.militarybasedecor.content.init.MBDInit;
 import com.builtbroken.militarybasedecor.content.tile.TileEntityAmmoCrate;
-import com.builtbroken.militarybasedecor.handler.MBDGuiHandler;
-import com.builtbroken.militarybasedecor.util.IIModel;
+import com.builtbroken.militarybasedecor.core.handler.MBDGuiHandler;
+import com.builtbroken.militarybasedecor.core.handler.MBDSoundHandler;
+import com.builtbroken.militarybasedecor.core.util.IIModel;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
@@ -12,6 +14,7 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,6 +22,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.Rotation;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -35,7 +39,10 @@ import javax.annotation.Nullable;
 public class BlockAmmoCrate extends BlockTileEntity<TileEntityAmmoCrate> implements IIModel {
 
     public static final PropertyDirection FACING;
-    protected static final AxisAlignedBB CRATE_AABB;
+    protected static final AxisAlignedBB CRATE_EAST_AABB;
+    protected static final AxisAlignedBB CRATE_WEST_AABB;
+    protected static final AxisAlignedBB CRATE_SOUTH_AABB;
+    protected static final AxisAlignedBB CRATE_NORTH_AABB;
 
     public BlockAmmoCrate() {
         super("ammo_crate", Material.WOOD, MapColor.WOOD, SoundType.WOOD);
@@ -73,18 +80,37 @@ public class BlockAmmoCrate extends BlockTileEntity<TileEntityAmmoCrate> impleme
         return false;
     }
 
-    @Override
-    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
-        return CRATE_AABB;
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+        switch((EnumFacing)state.getValue(FACING)) {
+            case EAST:
+            default:
+                return CRATE_EAST_AABB;
+            case WEST:
+                return CRATE_WEST_AABB;
+            case SOUTH:
+                return CRATE_SOUTH_AABB;
+            case NORTH:
+                return CRATE_NORTH_AABB;
+        }
     }
 
-    @Override
-    public AxisAlignedBB getBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
-        return CRATE_AABB;
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
+        switch((EnumFacing)blockState.getValue(FACING)) {
+            case EAST:
+            default:
+                return CRATE_EAST_AABB;
+            case WEST:
+                return CRATE_WEST_AABB;
+            case SOUTH:
+                return CRATE_SOUTH_AABB;
+            case NORTH:
+                return CRATE_NORTH_AABB;
+        }
     }
 
     @Override
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
+        player.playSound(MBDSoundHandler.openAmmoCrate,1.0F, 1F);
         if (!world.isRemote) {
             player.openGui(MilitaryBaseDecor.INSTANCE, MBDGuiHandler.AMMO_CRATE, world, pos.getX(), pos.getY(), pos.getZ());
         }
@@ -96,25 +122,12 @@ public class BlockAmmoCrate extends BlockTileEntity<TileEntityAmmoCrate> impleme
         TileEntityAmmoCrate tile = getTileEntity(world, pos);
         IItemHandler itemHandler = tile.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
 
-        ItemStack stack = itemHandler.getStackInSlot(0);
-        ItemStack stack1 = itemHandler.getStackInSlot(1);
-        ItemStack stack2 = itemHandler.getStackInSlot(2);
-        ItemStack stack3 = itemHandler.getStackInSlot(3);
-        if (!stack.isEmpty()) {
-            EntityItem item = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack);
-            world.spawnEntity(item);
-        }
-        if (!stack1.isEmpty()){
-            EntityItem item = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack1);
-            world.spawnEntity(item);
-        }
-        if (!stack2.isEmpty()) {
-            EntityItem item = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack2);
-            world.spawnEntity(item);
-        }
-        if (!stack3.isEmpty()) {
-            EntityItem item = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack3);
-            world.spawnEntity(item);
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+            ItemStack stack = itemHandler.getStackInSlot(i);
+            if (!stack.isEmpty()) {
+                EntityItem item = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack);
+                world.spawnEntity(item);
+            }
         }
         super.breakBlock(world, pos, state);
     }
@@ -132,6 +145,9 @@ public class BlockAmmoCrate extends BlockTileEntity<TileEntityAmmoCrate> impleme
 
     static {
         FACING = BlockHorizontal.FACING;
-        CRATE_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.D, 1.D, 0.5D, 1.0D);
+        CRATE_EAST_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.25D, 0.9375D, 0.375D, 0.75D); // NORTH
+        CRATE_WEST_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.25D, 0.9375D, 0.375D, 0.75D); // SOUTH
+        CRATE_SOUTH_AABB = new AxisAlignedBB(0.25D, 0.0D, 0.0625D, 0.75D, 0.375D, 0.9375D); // EAST
+        CRATE_NORTH_AABB = new AxisAlignedBB(0.25D, 0.0D, 0.0625D, 0.75D, 0.375D, 0.9375D); // WEST
     }
 }

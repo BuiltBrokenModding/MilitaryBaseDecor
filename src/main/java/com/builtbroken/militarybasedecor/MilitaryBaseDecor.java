@@ -1,9 +1,11 @@
 package com.builtbroken.militarybasedecor;
 
-import com.builtbroken.militarybasedecor.handler.MBDGuiHandler;
-import com.builtbroken.militarybasedecor.handler.RegistryHandler;
-import com.builtbroken.militarybasedecor.proxy.CommonProxy;
+import com.builtbroken.militarybasedecor.core.MBDCreativeTab;
+import com.builtbroken.militarybasedecor.core.handler.MBDGuiHandler;
+import com.builtbroken.militarybasedecor.core.handler.RegistryHandler;
+import com.builtbroken.militarybasedecor.core.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -26,16 +28,18 @@ public class MilitaryBaseDecor {
     @Mod.Instance("militarybasedecor")
     public static MilitaryBaseDecor INSTANCE;
 
-    @SidedProxy(clientSide = "com.builtbroken.militarybasedecor.proxy.ClientProxy", serverSide = "com.builtbroken.militarybasedecor.proxy.CommonProxy")
+    @SidedProxy(clientSide = "com.builtbroken.militarybasedecor.core.proxy.ClientProxy", serverSide = "com.builtbroken.militarybasedecor.core.proxy.CommonProxy")
 
     public static CommonProxy PROXY;
 
-    public static final CreativeTabs MILITARTYBASEDECORTAB = new MBDCreativeTab("militarybasedecor");
+    public static final CreativeTabs MILITARYBASEDECORTAB = new MBDCreativeTab("militarybasedecor");
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        MinecraftForge.EVENT_BUS.register(RegistryHandler.class);
         logger = event.getModLog();
         RegistryHandler.preInitRegistries();
+        PROXY.preInit(event);
         NetworkRegistry.INSTANCE.registerGuiHandler(this, new MBDGuiHandler());
     }
 

@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor.util;
+package com.builtbroken.militarybasedecor.core.util;
 
 public interface IIModel {
 

@@ -2,7 +2,7 @@ package com.builtbroken.militarybasedecor.content.block;
 
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.content.init.MBDInit;
-import com.builtbroken.militarybasedecor.util.IIModel;
+import com.builtbroken.militarybasedecor.core.util.IIModel;
 import net.minecraft.block.BlockButtonStone;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -12,7 +12,7 @@ public class BlockReinforcedButton extends BlockButtonStone implements IIModel{
     public BlockReinforcedButton(String name) {
         setRegistryName(name);
         setUnlocalizedName(name);
-        setCreativeTab(MilitaryBaseDecor.MILITARTYBASEDECORTAB);
+        setCreativeTab(MilitaryBaseDecor.MILITARYBASEDECORTAB);
         setHardness(2.5F);
         setResistance(35);
         MBDInit.BLOCKS.add(this);

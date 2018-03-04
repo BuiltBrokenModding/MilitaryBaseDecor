@@ -1,4 +1,6 @@
 {
+	"parent": "block/block",
+	"ambientocclusion": false,
 	"textures": {
 		"crate": "militarybasedecor:blocks/ammo_crate",
 		"planks": "blocks/planks_oak",

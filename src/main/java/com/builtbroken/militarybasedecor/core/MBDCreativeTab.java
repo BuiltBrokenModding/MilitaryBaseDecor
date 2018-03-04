@@ -1,4 +1,4 @@
-package com.builtbroken.militarybasedecor;
+package com.builtbroken.militarybasedecor.core;
 
 import com.builtbroken.militarybasedecor.content.init.MBDInit;
 import net.minecraft.creativetab.CreativeTabs;

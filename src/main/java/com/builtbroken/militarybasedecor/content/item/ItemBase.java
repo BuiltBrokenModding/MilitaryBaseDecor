@@ -1,8 +1,8 @@
-package com.builtbroken.militarybasedecor.item;
+package com.builtbroken.militarybasedecor.content.item;
 
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.content.init.MBDInit;
-import com.builtbroken.militarybasedecor.util.IIModel;
+import com.builtbroken.militarybasedecor.core.util.IIModel;
 import net.minecraft.item.Item;
 
 public class ItemBase extends Item implements IIModel {
@@ -11,7 +11,7 @@ public class ItemBase extends Item implements IIModel {
         setUnlocalizedName(name);
         setRegistryName(name);
         MBDInit.ITEMS.add(this);
-        setCreativeTab(MilitaryBaseDecor.MILITARTYBASEDECORTAB);
+        setCreativeTab(MilitaryBaseDecor.MILITARYBASEDECORTAB);
     }
 
     @Override

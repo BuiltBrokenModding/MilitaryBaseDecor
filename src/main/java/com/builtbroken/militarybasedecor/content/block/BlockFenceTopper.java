@@ -2,7 +2,7 @@ package com.builtbroken.militarybasedecor.content.block;
 
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.content.init.MBDInit;
-import com.builtbroken.militarybasedecor.util.IIModel;
+import com.builtbroken.militarybasedecor.core.util.IIModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.SoundType;
@@ -44,7 +44,7 @@ public class BlockFenceTopper extends Block implements IIModel {
         entityDamageAmount = damageAmount;
         MBDInit.BLOCKS.add(this);
         MBDInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
-        setCreativeTab(MilitaryBaseDecor.MILITARTYBASEDECORTAB);
+        setCreativeTab(MilitaryBaseDecor.MILITARYBASEDECORTAB);
     }
 
     @SideOnly(Side.CLIENT)

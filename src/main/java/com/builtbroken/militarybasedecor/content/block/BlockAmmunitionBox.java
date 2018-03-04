@@ -1,10 +1,9 @@
 package com.builtbroken.militarybasedecor.content.block;
 
 import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
-import com.builtbroken.militarybasedecor.content.tile.TileEntityAmmoCrate;
 import com.builtbroken.militarybasedecor.content.tile.TileEntityAmmunitionBox;
-import com.builtbroken.militarybasedecor.handler.MBDGuiHandler;
-import com.builtbroken.militarybasedecor.util.IIModel;
+import com.builtbroken.militarybasedecor.core.handler.MBDGuiHandler;
+import com.builtbroken.militarybasedecor.core.util.IIModel;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;

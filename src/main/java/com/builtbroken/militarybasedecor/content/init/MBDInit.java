@@ -1,5 +1,6 @@
 package com.builtbroken.militarybasedecor.content.init;
 
+import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.content.block.*;
 import com.builtbroken.militarybasedecor.content.block.BlockBase;
 import net.minecraft.block.Block;
@@ -8,6 +9,8 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +60,4 @@ public class MBDInit {
     public static final Block BLOCK_AMMO_CRATE = new BlockAmmoCrate();
     public static final Block BLOCK_AMMUNITION_BOX = new BlockAmmunitionBox();
 
-    // ITEMS
-    //public static final Item ITEM_WIRE_CUTTERS = new ItemBase("wire_cutters");
 }
