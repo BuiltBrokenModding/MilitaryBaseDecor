@@ -57,12 +57,15 @@ public class ContainerAmmunitionBox extends Container {
     public ContainerAmmunitionBox(InventoryPlayer playerInv, final TileEntityAmmunitionBox crate) {
         IItemHandler inventory = crate.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
 
-        addSlotToContainer(new SlotItemHandler(inventory, 0, 80, 35) {
-            @Override
-            public void onSlotChanged() {
-                crate.markDirty();
+        for (int i =0; i < 3; i++) {
+            for (int j = 0; j < 9; j++) {
+                addSlotToContainer(new SlotItemHandler(inventory, j + i * 9 + 9, 8 + j * 18, 17 + i * 18) {
+                    @Override
+                    public void onSlotChanged() {
+                        crate.markDirty();
+                    }});
             }
-        });
+        }
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {

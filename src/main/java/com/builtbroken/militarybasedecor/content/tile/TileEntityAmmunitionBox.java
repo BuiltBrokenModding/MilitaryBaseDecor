@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
  */
 public class TileEntityAmmunitionBox extends TileEntity {
 
-    private ItemStackHandler inventory = new ItemStackHandler(1);
+    private ItemStackHandler inventory = new ItemStackHandler(54);
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {

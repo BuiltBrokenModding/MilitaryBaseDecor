@@ -37,6 +37,6 @@ public class GuiAmmunitionBox extends GuiContainer {
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
         String name = I18n.format(MBDInit.BLOCK_AMMUNITION_BOX.getUnlocalizedName() + ".name");
         fontRenderer.drawString(name, xSize / 2 - fontRenderer.getStringWidth(name) / 2, 6, 0xFFE81C);
-        fontRenderer.drawString(playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, 0xFFE81C);
+        fontRenderer.drawString(playerInv.getDisplayName().getUnformattedText(), 8, ySize - 98, 0xFFE81C);
     }
 }

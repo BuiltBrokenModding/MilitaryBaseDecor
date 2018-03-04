@@ -43,10 +43,12 @@ public class BlockAmmunitionBox extends BlockTileEntity<TileEntityAmmunitionBox>
         TileEntityAmmunitionBox tile = getTileEntity(world, pos);
         IItemHandler itemHandler = tile.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
 
-        ItemStack stack = itemHandler.getStackInSlot(0);
-        if (!stack.isEmpty()) {
-            EntityItem item = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack);
-            world.spawnEntity(item);
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+            ItemStack stack = itemHandler.getStackInSlot(i);
+            if (!stack.isEmpty()) {
+                EntityItem item = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack);
+                world.spawnEntity(item);
+            }
         }
         super.breakBlock(world, pos, state);
     }

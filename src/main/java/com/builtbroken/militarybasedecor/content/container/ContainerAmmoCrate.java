@@ -60,42 +60,24 @@ public class ContainerAmmoCrate extends Container {
     public ContainerAmmoCrate(InventoryPlayer playerInv, final TileEntityAmmoCrate crate) {
             IItemHandler inventory = crate.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
 
-            addSlotToContainer(new SlotItemHandler(inventory, 0, 53, 35) {
-            @Override
-            public void onSlotChanged() {
-                crate.markDirty();
-            }
-        });
-
-        addSlotToContainer(new SlotItemHandler(inventory, 1, 71, 35) {
-            @Override
-            public void onSlotChanged() {
-                crate.markDirty();
-            }
-        });
-
-        addSlotToContainer(new SlotItemHandler(inventory, 2, 89, 35) {
-            @Override
-            public void onSlotChanged() {
-                crate.markDirty();
-            }
-        });
-
-        addSlotToContainer(new SlotItemHandler(inventory, 3, 107, 35) {
-            @Override
-            public void onSlotChanged() {
-                crate.markDirty();
-            }
-        });
-
-        for (int i = 0; i < 3; i++) {
+        for (int i =0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
-                addSlotToContainer(new Slot(playerInv, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
+                addSlotToContainer(new SlotItemHandler(inventory, j + i * 9 + 9, 8 + j * 18, 17 + i * 18) {
+                    @Override
+                    public void onSlotChanged() {
+                        crate.markDirty();
+                    }});
+                }
+            }
+
+        for (int k = 0; k < 3; k++) {
+            for (int l = 0; l < 9; l++) {
+                addSlotToContainer(new Slot(playerInv, l + k * 9 + 9, 8 + l * 18, 84 + k * 18));
             }
         }
 
-        for (int k = 0; k < 9; k++) {
-            addSlotToContainer(new Slot(playerInv, k, 8 + k * 18, 142));
+        for (int m = 0; m < 9; m++) {
+            addSlotToContainer(new Slot(playerInv, m, 8 + m * 18, 142));
         }
     }
 }
