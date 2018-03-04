@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "militarybasedecor:concertina_wire_2", "y": 90},
+    "facing=west": { "model": "militarybasedecor:concertina_wire_2", "y": 180 },
+    "facing=north": { "model": "militarybasedecor:concertina_wire_2", "y": 270 },
+    "facing=east": { "model": "militarybasedecor:concertina_wire_2" }
+  }
+}

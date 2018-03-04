@@ -36,5 +36,9 @@ tile.ammunition_box.name=Ammunition Box
 tile.equipment_crate.name=Equipment Crate
 tile.ammo_crate.name=Ammo Crate
 
+tile.concertina_wire.name=Concertina Wire
+tile.concertina_wire_2.name=Concertina Wire
+tile.concertina_wire_2_bloody.name=Bloody Concertina Wire
+
 death.attack.wiredFence=%1$s was pricked to death by a fence
 death.attack.wiredFence.player=%1$s walked into a wired fence whilst trying to escape %2$s

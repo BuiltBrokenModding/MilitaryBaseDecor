@@ -1,0 +1,7 @@
+{
+  "parent": "militarybasedecor:block/concertina_wire_2",
+  "textures": {
+    "barbed": "militarybasedecor:blocks/concertina_wire_barbed_bloody",
+    "particle": "militarybasedecor:blocks/concertina_wire_barbed_bloody"
+  }
+}

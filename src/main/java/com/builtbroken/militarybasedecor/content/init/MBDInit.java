@@ -1,6 +1,5 @@
 package com.builtbroken.militarybasedecor.content.init;
 
-import com.builtbroken.militarybasedecor.MilitaryBaseDecor;
 import com.builtbroken.militarybasedecor.content.block.*;
 import com.builtbroken.militarybasedecor.content.block.BlockBase;
 import net.minecraft.block.Block;
@@ -9,8 +8,6 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,6 +52,10 @@ public class MBDInit {
     public static final Block BLOCK_STRENGTHENED_WOODEN_BARRICADE_2 = new BlockBarricade("strengthened_wooden_barricade_2", Material.WOOD, MapColor.WOOD, SoundType.WOOD);
 
     public static final Block BLOCK_EQUIPMENT_CRATE = new BlockEquipmentCrate("equipment_crate", Material.IRON, MapColor.BLACK, SoundType.METAL);
+
+    public static final Block BLOCK_CONCERTINA_WIRE = new BlockDamaging("concertina_wire", Material.IRON, MapColor.AIR, SoundType.METAL, 1.5f);
+    public static final Block BLOCK_CONCERTINA_WIRE_2 = new BlockConcertinaWire("concertina_wire_2", Material.IRON, MapColor.IRON, SoundType.METAL, 2.0f);
+    public static final Block BLOCK_CONCERTINA_WIRE_2_BLOODY = new BlockConcertinaWire("concertina_wire_2_bloody", Material.IRON, MapColor.IRON, SoundType.METAL, 2.0f);
 
     // Storage Blocks
     public static final Block BLOCK_AMMO_CRATE = new BlockAmmoCrate();
