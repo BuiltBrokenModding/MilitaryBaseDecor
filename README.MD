@@ -1,12 +1,15 @@
 Military Base Decor - 1.12.2 Rewrite
 =================
 
+This branch houses the code for the 1.12.2 rewrite of Military Base Decor, the mod is being rewritten from scratch without Voltz Engine, some content will return while some content will stay, and there will be some new stuff as well. There is no ETA on either a full stable release or a beta/alpha release, to see the current progress/todo list for the project check here: https://github.com/BuiltBrokenModding/MilitaryBaseDecor/projects/1
+
 This mod is a split off from the ICBM 2 rewrite that removed concrete. The mod started as a way to keep some of the old decoration blocks alive. However, has evolved into providing any and all decoration needed for military bases. This includes decorations from several different military eras. As well provides generic era based blocks that would have exists during those time periods
 
-If you want documentation while we still work on an improved in-game documentation system, check out Hennamann´s youtube channel located here: https://www.youtube.com/channel/UCkoVUnZP6Gn6ODBX-fbCeSg
+For updates on new features and content check Hennamann's YouTube channel: https://www.youtube.com/channel/UCkoVUnZP6Gn6ODBX-fbCeSg
 
-This is still a heavy work in progress as both old and new content is being written from scratch for 1.12.2
-NOTE: The mod no longer requires Voltz Engine to run (1.7.10 still requires it.).
+This is still a heavy work in progress as both old and new content is being rewritten from scratch for 1.12.2
+
+**NOTE: The mod no longer requires Voltz Engine to run (1.7.10 still requires it.).**
 
 ## License
 https://raw.githubusercontent.com/BuiltBrokenModding/ICBM/development/license.md
