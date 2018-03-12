@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "militarybasedecor:knife_rest", "y": 270 },
+    "facing=west": { "model": "militarybasedecor:knife_rest", "y": 180 },
+    "facing=north": { "model": "militarybasedecor:knife_rest", "y": 90 },
+    "facing=east": { "model": "militarybasedecor:knife_rest" }
+  }
+}

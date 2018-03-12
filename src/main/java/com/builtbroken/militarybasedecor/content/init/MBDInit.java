@@ -57,6 +57,8 @@ public class MBDInit {
     public static final Block BLOCK_CONCERTINA_WIRE_2 = new BlockConcertinaWire("concertina_wire_2", Material.IRON, MapColor.IRON, SoundType.METAL, 2.0f);
     public static final Block BLOCK_CONCERTINA_WIRE_2_BLOODY = new BlockConcertinaWire("concertina_wire_2_bloody", Material.IRON, MapColor.IRON, SoundType.METAL, 2.0f);
 
+    public static final Block BLOCK_KNIFE_REST = new BlockKnifeRest("knife_rest", Material.WOOD, MapColor.WOOD, SoundType.WOOD, 1.5f);
+
     // Storage Blocks
     public static final Block BLOCK_AMMO_CRATE = new BlockAmmoCrate();
     public static final Block BLOCK_AMMUNITION_BOX = new BlockAmmunitionBox();
