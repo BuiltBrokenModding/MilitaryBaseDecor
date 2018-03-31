@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "militarybasedecor:military_phone", "y": 270},
+    "facing=west": { "model": "militarybasedecor:military_phone", "y": 180 },
+    "facing=north": { "model": "militarybasedecor:military_phone", "y": 90 },
+    "facing=east": { "model": "militarybasedecor:military_phone" }
+  }
+}

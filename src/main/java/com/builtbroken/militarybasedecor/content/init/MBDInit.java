@@ -59,6 +59,9 @@ public class MBDInit {
 
     public static final Block BLOCK_KNIFE_REST = new BlockKnifeRest("knife_rest", Material.WOOD, MapColor.WOOD, SoundType.WOOD, 1.5f);
 
+    public static final Block BLOCK_MILITARY_TV = new BlockRotatableModel("military_tv", Material.IRON, MapColor.IRON, SoundType.METAL);
+    public static final Block BLOCK_MILITARY_PHONE = new BlockRotatableModel("military_phone", Material.IRON, MapColor.GREEN, SoundType.METAL);
+
     // Storage Blocks
     public static final Block BLOCK_AMMO_CRATE = new BlockAmmoCrate();
     public static final Block BLOCK_AMMUNITION_BOX = new BlockAmmunitionBox();
