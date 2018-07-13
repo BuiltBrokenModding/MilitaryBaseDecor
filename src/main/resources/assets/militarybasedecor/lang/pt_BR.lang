@@ -2,7 +2,7 @@
 
 ## Military Base Decor
 
-itemGroup.MilitaryBaseDecor=Decoração de base militar
+itemGroup.MilitaryBaseDecor=Decoração de bases militares
 ## Misc Blocks
 tile.militarybasedecor:simple_camo.0.name=Bloco de camuflagem básica
 tile.asphalt.0.name=Asfalto
@@ -37,7 +37,7 @@ tile.rope_fence.0.name=Cerca de cordas
 tile.tangled_rope.0.name=Corda emaranhada
 tile.militarybasedecor:fenceTopper.0.name=Cerca com barreira
 tile.corrugated_galvanised_iron_block.0.name=Bloco de ferro galvanizado ondulado
-tile.olive_drab_textured_block.0.name=Olive Drab Textured Block
+tile.olive_drab_textured_block.0.name=Bloco texturizado verde-oliva
 tile.ammunition_box.0.name=Caixa de munição
 tile.equipment_crate.0.name=Caixote de equipamentos
 tile.militarybasedecor:camouflage_block_woodlands.name=Bloco texturizado de camuflagem na floresta
@@ -83,7 +83,7 @@ tile.concrete_basic.1.name=Concreto laranja básico
 tile.concrete_basic.2.name=Concreto magenta básico
 tile.concrete_basic.3.name=Concreto azul-claro básico
 tile.concrete_basic.4.name=Concreto amarelo básico
-tile.concrete_basic.5.name=Concreto limão básico
+tile.concrete_basic.5.name=Concreto verde-limão básico
 tile.concrete_basic.6.name=Concreto rosa básico
 tile.concrete_basic.7.name=Concreto cinza básico
 tile.concrete_basic.8.name=Concreto cinza-claro básico
@@ -101,7 +101,7 @@ tile.concrete_reinforced.1.name=Concreto laranja reforçado
 tile.concrete_reinforced.2.name=Concreto magenta reforçado
 tile.concrete_reinforced.3.name=Concreto azul-claro reforçado
 tile.concrete_reinforced.4.name=Concreto amarelo reforçado
-tile.concrete_reinforced.5.name=Concreto limão reforçado
+tile.concrete_reinforced.5.name=Concreto verde-limão reforçado
 tile.concrete_reinforced.6.name=Concreto rosa reforçado
 tile.concrete_reinforced.7.name=Concreto cinza reforçado
 tile.concrete_reinforced.8.name=Concreto cinza-claro reforçado
@@ -120,7 +120,7 @@ tile.high_strength_concrete.1.name=Concreto laranja de alta resistência
 tile.high_strength_concrete.2.name=Concreto magenta de alta resistência
 tile.high_strength_concrete.3.name=Concreto azul-claro de alta resistência
 tile.high_strength_concrete.4.name=Concreto amarelo de alta resistência
-tile.high_strength_concrete.5.name=Concreto limão de alta resistência
+tile.high_strength_concrete.5.name=Concreto verde-limão de alta resistência
 tile.high_strength_concrete.6.name=Concreto rosa de alta resistência
 tile.high_strength_concrete.7.name=Concreto cinza de alta resistência
 tile.high_strength_concrete.8.name=Concreto cinza-claro de alta resistência
@@ -138,7 +138,7 @@ tile.ultra_high_performance_concrete.1.name=Concreto laranja de alto desempenho
 tile.ultra_high_performance_concrete.2.name=Concreto magenta de alto desempenho
 tile.ultra_high_performance_concrete.3.name=Concreto azul-claro de alto desempenho
 tile.ultra_high_performance_concrete.4.name=Concreto amarelo de alto desempenho
-tile.ultra_high_performance_concrete.5.name=Concreto limão de alto desempenho
+tile.ultra_high_performance_concrete.5.name=Concreto verde-limão de alto desempenho
 tile.ultra_high_performance_concrete.6.name=Concreto rosa de alto desempenho
 tile.ultra_high_performance_concrete.7.name=Concreto cinza de alto desempenho
 tile.ultra_high_performance_concrete.8.name=Concreto cinza-claro de alto desempenho
@@ -174,8 +174,8 @@ item.liquid_bitumen_bucket.name=Balde com betume líquido
 
 ## Blastcraft
 tile.hardened_brick.0.name=Tijolo maçiço
-tile.raw_blast_proof_walling.0.name=Raw Blast Proof Walling
-tile.blast_proof_walling.0.name=Blast Proof Walling
+tile.raw_blast_proof_walling.0.name=Muro bruto à prova de explosões
+tile.blast_proof_walling.0.name=Muro à prova de explosões
 tile.blast_proof_glass_normal.0.name=Vidro blindado
 tile.blast_proof_glass_seamless.0.name=Vidro blindado
 tile.blast_proof_trapdoor.0.name=Alçapão à prova de explosões
@@ -188,7 +188,7 @@ tile.blast_proof_trapdoor.6.name=Alçapão à prova de explosões
 tile.blast_proof_trapdoor.7.name=Alçapão à prova de explosões
 tile.blast_proof_trapdoor.8.name=Alçapão à prova de explosões
 tile.blast_proof_trapdoor.9.name=Alçapão à prova de explosões
-tile.carbon_plated_walling.0.name=Carbon Plated Walling
+tile.carbon_plated_walling.0.name=Muro de carbono galvanizado
 tile.militarybasedecor:blast_compressor.0.name=Compressor de explosões
 
 ## Tooltips - Modules
@@ -197,11 +197,11 @@ tooltip.gunpowder=Módulo de pólvora
 tooltip.worldwar1=Módulo da Primeira Guerra Mundial
 tooltip.worldwar2=Módulo da Segunda Guerra Mundial
 tooltip.coldwar=Módulo da Guerra Fria
-tooltip.blastcraft=Blastcraft Module
+tooltip.blastcraft=Módulo do Blastcraft
 
 ## Tooltips - Blocks and Items
 tooltip.wire_fence=Atenção: aflige dano às entidades
-tooltip.quonsethut=Utilizado para criar barracões Quonset
+tooltip.quonsethut=Utilizado para criar barracas Quonset
 
 ## GUIs/Containers
 container.blast_compressor=Compressor de explosões
