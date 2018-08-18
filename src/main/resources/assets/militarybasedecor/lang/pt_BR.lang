@@ -1,0 +1,207 @@
+## Master language file
+
+## Military Base Decor
+
+itemGroup.MilitaryBaseDecor=Decoração de bases militares
+## Misc Blocks
+tile.militarybasedecor:simple_camo.0.name=Bloco de camuflagem básica
+tile.asphalt.0.name=Asfalto
+tile.militarybasedecor:wood_casing.name=Cobertura reforçada de madeira
+tile.militarybasedecor:metal_casing.name=Cobertura reforçada de metal
+tile.militarybasedecor:reinforced_glass_normal.name=Vidro reforçado (não transparente)
+tile.reinforced_glass.0.name=Vidro reforçado (transparente)
+tile.militarybasedecor:reinforced_dirt.name=Terra reforçada
+tile.militarybasedecor:reinforced_sand.name=Terra reforçada
+tile.militarybasedecor:reinforced_cobblestone.name=Pedregulho reforçado
+tile.militarybasedecor:reinforced_stone.name=Pedra reforçada
+tile.militarybasedecor:reinforced_stonebrick.name=Tijolos de pedra reforçados
+tile.militarybasedecor:reinforced_iron.name=Bloco de ferro reforçado
+tile.militarybasedecor:reinforced_gold.name=Bloco de ouro reforçado
+tile.reinforced_rail.0.name=Trilho reforçado
+tile.reinforced_rail.1.name=Trilho reforçado
+tile.reinforced_rail.2.name=Trilho reforçado
+tile.reinforced_rail.3.name=Trilho reforçado
+tile.reinforced_rail.4.name=Trilho reforçado
+tile.reinforced_rail.5.name=Trilho reforçado
+tile.reinforced_rail.6.name=Trilho reforçado
+tile.reinforced_rail.7.name=Trilho reforçado
+tile.reinforced_rail.8.name=Trilho reforçado
+tile.reinforced_rail.9.name=Trilho reforçado
+tile.picket_fence.0.name=Cerca de estacas
+tile.wire_fence.0.name=Cerca elétrica
+tile.wire_fence.1.name=Grades de ferro
+tile.wire_fence.2.name=Cerca de arame farpado
+tile.wire_fence.3.name=Bloody Barbed Wire Fence
+tile.militarybasedecor:sand_bag.name=Saco de areia
+tile.rope_fence.0.name=Cerca de cordas
+tile.tangled_rope.0.name=Corda emaranhada
+tile.militarybasedecor:fenceTopper.0.name=Cerca com barreira
+tile.corrugated_galvanised_iron_block.0.name=Bloco de ferro galvanizado ondulado
+tile.olive_drab_textured_block.0.name=Bloco texturizado verde-oliva
+tile.ammunition_box.0.name=Caixa de munição
+tile.equipment_crate.0.name=Caixote de equipamentos
+tile.militarybasedecor:camouflage_block_woodlands.name=Bloco texturizado de camuflagem na floresta
+tile.militarybasedecor:camouflage_block_desert.name=Bloco texturizado de camuflagem no deserto
+tile.militarybasedecor:camouflage_block_urban.name=Bloco texturizado de camuflagem urbana
+tile.reinforced_button.0.name=Botão reforçado
+tile.reinforced_button.1.name=Botão reforçado
+tile.reinforced_button.2.name=Botão reforçado
+tile.reinforced_button.3.name=Botão reforçado
+tile.reinforced_button.4.name=Botão reforçado
+tile.reinforced_button.5.name=Botão reforçado
+tile.reinforced_button.6.name=Botão reforçado
+tile.reinforced_button.7.name=Botão reforçado
+tile.reinforced_button.8.name=Botão reforçado
+tile.reinforced_button.9.name=Botão reforçado
+tile.basic_mixer.name=Basic Mixer
+tile.basic_mixer.0.name=Basic Mixer
+tile.basic_mixer.3.name=Basic Mixer
+item.basic_mixer.name=Basic Mixer
+tile.rebar_mesh.0.name=Malha de vergalhão
+tile.militarybasedecor:icbm_concrete.0.name=Concreto clássico básico
+tile.militarybasedecor:icbm_concrete.1.name=Concreto clássico compacto
+tile.militarybasedecor:icbm_concrete.2.name=Concreto clássico reforçado
+tile.militarybasedecor:icbm_concrete.3.name=Concreto preto clássico básico
+tile.militarybasedecor:reinforced_door.0.name=Porta reforçada
+tile.militarybasedecor:reinforced_door.1.name=Porta reforçada
+tile.militarybasedecor:reinforced_door.2.name=Porta reforçada
+tile.militarybasedecor:reinforced_door.3.name=Porta reforçada
+tile.militarybasedecor:reinforced_door.4.name=Porta reforçada
+tile.militarybasedecor:reinforced_door.5.name=Porta reforçada
+tile.militarybasedecor:reinforced_door.6.name=Porta reforçada
+tile.militarybasedecor:reinforced_door.7.name=Porta reforçada
+tile.militarybasedecor:reinforced_door.8.name=Porta reforçada
+tile.militarybasedecor:reinforced_door.9.name=Porta reforçada
+item.reinforced_door_item.name=Porta reforçada
+tile.militarybasedecor:dragons_teeth.0.name=Dentes de dragão
+death.attack.concreteSolidify=%1$s solidificou-se em concreto líquido
+
+## Concrete
+# Basic Concrete
+tile.concrete_basic.0.name=Concreto branco básico
+tile.concrete_basic.1.name=Concreto laranja básico
+tile.concrete_basic.2.name=Concreto magenta básico
+tile.concrete_basic.3.name=Concreto azul-claro básico
+tile.concrete_basic.4.name=Concreto amarelo básico
+tile.concrete_basic.5.name=Concreto verde-limão básico
+tile.concrete_basic.6.name=Concreto rosa básico
+tile.concrete_basic.7.name=Concreto cinza básico
+tile.concrete_basic.8.name=Concreto cinza-claro básico
+tile.concrete_basic.9.name=Concreto ciano básico
+tile.concrete_basic.10.name=Concreto roxo básico
+tile.concrete_basic.11.name=Concreto azul básico
+tile.concrete_basic.12.name=Concreto marrom básico
+tile.concrete_basic.13.name=Concreto verde básico
+tile.concrete_basic.14.name=Concreto vermelho básico
+tile.concrete_basic.15.name=Concreto preto básico
+
+# Reinforced Concrete
+tile.concrete_reinforced.0.name=Concreto branco reforçado
+tile.concrete_reinforced.1.name=Concreto laranja reforçado
+tile.concrete_reinforced.2.name=Concreto magenta reforçado
+tile.concrete_reinforced.3.name=Concreto azul-claro reforçado
+tile.concrete_reinforced.4.name=Concreto amarelo reforçado
+tile.concrete_reinforced.5.name=Concreto verde-limão reforçado
+tile.concrete_reinforced.6.name=Concreto rosa reforçado
+tile.concrete_reinforced.7.name=Concreto cinza reforçado
+tile.concrete_reinforced.8.name=Concreto cinza-claro reforçado
+tile.concrete_reinforced.9.name=Concreto ciano reforçado
+tile.concrete_reinforced.10.name=Concreto roxo reforçado
+tile.concrete_reinforced.11.name=Concreto azul reforçado
+tile.concrete_reinforced.12.name=Concreto marrom reforçado
+tile.concrete_reinforced.13.name=Concreto verde reforçado
+tile.concrete_reinforced.14.name=Concreto vermelho reforçado
+tile.concrete_reinforced.15.name=Concreto preto reforçado
+tile.liquid_reinforced_concrete.0.name=Concreto reforçado
+
+# High Strength Concrete
+tile.high_strength_concrete.0.name=Concreto branco de alta resistência
+tile.high_strength_concrete.1.name=Concreto laranja de alta resistência
+tile.high_strength_concrete.2.name=Concreto magenta de alta resistência
+tile.high_strength_concrete.3.name=Concreto azul-claro de alta resistência
+tile.high_strength_concrete.4.name=Concreto amarelo de alta resistência
+tile.high_strength_concrete.5.name=Concreto verde-limão de alta resistência
+tile.high_strength_concrete.6.name=Concreto rosa de alta resistência
+tile.high_strength_concrete.7.name=Concreto cinza de alta resistência
+tile.high_strength_concrete.8.name=Concreto cinza-claro de alta resistência
+tile.high_strength_concrete.9.name=Concreto ciano de alta resistência
+tile.high_strength_concrete.10.name=Concreto roxo de alta resistência
+tile.high_strength_concrete.11.name=Concreto azul de alta resistência
+tile.high_strength_concrete.12.name=Concreto marrom de alta resistência
+tile.high_strength_concrete.13.name=Concreto verde de alta resistência
+tile.high_strength_concrete.14.name=Concreto vermelho de alta resistência
+tile.high_strength_concrete.15.name=Concreto preto de alta resistência
+
+# Ultra High Performance Concrete
+tile.ultra_high_performance_concrete.0.name=Concreto branco de alto desempenho
+tile.ultra_high_performance_concrete.1.name=Concreto laranja de alto desempenho
+tile.ultra_high_performance_concrete.2.name=Concreto magenta de alto desempenho
+tile.ultra_high_performance_concrete.3.name=Concreto azul-claro de alto desempenho
+tile.ultra_high_performance_concrete.4.name=Concreto amarelo de alto desempenho
+tile.ultra_high_performance_concrete.5.name=Concreto verde-limão de alto desempenho
+tile.ultra_high_performance_concrete.6.name=Concreto rosa de alto desempenho
+tile.ultra_high_performance_concrete.7.name=Concreto cinza de alto desempenho
+tile.ultra_high_performance_concrete.8.name=Concreto cinza-claro de alto desempenho
+tile.ultra_high_performance_concrete.9.name=Concreto ciano de alto desempenho
+tile.ultra_high_performance_concrete.10.name=Concreto roxo de alto desempenho
+tile.ultra_high_performance_concrete.11.name=Concreto azul de alto desempenho
+tile.ultra_high_performance_concrete.12.name=Concreto marrom de alto desempenho
+tile.ultra_high_performance_concrete.13.name=Concreto verde de alto desempenho
+tile.ultra_high_performance_concrete.14.name=Concreto vermelho de alto desempenho
+tile.ultra_high_performance_concrete.15.name=Concreto preto de alto desempenho
+
+# Various Concrete
+tile.militarybasedecor:pervious_concrete.name=Concreto permeável
+tile.militarybasedecor:glass_concrete.name=Concreto de vidro
+tile.militarybasedecor:limecrete.name=Concreto com cal
+
+# Misc Items
+item.bag_cement.name=Saco de cimento
+item.bag.name=Saco
+item.bucket_liquid_concrete.name=Balde com concreto líquido
+item.militarybasedecor:bundled_wire.name=Rolo de arame
+item.barbed_bundled_wire.name=Rolo de arame farpado
+item.militarybasedecor:rope.name=Corda
+item.wire_cutters.name=Alicate
+wire_cutters.chattext.wiredfence=Cortar uma cerca de arame
+wire_cutters.chattext.chainfence=Cortar uma cerca com grades de ferro
+wire_cutters.chattext.barbedfence=Cortar uma cerca de arame farpado
+item.rebar.name=Vergalhão
+
+item.bituminous_coal.name=Carvão betuminoso
+item.bituminous_coal_bucket.name=Balde com carvão betuminoso
+item.liquid_bitumen_bucket.name=Balde com betume líquido
+
+## Blastcraft
+tile.hardened_brick.0.name=Tijolo maçiço
+tile.raw_blast_proof_walling.0.name=Muro bruto à prova de explosões
+tile.blast_proof_walling.0.name=Muro à prova de explosões
+tile.blast_proof_glass_normal.0.name=Vidro blindado
+tile.blast_proof_glass_seamless.0.name=Vidro blindado
+tile.blast_proof_trapdoor.0.name=Alçapão à prova de explosões
+tile.blast_proof_trapdoor.1.name=Alçapão à prova de explosões
+tile.blast_proof_trapdoor.2.name=Alçapão à prova de explosões
+tile.blast_proof_trapdoor.3.name=Alçapão à prova de explosões
+tile.blast_proof_trapdoor.4.name=Alçapão à prova de explosões
+tile.blast_proof_trapdoor.5.name=Alçapão à prova de explosões
+tile.blast_proof_trapdoor.6.name=Alçapão à prova de explosões
+tile.blast_proof_trapdoor.7.name=Alçapão à prova de explosões
+tile.blast_proof_trapdoor.8.name=Alçapão à prova de explosões
+tile.blast_proof_trapdoor.9.name=Alçapão à prova de explosões
+tile.carbon_plated_walling.0.name=Muro de carbono galvanizado
+tile.militarybasedecor:blast_compressor.0.name=Compressor de explosões
+
+## Tooltips - Modules
+tooltip.vanilla=Módulo comum
+tooltip.gunpowder=Módulo de pólvora
+tooltip.worldwar1=Módulo da Primeira Guerra Mundial
+tooltip.worldwar2=Módulo da Segunda Guerra Mundial
+tooltip.coldwar=Módulo da Guerra Fria
+tooltip.blastcraft=Módulo do Blastcraft
+
+## Tooltips - Blocks and Items
+tooltip.wire_fence=Atenção: aflige dano às entidades
+tooltip.quonsethut=Utilizado para criar barracas Quonset
+
+## GUIs/Containers
+container.blast_compressor=Compressor de explosões
